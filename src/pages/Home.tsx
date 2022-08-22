@@ -1,5 +1,5 @@
 export const Home = () => {
     return (
-        <div> Something</div>
+        <div className="text-lime-400 text-xl"> Something</div>
     )
 }
