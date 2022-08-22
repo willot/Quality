@@ -10,7 +10,13 @@ module.exports = {
       },
       'white': {
         DEFAULT: '#F4F4F5'
-      }
+      },
+      'pink': {
+        DEFAULT: '#ffd1dc'
+      },
+      'red': {
+        DEFAULT: '#e32636'
+      },
     },
     extend: {},
   },
