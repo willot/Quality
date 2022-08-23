@@ -1,6 +1,8 @@
 import {useState} from "react";
 import {ExampleButton} from "../components/ExampleButton";
 import {ExampleButtonNotAccessible} from "../components/ExampleButtonNotAccessible";
+import { dark } from 'react-syntax-highlighter/dist/esm/styles/prism';
+import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
 
 export const Home = () => {
     const [textDetails, setTextDetails] = useState("");
@@ -153,16 +155,14 @@ export const Home = () => {
                 application and make sure the expected behaviors are happening. But I can't test if it is what the users
                 expect.
             </section>
+            <SyntaxHighlighter
+                language='javascript'
+                style={dark}
+                highlighter={"prism" || "hljs"}
+            >
+                {test1}
+            </SyntaxHighlighter>
 
-                {/*<code className="bg-bladk">{test1}</code>*/}
-                {/*<code>{test2}</code>*/}
-            {/*</pre>*/}
-            <section className="bg-pink rounded-xl text-left w-11/12 md:w-9/12 lg:w-6/12 2xl:w-4/12">
-
-            <pre className="bg-pink rounded-xl text-left w-11/12 md:w-9/12 lg:w-6/12 2xl:w-4/12">
-                <code className="bg-pink rounded-xl text-left w-11/12 md:w-9/12 lg:w-6/12 2xl:w-4/12">{test3}</code>
-            </pre>
-            </section>
             <p>I think this is where exploratory testing enter. </p>
 
         </section>
