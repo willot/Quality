@@ -1,10 +1,8 @@
 import {useState} from "react";
+import {ExampleButton} from "../components/ExampleButton";
+import {ExampleButtonNotAccessible} from "../components/ExampleButtonNotAccessible";
 
 export const Home = () => {
-   const [showDetailsB1, setShowDetailsB1] = useState(false);
-   const [showDetailsB2, setShowDetailsB2] = useState(false);
-   const [showDetailsB3, setShowDetailsB3] = useState(false);
-   const [showDetailsB4, setShowDetailsB4] = useState(false);
    const [textDetails, setTextDetails] = useState("");
 
 
@@ -42,12 +40,12 @@ export const Home = () => {
         }
     }
 
-    const buttonText = (value: boolean) => {
+    const buttonText = (value: boolean): string => {
         return value? "show less details": "show more details";
     }
 
-    const wrongWordingButtonText = () => {
-        return showDetailsB2? "less details": "details";
+    const wrongWordingButtonText = (value: boolean): string => {
+        return value? "less details": "details";
     }
 
     return (
@@ -87,51 +85,10 @@ export const Home = () => {
             <ul>Text of the button should change after clicking on it</ul>
             <ul>Information should disapear if the user reclick the button</ul>
             <section className="flex flex-row space-x-2 justify-center py-2">
-                <button className="bg-pink text-blue w-28 border border-white rounded-md"
-                        onClick={ () => {
-                            const showDetails = !showDetailsB1? "button1" : "";
-                            setTextDetails(showDetails);
-                            setShowDetailsB1(!showDetailsB1);
-                            if(!showDetailsB1) {
-                                setShowDetailsB2(!showDetailsB2);
-                                setShowDetailsB3(!showDetailsB3);
-                                setShowDetailsB4(!showDetailsB4);
-                            }
-                        }}>{buttonText(showDetailsB1)}
-                </button>
-                <button className="bg-pink text-blue w-28 border border-white rounded-md"
-                        onClick={ () => {
-                            const showDetails = showDetailsB2? "button2" : "";
-                            setTextDetails(showDetails);
-                            setShowDetailsB2(!showDetailsB2);
-                            if(!showDetailsB2) {
-                                setShowDetailsB1(!showDetailsB2);
-                                setShowDetailsB3(!showDetailsB3);
-                                setShowDetailsB4(!showDetailsB4);
-                            }
-                        }}>{wrongWordingButtonText()}</button>
-                <button className="bg-white text-pink w-28 border border-white rounded-md"
-                        onClick={ () => {
-                            const showDetails = !showDetailsB3? "button3" : "";
-                            setTextDetails(showDetails);
-                            setShowDetailsB3(!showDetailsB3);
-                            if(!showDetailsB3) {
-                                setShowDetailsB1(!showDetailsB2);
-                                setShowDetailsB2(!showDetailsB3);
-                                setShowDetailsB4(!showDetailsB4);
-                            }
-                        }}>{buttonText(showDetailsB3)}</button>
-                <div className="bg-pink text-blue w-28 border border-white rounded-md"
-                     onClick={ () => {
-                         const showDetails = !showDetailsB4? "buttonAccessibility" : "";
-                         setTextDetails(showDetails);
-                         setShowDetailsB4(!showDetailsB4);
-                         if(!showDetailsB4) {
-                             setShowDetailsB1(!showDetailsB2);
-                             setShowDetailsB2(!showDetailsB3);
-                             setShowDetailsB3(!showDetailsB4);
-                         }
-                }}>{buttonText(showDetailsB4)}</div>
+                <ExampleButton setTextDetails={setTextDetails} buttonId="button1" buttonWording={buttonText}/>
+                <ExampleButton setTextDetails={setTextDetails} buttonId="button2" buttonWording={wrongWordingButtonText}/>
+                <ExampleButton setTextDetails={setTextDetails} buttonId="button3" buttonWording={buttonText}/>
+                <ExampleButtonNotAccessible setTextDetails={setTextDetails} buttonId="button3" buttonWording={buttonText}/>
             </section>
             <section className="text-red">
                 {details()}
