@@ -1,0 +1,36 @@
+import {Home} from "./Home";
+import {findByText, render, screen} from '@testing-library/react';
+import {click} from "@testing-library/user-event/dist/click";
+
+describe('home page', () =>{
+    describe('example buttons', () => {
+        it('should change the text wording when the button is clicked', () => {
+            render(<Home/>);
+            const buttons = screen.getAllByRole('button');
+            expect(buttons[0]).toContainHTML("show more details")
+            click(buttons[0]);
+            expect(buttons[0]).toContainHTML("show less details")
+        });
+        it('should show more info when the button is clicked', () => {
+            render(<Home/>);
+            const buttons = screen.getAllByRole('button');
+            click(buttons[0]);
+            const extraInfo = screen.queryByText("Button1 follow all the requirements. But will a user expect " +
+                "a button to get more information?")
+            expect(extraInfo).toBeInTheDocument();
+        });
+        it('should reset the wording of the button and change the text when clicking a second button', () => {
+            render(<Home/>);
+            const buttons = screen.getAllByRole('button');
+            click(buttons[0]);
+            expect(buttons[0]).toContainHTML("show less details");
+            expect(buttons[2]).toContainHTML("show more details");
+            click(buttons[2]);
+            expect(buttons[2]).toContainHTML("show less details");
+            expect(buttons[0]).toContainHTML("show more details");
+            const extraInfo = screen.queryByText("Button3 follow all the requirements. But the color contrast is" +
+                " hard to read.")
+            expect(extraInfo).toBeInTheDocument();
+        });
+    });
+})

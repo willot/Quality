@@ -9,11 +9,12 @@ type ExampleButtonNotAccessibleProps = {
 export const ExampleButtonNotAccessible = ({setTextDetails, buttonId, buttonWording}:ExampleButtonNotAccessibleProps) => {
     const {ref, isVisible, setIsVisible} = OutsideClickDetector(false);
 
+
     return (
         <div ref={ref}
-            className="bg-pink text-blue w-28 border border-white rounded-md"
+            className="bg-pink text-blue w-28 text-center border border-white rounded-md cursor-pointer mb-2"
             onClick={() => {
-                 const details = !isVisible ? buttonId : "";
+                    const details = !isVisible ? buttonId : "";
                  setTextDetails(details);
                  setIsVisible(!isVisible);
                  }}
