@@ -32,5 +32,15 @@ describe('home page', () =>{
                 " hard to read.")
             expect(extraInfo).toBeInTheDocument();
         });
+        it('should not show the information if the button is clicked again', () => {
+            render(<Home/>);
+            const buttons = screen.getAllByRole('button');
+            click(buttons[0]);
+            const extraInfo = screen.queryByText("Button1 follow all the requirements. But will a user expect " +
+                "a button to get more information?")
+            expect(extraInfo).toBeInTheDocument();
+            click(buttons[0]);
+            expect(extraInfo).not.toBeInTheDocument();
+        });
     });
 })
