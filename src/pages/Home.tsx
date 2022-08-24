@@ -2,8 +2,11 @@ import {useState} from "react";
 import {ExampleButton} from "../components/ExampleButton";
 import {ExampleButtonNotAccessible} from "../components/ExampleButtonNotAccessible";
 
+
 import {Prism as SyntaxHighlighter} from 'react-syntax-highlighter';
 import {xonokai} from "react-syntax-highlighter/dist/cjs/styles/prism";
+import {ArrowLongRightIcon} from "@heroicons/react/24/solid";
+import {Link} from "react-router-dom";
 
 export const Home = () => {
     const [textDetails, setTextDetails] = useState("");
@@ -224,6 +227,10 @@ export const Home = () => {
                     EXPLORATORY testing! </p>
                 </section>
             </section>
+            <Link to="/exploratoryTesting" className="flex flex-row items-center pt-10">
+                <span className="text-pink text-lg font-semibold w-52">Exploratory Testing</span>
+                <ArrowLongRightIcon className="text-pink h-16 w-16"/>
+            </Link>
         </section>
     )
 }
