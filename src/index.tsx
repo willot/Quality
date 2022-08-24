@@ -17,7 +17,6 @@ root.render(
               <Route path="/" element={<App />} />
               <Route path="exploratoryTesting" element={<ExploratoryTesting />} />
           </Routes>
-          {/*<App />*/}
       </BrowserRouter>
   </React.StrictMode>
 );
