@@ -221,7 +221,7 @@ export const Home = () => {
                     15 more tests... Which at this point would be silly. To take an analogy that Elizabeth Hendrickson use
                     in her book "Explore It!". Test are a net, the more tests the tighter the weave are but you will always
                     have gaps.</p>
-                    <p className="pt-2">For me one of the most important value of the tests that often get missed is that they remove the
+                    <p className="pt-2 text-pink font-semibold">For me one of the most important value of the tests that often get missed is that they remove the
                     tedious, boring, unimportant part of testing. These test give the time back to the professional tester
                     to do the important testing: usability testing, stress testing, accessibility testing, load testing and
                     EXPLORATORY testing! </p>

@@ -1,5 +1,5 @@
 import {Home} from "./Home";
-import {findByText, render, screen} from '@testing-library/react';
+import {render, screen} from '@testing-library/react';
 import {click} from "@testing-library/user-event/dist/click";
 import {MemoryRouter} from "react-router-dom";
 
