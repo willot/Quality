@@ -69,7 +69,7 @@ export const ExploratoryTesting = () => {
                     the system this kind help you create better hypothesis You are more likely to catch things.</p>
                 </section>
                 <section>
-                    <h2>What do you need to focus on?</h2>
+                    <h2 className="font-bold pt-10">What do you need to focus on?</h2>
                     <p>This 4 sections are based on the "Explore it!" book</p>
                     NEED TO CHANGE THE NAMES
                     <ul>Sequences and interactions</ul>

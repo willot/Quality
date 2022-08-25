@@ -16,10 +16,9 @@ root.render(
     <React.StrictMode>
         <BrowserRouter>
             <Routes>
-                <Route path="/" element={<App/>}>
-                    <Route path="/exploratoryTesting" element={<ExploratoryTesting/>}/>
-                    <Route path="/interactions" element={<Interactions/>}/>
-                </Route>
+                <Route path="/" element={<App/>}/>
+                <Route path="/exploratoryTesting" element={<ExploratoryTesting/>}/>
+                <Route path="/interactions" element={<Interactions/>}/>
                 <Route path="*" element={<NoPage/>}/>
             </Routes>
         </BrowserRouter>
