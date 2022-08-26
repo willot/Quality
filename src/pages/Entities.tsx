@@ -1,5 +1,6 @@
 import {Link} from "react-router-dom";
 import {ArrowLongLeftIcon} from "@heroicons/react/24/solid";
+import {UserForm} from "../components/UserForm";
 
 export const Entities = () => {
 
@@ -23,14 +24,15 @@ export const Entities = () => {
                 people to their policy. Like multiple driver for a car. Now there are multiple users connected to one
                 policy. Can each one of them modify the policy? Or only the principal user? The amount of interactions
                 can increase quickly and all this interactions held logic that can hide a bug.</p>
-                <section>
-                    <h2>Exploring the objects</h2>
-                    <p>The first thing is that you want to identify these objects. As stated earlier they are things on
+                <section className="py-10">
+                    <h2 className="font-bold">Exploring the objects</h2>
+                    <p className="pb-4">The first thing is that you want to identify these objects. As stated earlier they are things on
                         which you can take actions. A lot of things can happen when you create an object. Are all the
-                    field require? Can you put empty space? can you use weird characters Ω√? Is there a limit in the
-                    number of characters? This is a common one, database will have limit for the number of character in
-                    a field but the front end will not enforce it. The data is send to the back end and it crashes and
-                    send an error...</p>
+                    field require? Can you put empty space? can you use weird characters "Ω√"? Is there a limit in the
+                    number of characters? The problem of string being too long is pretty common one, database have limit
+                    for the number of characters in a field but the front end will not enforce it. Therefore the data is
+                    send to the back end and it crashes and send an error...</p>
+                    <UserForm/>
                 </section>
             </section>
         </section>
