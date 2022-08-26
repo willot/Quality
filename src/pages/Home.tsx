@@ -152,12 +152,12 @@ export const Home = () => {
                 </section>
                 <section className="grid grid-rows-2 grid-flow-col justify-items-center md:grid-rows-1 pt-4">
                     <ExampleButton setTextDetails={setTextDetails} buttonId="button1" buttonWording={buttonText}
-                                   css={"bg-pink text-blue w-28 border border-white rounded-md mb-2"}/>
+                                   css={"bg-pink text-blue w-28 border border-white rounded-md mb-2 active:translate-y-0.5 duration-200 active:bg-white"}/>
                     <ExampleButton setTextDetails={setTextDetails} buttonId="button2"
                                    buttonWording={wrongWordingButtonText}
-                                   css={"bg-pink text-blue w-48 border border-white rounded-md sm:w-28 mb-2"}/>
+                                   css={"bg-pink text-blue w-48 border border-white rounded-md sm:w-28 mb-2 active:translate-y-0.5 duration-200 active:bg-white"}/>
                     <ExampleButton setTextDetails={setTextDetails} buttonId="button3" buttonWording={buttonText}
-                                   css={"bg-pink text-white w-28 border border-white rounded-md mb-2"}/>
+                                   css={"bg-pink text-white w-28 border border-white rounded-md mb-2 active:translate-y-0.5 duration-200 active:bg-white"}/>
                     <ExampleButtonNotAccessible setTextDetails={setTextDetails} buttonId="button3"
                                                 buttonWording={buttonText}/>
                 </section>

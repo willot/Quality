@@ -1,8 +1,31 @@
 import {Link} from "react-router-dom";
 import {ArrowLongLeftIcon} from "@heroicons/react/24/solid";
-import {ExampleButton} from "../components/ExampleButton";
+import {ShoppingCartIcon} from "@heroicons/react/20/solid";
+import {useState} from "react";
 
 export const Interactions = () => {
+    const [buttonIndex, setButtonIndex] = useState<string>("");
+
+    const buttonMessage = () => {
+        if (buttonIndex === "") {
+            return null;
+        }
+        if (buttonIndex === "button1") {
+            return "You are wrong there is no aria label. Someone using a screen reader would orly hear `button` and have" +
+                "no idea what is this button for..."
+        }
+        if (buttonIndex === "button2") {
+            return "You are correct there is a aria label, the outline is not deactivated and it is button not a div "
+        }
+        if (buttonIndex === "button3") {
+            return "You are wrong the outline of the button is deactivated when the button is focus. So you don't know that" +
+                "you are currently on the button when you tab around"
+        }
+        if (buttonIndex === "button4") {
+            return "You are wrong this button is not a button and get ignore by screen reader."
+        }
+    }
+
     return (
         <section className="bg-blue flex flex-row justify-center w-full">
             <section
@@ -43,22 +66,66 @@ export const Interactions = () => {
                         keyboard can have a huge impact on your interaction with an application. These are example on
                         what
                         can go wrong when using a keyboard.</p>
-                    <section>
-                        <h3 className="font-semibold">Lets play with tabbing. Try to tab through this buttons.</h3>
-                    </section>
-                    <section className="grid grid-rows-2 grid-flow-col justify-items-center md:grid-rows-1 pt-4">
-                        <button tabIndex={0}
-                                className="bg-pink text-blue w-28 border border-white rounded-md mb-2 p-2 active:translate-y-0.5 duration-200 active:bg-white">button 1
-                        </button>
-                        <button tabIndex={3}
-                                className="shadow-lg shadow-pink bg-pink text-blue w-28 border border-white rounded-md mb-2 p-2 active:translate-y-0.5 duration-200 active:bg-white">button 2
-                        </button>
-                        <button tabIndex={1}
-                                className="bg-pink text-blue w-28 border border-white rounded-md mb-2 p-2 active:translate-y-0.5 duration-200 active:bg-white">button 3
-                        </button>
-                        <button tabIndex={2}
-                                className="bg-pink text-blue w-28 border border-white rounded-md mb-2 p-2 active:translate-y-0.5 duration-200 active:bg-white">button 4
-                        </button>
+                    <section className="pt-4">
+                        <h3 className="font-medium">Lets play with tabbing. Try to tab through this buttons.</h3>
+                        <section className="grid grid-rows-2 grid-flow-col justify-items-center md:grid-rows-1 pt-4">
+                            <button tabIndex={0}
+                                    className="bg-pink text-blue w-28 border border-white rounded-md mb-2 p-2 active:translate-y-0.5 duration-200 active:bg-white">button
+                                1
+                            </button>
+                            <button tabIndex={3}
+                                    className="bg-pink text-blue w-28 border border-white rounded-md mb-2 p-2 active:translate-y-0.5 duration-200 active:bg-white active:shadow-none">button
+                                2
+                            </button>
+                            <button tabIndex={1}
+                                    className="bg-pink text-blue w-28 border border-white rounded-md mb-2 p-2 active:translate-y-0.5 duration-200 active:bg-white">button
+                                3
+                            </button>
+                            <button tabIndex={2}
+                                    className="bg-pink text-blue w-28 border border-white rounded-md mb-2 p-2 active:translate-y-0.5 duration-200 active:bg-white">button
+                                4
+                            </button>
+                        </section>
+                        <p>As you can see the ordering of the button is not right. This is a frequent issue that the
+                            tabbing doesn't always follow the expected flow.</p>
+
+                        <p>Let's look at another example. Click or tab on the button you think you are correct</p>
+                        <section className="grid grid-rows-2 grid-flow-col justify-items-center md:grid-rows-1 pt-4">
+                            <button tabIndex={5}
+                                    className="flex flex-row justify-center bg-pink text-blue w-28 border border-white rounded-md mb-2 p-2 active:translate-y-0.5 duration-200 active:bg-white"
+                                    onClick={() => {
+                                        setButtonIndex("button1")
+                                    }}>
+                                <ShoppingCartIcon className="h-6 w-6"/>
+                            </button>
+                            <button aria-label="Shopping cart"
+                                    tabIndex={5}
+                                    className="flex flex-row justify-center bg-pink text-blue w-28 border border-white rounded-md mb-2 p-2 active:translate-y-0.5 duration-200 active:bg-white "
+                                    onClick={() => {
+                                        setButtonIndex("button2")
+                                    }}>
+                                <ShoppingCartIcon className="h-6 w-6"/>
+                            </button>
+                            <button aria-label="Shopping cart"
+                                    tabIndex={5}
+                                    className="flex flex-row justify-center bg-pink text-blue w-28 border border-white rounded-md mb-2 p-2 active:translate-y-0.5 duration-200 active:bg-white outline-0"
+                                    onClick={() => {
+                                        setButtonIndex("button3")
+                                    }}>
+                                <ShoppingCartIcon className="h-6 w-6"/>
+                            </button>
+                            <div tabIndex={5}
+                                 className="flex flex-row justify-center bg-pink text-blue w-28 border border-white rounded-md mb-2 p-2 active:translate-y-0.5 duration-200 active:bg-white"
+                                 onClick={() => {
+                                     setButtonIndex("button4")
+                                 }}>
+                                <ShoppingCartIcon className="h-6 w-6"/>
+                            </div>
+                        </section>
+                        <section className="text-red">
+                            {buttonMessage()}
+                        </section>
+
                     </section>
 
                 </section>

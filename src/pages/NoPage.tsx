@@ -17,7 +17,7 @@ export const NoPage = () => {
                         <span className="text-pink text-lg font-semibold w-52">Exploratory Testing</span>
                         <ArrowLongRightIcon className="text-pink h-16 w-16"/>
                     </Link>
-                    <p>If you came here from my 'blabla' link example than click on this link to go back where you were.</p>
+                    <p>If you came here from my '/blabla' link example than click on this link to go back where you were.</p>
                     <Link to="/interactions" className="flex flex-row items-center">
                         <span className="text-pink text-lg font-semibold w-52">Interactions</span>
                         <ArrowLongRightIcon className="text-pink h-16 w-16"/>
