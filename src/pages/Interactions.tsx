@@ -1,5 +1,5 @@
 import {Link} from "react-router-dom";
-import {ArrowLongLeftIcon} from "@heroicons/react/24/solid";
+import {ArrowLongLeftIcon, ArrowLongRightIcon} from "@heroicons/react/24/solid";
 import {ShoppingCartIcon} from "@heroicons/react/20/solid";
 import {useState} from "react";
 
@@ -32,7 +32,7 @@ export const Interactions = () => {
                 className="bg-blue h-full text-white text-justify py-10 px-5 w-11/12 md:w-9/12 lg:w-8/12 xl:w7/12 2xl:w-5/12">
                 <Link to="/exploratoryTesting" className="flex flex-row items-center mt-10">
                     <ArrowLongLeftIcon className="text-pink h-16 w-16"/>
-                    <span className="text-pink text-lg font-semibold w-52 pl-6">Exploratory Testing</span>
+                    <span className="text-pink text-lg font-semibold w-68 pl-6">Back to Exploratory Testing</span>
                 </Link>
                 <h1 className="text-4xl font-medium pb-5">Interaction with your application</h1>
                 <p>You know your application you use it everyday. But do you really know it. Did you ever try to do
@@ -89,7 +89,7 @@ export const Interactions = () => {
                         <p>As you can see the ordering of the button is not right. This is a frequent issue that the
                             tabbing doesn't always follow the expected flow.</p>
 
-                        <p>Let's look at another example. Click or tab on the button you think you are correct</p>
+                        <p className="pt-6">Let's look at another example. Click or tab on the button you think you are correct</p>
                         <section className="grid grid-rows-2 grid-flow-col justify-items-center md:grid-rows-1 pt-4">
                             <button tabIndex={5}
                                     className="flex flex-row justify-center bg-pink text-blue w-28 border border-white rounded-md mb-2 p-2 active:translate-y-0.5 duration-200 active:bg-white"
@@ -129,6 +129,10 @@ export const Interactions = () => {
                     </section>
 
                 </section>
+                <Link to="/objects" className="flex flex-row items-center pt-10">
+                    <span className="text-pink text-lg font-semibold w-52">Dealing with Objects</span>
+                    <ArrowLongRightIcon className="text-pink h-16 w-16"/>
+                </Link>
             </section>
         </section>
     )

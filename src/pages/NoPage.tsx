@@ -22,6 +22,10 @@ export const NoPage = () => {
                         <span className="text-pink text-lg font-semibold w-52">Interactions</span>
                         <ArrowLongRightIcon className="text-pink h-16 w-16"/>
                     </Link>
+                    <Link to="/objects" className="flex flex-row items-center pt-10">
+                        <span className="text-pink text-lg font-semibold w-52">Dealing with Objects</span>
+                        <ArrowLongRightIcon className="text-pink h-16 w-16"/>
+                    </Link>
                 </section>
             </section>
         </section>

@@ -7,6 +7,7 @@ import {BrowserRouter, Route, Routes} from "react-router-dom";
 import {ExploratoryTesting} from "./pages/ExploratoryTesting";
 import {Interactions} from "./pages/Interactions";
 import {NoPage} from "./pages/NoPage";
+import {Entities} from "./pages/Entities";
 
 const root = ReactDOM.createRoot(
     document.getElementById('root') as HTMLElement
@@ -19,6 +20,7 @@ root.render(
                 <Route path="/" element={<App/>}/>
                 <Route path="/exploratoryTesting" element={<ExploratoryTesting/>}/>
                 <Route path="/interactions" element={<Interactions/>}/>
+                <Route path="/objects" element={<Entities/>}/>
                 <Route path="*" element={<NoPage/>}/>
             </Routes>
         </BrowserRouter>
