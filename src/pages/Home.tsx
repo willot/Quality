@@ -109,34 +109,28 @@ export const Home = () => {
                     the degree od excellence of something</p>
                 <p className="text-xs indent-8 pb-5">--Oxford Languages--</p>
                 <p>It is not really useful, doesn't really tell us what is quality. What should I compare my website
-                    too? Do I really want to match my competition? If I want to gain on them I want to be better.
-                    Is being better have nothing to do with quality?</p>
+                    too? Do I really want to match my competition if I want to be the best. Is being the best just means
+                    to be the standard for quality?</p>
             </section>
             <section className="pb-10">
                 <h2 className="font-bold">Useful definition:</h2>
                 <p className="indent-8">
                     "An essential requirement of these products is that they meet the needs of those members of society
-                    who
-                    will actually use them. This concept of fitness for use is universal. It applies to all goods and
-                    services, without exception. The popular term for fitness for use is Quality, and our basic
-                    definition
-                    becomes: quality means fitness for use."
+                    who will actually use them. This concept of fitness for use is universal. It applies to all goods
+                    and services, without exception. The popular term for fitness for use is Quality, and our basic
+                    definition becomes: quality means fitness for use."
                 </p>
                 <p className="text-xs indent-8 pb-5">--Joseph Juran--</p>
                 <p>
                     Basically we produce something the user want and meet their expectation. Quality is all about the
-                    users
-                    not about the requirements.
+                    users not about the requirements.
                 </p>
                 <p>
                     As a software engineer this is interesting. The quality of my work is in general base on me
-                    completing
-                    the requirements of my story, adding tests, passing all the previous tests and someone validating
-                    the
-                    work.
-                    If I do that my story get accepted and push to prod.
-                    But this definition is interesting because I can do all my work (write tests, pass tests, complete
-                    requirements) and nonetheless produce bad quality.
+                    completing the requirements of my story, adding tests, passing all the previous tests and someone
+                    validating the work. If I do that my story get accepted and push to prod. But this definition is
+                    interesting because I can do all my work (write tests, pass tests, complete requirements) and
+                    nonetheless produce bad quality.
                 </p>
             </section>
             <section className="pb-10">
@@ -174,7 +168,8 @@ export const Home = () => {
             </section>
             <section className="pt-10">
                 <h2 className="font-bold">Let's look at the tests</h2>
-                <p className="py-2">First test is very simple. Does the text in the button change when the user click on it? It tests for
+                <p className="py-2">First test is very simple. Does the text in the button change when the user click on
+                    it? It tests for
                     the second requirement</p>
                 <SyntaxHighlighter
                     language='javascript'
@@ -183,7 +178,8 @@ export const Home = () => {
                 >
                     {test1}
                 </SyntaxHighlighter>
-                <p className="pb-2 pt-4">The second test is slightly more involved, it test the first requirement. Does extra information appears when the user click on the
+                <p className="pb-2 pt-4">The second test is slightly more involved, it test the first requirement. Does
+                    extra information appears when the user click on the
                     button?</p>
                 <SyntaxHighlighter
                     language='javascript'
@@ -192,9 +188,10 @@ export const Home = () => {
                 >
                     {test2}
                 </SyntaxHighlighter>
-                <p className="pb-2 pt-4">The third test keep adding behavioral complexity. If the user click on a button and see the information and then click on
-                another button does the text on the first button click change correctly? This test the a combination of
-                all the requirement together</p>
+                <p className="pb-2 pt-4">The third test keep adding behavioral complexity. If the user click on a button
+                    and see the information and then click on
+                    another button does the text on the first button click change correctly? This test the a combination
+                    of all the requirement together</p>
                 <SyntaxHighlighter
                     language='javascript'
                     style={xonokai}
@@ -202,7 +199,8 @@ export const Home = () => {
                 >
                     {test3}
                 </SyntaxHighlighter>
-                <p className="pb-2 pt-4">The last test is focus on a single button behavior. Does extra information appears and then
+                <p className="pb-2 pt-4">The last test is focus on a single button behavior. Does extra information
+                    appears and then
                     disappears when the button is clicked again? This is the last requirement</p>
                 <SyntaxHighlighter
                     language='javascript'
@@ -213,18 +211,25 @@ export const Home = () => {
                 </SyntaxHighlighter>
                 <section className="pt-10">
                     <p>These simple tests can seems useless. It is very easy to reproduce them quickly manually and
-                    ensure that the functionality works correctly. Yes but it would be missing the point. The value of the tests is that
-                    they can be repeated cheaply and at will. You can run them when committing, when pushing code...
-                    They unsure that nothing new broke the current functionality. They also act as a documentation
-                    of what is expected.</p>
-                    <p className="pt-2">Nonetheless tests are not bullet proof. If I wanted to cover all possibility I could have wrote at least
-                    15 more tests... Which at this point would be silly. To take an analogy that Elizabeth Hendrickson use
-                    in her book "Explore It!". Test are a net, the more tests the tighter the weave are but you will always
-                    have gaps.</p>
-                    <p className="pt-2 text-pink font-semibold">For me one of the most important value of the tests that often get missed is that they remove the
-                    tedious, boring, unimportant part of testing. These test give the time back to the professional tester
-                    to do the important testing: usability testing, stress testing, accessibility testing, load testing and
-                    EXPLORATORY testing! </p>
+                        ensure that the functionality works correctly. Yes but it would be missing the point. The value
+                        of the tests is that
+                        they can be repeated cheaply and at will. You can run them when committing, when pushing code...
+                        They unsure that nothing new broke the current functionality. They also act as a documentation
+                        of what is expected.</p>
+                    <p className="pt-2">Nonetheless tests are not bullet proof. If I wanted to cover all possibility I
+                        could have wrote at least
+                        15 more tests... Which at this point would be silly. To take an analogy that Elizabeth
+                        Hendrickson use
+                        in her book "Explore It!". Test are a net, the more tests the tighter the weave are but you will
+                        always
+                        have gaps.</p>
+                    <p className="pt-2 text-pink font-semibold">For me one of the most important value of the tests that
+                        often get missed is that they remove the
+                        tedious, boring, unimportant part of testing. These test give the time back to the professional
+                        tester
+                        to do the important testing: usability testing, stress testing, accessibility testing, load
+                        testing and
+                        EXPLORATORY testing! </p>
                 </section>
             </section>
             <Link to="/exploratoryTesting" className="flex flex-row items-center pt-10">
