@@ -13,8 +13,8 @@ export const UserForm = () => {
     return (
         <section className="bg-blue">
             <form onSubmit={save} className="flex flex-col space-y-2">
-                <label className="flex flex-row">
-                    <span className="w-28 font-semibold">Name</span>
+                <label className="flex flex-col sm:flex-row">
+                    <span className="w-16 font-semibold">Name</span>
                     <input className="text-blue rounded-md"
                            type="text"
                            name={"name"}
@@ -23,8 +23,8 @@ export const UserForm = () => {
                                setName(event.target.value)
                            }}/>
                 </label>
-                <label className="flex flex-row">
-                    <span className="w-28 font-semibold">Street</span>
+                <label className="flex flex-col sm:flex-row">
+                    <span className="w-16 font-semibold">Street</span>
                     <input className="text-blue rounded-md"
                            type="text"
                            name={"street"}
@@ -33,8 +33,8 @@ export const UserForm = () => {
                                setStreet(event.target.value)
                            }}/>
                 </label>
-                <label className="flex flex-row">
-                    <span className="w-28 font-semibold">Apartment #</span>
+                <label className="flex flex-col sm:flex-row">
+                    <span className="w-16 font-semibold">Apt #</span>
                     <input className="text-blue rounded-md"
                            type="text"
                            name={"apartment"}
@@ -43,8 +43,8 @@ export const UserForm = () => {
                                setApartment(event.target.value)
                            }}/>
                 </label>
-                <label className="flex flex-row">
-                    <span className="w-28 font-semibold">City</span>
+                <label className="flex flex-col sm:flex-row">
+                    <span className="w-16 font-semibold">City</span>
                     <input className="text-blue rounded-md"
                            type="text"
                            name={"city"}
@@ -53,7 +53,7 @@ export const UserForm = () => {
                                setCity(event.target.value)
                            }}/>
                 </label>
-                <input type="submit" value="Submit" className=" ml-28 w-32 h-8 bg-pink rounded-md text-blue font-semibold"/>
+                <input type="submit" value="Submit" className=" ml-16 w-32 h-8 bg-pink rounded-md text-blue font-semibold"/>
             </form>
         </section>
     )

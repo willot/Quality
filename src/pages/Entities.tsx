@@ -34,8 +34,8 @@ export const Entities = () => {
                         the number of characters? The problem of string being too long is pretty common one, database
                         have limit for the number of characters in a field but the front end will not enforce it.
                         Therefore the data is send to the back end and it crashes and send an error...</p>
-                </section>
                 <UserForm/>
+                </section>
             </section>
         </section>
     )
