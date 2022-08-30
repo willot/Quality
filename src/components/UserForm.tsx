@@ -1,18 +1,32 @@
 import {useState} from "react";
+import {User} from "../pages/Entities";
 
-export const UserForm = () => {
+type UserFormProps = {
+    setEntity: (value: User) => void;
+}
+
+export const UserForm = ({setEntity}: UserFormProps) => {
     const [name, setName] = useState<string>();
     const [street, setStreet] = useState<string>();
     const [apartment, setApartment] = useState<string>();
     const [city, setCity] = useState<string>();
 
     const save = (event: any) => {
+        setEntity({
+            name: name,
+            street: street,
+            apt: apartment,
+            city: city
+        });
+        setName("");
+        setStreet("");
+        setApartment("");
+        setCity("");
         console.log("Event", event.target.value)
     }
 
     return (
-        <section className="bg-blue">
-            <form onSubmit={save} className="flex flex-col space-y-2">
+        <section className="bg-blue flex flex-col space-y-2">
                 <label className="flex flex-col sm:flex-row">
                     <span className="w-16 font-semibold">Name</span>
                     <input className="text-blue rounded-md"
@@ -53,8 +67,9 @@ export const UserForm = () => {
                                setCity(event.target.value)
                            }}/>
                 </label>
-                <input type="submit" value="Submit" className=" ml-16 w-32 h-8 bg-pink rounded-md text-blue font-semibold"/>
-            </form>
+                <input type="submit" value="Submit"
+                       onClick={save}
+                       className=" ml-16 w-32 h-8 bg-pink rounded-md text-blue font-semibold"/>
         </section>
     )
 }

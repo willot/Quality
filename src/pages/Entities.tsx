@@ -1,8 +1,17 @@
 import {Link} from "react-router-dom";
 import {ArrowLongLeftIcon} from "@heroicons/react/24/solid";
 import {UserForm} from "../components/UserForm";
+import {useState} from "react";
+
+export type User = {
+    name?: string;
+    street?: string;
+    apt?: string;
+    city?: string;
+}
 
 export const Entities = () => {
+    const [entity, setEntity] = useState<User>();
 
     return (
         <section className="bg-blue flex flex-row justify-center w-full">
@@ -34,7 +43,18 @@ export const Entities = () => {
                         the number of characters? The problem of string being too long is pretty common one, database
                         have limit for the number of characters in a field but the front end will not enforce it.
                         Therefore the data is send to the back end and it crashes and send an error...</p>
-                <UserForm/>
+                    <UserForm setEntity={setEntity}/>
+                    <section className="pt-4">
+                        <h3 className="font-semibold">Saved entity</h3>
+                        {entity && (
+                            <>
+                                <p className="pl-6"><span className="font-semibold">Name:</span> {entity.name}</p>
+                                <p className="pl-6"><span className="font-semibold">Street:</span> {entity.street}</p>
+                                <p className="pl-6"><span className="font-semibold">Apartment #:</span> {entity.apt}</p>
+                                <p className="pl-6"><span className="font-semibold">City:</span> {entity.city}</p>
+                            </>
+                        )}
+                    </section>
                 </section>
             </section>
         </section>
