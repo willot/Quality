@@ -50,10 +50,10 @@ export const UserForm = () => {
                            name={"city"}
                            value={city}
                            onChange={(event) => {
-                               setApartment(event.target.value)
+                               setCity(event.target.value)
                            }}/>
                 </label>
-                <input type="submit" value="Submit" className="w-32 bg-pink rounded-md text-blue font-semibold"/>
+                <input type="submit" value="Submit" className=" ml-28 w-32 h-8 bg-pink rounded-md text-blue font-semibold"/>
             </form>
         </section>
     )
