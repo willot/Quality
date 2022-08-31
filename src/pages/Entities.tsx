@@ -1,10 +1,11 @@
 import {Link} from "react-router-dom";
 import {ArrowLongLeftIcon} from "@heroicons/react/24/solid";
-import {UserForm} from "../components/UserForm";
+import {EntitiesForm} from "../components/EntitiesForm";
 import {useState} from "react";
 
 export type User = {
-    name?: string;
+    firstName?: string;
+    lastName?: string;
     street?: string;
     apt?: string;
     city?: string;
@@ -43,15 +44,30 @@ export const Entities = () => {
                         the number of characters? The problem of string being too long is pretty common one, database
                         have limit for the number of characters in a field but the front end will not enforce it.
                         Therefore the data is send to the back end and it crashes and send an error...</p>
-                    <UserForm setEntity={setEntity}/>
+                    <EntitiesForm setEntity={setEntity}/>
                     <section className="pt-4">
-                        <h3 className="font-semibold">Saved entity</h3>
+                        <h3 className="font-semibold pb-2">Saved entities</h3>
                         {entity && (
                             <>
-                                <p className="pl-6"><span className="font-semibold">Name:</span> {entity.name}</p>
-                                <p className="pl-6"><span className="font-semibold">Street:</span> {entity.street}</p>
-                                <p className="pl-6"><span className="font-semibold">Apartment #:</span> {entity.apt}</p>
-                                <p className="pl-6"><span className="font-semibold">City:</span> {entity.city}</p>
+                                <section>
+                                    <p className="font-bold text-pink">User</p>
+                                    <p className="pl-6"><span
+                                        className="font-semibold">First name:</span> {entity.firstName}</p>
+                                    <p className="pl-6"><span
+                                        className="font-semibold">Last name:</span> {entity.lastName}</p>
+                                    <p className="font-bold text-pink">Address</p>
+                                    <p className="pl-6"><span className="font-semibold">Street:</span> {entity.street}
+                                    </p>
+                                    <p className="pl-6"><span className="font-semibold">Apartment #:</span> {entity.apt}
+                                    </p>
+                                    <p className="pl-6"><span className="font-semibold">City:</span> {entity.city}</p>
+                                </section>
+                                <section className="pt-2">
+                                    <p>We have one form but we can see that we created 2 separated entities. One user
+                                        with a first and last name and an address with street apartment number and
+                                        city.</p>
+                                </section>
+
                             </>
                         )}
                     </section>
