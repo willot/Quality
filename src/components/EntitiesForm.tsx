@@ -3,20 +3,28 @@ import {User} from "../pages/Entities";
 
 type UserFormProps = {
     setEntity: (value: User) => void;
+    originalEntities?: User;
 }
 
-export const EntitiesForm = ({setEntity}: UserFormProps) => {
-    const [firstName, setFirstName] = useState<string | undefined>();
-    const [lastName, setLastName] = useState<string | undefined>();
-    const [street, setStreet] = useState<string | undefined>();
-    const [apartment, setApartment] = useState<string | undefined>();
-    const [city, setCity] = useState<string | undefined>();
+export const EntitiesForm = ({setEntity, originalEntities}: UserFormProps) => {
+    const [firstName, setFirstName] = useState<string | undefined>(originalEntities ? originalEntities.firstName : undefined);
+    const [lastName, setLastName] = useState<string | undefined>(originalEntities ? originalEntities.lastName : undefined);
+    const [street, setStreet] = useState<string | undefined>(originalEntities ? originalEntities.street : undefined);
+    const [apartment, setApartment] = useState<string | undefined>(originalEntities ? originalEntities.apt : undefined);
+    const [city, setCity] = useState<string | undefined>(originalEntities ? originalEntities.city : undefined);
     const [error, setError] = useState(false);
+    const [updateSuccess, setUpdateSuccess] = useState(false);
 
     const save = (event: any) => {
         if (city === undefined || city === "" || lastName === undefined || lastName === "") {
             setError(true);
+            setUpdateSuccess(false);
+
             return
+        }
+        if (originalEntities && originalEntities.apt && apartment === "") {
+            setUpdateSuccess(false);
+            return;
         }
         setError(false);
         setEntity({
@@ -26,12 +34,16 @@ export const EntitiesForm = ({setEntity}: UserFormProps) => {
             apt: apartment,
             city: city
         });
-        setFirstName("");
-        setLastName("");
-        setStreet("");
-        setApartment("");
-        setCity("");
-        console.log("Event", event.target.value)
+        if (originalEntities) {
+            setUpdateSuccess(true);
+        }
+        if (!originalEntities) {
+            setFirstName("");
+            setLastName("");
+            setStreet("");
+            setApartment("");
+            setCity("");
+        }
     }
 
     return (
@@ -92,6 +104,12 @@ export const EntitiesForm = ({setEntity}: UserFormProps) => {
                 {firstName === "" || firstName === undefined ? " First Name," : ""}
                 {city === "" || city === undefined ? " City" : ""}
             </p>}
+            {(updateSuccess && originalEntities) && (
+                <p className="text-green font-semibold">You successfully updated your user information</p>
+            )}
+            {(!updateSuccess && originalEntities && originalEntities.apt && apartment === "") && (
+                <p className="text-red font-semibold">You can't remove the apartment field</p>
+            )}
             <section className="flex flex-row justify-center sm:justify-start">
                 <input type="submit" value="Submit"
                        onClick={save}

@@ -38,12 +38,13 @@ export const Entities = () => {
                 <section className="py-10">
                     <h2 className="font-bold">Exploring the objects</h2>
                     <p className="pb-4">The first thing is that you want to identify these objects. As stated earlier
-                        they are things on
-                        which you can take actions. A lot of things can happen when you create an object. Are all the
-                        field require? Can you put empty space? can you use weird characters "Ω√"? Is there a limit in
-                        the number of characters? The problem of string being too long is pretty common one, database
-                        have limit for the number of characters in a field but the front end will not enforce it.
-                        Therefore the data is send to the back end and it crashes and send an error...</p>
+                        they are things on which you can take actions. A lot of things can happen when you create an
+                        object. Are all the field require? Can you put empty space? can you use weird characters "Ω√"?
+                        Is there a limit in the number of characters? The problem of string being too long is pretty
+                        common one, database have limit for the number of characters in a field but the front end will
+                        not enforce it. Therefore the data is send to the back end and it crashes and send an
+                        error...</p>
+                    <h3 className="text-pink font-semibold pb-4">Creating entities</h3>
                     <EntitiesForm setEntity={setEntity}/>
                     <section className="pt-4">
                         <h3 className="font-semibold pb-2">Saved entities</h3>
@@ -63,9 +64,45 @@ export const Entities = () => {
                                     <p className="pl-6"><span className="font-semibold">City:</span> {entity.city}</p>
                                 </section>
                                 <section className="pt-2">
-                                    <p>We have one form but we can see that we created 2 separated entities. One user
+                                    <p>We have one form but we can see that we created two separated entities. One user
                                         with a first and last name and an address with street apartment number and
                                         city.</p>
+                                    <p className="pt-2">If you play around you can notice a few things. There are no
+                                        limit in the number
+                                        of characters that you can enter inside each input. So if you want to type
+                                        3000 characters into the input box you can (It will work). The only reason that
+                                        it doesn't produce an error is that in this application there is no database
+                                        saving this information. Otherwise it is very
+                                        likely we will run into some field constraint in the database particularly for
+                                        field like city. When you do exploratory testing it is important to know what
+                                        can of data a user will enter. For example the biggest name for a european city
+                                        is 58 characters in Welch. Knowing this can help you set some good test cases.
+                                        One that I often run into is middle name. If you complete immigration paper work
+                                        this field often come up. I have 2 middle name... Most of the time it only let
+                                        you enter one which can be a problem for immigration paperwork.
+                                        Limited lenght for inputs is a type of error that is frequently not handle very
+                                        well. Often no error is display to the user know that the date was not save or
+                                        if there is an error no explanation is given to remedy it. So it
+                                        is important for the front end to be aware to the limitation of the back end to
+                                        protect the users against potential failure. </p>
+                                    <section className="pt-4">
+                                        <h3 className="text-pink font-semibold pb-4">Updating entities</h3>
+                                        <EntitiesForm setEntity={setEntity} originalEntities={entity}/>
+                                        <p>Now let's imagine that we want to update our entities. We can ensure that
+                                            city and last name are still required. We can enter empty string in every
+                                            field and see that it sadly it is a bug because it shouldn't work. Now let's
+                                            try to update the apartment field. Let's image that you recently move and
+                                            are updating your address. You lived in an apartment complex and now you
+                                            have a nice house. Ouch what happens. It is telling me I can't do that. This
+                                            is sometimes an issue.
+                                            System are okay with blank field field when entities are created but it will
+                                            refuse to overwrite a field with an Null if there is already data there.
+                                            This is
+                                            why exploratory testing is so important. The website is working correctly
+                                            and
+                                            giving you a correct error. But this go against what the user want to do. It
+                                            is a case where the acceptance criteria are wrong. </p>
+                                    </section>
                                 </section>
 
                             </>
