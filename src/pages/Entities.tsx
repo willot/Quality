@@ -1,5 +1,5 @@
 import {Link} from "react-router-dom";
-import {ArrowLongLeftIcon} from "@heroicons/react/24/solid";
+import {ArrowLongLeftIcon, ArrowLongRightIcon} from "@heroicons/react/24/solid";
 import {EntitiesForm} from "../components/EntitiesForm";
 import {useState} from "react";
 
@@ -37,17 +37,18 @@ export const Entities = () => {
                     logic that can hide a bug.</p>
                 <section className="py-10">
                     <h2 className="font-bold">Exploring the objects</h2>
-                    <p className="pb-4">The first thing is that you want to identify these objects. As stated earlier
+                    <p className="pb-2">The first thing is that you want to identify these objects. As stated earlier
                         they are things on which you can take actions. A lot of things can happen when you create an
                         object. Are all the field require? Can you put empty space? can you use weird characters "Ω√"?
                         Is there a limit in the number of characters? The problem of string being too long is pretty
                         common one, database have limit for the number of characters in a field but the front end will
                         not enforce it. Therefore the data is send to the back end and it crashes and send an
-                        error...</p>
-                    <h3 className="text-pink font-semibold pb-4">Creating entities</h3>
+                        error... </p>
+                    <p className="pb-4 font-semibold text-green">Fill the example form with fake info to continue.</p>
+                    <h3 className="text-pink font-semibold pb-4">Creating objects</h3>
                     <EntitiesForm setEntity={setEntity}/>
                     <section className="pt-4">
-                        <h3 className="font-semibold pb-2">Saved entities</h3>
+                        <p className="font-semibold pb-2">Saved objects</p>
                         {entity && (
                             <>
                                 <section>
@@ -64,8 +65,8 @@ export const Entities = () => {
                                     <p className="pl-6"><span className="font-semibold">City:</span> {entity.city}</p>
                                 </section>
                                 <section className="pt-2">
-                                    <p>We have one form but we can see that we created two separated entities. One user
-                                        with a first and last name and an address with street apartment number and
+                                    <p>We have one form but we can see that we created two separated objects. One user
+                                        with a first and last name and an address with street, apartment, number, and
                                         city.</p>
                                     <p className="pt-2">If you play around you can notice a few things. There are no
                                         limit in the number
@@ -75,40 +76,76 @@ export const Entities = () => {
                                         saving this information. Otherwise it is very
                                         likely we will run into some field constraint in the database particularly for
                                         field like city. When you do exploratory testing it is important to know what
-                                        can of data a user will enter. For example the biggest name for a european city
+                                        kind of data a user will enter. For example the biggest name for a european city
                                         is 58 characters in Welch. Knowing this can help you set some good test cases.
                                         One that I often run into is middle name. If you complete immigration paper work
                                         this field often come up. I have 2 middle name... Most of the time it only let
                                         you enter one which can be a problem for immigration paperwork.
-                                        Limited lenght for inputs is a type of error that is frequently not handle very
+                                        Limited length for inputs is a type of error that is frequently not handle very
                                         well. Often no error is display to the user know that the date was not save or
                                         if there is an error no explanation is given to remedy it. So it
                                         is important for the front end to be aware to the limitation of the back end to
-                                        protect the users against potential failure. </p>
-                                    <section className="pt-4">
-                                        <h3 className="text-pink font-semibold pb-4">Updating entities</h3>
-                                        <EntitiesForm setEntity={setEntity} originalEntities={entity}/>
-                                        <p>Now let's imagine that we want to update our entities. We can ensure that
-                                            city and last name are still required. We can enter empty string in every
-                                            field and see that it sadly it is a bug because it shouldn't work. Now let's
-                                            try to update the apartment field. Let's image that you recently move and
-                                            are updating your address. You lived in an apartment complex and now you
-                                            have a nice house. Ouch what happens. It is telling me I can't do that. This
-                                            is sometimes an issue.
-                                            System are okay with blank field field when entities are created but it will
-                                            refuse to overwrite a field with an Null if there is already data there.
-                                            This is
-                                            why exploratory testing is so important. The website is working correctly
-                                            and
-                                            giving you a correct error. But this go against what the user want to do. It
-                                            is a case where the acceptance criteria are wrong. </p>
-                                    </section>
+                                        protect the users against potential failure.</p>
+                                    <p>Another issue you can find is that the form doesn't trim white space. You can
+                                        currently enter white space in every field and it will let you move forward.</p>
                                 </section>
+                                <section className="pt-4">
+                                    <h3 className="text-pink font-semibold pb-4">Updating objects</h3>
+                                    <EntitiesForm setEntity={setEntity} originalEntities={entity}/>
+                                    <p className="font-semibold py-2">Updated entities</p>
+                                    {entity && (
+                                        <section className="pb-4">
+                                            <p className="font-bold text-pink">User</p>
+                                            <p className="pl-6"><span
+                                                className="font-semibold">First name:</span> {entity.firstName}</p>
+                                            <p className="pl-6"><span
+                                                className="font-semibold">Last name:</span> {entity.lastName}</p>
+                                            <p className="font-bold text-pink">Address</p>
+                                            <p className="pl-6"><span
+                                                className="font-semibold">Street:</span> {entity.street}
+                                            </p>
+                                            <p className="pl-6"><span
+                                                className="font-semibold">Apartment #:</span> {entity.apt}
+                                            </p>
+                                            <p className="pl-6"><span
+                                                className="font-semibold">City:</span> {entity.city}</p>
+                                        </section>
+                                    )}
 
+                                    <p>Now let's imagine that we want to update our objects. We can ensure that
+                                        city and last name are still required. We can enter empty string in every
+                                        field and see that it sadly it still a bug because it is saving the empty space
+                                        as values... Now let's try to update the apartment field. Let's image that you
+                                        recently move and
+                                        are updating your address. You lived in an apartment complex and now you
+                                        have a nice house. Ouch what happens. It is telling me I can't do that. This
+                                        is sometimes an issue.
+                                        System are okay with blank field field when objects are created but it will
+                                        refuse to overwrite a field with an Null if there is already data there.
+                                        This is
+                                        why exploratory testing is so important. The website is working correctly
+                                        and
+                                        giving you a correct error. But this go against what the user want to do. It
+                                        is a case where the acceptance criteria are wrong. </p>
+                                </section>
+                                <p className="pt-4">If you are critic you could say that we don't need exploratory testing. We need the engineers
+                                    to write more tests or better tests. I think it is true. But it is hard for engineer to
+                                    think about all these cases. What is also harder is that the person that created the form
+                                    may not be the same one that add the next field. Context get lost all the time and tests are
+                                    very useful to document functionality. Engineers will miss things because that is what human
+                                    do. When you build something you can't think about all things that go wrong. But what you
+                                    can do is that when a bug is reported is write a test to ensure that in the future this bug
+                                    doesn't happen again. For example someone found the bug that white space should be trim when
+                                    submitting data. You can easily write a unit test for it an move on.</p>
                             </>
                         )}
+
                     </section>
                 </section>
+                <Link to="/states" className="flex flex-row items-center pt-10">
+                    <span className="text-pink text-lg font-semibold w-52">States</span>
+                    <ArrowLongRightIcon className="text-pink h-16 w-16"/>
+                </Link>
             </section>
         </section>
     )
