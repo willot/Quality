@@ -30,6 +30,14 @@ export const NoPage = () => {
                         <span className="text-pink text-lg font-semibold w-52">Dealing with states</span>
                         <ArrowLongRightIcon className="text-pink h-16 w-16"/>
                     </Link>
+                    <Link to="/ecoSystem" className="flex flex-row items-center pt-10">
+                        <span className="text-pink text-lg font-semibold w-52">Software in a system</span>
+                        <ArrowLongRightIcon className="text-pink h-16 w-16"/>
+                    </Link>
+                    <Link to="/summary" className="flex flex-row items-center pt-10">
+                        <span className="text-pink text-lg font-semibold w-52">Summary</span>
+                        <ArrowLongRightIcon className="text-pink h-16 w-16"/>
+                    </Link>
                 </section>
             </section>
         </section>

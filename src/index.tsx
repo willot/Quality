@@ -10,6 +10,7 @@ import {NoPage} from "./pages/NoPage";
 import {Entities} from "./pages/Entities";
 import {States} from "./pages/States";
 import {Ecosystem} from "./pages/Ecosystem";
+import {Summary} from "./pages/summary";
 
 const root = ReactDOM.createRoot(
     document.getElementById('root') as HTMLElement
@@ -25,6 +26,7 @@ root.render(
                 <Route path="/objects" element={<Entities/>}/>
                 <Route path="/states" element={<States/>}/>
                 <Route path="/ecosystem" element={<Ecosystem/>}/>
+                <Route path="/summary" element={<Summary/>}/>
                 <Route path="*" element={<NoPage/>}/>
             </Routes>
         </BrowserRouter>
