@@ -9,6 +9,7 @@ import {Interactions} from "./pages/Interactions";
 import {NoPage} from "./pages/NoPage";
 import {Entities} from "./pages/Entities";
 import {States} from "./pages/States";
+import {Ecosystem} from "./pages/Ecosystem";
 
 const root = ReactDOM.createRoot(
     document.getElementById('root') as HTMLElement
@@ -23,6 +24,7 @@ root.render(
                 <Route path="/interactions" element={<Interactions/>}/>
                 <Route path="/objects" element={<Entities/>}/>
                 <Route path="/states" element={<States/>}/>
+                <Route path="/ecosystem" element={<Ecosystem/>}/>
                 <Route path="*" element={<NoPage/>}/>
             </Routes>
         </BrowserRouter>

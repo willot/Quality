@@ -118,7 +118,7 @@ export const States = () => {
                         tests scenarios that can really negatively affect the users.</p>
                 </section>
                 <Link to="/ecoSystem" className="flex flex-row items-center pt-10">
-                    <span className="text-pink text-lg font-semibold w-52">Ecosystem</span>
+                    <span className="text-pink text-lg font-semibold w-52">Software in a system</span>
                     <ArrowLongRightIcon className="text-pink h-16 w-16"/>
                 </Link>
             </section>
