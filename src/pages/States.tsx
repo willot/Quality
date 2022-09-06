@@ -2,21 +2,8 @@ import {ArrowLongLeftIcon, ArrowLongRightIcon} from "@heroicons/react/24/solid";
 import {Link} from "react-router-dom";
 import Xarrow, {useXarrow, Xwrapper} from "react-xarrows";
 
-const boxStyle = {border: 'grey solid 2px', borderRadius: '10px', padding: '5px'};
 
 export const States = () => {
-
-    const DraggableBox = ({id}: any) => {
-        const updateXarrow = useXarrow();
-        return (
-            // <Draggable onDrag={updateXarrow} onStop={updateXarrow}>
-            <div id={id} className="border-2 border-red m-8">
-                {id}
-            </div>
-            // </Draggable>
-        );
-    };
-
     return (
         <section className="bg-blue flex flex-row justify-center w-full">
             <section

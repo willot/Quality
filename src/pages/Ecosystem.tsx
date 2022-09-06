@@ -1,5 +1,5 @@
 import {Link} from "react-router-dom";
-import {ArrowLongLeftIcon} from "@heroicons/react/24/solid";
+import {ArrowLongLeftIcon, ArrowLongRightIcon} from "@heroicons/react/24/solid";
 
 export const Ecosystem = () => {
     return (
@@ -52,6 +52,10 @@ export const Ecosystem = () => {
                     system. You will
                     gain insight on your system and its limitation. It will also help you be proactive when something go
                     wrong instead of being reactive.</p>
+                <Link to="/summary" className="flex flex-row items-center pt-10">
+                    <span className="text-pink text-lg font-semibold w-52">Summary</span>
+                    <ArrowLongRightIcon className="text-pink h-16 w-16"/>
+                </Link>
 
             </section>
         </section>
