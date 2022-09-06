@@ -1,6 +1,6 @@
 import {ArrowLongLeftIcon, ArrowLongRightIcon} from "@heroicons/react/24/solid";
 import {Link} from "react-router-dom";
-import Xarrow, {useXarrow, Xwrapper} from "react-xarrows";
+import Xarrow, {Xwrapper} from "react-xarrows";
 
 
 export const States = () => {
