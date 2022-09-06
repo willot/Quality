@@ -11,7 +11,7 @@ export const Ecosystem = () => {
                     <span
                         className="text-pink text-lg font-semibold w-52 pl-6">Back to states and changing states</span>
                 </Link>
-                <h1 className="text-4xl font-medium pb-5">App Ecosystem</h1>
+                <h1 className="text-4xl font-medium pb-5">Application in its environment</h1>
                 <p>Your application is not only the software. It is running on servers. It is being access from tons of
                     different devices, PC, tablets, androids, iPhones... It is using databases. It is using external
                     API for data, for transactions, for login... It may be connected to physical hardware or devices...

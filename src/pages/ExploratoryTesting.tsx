@@ -93,16 +93,25 @@ export const ExploratoryTesting = () => {
                 </section>
                 <section>
                     <h2 className="font-bold pt-10">What do you need to focus on?</h2>
-                    <p>This 4 sections are based on the "Explore it!" book</p>
-                    NEED TO CHANGE THE NAMES
-                    <ul>Sequences and interactions</ul>
-                    <ul>Entities and relationship</ul>
-                    <ul>States and transition</ul>
-                    <ul>Ecosystem</ul>
-                    <ul>Going behond the software. So many example where the software is the continuation of a process
-                        from another system or from paper. So many time you get on a website with a piece of information
-                        and then you can't find the correct link the right id...
+                    <p className="pb-2">These four sections are based on the "Explore it!" book</p>
+                    <ul>
+                        <Link to="/interactions" className="text-lg underline underline-offset-2 px-2">
+                            Interactions
+                        </Link>
                     </ul>
+                    <ul>
+                        <Link to="/objects" className="text-lg underline underline-offset-2 px-2">Dealing with
+                            Objects</Link>
+                    </ul>
+                    <ul>
+                        <Link to="/states" className="text-lg underline underline-offset-2 px-2">States and changing
+                            states</Link>
+                    </ul>
+                    <ul>
+                        <Link to="/ecoSystem" className="text-lg underline underline-offset-2 px-2">Application in its
+                            environment</Link>
+                    </ul>
+
                 </section>
                 <Link to="/interactions" className="flex flex-row items-center pt-10">
                     <span className="text-pink text-lg font-semibold w-52">Learn more about interactions</span>
