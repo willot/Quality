@@ -8,7 +8,7 @@ describe('home page', () =>{
         it('should change the text wording when the button is clicked', () => {
                 render(<Home/>,{wrapper: MemoryRouter});
             const buttons = screen.getAllByRole('button');
-            expect(buttons[0]).toContainHTML("show more details")
+            expect(buttons[0]).toContainHTML("Show more details");
             click(buttons[0]);
             expect(buttons[0]).toContainHTML("show less details")
         });
@@ -16,20 +16,20 @@ describe('home page', () =>{
             render(<Home/>, {wrapper: MemoryRouter});
             const buttons = screen.getAllByRole('button');
             click(buttons[0]);
-            const extraInfo = screen.queryByText("Button1 follow all the requirements. But will a user expect " +
+            const extraInfo = screen.queryByText("Button 1 follow all the requirements. But will a user expect " +
                 "a button to get more information?")
-            expect(extraInfo).toBeInTheDocument();
+            expect(extraInfo).not.toBeNull();
         });
         it('should reset the wording of the button and change the text when clicking a second button', () => {
             render(<Home/>, {wrapper: MemoryRouter});
             const buttons = screen.getAllByRole('button');
             click(buttons[0]);
             expect(buttons[0]).toContainHTML("show less details");
-            expect(buttons[2]).toContainHTML("show more details");
+            expect(buttons[2]).toContainHTML("Show more details");
             click(buttons[2]);
             expect(buttons[2]).toContainHTML("show less details");
-            expect(buttons[0]).toContainHTML("show more details");
-            const extraInfo = screen.queryByText("Button3 follow all the requirements. But the color contrast is" +
+            expect(buttons[0]).toContainHTML("Show more details");
+            const extraInfo = screen.queryByText("Button 3 follow all the requirements. But the color contrast is" +
                 " hard to read.")
             expect(extraInfo).toBeInTheDocument();
         });
@@ -37,7 +37,7 @@ describe('home page', () =>{
             render(<Home/>, {wrapper: MemoryRouter});
             const buttons = screen.getAllByRole('button');
             click(buttons[0]);
-            const extraInfo = screen.queryByText("Button1 follow all the requirements. But will a user expect " +
+            const extraInfo = screen.queryByText("Button 1 follow all the requirements. But will a user expect " +
                 "a button to get more information?")
             expect(extraInfo).toBeInTheDocument();
             click(buttons[0]);
