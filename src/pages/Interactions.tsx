@@ -11,18 +11,18 @@ export const Interactions = () => {
             return null;
         }
         if (buttonIndex === "button1") {
-            return "You are wrong there is no aria label. Someone using a screen reader would orly hear `button` and have" +
-                "no idea what is this button for..."
+            return "You are incorrect there is no aria label. Someone using a screen reader and that has difficulty to see would orly hear `button` and have" +
+                " no idea what is this button for..."
         }
         if (buttonIndex === "button2") {
             return "You are correct there is a aria label, the outline is not deactivated and it is button not a div "
         }
         if (buttonIndex === "button3") {
-            return "You are wrong the outline of the button is deactivated when the button is focus. So you don't know that" +
-                "you are currently on the button when you tab around"
+            return "You are incorrect the outline of the button is deactivated when the button is focus. So you don't know that" +
+                " you are currently on the button when you tab around"
         }
         if (buttonIndex === "button4") {
-            return "You are wrong this button is not a button and get ignore by screen reader."
+            return "You are incorrect this button is not a button and get ignore by screen reader."
         }
     }
 
@@ -40,7 +40,7 @@ export const Interactions = () => {
                     try to use a screen reader?
                     When I explore an app I try to think like my kid and be curious. I try to act like I don't know
                     better.
-                    This is a list of things you can do to try to change the way you interact with the application you
+                    These arethings you can do to try to change the way you interact with the application you
                     are exploring.
                 </p>
                 <section className="py-10">
@@ -48,26 +48,24 @@ export const Interactions = () => {
                     <p>Did you ever try to mess with the url. Click on the link below or better try to mess with the
                         url.
                         This is a simple app but sometimes the url contain ids or parameter. It is often a
-                        good thing to try to mess with them and see what happen. See if the application break or if you
-                        get
-                        access to things you shouldn't be able to. It is an issue that you sometimes find is that your
-                        application is secure but when you are log in you can sometimes take action for other user
-                        because an
-                        end point is not properly secure. Messing with a url is a simple way to try things. You can also
-                        use
-                        tools like postman</p>
+                        good thing to try to mess with them and see what happens. See if the application breaks or if
+                        you get access to things you shouldn't be able to. It is an issue that you can sometimes find i
+                        applications. The application is properly secure against users that are not logged but when you
+                        are log in you can sometimes take action you shouldn't be able to because end point is not
+                        properly secure with the right permissions. Messing with a url is a simple way to try things.
+                        You can also use tools like postman</p>
                     <Link to="/blabla" className="flex flex-row items-center mt-2">
                         <span className="text-pink text-lg font-semibold w-52 pl-6">Link to /blabla</span>
                     </Link>
                 </section>
                 <section className="pb-10">
                     <h2 className="font-bold">Use your keyboard</h2>
-                    <p>Lot of people use their keyboard to navigate into an application. Using a
+                    <p>Lot of people use their keyboard to navigate into applications. Using a
                         keyboard can have a huge impact on your interaction with an application. These are example on
                         what
                         can go wrong when using a keyboard.</p>
                     <section className="pt-4">
-                        <h3 className="font-medium">Lets play with tabbing. Try to tab through this buttons.</h3>
+                        <h3 className="font-medium">Lets play with tabbing. Try to tab through these buttons.</h3>
                         <section className="grid grid-rows-2 grid-flow-col justify-items-center md:grid-rows-1 pt-4">
                             <button tabIndex={0}
                                     className="bg-pink text-blue w-28 border border-white rounded-md mb-2 p-2 active:translate-y-0.5 duration-200 active:bg-white">button
@@ -86,10 +84,11 @@ export const Interactions = () => {
                                 4
                             </button>
                         </section>
-                        <p>As you can see the ordering of the button is not right. This is a frequent issue that the
-                            tabbing doesn't always follow the expected flow.</p>
+                        <p>As you can see the ordering of the button is not right. This is a common issue. The
+                            tabbing ordering doesn't follow the expected application flow.</p>
 
-                        <p className="pt-6">Let's look at another example. Click or tab on the button you think you are correct</p>
+                        <p className="pt-6">Let's look at another example. Click or tab on the button you think is
+                            correct.</p>
                         <section className="grid grid-rows-2 grid-flow-col justify-items-center md:grid-rows-1 pt-4">
                             <button tabIndex={5}
                                     className="flex flex-row justify-center bg-pink text-blue w-28 border border-white rounded-md mb-2 p-2 active:translate-y-0.5 duration-200 active:bg-white"
@@ -122,7 +121,7 @@ export const Interactions = () => {
                                 <ShoppingCartIcon className="h-6 w-6"/>
                             </div>
                         </section>
-                        <section className="text-red">
+                        <section className="text-green font-semibold">
                             {buttonMessage()}
                         </section>
 
