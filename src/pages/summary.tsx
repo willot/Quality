@@ -18,9 +18,11 @@ export const Summary = () => {
                     need a testing strategy.</p>
                 <p className="pb-4">Test automation is a require step in your testing strategy. It is the foundation on
                     which you can
-                    build. It gives confidence to the team that the product is good to be released. Tools like load
-                    testing and usability testing can also be important. But I believe one of the most under use tool is
-                    exploratory testing. Exploratory testing is not writing a script and run it over and over before
+                    build. It gives you confidence that your current application can be released to your users. Tools
+                    like load
+                    testing and usability testing can also be important depending of what is your product. But I believe
+                    one of the most under used tool is
+                    "exploratory testing". Exploratory testing is not writing a script and run it over and over before
                     each release. These kind of tests are for automated tests. Exploratory testing is where you probe
                     the potential cracks in your application. This let you find bug before your users. These bugs get
                     fixed. Unit, integration or end to end tests get written to ensure that this bug never appear again.
@@ -35,9 +37,9 @@ export const Summary = () => {
                     discover the limit of their application. </p>
                 <p>Exploratory is a tool. It is not meant to replace other type of testing. It is a complement to your
                     current process. Since it is manual it is often discarded or confused with simple manual testing. It
-                    is a tool that is worth learning because everybody can gain from it. From the engineer spending more
-                    time reviewing the story produce, the PM better accepting stories to the product owner gaining
-                    understanding the system at a deeper level.</p>
+                    is a tool that is worth learning because everybody can gain from it. Engineers getting better at
+                    testing their own story before they push it. The PMs discovering more issues when accepting stories.
+                    The product owners gaining understanding the system at a deeper level.</p>
 
                 <Link to="/" className="flex flex-row items-center pt-10">
                     <span className="text-pink text-lg font-semibold w-52">Back to the start</span>
