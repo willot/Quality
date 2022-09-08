@@ -19,7 +19,8 @@ export const Home = () => {
         if (textDetails === "button1") {
             return (
                 <section>
-                    Button 1 follows all the requirements, but will a user expect a button to get more information? Should it be a link to a help page?
+                    Button 1 follows all the requirements, but will a user expect a button to get more information?
+                    Should it be a link to a help page?
                 </section>
             )
         }
@@ -108,7 +109,8 @@ export const Home = () => {
                 <p className="indent-8">The standard of something as measured against other things of a similar kind;
                     the degree of excellence of something</p>
                 <p className="text-xs indent-8 pb-5">--Oxford Languages--</p>
-                <p>This definition is not really useful. It doesn't really tell us what quality is. What should I compare my website
+                <p>This definition is not really useful. It doesn't really tell us what quality is. What should I
+                    compare my website
                     too? Do I really want to match my competition if I want to be the best? Does being the best mean
                     being the standard for quality?</p>
             </section>
@@ -126,7 +128,8 @@ export const Home = () => {
                     users, not about the requirements.
                 </p>
                 <p>
-                    As a software engineer, this definition is interesting. The quality of my work is, in general, based on me
+                    As a software engineer, this definition is interesting. The quality of my work is, in general, based
+                    on me
                     completing the requirements of my story, adding tests, passing all the previous tests and someone
                     validating the work. If I do that, my story gets accepted and pushed to prod. But this definition is
                     interesting, because I can do all my work (write tests, pass tests, complete requirements) and
@@ -162,14 +165,16 @@ export const Home = () => {
             </section>
             <section className="pb-4">
                 I chose these four examples, because they are impossible or hard to write tests for. As an engineer,
-                I can write unit, integration and end-to-end tests for the ticket acceptance criteria. I can test the basic logic in the
+                I can write unit, integration and end-to-end tests for the ticket acceptance criteria. I can test the
+                basic logic in the
                 application and make sure the expected behaviors are happening. At least, that is what I like to
                 believe...
                 But I can't test if it is what the users expect, and I can't test what I didn't think about.
             </section>
             <section className="pt-4">
                 <h2 className="font-bold">Let's look at the tests</h2>
-                <p className="py-2">The first test is very simple. Does the text in the button change when the user clicks on
+                <p className="py-2">The first test is very simple. Does the text in the button change when the user
+                    clicks on
                     it? It tests for
                     the second requirement.</p>
                 <SyntaxHighlighter
@@ -189,9 +194,11 @@ export const Home = () => {
                 >
                     {test2}
                 </SyntaxHighlighter>
-                <p className="pb-2 pt-4">The third test keeps adding behavioral complexity. If the user clicks on a button
+                <p className="pb-2 pt-4">The third test keeps adding behavioral complexity. If the user clicks on a
+                    button
                     and sees the information and then clicks on
-                    another button, does the text on the first button clicked change correctly? This test is a combination
+                    another button, does the text on the first button clicked change correctly? This test is a
+                    combination
                     of all the requirement together.</p>
                 <SyntaxHighlighter
                     language='javascript'
@@ -212,22 +219,23 @@ export const Home = () => {
                 </SyntaxHighlighter>
                 <section className="pt-10">
                     <p>These simple tests can seems useless. It is very easy to reproduce them quickly manually and
-                        ensure that the functionality works correctly. Yes but it would be missing the point. The value
+                        ensure that the functionality works correctly. Yes, but it would be missing the point. The value
                         of the tests is that
                         they can be repeated cheaply and at will. You can run them when committing, when pushing code...
-                        They unsure that nothing new broke the current functionality. They also act as a documentation
+                        They unsure that nothing new, broke the current functionality. They also act as a documentation
                         of what is expected. They are regression tests.</p>
-                    <p className="pt-2">Nonetheless tests are not bullet proof. If I wanted to cover all possibility I
+                    <p className="pt-2">Nonetheless tests are not bullet proof. If I wanted to cover all possibilities I
                         could have wrote at least
                         15 more tests... Which at this point would be silly. To take an analogy that Elizabeth
                         Hendrickson use
                         in her book "Explore It!". Test are a net, the more tests the tighter the weave are but you will
                         always
                         have gaps.</p>
-                    <p className="pt-2 text-pink font-semibold">For me one of the most important value of the tests that
+                    <p className="pt-2 text-pink font-semibold">For me, one of the most important value of the tests
+                        that
                         often get missed is that they remove the
                         tedious, boring, unimportant part of testing. These tests give the time back to the professional
-                        tester
+                        testers
                         to do the important testing: usability testing, stress testing, accessibility testing, load
                         testing and
                         EXPLORATORY testing! </p>
