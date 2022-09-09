@@ -218,27 +218,22 @@ export const Home = () => {
                     {test4}
                 </SyntaxHighlighter>
                 <section className="pt-10">
-                    <p>These simple tests can seems useless. It is very easy to reproduce them quickly manually and
+                    <p>These simple tests can seem useless. It is very easy to reproduce them quickly manually and
                         ensure that the functionality works correctly. Yes, but it would be missing the point. The value
-                        of the tests is that
-                        they can be repeated cheaply and at will. You can run them when committing, when pushing code...
-                        They unsure that nothing new, broke the current functionality. They also act as a documentation
-                        of what is expected. They are regression tests.</p>
-                    <p className="pt-2">Nonetheless tests are not bullet proof. If I wanted to cover all possibilities I
-                        could have wrote at least
-                        15 more tests... Which at this point would be silly. To take an analogy that Elizabeth
-                        Hendrickson use
-                        in her book "Explore It!". Test are a net, the more tests the tighter the weave are but you will
-                        always
-                        have gaps.</p>
-                    <p className="pt-2 text-pink font-semibold">For me, one of the most important value of the tests
-                        that
-                        often get missed is that they remove the
-                        tedious, boring, unimportant part of testing. These tests give the time back to the professional
-                        testers
-                        to do the important testing: usability testing, stress testing, accessibility testing, load
-                        testing and
-                        EXPLORATORY testing! </p>
+                        of the tests is that they can be repeated cheaply and at will. You can run them when committing,
+                        when pushing code...
+                        They ensure that nothing new breaks the current functionality. They also act as a documentation
+                        of what is expected. They are regression tests.
+                    </p>
+                    <p className="pt-2">Nonetheless, tests are not bulletproof. If I wanted to cover all possibilities I
+                        could have written at least 15 more tests... Which at this point would be silly. To take an
+                        analogy that Elizabeth Hendrickson uses in her book "Explore It!". Tests are a net, the more
+                        tests the tighter the weave are but you will always have gaps.</p>
+                    <p className="pt-2 text-pink font-semibold">For me, one of the most important values of the tests
+                        that often get missed is that they remove the tedious, boring, unimportant part of testing.
+                        These tests give the time back to the professional testers to do the important testing:
+                        usability testing, stress testing, accessibility testing, load testing and EXPLORATORY
+                        testing!</p>
                 </section>
             </section>
             <Link to="/exploratoryTesting" className="flex flex-row items-center pt-10">
