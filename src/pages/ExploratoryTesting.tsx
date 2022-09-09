@@ -1,5 +1,6 @@
 import {ArrowLongLeftIcon, ArrowLongRightIcon} from "@heroicons/react/24/solid";
 import {Link} from "react-router-dom";
+import {SideNavBar} from "../components/SideNavBar";
 
 export const ExploratoryTesting = () => {
 
@@ -7,6 +8,7 @@ export const ExploratoryTesting = () => {
         <div className="bg-blue flex flex-row justify-center w-full">
             <section
                 className="bg-blue h-full text-white text-justify py-10 px-5 w-11/12 md:w-9/12 lg:w-8/12 xl:w7/12 2xl:w-5/12">
+                <SideNavBar/>
                 <Link to="/" className="flex flex-row items-center pt-10">
                     <ArrowLongLeftIcon className="text-pink h-16 w-16"/>
                     <span className="text-pink text-lg font-semibold w-52 pl-6">Quality</span>
