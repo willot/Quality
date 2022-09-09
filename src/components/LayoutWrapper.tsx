@@ -6,7 +6,7 @@ type LayoutWrapperProps = {
 }
 
 export const LayoutWrapper = ({children}: LayoutWrapperProps) => {
-    const [showSideNavBar, setShowSideNavBar] = useState(false);
+    const [showSideNavBar, setShowSideNavBar] = useState(window.innerWidth > 450);
 
     useEffect(() => {
         componentToDisplay();

@@ -1,11 +1,16 @@
-import {Link} from "react-router-dom";
+import {Link, useLocation} from "react-router-dom";
 import {ArrowLongLeftIcon, ArrowLongRightIcon} from "@heroicons/react/24/solid";
 import {ShoppingCartIcon} from "@heroicons/react/20/solid";
-import {useState} from "react";
+import {useEffect, useState} from "react";
 import {LayoutWrapper} from "../components/LayoutWrapper";
 
 export const Interactions = () => {
     const [buttonIndex, setButtonIndex] = useState<string>("");
+
+    const { pathname } = useLocation();
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, [pathname]);
 
     const buttonMessage = () => {
         if (buttonIndex === "") {

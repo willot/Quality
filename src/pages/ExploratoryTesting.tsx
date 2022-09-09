@@ -1,8 +1,13 @@
 import {ArrowLongLeftIcon, ArrowLongRightIcon} from "@heroicons/react/24/solid";
-import {Link} from "react-router-dom";
+import {Link, useLocation} from "react-router-dom";
 import {LayoutWrapper} from "../components/LayoutWrapper";
+import {useEffect} from "react";
 
 export const ExploratoryTesting = () => {
+    const { pathname } = useLocation();
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, [pathname]);
 
     return (
         <div className="bg-blue flex flex-row justify-center w-full">

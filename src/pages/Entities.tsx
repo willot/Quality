@@ -1,7 +1,7 @@
-import {Link} from "react-router-dom";
+import {Link, useLocation} from "react-router-dom";
 import {ArrowLongLeftIcon, ArrowLongRightIcon} from "@heroicons/react/24/solid";
 import {EntitiesForm} from "../components/EntitiesForm";
-import {useState} from "react";
+import {useEffect, useState} from "react";
 import {LayoutWrapper} from "../components/LayoutWrapper";
 
 export type User = {
@@ -14,6 +14,11 @@ export type User = {
 
 export const Entities = () => {
     const [entity, setEntity] = useState<User>();
+
+    const { pathname } = useLocation();
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, [pathname]);
 
     return (
         <section className="bg-blue flex flex-row justify-center w-full">

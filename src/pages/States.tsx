@@ -1,10 +1,16 @@
 import {ArrowLongLeftIcon, ArrowLongRightIcon} from "@heroicons/react/24/solid";
-import {Link} from "react-router-dom";
+import {Link, useLocation} from "react-router-dom";
 import Xarrow, {Xwrapper} from "react-xarrows";
 import {LayoutWrapper} from "../components/LayoutWrapper";
+import {useEffect} from "react";
 
 
 export const States = () => {
+    const { pathname } = useLocation();
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, [pathname]);
+
     return (
         <section className="bg-blue flex flex-row justify-center w-full">
             <LayoutWrapper>
