@@ -23,7 +23,7 @@ export const Entities = () => {
     return (
         <section className="bg-blue flex flex-row justify-center w-full">
             <LayoutWrapper>
-                <section className="bg-blue h-full text-white text-justify py-10 px-5">
+                <section className="bg-blue h-full text-white text-justify py-10 px-1">
                     <h1 className="text-4xl font-medium pb-5">Dealing with Objects</h1>
                     <p>Object is maybe more an engineer term to describe something that can be created, updated, or
                         deleted. An example can be a user in an application, a transaction when buying something, a post

@@ -12,7 +12,7 @@ export const Ecosystem = () => {
     return (
         <section className="bg-blue flex flex-row justify-center w-full">
             <LayoutWrapper>
-                <section className="bg-blue h-full text-white text-justify py-10 px-5">
+                <section className="bg-blue h-full text-white text-justify py-10 px-1">
                     <h1 className="text-4xl font-medium pb-5">Application in its environment</h1>
                     <p>Your application is not only the software. It is running on servers. It is being access from a
                         lot of

@@ -103,7 +103,7 @@ export const Home = () => {
 
     return (
         <LayoutWrapper>
-            <section className="bg-blue h-full text-white text-justify py-10 px-5 ">
+            <section className="bg-blue h-full text-white text-justify py-10 px-1">
                 <h1 className="text-4xl font-medium pb-5">What is quality?</h1>
                 <section className="pb-10">
                     <h2 className="font-bold">Dictionary definition:</h2>

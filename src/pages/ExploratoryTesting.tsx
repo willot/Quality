@@ -12,7 +12,7 @@ export const ExploratoryTesting = () => {
     return (
         <div className="bg-blue flex flex-row justify-center w-full">
             <LayoutWrapper>
-                <section className="bg-blue h-full text-white text-justify py-10 px-5 ">
+                <section className="bg-blue h-full text-white text-justify py-10 px-1">
                     <h1 className="text-4xl font-medium pb-5">Exploratory testing </h1>
                     <section className="pb-10">
                         <h2 className="font-bold">Exploratory testing definition?</h2>

@@ -36,7 +36,7 @@ export const Interactions = () => {
         <section className="bg-blue flex flex-row justify-center w-full">
             <LayoutWrapper>
                 <section
-                    className="bg-blue h-full text-white text-justify py-10 px-5">
+                    className="bg-blue h-full text-white text-justify py-10 px-1">
                     <h1 className="text-4xl font-medium pb-5">Interaction with your application</h1>
                     <p>You know your application you use it everyday. But do you really know it. Did you ever try to do
                         things out of order? Did you try to use your keyboard instead of your mouse to navigate? Did you
