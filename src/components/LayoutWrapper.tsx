@@ -85,15 +85,20 @@ export const LayoutWrapper = ({children}: LayoutWrapperProps) => {
         if (!showSideNavBar) {
             return (
                 <>
-                    <section className="flex flex-row justify-end">
-                        <button ref={ref} onClick={() => {
-                            setIsVisible(!isVisible);
-                        }}>
-                            <Bars3Icon className="h12 w-12 pr-5 pt-4 "/>
+                    <section className="flex flex-row justify-end pt-2">
+                        <button
+                            className="flex flex-row justify-center"
+                            ref={ref}
+                            onClick={() => {
+                                setIsVisible(!isVisible);
+                            }}
+                        >
+                            <Bars3Icon className="h8 w-8"/>
                         </button>
                     </section>
                     {isVisible && (
-                        <section  className="absolute w-9/12 flex right-3 flex-col pt-4 pl-4 space-y-1 bg-white rounded-xl">
+                        <section
+                            className="absolute w-9/12 flex right-3 flex-col pt-4 pl-4 space-y-1 bg-white rounded-xl">
                             {listOfLink()}
                         </section>
                     )
