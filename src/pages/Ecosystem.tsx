@@ -10,10 +10,10 @@ export const Ecosystem = () => {
     }, [pathname]);
 
     return (
-        <section className="bg-blue flex flex-row justify-center w-full">
+        <section className="bg-white-bg flex flex-row justify-center w-full">
             <LayoutWrapper>
-                <section className="bg-blue h-full text-white text-justify py-10 px-1">
-                    <h1 className="text-4xl font-medium pb-5">Application in its environment</h1>
+                <section className="bg-white-bg h-full text-black text-justify py-10 px-1">
+                    <h1 className="text-4xl font-medium pb-5 text-pink">Application in its environment</h1>
                     <p>Your application is not only the software. It is running on servers. It is being access from a
                         lot of
                         different devices, PC, tablets, androids, iPhones... It is using databases. It is using external
@@ -80,7 +80,7 @@ export const Ecosystem = () => {
                         gain insight on your system and its limitations. It will also help you be proactive when
                         something go
                         wrong instead of being reactive.</p>
-                    <Link to="/summary" className="flex flex-row items-center pt-10">
+                    <Link to="/summary" className="flex flex-row items-center pt-4">
                         <span className="text-pink text-lg font-semibold w-52">Summary</span>
                         <ArrowLongRightIcon className="text-pink h-16 w-16"/>
                     </Link>

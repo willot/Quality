@@ -103,8 +103,8 @@ export const Home = () => {
 
     return (
         <LayoutWrapper>
-            <section className="bg-blue h-full text-white text-justify py-10 px-1">
-                <h1 className="text-4xl font-medium pb-5">What is quality?</h1>
+            <section className="bg-white-bg h-full text-black text-justify py-10 px-1">
+                <h1 className="text-4xl font-medium pb-5 text-pink">What is quality?</h1>
                 <section className="pb-10">
                     <h2 className="font-bold">Dictionary definition:</h2>
                     <p className="indent-8">The standard of something as measured against other things of a similar
@@ -159,12 +159,12 @@ export const Home = () => {
                     <p>Click on the button below to see how they implement the story:</p>
                     <section className="grid grid-rows-2 grid-flow-col justify-items-center md:grid-rows-1 pt-4">
                         <ExampleButton setTextDetails={setTextDetails} buttonId="button1" buttonWording={buttonText}
-                                       css={"bg-pink text-blue w-28 border border-white rounded-md mb-2 active:translate-y-0.5 duration-200 active:bg-white"}/>
+                                       css={"bg-pink font-semibold text-white w-28 border border-white rounded-md mb-2 active:translate-y-0.5 duration-200 active:bg-white"}/>
                         <ExampleButton setTextDetails={setTextDetails} buttonId="button2"
                                        buttonWording={wrongWordingButtonText}
-                                       css={"bg-pink text-blue w-36 border border-white rounded-md sm:w-28 mb-2 active:translate-y-0.5 duration-200 active:bg-white"}/>
+                                       css={"bg-pink font-semibold text-white w-36 border border-white rounded-md sm:w-28 mb-2 active:translate-y-0.5 duration-200 active:bg-white"}/>
                         <ExampleButton setTextDetails={setTextDetails} buttonId="button3" buttonWording={buttonText}
-                                       css={"bg-pink text-white w-28 border border-white rounded-md mb-2 active:translate-y-0.5 duration-200 active:bg-white"}/>
+                                       css={"bg-pink font-semibold text-red w-28 border border-white rounded-md mb-2 active:translate-y-0.5 duration-200 active:bg-white"}/>
                         <ExampleButtonNotAccessible setTextDetails={setTextDetails} buttonId="button4"
                                                     buttonWording={buttonText}/>
                     </section>
@@ -253,7 +253,7 @@ export const Home = () => {
                             testing!</p>
                     </section>
                 </section>
-                <Link to="/exploratoryTesting" className="flex flex-row items-center pt-10">
+                <Link to="/exploratoryTesting" className="flex flex-row items-center pt-4">
                     <span className="text-pink text-lg font-semibold w-52">Exploratory Testing</span>
                     <ArrowLongRightIcon className="text-pink h-16 w-16"/>
                 </Link>

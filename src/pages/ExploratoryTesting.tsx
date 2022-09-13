@@ -10,10 +10,10 @@ export const ExploratoryTesting = () => {
     }, [pathname]);
 
     return (
-        <div className="bg-blue flex flex-row justify-center w-full">
+        <div className="bg-white-bg flex flex-row justify-center w-full">
             <LayoutWrapper>
-                <section className="bg-blue h-full text-white text-justify py-10 px-1">
-                    <h1 className="text-4xl font-medium pb-5">Exploratory testing </h1>
+                <section className="bg-white-bg h-full text-black text-justify py-10 px-1">
+                    <h1 className="text-4xl font-medium pb-5 text-pink">Exploratory testing </h1>
                     <section className="pb-10">
                         <h2 className="font-bold">Exploratory testing definition?</h2>
                         <p className="indent-8"> "A style of software testing that emphasizes the personal freedom and
@@ -135,7 +135,7 @@ export const ExploratoryTesting = () => {
                         </ul>
 
                     </section>
-                    <Link to="/interactions" className="flex flex-row items-center pt-10">
+                    <Link to="/interactions" className="flex flex-row items-center pt-4">
                         <span className="text-pink text-lg font-semibold w-52">Learn more about interactions</span>
                         <ArrowLongRightIcon className="text-pink h-16 w-16"/>
                     </Link>

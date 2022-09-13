@@ -33,11 +33,11 @@ export const Interactions = () => {
     }
 
     return (
-        <section className="bg-blue flex flex-row justify-center w-full">
+        <section className="bg-white-bg flex flex-row justify-center w-full">
             <LayoutWrapper>
                 <section
-                    className="bg-blue h-full text-white text-justify py-10 px-1">
-                    <h1 className="text-4xl font-medium pb-5">Interaction with your application</h1>
+                    className="bg-white-bg h-full text-black text-justify py-10 px-1">
+                    <h1 className="text-4xl font-medium pb-5 text-pink">Interaction with your application</h1>
                     <p>You know your application you use it everyday. But do you really know it. Did you ever try to do
                         things out of order? Did you try to use your keyboard instead of your mouse to navigate? Did you
                         try to use a screen reader?
@@ -77,19 +77,19 @@ export const Interactions = () => {
                             <section
                                 className="grid grid-rows-2 grid-flow-col justify-items-center md:grid-rows-1 pt-4">
                                 <button tabIndex={0}
-                                        className="bg-pink text-blue w-28 border border-white rounded-md mb-2 p-2 active:translate-y-0.5 duration-200 active:bg-white">button
+                                        className="bg-pink text-white font-semibold w-28 border border-white rounded-md mb-2 p-2 active:translate-y-0.5 duration-200 active:bg-white">button
                                     1
                                 </button>
                                 <button tabIndex={3}
-                                        className="bg-pink text-blue w-28 border border-white rounded-md mb-2 p-2 active:translate-y-0.5 duration-200 active:bg-white active:shadow-none">button
+                                        className="bg-pink text-white font-semibold w-28 border border-white rounded-md mb-2 p-2 active:translate-y-0.5 duration-200 active:bg-white active:shadow-none">button
                                     2
                                 </button>
                                 <button tabIndex={1}
-                                        className="bg-pink text-blue w-28 border border-white rounded-md mb-2 p-2 active:translate-y-0.5 duration-200 active:bg-white">button
+                                        className="bg-pink text-white font-semibold w-28 border border-white rounded-md mb-2 p-2 active:translate-y-0.5 duration-200 active:bg-white">button
                                     3
                                 </button>
                                 <button tabIndex={2}
-                                        className="bg-pink text-blue w-28 border border-white rounded-md mb-2 p-2 active:translate-y-0.5 duration-200 active:bg-white">button
+                                        className="bg-pink text-white font-semibold w-28 border border-white rounded-md mb-2 p-2 active:translate-y-0.5 duration-200 active:bg-white">button
                                     4
                                 </button>
                             </section>
@@ -101,7 +101,7 @@ export const Interactions = () => {
                             <section
                                 className="grid grid-rows-2 grid-flow-col justify-items-center md:grid-rows-1 pt-4">
                                 <button tabIndex={5}
-                                        className="flex flex-row justify-center bg-pink text-blue w-28 border border-white rounded-md mb-2 p-2 active:translate-y-0.5 duration-200 active:bg-white"
+                                        className="flex flex-row justify-center bg-pink text-white w-28 border border-white rounded-md mb-2 p-2 active:translate-y-0.5 duration-200 active:bg-white"
                                         onClick={() => {
                                             setButtonIndex("button1")
                                         }}>
@@ -109,7 +109,7 @@ export const Interactions = () => {
                                 </button>
                                 <button aria-label="Shopping cart"
                                         tabIndex={5}
-                                        className="flex flex-row justify-center bg-pink text-blue w-28 border border-white rounded-md mb-2 p-2 active:translate-y-0.5 duration-200 active:bg-white "
+                                        className="flex flex-row justify-center bg-pink text-white w-28 border border-white rounded-md mb-2 p-2 active:translate-y-0.5 duration-200 active:bg-white "
                                         onClick={() => {
                                             setButtonIndex("button2")
                                         }}>
@@ -117,14 +117,14 @@ export const Interactions = () => {
                                 </button>
                                 <button aria-label="Shopping cart"
                                         tabIndex={5}
-                                        className="flex flex-row justify-center bg-pink text-blue w-28 border border-white rounded-md mb-2 p-2 active:translate-y-0.5 duration-200 active:bg-white outline-0"
+                                        className="flex flex-row justify-center bg-pink text-white w-28 border border-white rounded-md mb-2 p-2 active:translate-y-0.5 duration-200 active:bg-white outline-0"
                                         onClick={() => {
                                             setButtonIndex("button3")
                                         }}>
                                     <ShoppingCartIcon className="h-6 w-6"/>
                                 </button>
                                 <div tabIndex={5}
-                                     className="flex flex-row justify-center bg-pink text-blue w-28 border border-white rounded-md mb-2 p-2 active:translate-y-0.5 duration-200 active:bg-white"
+                                     className="flex flex-row justify-center bg-pink text-white w-28 border border-white rounded-md mb-2 p-2 active:translate-y-0.5 duration-200 active:bg-white"
                                      onClick={() => {
                                          setButtonIndex("button4")
                                      }}>
@@ -138,7 +138,7 @@ export const Interactions = () => {
                         </section>
 
                     </section>
-                    <Link to="/objects" className="flex flex-row items-center pt-10">
+                    <Link to="/objects" className="flex flex-row items-center pt-4">
                         <span className="text-pink text-lg font-semibold w-52">Dealing with Objects</span>
                         <ArrowLongRightIcon className="text-pink h-16 w-16"/>
                     </Link>

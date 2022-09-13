@@ -21,9 +21,9 @@ export const LayoutWrapper = ({children}: LayoutWrapperProps) => {
 
     const navLinkStyle = (navData: any) => {
         if (showSideNavBar) {
-            return navData.isActive ? "text-green font-semibold text-left" : "text-pink font-semibold text-left"
+            return navData.isActive ? "text-blue font-semibold text-left" : "text-pink font-semibold text-left"
         } else {
-            return navData.isActive ? "text-green font-semibold text-left" : "text-blue font-semibold text-left"
+            return navData.isActive ? "text-blue font-semibold text-left" : "text-blue font-semibold text-left"
         }
     }
 
@@ -110,7 +110,7 @@ export const LayoutWrapper = ({children}: LayoutWrapperProps) => {
 
     return (
         <section
-            className=" bg-blue h-full text-white text-justify grid grid-cols-12 w-11/12 md:w-10/12 lg:w-9/12 xl:w8/12 2xl:w-7/12">
+            className=" bg-white-bg h-full text-black text-justify grid grid-cols-12 w-11/12 md:w-10/12 lg:w-9/12 xl:w8/12 2xl:w-7/12">
             {sideBar()}
             <section className={showSideNavBar ? "col-span-9" : "col-span-12"}>
                 {showSideBarIcon()}

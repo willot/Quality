@@ -21,10 +21,10 @@ export const Entities = () => {
     }, [pathname]);
 
     return (
-        <section className="bg-blue flex flex-row justify-center w-full">
+        <section className="bg-white-bg flex flex-row justify-center w-full">
             <LayoutWrapper>
-                <section className="bg-blue h-full text-white text-justify py-10 px-1">
-                    <h1 className="text-4xl font-medium pb-5">Dealing with Objects</h1>
+                <section className="bg-white-bg h-full text-black text-justify py-10 px-1">
+                    <h1 className="text-4xl font-medium pb-5 text-pink">Dealing with Objects</h1>
                     <p>Object is maybe more an engineer term to describe something that can be created, updated, or
                         deleted. An example can be a user in an application, a transaction when buying something, a post
                         on
@@ -65,7 +65,7 @@ export const Entities = () => {
                             back
                             an
                             error... </p>
-                        <p className="pb-4 font-semibold text-green">Fill the example form with fake info to
+                        <p className="pb-4 font-semibold text-blue">Fill the example form with fake info to
                             continue.</p>
                         <h3 className="text-pink font-semibold pb-4">Creating objects</h3>
                         <EntitiesForm setEntity={setEntity}/>
@@ -75,19 +75,19 @@ export const Entities = () => {
                                 <>
                                     <section>
                                         <p className="font-bold text-pink">User</p>
-                                        <p className="pl-6"><span
-                                            className="font-semibold">First name:</span> {entity.firstName}</p>
-                                        <p className="pl-6"><span
-                                            className="font-semibold">Last name:</span> {entity.lastName}</p>
+                                        <p className="pl-6 text-blue"><span
+                                            className="font-semibold text-black">First name:</span> {entity.firstName}</p>
+                                        <p className="pl-6 text-blue"><span
+                                            className="font-semibold text-black">Last name:</span> {entity.lastName}</p>
                                         <p className="font-bold text-pink">Address</p>
-                                        <p className="pl-6"><span
-                                            className="font-semibold">Street:</span> {entity.street}
+                                        <p className="pl-6 text-blue"><span
+                                            className="font-semibold text-black">Street:</span> {entity.street}
                                         </p>
-                                        <p className="pl-6"><span
-                                            className="font-semibold">Apartment #:</span> {entity.apt}
+                                        <p className="pl-6 text-blue"><span
+                                            className="font-semibold text-black">Apartment #:</span> {entity.apt}
                                         </p>
-                                        <p className="pl-6"><span className="font-semibold">City:</span> {entity.city}
-                                        </p>
+                                        <p className="pl-6 text-blue"><span
+                                            className="font-semibold text-black">City:</span> {entity.city}</p>
                                     </section>
                                     <section className="pt-2">
                                         <p>We have one form but we can see that we created two separated objects. One
@@ -130,7 +130,7 @@ export const Entities = () => {
                                     </section>
                                     <section className="pt-4">
                                         <h3 className="text-pink font-semibold ">Updating objects</h3>
-                                        <p className="pb-4 text-green font-semibold">Now update the information you
+                                        <p className="pb-4 text-blue font-semibold">Now update the information you
                                             enter
                                             earlier.</p>
                                         <EntitiesForm setEntity={setEntity} originalEntities={entity}/>
@@ -138,19 +138,19 @@ export const Entities = () => {
                                         {entity && (
                                             <section className="pb-4">
                                                 <p className="font-bold text-pink">User</p>
-                                                <p className="pl-6"><span
-                                                    className="font-semibold">First name:</span> {entity.firstName}</p>
-                                                <p className="pl-6"><span
-                                                    className="font-semibold">Last name:</span> {entity.lastName}</p>
+                                                <p className="pl-6 text-blue"><span
+                                                    className="font-semibold text-black">First name:</span> {entity.firstName}</p>
+                                                <p className="pl-6 text-blue"><span
+                                                    className="font-semibold text-black">Last name:</span> {entity.lastName}</p>
                                                 <p className="font-bold text-pink">Address</p>
-                                                <p className="pl-6"><span
-                                                    className="font-semibold">Street:</span> {entity.street}
+                                                <p className="pl-6 text-blue"><span
+                                                    className="font-semibold text-black">Street:</span> {entity.street}
                                                 </p>
-                                                <p className="pl-6"><span
-                                                    className="font-semibold">Apartment #:</span> {entity.apt}
+                                                <p className="pl-6 text-blue"><span
+                                                    className="font-semibold text-black">Apartment #:</span> {entity.apt}
                                                 </p>
-                                                <p className="pl-6"><span
-                                                    className="font-semibold">City:</span> {entity.city}</p>
+                                                <p className="pl-6 text-blue"><span
+                                                    className="font-semibold text-black">City:</span> {entity.city}</p>
                                             </section>
                                         )}
 
@@ -196,7 +196,7 @@ export const Entities = () => {
 
                         </section>
                     </section>
-                    <Link to="/states" className="flex flex-row items-center pt-10">
+                    <Link to="/states" className="flex flex-row items-center pt-4">
                         <span className="text-pink text-lg font-semibold w-52">States</span>
                         <ArrowLongRightIcon className="text-pink h-16 w-16"/>
                     </Link>

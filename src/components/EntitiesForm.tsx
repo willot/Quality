@@ -47,7 +47,7 @@ export const EntitiesForm = ({setEntity, originalEntities}: UserFormProps) => {
     }
 
     return (
-        <section className="bg-blue flex flex-col space-y-2">
+        <section className="bg-white-bg flex flex-col space-y-2">
             <label className="flex flex-col sm:flex-row">
                 <span className="w-24 font-semibold">First Name</span>
                 <input className="text-blue rounded-md"
@@ -113,7 +113,7 @@ export const EntitiesForm = ({setEntity, originalEntities}: UserFormProps) => {
             <section className="flex flex-row justify-center sm:justify-start">
                 <input type="submit" value="Submit"
                        onClick={save}
-                       className=" ml-24 w-32 h-8 bg-pink rounded-md text-blue font-semibold active:translate-y-0.5 duration-200 active:bg-white"/>
+                       className=" ml-24 w-32 h-8 bg-pink rounded-md text-white font-semibold active:translate-y-0.5 duration-200 active:bg-white"/>
             </section>
         </section>
     )

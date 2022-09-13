@@ -5,7 +5,7 @@ import {Home} from "./pages/Home";
 
 function App() {
   return (
-    <div className="App bg-blue flex flex-row justify-center">
+    <div className="App bg-white-bg flex flex-row justify-center">
       <Home/>
     </div>
   );
