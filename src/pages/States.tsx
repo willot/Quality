@@ -54,7 +54,7 @@ export const States = () => {
                             state and is officially borrowed.
                             Then the user leave the building and is logged out.</p>
 
-                        <div className="w-full h-80 border-4 border-pink rounded-xl mt-6"
+                        {window.innerWidth > 800 && <div className="w-full h-80 border-4 border-pink rounded-xl mt-6"
                              aria-label="visual of the library example">
                             <span className="pl-4 pt-6 text-lg font-bold">Library</span>
                             <Xwrapper>
@@ -86,7 +86,7 @@ export const States = () => {
                                 <Xarrow start="book3" end="book5" color='orange'/>
                                 <Xarrow start="book5" end="book4" color='orange'/>
                             </Xwrapper>
-                        </div>
+                        </div>}
                         <section className="pt-4">
                             <p>If this process was happening in an application instead of the physical world. The action
                                 of
