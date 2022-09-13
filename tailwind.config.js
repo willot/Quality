@@ -6,13 +6,14 @@ module.exports = {
   theme: {
     colors:{
       'blue': {
-        DEFAULT: '#1034a6'
+        DEFAULT: '#0556d4',
       },
       'white': {
-        DEFAULT: '#F4F4F5'
+        DEFAULT: '#F4F4F5',
+        bg:'#F7F6F8',
       },
       'pink': {
-        DEFAULT: '#ffd1dc'
+        DEFAULT: '#fc55de'
       },
       'red': {
         DEFAULT: '#e32636'
@@ -20,6 +21,12 @@ module.exports = {
       'green': {
         DEFAULT: '#84CC16'
       },
+      'black': {
+        DEFAULT: '#000000'
+      },
+      'grey': {
+        DEFAULT: '#333'
+      }
     },
     extend: {},
   },
