@@ -8,6 +8,7 @@ import {useEffect} from "react";
 export const States = () => {
     const { pathname } = useLocation();
     useEffect(() => {
+        document.title = 'Exploratory Testing-States';
         window.scrollTo(0, 0);
     }, [pathname]);
 

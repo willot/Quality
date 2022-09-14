@@ -6,6 +6,7 @@ import {useEffect} from "react";
 export const ExploratoryTesting = () => {
     const {pathname} = useLocation();
     useEffect(() => {
+        document.title = 'Exploratory Testing';
         window.scrollTo(0, 0);
     }, [pathname]);
 

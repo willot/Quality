@@ -9,6 +9,7 @@ export const Interactions = () => {
 
     const {pathname} = useLocation();
     useEffect(() => {
+        document.title = 'Exploratory Testing-Interactions';
         window.scrollTo(0, 0);
     }, [pathname]);
 

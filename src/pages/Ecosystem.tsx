@@ -6,6 +6,7 @@ import {useEffect} from "react";
 export const Ecosystem = () => {
     const { pathname } = useLocation();
     useEffect(() => {
+        document.title = 'Exploratory Testing-Environment';
         window.scrollTo(0, 0);
     }, [pathname]);
 

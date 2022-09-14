@@ -15,8 +15,9 @@ export type User = {
 export const Entities = () => {
     const [entity, setEntity] = useState<User>();
 
-    const { pathname } = useLocation();
+    const {pathname} = useLocation();
     useEffect(() => {
+        document.title = 'Exploratory Testing-Objects';
         window.scrollTo(0, 0);
     }, [pathname]);
 
@@ -25,18 +26,13 @@ export const Entities = () => {
             <LayoutWrapper>
                 <section className="bg-white-bg h-full text-black text-justify py-10 px-1">
                     <h1 className="text-4xl font-medium pb-5 text-pink">Dealing with Objects</h1>
-                    <p>Object is maybe more an engineer term to describe something that can be created, updated, or
-                        deleted. An example can be a user in an application, a transaction when buying something, a post
-                        on
-                        social media. Application are full of these objects. They represent the business logic of the
-                        application. These objects most of the time are connected/interact with each other. A user will
-                        have
-                        an address this address is
-                        more than likely be its own object. A transaction is connected to a user or a user is connected
-                        to a
-                        transaction. This is a good example because the direction of the relationship has an effect on
-                        the
-                        logic and possible bugs.
+                    <p>An object is maybe more an engineer term to describe something that can be created, updated, or
+                        deleted. An example is a ‘user’ in an application, a ‘transaction’ when buying something, or a
+                        ‘post’ on social media. Applications are full of these objects. They represent the business
+                        logic of the application. These objects usually are connected/interact with each other. A user
+                        will have an address, this address is likely to be its own object. A transaction is connected to
+                        a user or, a user is connected to a transaction. This is a good example, because the direction
+                        of the relationship affects the logic and possible bugs.
                     </p>
                     <p className="pt-2">For example, an insurance website lets you buy a personal
                         customized policy. You will have an policy object and then a user "you" object. Then the
@@ -76,7 +72,8 @@ export const Entities = () => {
                                     <section>
                                         <p className="font-bold text-pink">User</p>
                                         <p className="pl-6 text-blue"><span
-                                            className="font-semibold text-black">First name:</span> {entity.firstName}</p>
+                                            className="font-semibold text-black">First name:</span> {entity.firstName}
+                                        </p>
                                         <p className="pl-6 text-blue"><span
                                             className="font-semibold text-black">Last name:</span> {entity.lastName}</p>
                                         <p className="font-bold text-pink">Address</p>
@@ -139,9 +136,11 @@ export const Entities = () => {
                                             <section className="pb-4">
                                                 <p className="font-bold text-pink">User</p>
                                                 <p className="pl-6 text-blue"><span
-                                                    className="font-semibold text-black">First name:</span> {entity.firstName}</p>
+                                                    className="font-semibold text-black">First name:</span> {entity.firstName}
+                                                </p>
                                                 <p className="pl-6 text-blue"><span
-                                                    className="font-semibold text-black">Last name:</span> {entity.lastName}</p>
+                                                    className="font-semibold text-black">Last name:</span> {entity.lastName}
+                                                </p>
                                                 <p className="font-bold text-pink">Address</p>
                                                 <p className="pl-6 text-blue"><span
                                                     className="font-semibold text-black">Street:</span> {entity.street}
