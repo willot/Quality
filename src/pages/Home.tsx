@@ -111,10 +111,9 @@ export const Home = () => {
                         kind;
                         the degree of excellence of something</p>
                     <p className="text-xs indent-8 pb-5">--Oxford Languages--</p>
-                    <p>This definition is not really useful. It doesn't really tell us what quality is. What should I
-                        compare my website
-                        too? Do I really want to match my competition if I want to be the best? Does being the best mean
-                        being the standard for quality?</p>
+                    <p>This definition is not really useful. It doesn't tell us what quality is. What should I compare
+                        my website to? Is my goal to match my competition if I want to be the best? Does being the best
+                        mean being the standard for quality?</p>
                 </section>
                 <section className="pb-10">
                     <h2 className="font-bold">Useful definition:</h2>
@@ -129,23 +128,19 @@ export const Home = () => {
                     <p className="text-xs indent-8 pb-5">--Joseph Juran--</p>
                     <p>
                         Basically, we produce something the user wants and meet their expectations. Quality is all about
-                        the
-                        users, not about the requirements.
+                        the users, not about the requirements..
                     </p>
                     <p>
                         As a software engineer, this definition is interesting. The quality of my work is, in general,
-                        based
-                        on me
-                        completing the requirements of my story, adding tests, passing all the previous tests and
-                        someone
-                        validating the work. If I do that, my story gets accepted and pushed to prod. But this
-                        definition is
-                        interesting, because I can do all my work (write tests, pass tests, complete requirements) and
-                        nonetheless produce bad quality if I don't meet the expectations of my users.
+                        based on me completing the requirements of my story, adding tests, passing all the previous
+                        tests, and someone validating the work. If I do that, my story gets accepted and pushed to prod.
+                        But this definition is interesting because I can do all my work (write tests, pass tests,
+                        complete requirements) and nonetheless produce bad quality if I don't meet the expectations of
+                        my users.
                     </p>
                 </section>
                 <section className="pb-10">
-                    <h2 className="font-bold">Lets look at this example</h2>
+                    <h2 className="font-bold">Let's look at this example</h2>
                     <h3>The story:</h3>
                     <section className="border-2 border-pink p-2 m-2 rounded-xl">
                         <p className="pl-2">As a user, I want to see more information about quality. Make a button that
@@ -173,13 +168,11 @@ export const Home = () => {
                     </section>
                 </section>
                 <section className="pb-4">
-                    I chose these four examples, because they are impossible or hard to write tests for. As an engineer,
-                    I can write unit, integration and end-to-end tests for the ticket acceptance criteria. I can test
-                    the
-                    basic logic in the
-                    application and make sure the expected behaviors are happening. At least, that is what I like to
-                    believe...
-                    But I can't test if it is what the users expect, and I can't test what I didn't think about.
+                    I chose these four examples because they are impossible or hard to write tests for. As an engineer,
+                    I can write unit, integration, and end-to-end tests for the ticket acceptance criteria. I can test
+                    the basic logic in the application and make sure the expected behaviors are happening. At least,
+                    that is what I like to believe... But I can't test if it is what the users expect, and I can't test
+                    what I didn't think about..
                 </section>
                 <section className="pt-4">
                     <h2 className="font-bold">Let's look at the tests</h2>
@@ -194,7 +187,7 @@ export const Home = () => {
                     >
                         {test1}
                     </SyntaxHighlighter>
-                    <p className="pb-2 pt-4">The second test is slightly more involved. It test the first requirement:
+                    <p className="pb-2 pt-4">The second test is slightly more involved. It tests the first requirement:
                         Does
                         extra information appears when the user clicks on the
                         button?</p>
@@ -209,8 +202,7 @@ export const Home = () => {
                         button
                         and sees the information and then clicks on
                         another button, does the text on the first button clicked change correctly? This test is a
-                        combination
-                        of all the requirement together.</p>
+                        combination of all the requirements together.</p>
                     <SyntaxHighlighter
                         language='javascript'
                         style={xonokai}
@@ -230,27 +222,21 @@ export const Home = () => {
                         {test4}
                     </SyntaxHighlighter>
                     <section className="pt-10">
-                        <p>These simple tests can seem useless. It is very easy to reproduce them quickly manually and
-                            ensure that the functionality works correctly. Yes, but it would be missing the point. The
-                            value
-                            of the tests is that they can be repeated cheaply and at will. You can run them when
-                            committing,
-                            when pushing code...
-                            They ensure that nothing new breaks the current functionality. They also act as a
-                            documentation
-                            of what is expected. They are regression tests.
+                        <p>These simple tests can seem useless. They are extremely easy to reproduce manually and ensure
+                            that the functionality works correctly. Yes, but it would be missing the point. The value of
+                            the tests is that they can be repeated cheaply and at will. You can run them when committing
+                            or when pushing code. They ensure that nothing new breaks the current functionality. They
+                            also act as documentation of the expected behavior. They are regression tests.
                         </p>
-                        <p className="pt-2">Nonetheless, tests are not bulletproof. If I wanted to cover all
-                            possibilities I
-                            could have written at least 15 more tests... Which at this point would be silly. To take an
-                            analogy that Elizabeth Hendrickson uses in her book "Explore It!". Tests are a net, the more
-                            tests the tighter the weave are but you will always have gaps.</p>
+                        <p className="pt-2">Nonetheless, tests are not bulletproof. If I wanted to cover all the
+                            possibilities I could have written at least 15 more tests... Which would be silly. To take
+                            an analogy that Elizabeth Hendrickson uses in her book "Explore It!". Tests are a net, the
+                            more tests the tighter the weaves are but you will always have gaps.</p>
                         <p className="pt-2 text-pink font-semibold">For me, one of the most important values of the
-                            tests
-                            that often get missed is that they remove the tedious, boring, unimportant part of testing.
-                            These tests give the time back to the professional testers to do the important testing:
-                            usability testing, stress testing, accessibility testing, load testing and EXPLORATORY
-                            testing!</p>
+                            tests that often get missed is that they remove the tedious, boring, unimportant part of
+                            testing. These automated tests give time back to the professional testers to do the
+                            essential testing: usability testing, stress testing, accessibility testing, load testing,
+                            and EXPLORATORY testing!</p>
                     </section>
                 </section>
                 <Link to="/exploratoryTesting" className="flex flex-row items-center pt-4">
