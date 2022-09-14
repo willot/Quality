@@ -53,7 +53,7 @@ export const Interactions = () => {
                             sometimes find in applications. The application is properly secure against users that are
                             not logged in but, when you are logged in you can sometimes take actions you shouldn't be
                             able to. This happens when endpoints are not properly secure with the right permissions.
-                            Messing with a URL is a simple way to try things. You can also use tools like<a
+                            Messing with a URL is a simple way to try things. You can also use tools like <a
                                 className="text-blue underline underline-offset-2"
                                 href={"https://www.postman.com/"}>postman</a>.</p>
                         <Link to="/blabla" className="flex flex-row items-center mt-2">
