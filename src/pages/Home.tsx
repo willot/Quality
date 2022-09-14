@@ -142,7 +142,7 @@ export const Home = () => {
                 <section className="pb-10">
                     <h2 className="font-bold">Let's look at this example</h2>
                     <h3>The story:</h3>
-                    <section className="border-2 border-pink p-2 m-2 rounded-xl">
+                    <section className="border-4 border-pink p-2 m-2 rounded-xl">
                         <p className="pl-2">As a user, I want to see more information about quality. Make a button that
                             the
                             user can click to see more information on quality</p>
