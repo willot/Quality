@@ -24,12 +24,12 @@ export const ExploratoryTesting = () => {
                             as
                             mutually supportive activities that run in parallel throughout the project."</p>
                         <p className="text-xs indent-8 pb-5">--Cem Kaner--</p>
-                        <p>For me exploratory testing is using the scientific method to gain insight in your application
-                            and find potential problems. You make an hypothesis. You gather data and you assess if your
-                            hypothesis holds or doesn't. Then you use your results to create a new hypothesis. This is
-                            how you "explore" your application/system. If you want to really dig into this subject I
+                        <p>For me, exploratory testing is using the scientific method to gain insights into your
+                            application and find potential problems. You make a hypothesis. You gather data. You assess
+                            if your hypothesis holds or doesn't. Then you use your results to create a new hypothesis.
+                            This is how you "explore" your application/system. If you want to dig into this subject, I
                             recommend "Explore It!" by Elisabeth Hendrickson. Ultimately how can you guarantee that the
-                            system works if you didn't test its edges.</p>
+                            system works if you didn't test its edges?</p>
                     </section>
                     <section className="pb-10">
                         <h2 className="font-bold">Why is it useful?</h2>
@@ -38,45 +38,43 @@ export const ExploratoryTesting = () => {
                             try to move beyond just checking the acceptance criteria then you are letting your users
                             find the bugs. If you let your users find the bug you risk breaking the trust of your users
                             and they are more likely to use your competitors. Letting the users find the bugs also
-                            increases the stress of your team because someone reports the bug. The bug go through triage
-                            and get prioritized. Since it is in production it is very likely that someone will be asked
-                            to fix it quickly or someone on call will get a message. The engineer is likely to receive
+                            increases the stress of your team because someone reports the bug. The bug goes through
+                            triage and gets prioritized. Since it is in production someone will likely be asked to fix
+                            it quickly or someone on call will get a message. The engineer is likely to receive
                             incomplete information about the bug. The person will have to try to gather more data to
-                            understand what the bug is. At the same time the manager will keep asking where we are with
-                            the bug and when will it be fixed? Then the bug gets fixed and gets pushed. It distracted a
-                            lot of people from their work, added a lot of stress and was terribly inefficient. Let's
+                            understand what the bug is. At the same time, the manager will keep asking where we are with
+                            the bug and when will it be fixed. Then the bug gets fixed and gets pushed. It distracted a
+                            lot of people from their work, added a lot of stress, and was terribly inefficient. Let's
                             imagine the happy path. A QA or anybody in the team did some exploratory testing on the
                             stage environment and found an issue. A detailed ticket gets created and the product manager
-                            decides to prioritize it or not. Then the ticket gets added to the engineer queue. The next
-                            engineer available will pick the ticket on top of the board. The engineer will have all the
-                            information needed to fix the bug and life go one. No pages, no manager asking when it will
+                            decides to prioritize it or not. Then the ticket gets added to the board. The next engineer
+                            available will pick the ticket on top of the board. The engineer will have all the
+                            information needed to fix the bug and life go on. No pages, no manager asking when it will
                             be fixed, no engineer complaining that they don't have information to fix the bug. No
                             disturbance in the normal process.</p>
                     </section>
                     <section className="pb-10">
                         <h2 className="font-bold">What does exploratory testing add?</h2>
-                        <p>For me exploratory testing is putting yourself in the user's shoes. You become a user
+                        <p>For me, exploratory testing is putting yourself in the user's shoes. You become a user
                             advocate. How do I feel as a user? Does that really make sense? Is this confusing? Can I be
                             in a weird state if I do some action in a different order than expected? What can a user do
-                            that we didn't think was possible, we didn't expect.</p>
+                            that we didn't think was possible, we didn't expect?</p>
                     </section>
                     <section>
                         <h2 className="font-bold">Basic rules:</h2>
                         <h3 className="text-pink font-semibold pt-4">The goal</h3>
-                        <p>You need to have a goal when you do exploratory testing. Otherwise you will just wander
-                            aimlessly and not really accomplish anything. It can be as simple as: "I want to test all
-                            the ways to create a user". You may find issues that are not relative to your goal, you
-                            should note them and come back later to it.</p>
+                        <p>You need to have a goal when you do exploratory testing. Otherwise, you will just wander
+                            aimlessly and not accomplish anything. It can be as simple as: "I want to test all the ways
+                            to create a user". You may find issues that are not relative to your goal, you should note
+                            them and come back later to it.</p>
                         <h3 className="text-pink font-semibold pt-4">The framework</h3>
-                        <p>You need to set aside time for your exploration. I like to use an hour and half to two
-                            hours.
-                            More it become hard to stay focus and less you feel like you just scratch the surface. I
-                            also
-                            like to
-                            set boundaries. I will only test on this browser or iOS...</p>
+                        <p>You need to set aside time for your exploration. I like to use an hour and a half to two
+                            hours. More time and it becomes hard to stay focused. Less time, then you feel like you just
+                            scratch the surface. I also like to set boundaries. I will only test on this browser or
+                            iOS...</p>
                         <h3 className="text-pink font-semibold pt-4">The group</h3>
-                        <p>I really recommend to mob when doing exploratory testing. I find 4 people ideal but it is not
-                            a hard set rule. What I like about doing with other people is that you generate more ideas
+                        <p>I recommend to mob when doing exploratory testing. I find 4 people ideal but it is not a
+                            hard-set rule. What I like about doing with other people is that you generate more ideas
                             about potential problems and you get more eyes looking at the screen. You also have more
                             people with knowledge of the system. This can help you create better hypotheses. You are
                             also more likely to catch things.</p>

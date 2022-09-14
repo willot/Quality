@@ -4,9 +4,7 @@ import {Home} from "./pages/Home";
 
 
 function App() {
-    // useEffect(() => {
         document.title = 'Quality';
-    // });
 
   return (
     <div className="App bg-white-bg flex flex-row justify-center">
