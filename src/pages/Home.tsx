@@ -222,19 +222,19 @@ export const Home = () => {
                         {test4}
                     </SyntaxHighlighter>
                     <section className="pt-10">
-                        <p>These simple tests can seem useless. They are extremely easy to reproduce manually and ensure
-                            that the functionality works correctly. Yes, but it would be missing the point. The value of
-                            the tests is that they can be repeated cheaply and at will. You can run them when committing
-                            or when pushing code. They ensure that nothing new breaks the current functionality. They
-                            also act as documentation of the expected behavior. They are regression tests.
+                        <p>These simple tests can seem useless at first. They are extremely easy to reproduce manually and ensure
+                            that the functionality works correctly. However, that would be missing the point. The value of
+                            the tests is that they can be repeated without wasting developer or QA time, and streamlines acceptance for deployment. You can run them when committing
+                            or pushing code. They ensure that nothing new breaks the current functionality, adn
+                            also act as documentation of expected behavior. They are regression tests.
                         </p>
                         <p className="pt-2">Nonetheless, tests are not bulletproof. If I wanted to cover all the
-                            possibilities I could have written at least 15 more tests... Which would be silly. To take
-                            an analogy that Elizabeth Hendrickson uses in her book "Explore It!". Tests are a net, the
-                            more tests the tighter the weaves are but you will always have gaps.</p>
-                        <p className="pt-2 text-pink font-semibold">For me, one of the most important values of the
-                            tests that often get missed is that they remove the tedious, boring, unimportant part of
-                            testing. These automated tests give time back to the professional testers to do the
+                            possibilities, I could have written at least 15 more tests... Which would be impractical. To use
+                            an analogy from Elizabeth Hendrickson's book, "Explore It!": Tests are a net, the
+                            more tests, the tighter the weaves are, but you will always have gaps.</p>
+                        <p className="pt-2 text-pink font-semibold">For me, one of the most important values of automated
+                            tests that often get missed, is that they remove the tedious, boring, unimportant parts of
+                            quality control. These automated tests give time back to the professional testers to do the
                             essential testing: usability testing, stress testing, accessibility testing, load testing,
                             and EXPLORATORY testing!</p>
                     </section>

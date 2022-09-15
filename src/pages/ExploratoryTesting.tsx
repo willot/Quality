@@ -16,7 +16,7 @@ export const ExploratoryTesting = () => {
                 <section className="bg-white-bg h-full text-black text-justify py-10 px-1">
                     <h1 className="text-4xl font-medium pb-5 text-pink">Exploratory testing </h1>
                     <section className="pb-10">
-                        <h2 className="font-bold">Exploratory testing definition?</h2>
+                        <h2 className="font-bold">The Definition</h2>
                         <p className="indent-8"> "A style of software testing that emphasizes the personal freedom and
                             responsibility of the individual tester to continually optimize the quality of his/her work
                             by
@@ -26,21 +26,21 @@ export const ExploratoryTesting = () => {
                         <p className="text-xs indent-8 pb-5">--Cem Kaner--</p>
                         <p>For me, exploratory testing is using the scientific method to gain insights into your
                             application and find potential problems. You make a hypothesis. You gather data. You assess
-                            if your hypothesis holds or doesn't. Then you use your results to create a new hypothesis.
+                            if your hypothesis holds or not. Then you use your results to create a new hypothesis.
                             This is how you "explore" your application/system. If you want to dig into this subject, I
-                            recommend "Explore It!" by Elisabeth Hendrickson. Ultimately how can you guarantee that the
-                            system works if you didn't test its edges?</p>
+                            recommend "Explore It!" by Elisabeth Hendrickson. Ultimately, how can you guarantee that the
+                            system works if you haven't tested its edges?</p>
                     </section>
                     <section className="pb-10">
                         <h2 className="font-bold">Why is it useful?</h2>
-                        <p>If you do not search for bugs how do you find them? Checking that acceptance criteria are met
-                            is not checking for bugs. It is just making sure the work is done as expected. If you do not
-                            try to move beyond just checking the acceptance criteria then you are letting your users
-                            find the bugs. If you let your users find the bug you risk breaking the trust of your users
-                            and they are more likely to use your competitors. Letting the users find the bugs also
-                            increases the stress of your team because someone reports the bug. The bug goes through
-                            triage and gets prioritized. Since it is in production someone will likely be asked to fix
-                            it quickly or someone on call will get a message. The engineer is likely to receive
+                        <p>If you do not search for bugs, how do you find them? Checking that acceptance criteria are met
+                            is not the same as checking for bugs. It only makes sure the work is done as expected. If you do not
+                            try to move beyond just checking the acceptance criteria, then you are letting your users
+                            find the bugs instead. If your users are the ones finding the bugs, you risk breaking their trust.
+                            They will be more likely to use your competitors. It will also
+                            increases the stress of your team. When a user reports a bug, the bug goes through
+                            triage and gets prioritized. Since it is in production, someone will likely be asked to rush a fix instead of their normal work,
+                            or, worse yet, get woken up in the middle of the night to solve it. The engineer is likely to receive
                             incomplete information about the bug. The person will have to try to gather more data to
                             understand what the bug is. At the same time, the manager will keep asking where we are with
                             the bug and when will it be fixed. Then the bug gets fixed and gets pushed. It distracted a
