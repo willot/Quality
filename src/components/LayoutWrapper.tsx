@@ -8,7 +8,7 @@ type LayoutWrapperProps = {
 }
 
 export const LayoutWrapper = ({children}: LayoutWrapperProps) => {
-    const [showSideNavBar, setShowSideNavBar] = useState(window.innerWidth > 450);
+    const [showSideNavBar, setShowSideNavBar] = useState(window.innerWidth > 650);
     const {ref, isVisible, setIsVisible} = OutsideClickDetector(false);
 
     useEffect(() => {
@@ -20,11 +20,7 @@ export const LayoutWrapper = ({children}: LayoutWrapperProps) => {
     })
 
     const navLinkStyle = (navData: any) => {
-        if (showSideNavBar) {
-            return navData.isActive ? "text-blue font-semibold text-left" : "text-pink font-semibold text-left"
-        } else {
-            return navData.isActive ? "text-blue font-semibold text-left" : "text-blue font-semibold text-left"
-        }
+        return navData.isActive ? "text-blue font-semibold text-left" : "text-pink font-semibold text-left"
     }
 
     const listOfLink = () => {
@@ -64,8 +60,10 @@ export const LayoutWrapper = ({children}: LayoutWrapperProps) => {
     const sideBar = () => {
         if (showSideNavBar) {
             return (
-                <section className="flex flex-col pt-20 pl-4 space-y-2 col-span-3">
-                    {listOfLink()}
+                <section className="relative pt-16 col-span-3">
+                    <section className="fixed flex flex-col py-4 pr-2 space-y-2  border-r border-pink">
+                        {listOfLink()}
+                    </section>
                 </section>)
         } else {
             return null;
@@ -74,7 +72,7 @@ export const LayoutWrapper = ({children}: LayoutWrapperProps) => {
 
     const componentToDisplay = () => {
         let width = window.innerWidth;
-        if (width < 450) {
+        if (width < 650) {
             setShowSideNavBar(false)
         } else {
             return setShowSideNavBar(true);
@@ -110,7 +108,7 @@ export const LayoutWrapper = ({children}: LayoutWrapperProps) => {
 
     return (
         <section
-            className=" bg-white-bg h-full text-black text-justify grid grid-cols-12 w-11/12 md:w-10/12 lg:w-9/12 xl:w8/12 2xl:w-7/12">
+            className="bg-white-bg h-full text-black text-justify grid grid-cols-12 w-full px-2 md:w-10/12 lg:w-9/12 xl:w8/12 2xl:w-7/12">
             {sideBar()}
             <section className={showSideNavBar ? "col-span-9" : "col-span-12"}>
                 {showSideBarIcon()}
