@@ -222,17 +222,22 @@ export const Home = () => {
                         {test4}
                     </SyntaxHighlighter>
                     <section className="pt-10">
-                        <p>These simple tests can seem useless at first. They are extremely easy to reproduce manually and ensure
-                            that the functionality works correctly. However, that would be missing the point. The value of
-                            the tests is that they can be repeated without wasting developer or QA time, and streamlines acceptance for deployment. You can run them when committing
+                        <p>These simple tests can seem useless at first. They are extremely easy to reproduce manually
+                            and ensure
+                            that the functionality works correctly. However, that would be missing the point. The value
+                            of
+                            the tests is that they can be repeated without wasting developer or QA time, and streamlines
+                            acceptance for deployment. You can run them when committing
                             or pushing code. They ensure that nothing new breaks the current functionality, adn
                             also act as documentation of expected behavior. They are regression tests.
                         </p>
                         <p className="pt-2">Nonetheless, tests are not bulletproof. If I wanted to cover all the
-                            possibilities, I could have written at least 15 more tests... Which would be impractical. To use
+                            possibilities, I could have written at least 15 more tests... Which would be impractical. To
+                            use
                             an analogy from Elizabeth Hendrickson's book, "Explore It!": Tests are a net, the
                             more tests, the tighter the weaves are, but you will always have gaps.</p>
-                        <p className="pt-4 text-pink font-semibold">For me, one of the most important values of automated
+                        <p className="pt-4 text-pink font-semibold">For me, one of the most important values of
+                            automated
                             tests that often get missed, is that they remove the tedious, boring, unimportant parts of
                             quality control. These automated tests give time back to the professional testers to do the
                             essential testing: usability testing, stress testing, accessibility testing, load testing,
