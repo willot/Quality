@@ -14,7 +14,7 @@ export const Ecosystem = () => {
         <section className="bg-white-bg flex flex-row justify-center w-full">
             <LayoutWrapper>
                 <section className="bg-white-bg h-full text-black text-justify py-10 px-1">
-                    <h1 className="text-4xl font-medium pb-5 text-pink">Application in its environment</h1>
+                    <h1 className="text-4xl text-left font-medium pb-5 text-pink">Application in its environment</h1>
                     <p>Your application is not only the software. It is running on servers. It is being access from a
                         lot of
                         different devices, PC, tablets, androids, iPhones... It is using databases. It is using external

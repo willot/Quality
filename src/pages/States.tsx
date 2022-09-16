@@ -16,7 +16,7 @@ export const States = () => {
         <section className="bg-white-bg flex flex-row justify-center w-full">
             <LayoutWrapper>
                 <section className="bg-white-bg h-full text-black text-justify py-10 px-1">
-                    <h1 className="text-4xl font-medium pb-5 text-pink">States and changing states</h1>
+                    <h1 className="text-4xl text-left font-medium pb-5 text-pink">States and changing states</h1>
                     <p>Weird bugs are often caused by action happening at time where they should not. They are usually
                         the
                         bugs that are hard to reproduce or even to understand.
