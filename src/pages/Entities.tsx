@@ -45,7 +45,7 @@ export const Entities = () => {
                         held
                         logic that can hide a bug.
                     </p>
-                    <section className="py-10">
+                    <section className="pt-10">
                         <h2 className="font-bold">Exploring the objects</h2>
                         <p className="pb-2">The first thing is that you want to identify these objects. As stated
                             earlier
@@ -192,7 +192,6 @@ export const Entities = () => {
                                         an move on.</p>
                                 </>
                             )}
-
                         </section>
                     </section>
                     <Link to="/states" className="flex flex-row items-center pt-4">
