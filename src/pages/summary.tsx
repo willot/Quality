@@ -59,7 +59,7 @@ export const Summary = () => {
                         The product owners gaining understanding the system at a deeper level.</p>
 
                     <Link to="/" className="flex flex-row items-center pt-4">
-                        <span className="text-pink text-lg font-semibold w-52">Back to the start</span>
+                        <span className="text-pink text-left text-lg font-semibold w-52">Back to the start</span>
                         <ArrowLongRightIcon className="text-pink h-16 w-16"/>
                     </Link>
                 </section>

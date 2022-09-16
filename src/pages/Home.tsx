@@ -240,7 +240,7 @@ export const Home = () => {
                     </section>
                 </section>
                 <Link to="/exploratoryTesting" className="flex flex-row items-center pt-4">
-                    <span className="text-pink text-lg font-semibold w-52">Exploratory Testing</span>
+                    <span className="text-pink text-left text-lg font-semibold w-52">Exploratory Testing</span>
                     <ArrowLongRightIcon className="text-pink h-16 w-16"/>
                 </Link>
             </section>

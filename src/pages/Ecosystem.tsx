@@ -82,7 +82,7 @@ export const Ecosystem = () => {
                         something go
                         wrong instead of being reactive.</p>
                     <Link to="/summary" className="flex flex-row items-center pt-4">
-                        <span className="text-pink text-lg font-semibold w-52">Summary</span>
+                        <span className="text-pink text-left text-lg font-semibold w-52">Summary</span>
                         <ArrowLongRightIcon className="text-pink h-16 w-16"/>
                     </Link>
                 </section>

@@ -10,32 +10,32 @@ export const NoPage = () => {
                 <section>
                     <h2 className="text-black font-bold">Where do you want to go?</h2>
                     <Link to="/" className="flex flex-row items-center">
-                        <span className="text-pink text-lg font-semibold w-52">Quality</span>
+                        <span className="text-pink text-left text-lg font-semibold w-52">Quality</span>
                         <ArrowLongRightIcon className="text-pink h-16 w-16"/>
                     </Link>
                     <Link to="/exploratoryTesting" className="flex flex-row items-center pb-6">
-                        <span className="text-pink text-lg font-semibold w-52">Exploratory Testing</span>
+                        <span className="text-pink text-left text-lg font-semibold w-52">Exploratory Testing</span>
                         <ArrowLongRightIcon className="text-pink h-16 w-16"/>
                     </Link>
                     <p>If you came here from my '/blabla' link example than click on this link to go back where you were.</p>
                     <Link to="/interactions" className="flex flex-row items-center">
-                        <span className="text-pink text-lg font-semibold w-52">Interactions</span>
+                        <span className="text-pink text-left text-lg font-semibold w-52">Interactions</span>
                         <ArrowLongRightIcon className="text-pink h-16 w-16"/>
                     </Link>
                     <Link to="/objects" className="flex flex-row items-center pt-10">
-                        <span className="text-pink text-lg font-semibold w-52">Dealing with Objects</span>
+                        <span className="text-pink text-left text-lg font-semibold w-52">Dealing with Objects</span>
                         <ArrowLongRightIcon className="text-pink h-16 w-16"/>
                     </Link>
                     <Link to="/states" className="flex flex-row items-center pt-10">
-                        <span className="text-pink text-lg font-semibold w-52">Dealing with states</span>
+                        <span className="text-pink text-left text-lg font-semibold w-52">Dealing with states</span>
                         <ArrowLongRightIcon className="text-pink h-16 w-16"/>
                     </Link>
                     <Link to="/ecoSystem" className="flex flex-row items-center pt-10">
-                        <span className="text-pink text-lg font-semibold w-52">Application in its environment</span>
+                        <span className="text-pink text-left text-lg font-semibold w-52">Application in its environment</span>
                         <ArrowLongRightIcon className="text-pink h-16 w-16"/>
                     </Link>
                     <Link to="/summary" className="flex flex-row items-center pt-10">
-                        <span className="text-pink text-lg font-semibold w-52">Summary</span>
+                        <span className="text-pink text-left text-lg font-semibold w-52">Summary</span>
                         <ArrowLongRightIcon className="text-pink h-16 w-16"/>
                     </Link>
                 </section>

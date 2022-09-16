@@ -103,7 +103,7 @@ export const ExploratoryTesting = () => {
 
                     </section>
                     <Link to="/interactions" className="flex flex-row items-center pt-4">
-                        <span className="text-pink text-lg font-semibold w-52">Learn more about interactions</span>
+                        <span className="text-pink text-left text-lg font-semibold w-52">Learn more about interactions</span>
                         <ArrowLongRightIcon className="text-pink h-16 w-16"/>
                     </Link>
                 </section>
