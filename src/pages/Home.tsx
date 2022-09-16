@@ -70,8 +70,8 @@ export const Home = () => {
             render(<Home/>);
             const buttons = screen.getAllByRole('button');
             click(buttons[0]);
-            const extraInfo = screen.queryByText("Button 1 follow all the requirements. But will a user expect " +
-                "a button to get more information?")
+            const extraInfo = screen.queryByText("Button 1 follow all the"
+            + "requirements. But will a user expect a button to get more information?")
             expect(extraInfo).toBeInTheDocument();
         });
         `;
@@ -85,8 +85,8 @@ export const Home = () => {
             click(buttons[2]);
             expect(buttons[2]).toContainHTML("show less details");
             expect(buttons[0]).toContainHTML("Show more details");
-            const extraInfo = screen.queryByText("Button 3 follow all the requirements. But the color contrast is" +
-                " hard to read.")
+            const extraInfo = screen.queryByText("Button 3 follow all the requirements." +
+             "But the color contrast is hard to read.")
             expect(extraInfo).toBeInTheDocument();
         });`;
 
@@ -94,8 +94,8 @@ export const Home = () => {
             render(<Home/>);
             const buttons = screen.getAllByRole('button');
             click(buttons[0]);
-            const extraInfo = screen.queryByText("Button 1 follow all the requirements. But will a user expect " +
-                "a button to get more information?")
+            const extraInfo = screen.queryByText("Button 1 follow all the" + 
+            "requirements. But will a user expect a button to get more information?")
             expect(extraInfo).toBeInTheDocument();
             click(buttons[0]);
             expect(extraInfo).not.toBeInTheDocument();
@@ -142,7 +142,7 @@ export const Home = () => {
                 <section className="pb-10">
                     <h2 className="font-bold">Let's look at this example</h2>
                     <h3>The story:</h3>
-                    <section className="border-4 border-pink p-2 m-2 rounded-xl">
+                    <section className="border-2 border-pink p-2 m-2 rounded-xl">
                         <p className="pl-2">As a user, I want to see more information about quality. Make a button that
                             the
                             user can click to see more information on quality</p>
@@ -232,7 +232,7 @@ export const Home = () => {
                             possibilities, I could have written at least 15 more tests... Which would be impractical. To use
                             an analogy from Elizabeth Hendrickson's book, "Explore It!": Tests are a net, the
                             more tests, the tighter the weaves are, but you will always have gaps.</p>
-                        <p className="pt-2 text-pink font-semibold">For me, one of the most important values of automated
+                        <p className="pt-4 text-pink font-semibold">For me, one of the most important values of automated
                             tests that often get missed, is that they remove the tedious, boring, unimportant parts of
                             quality control. These automated tests give time back to the professional testers to do the
                             essential testing: usability testing, stress testing, accessibility testing, load testing,

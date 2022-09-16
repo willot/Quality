@@ -3,10 +3,10 @@ import {render, screen} from '@testing-library/react';
 import {click} from "@testing-library/user-event/dist/click";
 import {MemoryRouter} from "react-router-dom";
 
-describe('home page', () =>{
+describe('home page', () => {
     describe('example buttons', () => {
         it('should change the text wording when the button is clicked', () => {
-                render(<Home/>,{wrapper: MemoryRouter});
+            render(<Home/>, {wrapper: MemoryRouter});
             const buttons = screen.getAllByRole('button');
             expect(buttons[0]).toContainHTML("Show more details");
             click(buttons[0]);

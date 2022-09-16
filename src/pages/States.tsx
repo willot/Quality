@@ -55,7 +55,7 @@ export const States = () => {
                             state and is officially borrowed.
                             Then the user leave the building and is logged out.</p>
 
-                        {window.innerWidth > 800 && <div className="w-full h-80 border-4 border-pink rounded-xl mt-6"
+                        {window.innerWidth > 800 && <div className="w-full h-80 border-2 border-pink rounded-xl mt-6"
                              aria-label="visual of the library example">
                             <span className="pl-4 pt-6 text-lg font-bold">Library</span>
                             <Xwrapper>
