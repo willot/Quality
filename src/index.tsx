@@ -28,6 +28,7 @@ root.render(
                 <Route path="/ecosystem" element={<Ecosystem/>}/>
                 <Route path="/summary" element={<Summary/>}/>
                 <Route path="*" element={<NoPage/>}/>
+                <Route path="/error" element={<NoPage/>}/>
             </Routes>
         </BrowserRouter>
     </React.StrictMode>
