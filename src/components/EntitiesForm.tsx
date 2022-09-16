@@ -50,7 +50,7 @@ export const EntitiesForm = ({setEntity, originalEntities}: UserFormProps) => {
         <section className="bg-white-bg flex flex-col space-y-2">
             <label className="flex flex-col sm:flex-row">
                 <span className="w-24 font-semibold">First Name</span>
-                <input className="text-blue rounded-md"
+                <input className="text-blue border border-pink rounded-md"
                        type="text"
                        name={"name"}
                        value={firstName}
@@ -61,7 +61,7 @@ export const EntitiesForm = ({setEntity, originalEntities}: UserFormProps) => {
             <label className="flex flex-col sm:flex-row">
                 <span className="w-24 font-semibold">Last Name*</span>
                 <input
-                    className={`text-blue rounded-md ${error && (lastName === undefined || lastName === "") ? "ring-4 border-solid ring-red" : ""}`}
+                    className={`text-blue border border-pink rounded-md ${error && (lastName === undefined || lastName === "") ? "ring-4 border-solid ring-red" : ""}`}
                     type="text"
                     name={"name"}
                     value={lastName}
@@ -71,7 +71,7 @@ export const EntitiesForm = ({setEntity, originalEntities}: UserFormProps) => {
             </label>
             <label className="flex flex-col sm:flex-row">
                 <span className="w-24 font-semibold">Street</span>
-                <input className="text-blue rounded-md"
+                <input className="text-blue border border-pink rounded-md"
                        type="text"
                        name={"street"}
                        value={street}
@@ -81,7 +81,7 @@ export const EntitiesForm = ({setEntity, originalEntities}: UserFormProps) => {
             </label>
             <label className="flex flex-col sm:flex-row">
                 <span className="w-24 font-semibold">Apt #</span>
-                <input className="text-blue rounded-md"
+                <input className="text-blue border border-pink rounded-md"
                        type="text"
                        name={"apartment"}
                        value={apartment}
@@ -92,7 +92,7 @@ export const EntitiesForm = ({setEntity, originalEntities}: UserFormProps) => {
             <label className="flex flex-col sm:flex-row">
                 <span className="w-24 font-semibold">City*</span>
                 <input
-                    className={`text-blue rounded-md ${error && (city === undefined || city === "") ? "ring-4 border-solid ring-red" : ""}`}
+                    className={`text-blue border border-pink rounded-md ${error && (city === undefined || city === "") ? "ring-4 border-solid ring-red" : ""}`}
                     type="text"
                     name={"city"}
                     value={city}
