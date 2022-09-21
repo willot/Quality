@@ -12,7 +12,7 @@ export const Summary = () => {
 
     return (
         <section className="bg-white-bg flex flex-row justify-center w-full">
-            <LayoutWrapper section="">
+            <LayoutWrapper section="" navigationTextButton="Quality" navigationButtonLinkUrl="/">
                 <section className="bg-white-bg h-full text-black text-justify py-10 px-1">
                     <h1 className="text-4xl text-left font-medium pb-5 text-pink">Summary</h1>
                     <p className="pb-4">Quality is not only meeting your user expectation. It is also something that
@@ -57,11 +57,6 @@ export const Summary = () => {
                         testing their own story before they push it. The PMs discovering more issues when accepting
                         stories.
                         The product owners gaining understanding the system at a deeper level.</p>
-
-                    <Link to="/" className="flex flex-row items-center pt-4">
-                        <span className="text-pink text-left text-lg font-semibold w-52">Back to the start</span>
-                        <ArrowLongRightIcon className="text-pink h-16 w-16"/>
-                    </Link>
                 </section>
             </LayoutWrapper>
         </section>

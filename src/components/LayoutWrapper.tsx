@@ -2,13 +2,16 @@ import {NavLink} from "react-router-dom";
 import React, {useEffect, useState} from "react";
 import {Bars3Icon} from "@heroicons/react/24/solid";
 import {OutsideClickDetector} from "../hooks/OutsideClickDetector";
+import {NavButton} from "./NavButton";
 
 type LayoutWrapperProps = {
     section: string;
     children: React.ReactElement;
+    navigationTextButton: string,
+    navigationButtonLinkUrl: string,
 }
 
-export const LayoutWrapper = ({section, children}: LayoutWrapperProps) => {
+export const LayoutWrapper = ({section, children, navigationTextButton, navigationButtonLinkUrl}: LayoutWrapperProps) => {
     const [showSideNavBar, setShowSideNavBar] = useState(window.innerWidth > 650);
     const {ref, isVisible, setIsVisible} = OutsideClickDetector(false);
 
@@ -29,7 +32,8 @@ export const LayoutWrapper = ({section, children}: LayoutWrapperProps) => {
             case "quality": {
                 return (<section className="px-4 text-left w-full py-28 md:w-10/12 lg:w-9/12 xl:w8/12 2xl:w-7/12">
                     <h1 className="text-4xl font-medium pb-5 text-pink">What is quality?</h1>
-                    <p>Let's start by refreshing what quality means.</p>
+                    <p className="pb-8">Let's start by refreshing what quality means.</p>
+                    <NavButton text="Exploratory Testing" linkUrl="/exploratoryTesting" />
                 </section>)
             }
             default: {
@@ -62,7 +66,7 @@ export const LayoutWrapper = ({section, children}: LayoutWrapperProps) => {
                          className={(navData) => navLinkStyle(navData)}>
                     States
                 </NavLink>
-                <NavLink to="/ecoSystem"
+                <NavLink to="/environment"
                          className={(navData) => navLinkStyle(navData)}>
                     Environment
                 </NavLink>
@@ -113,7 +117,7 @@ export const LayoutWrapper = ({section, children}: LayoutWrapperProps) => {
                     </section>
                     {isVisible && (
                         <section
-                            className="absolute w-9/12 flex right-3 flex-col pt-4 pl-4 space-y-1 bg-white rounded-xl">
+                            className="absolute w-9/12 flex right-7 flex-col pt-4 pl-4 space-y-1 bg-white rounded-xl">
                             {listOfLink()}
                         </section>
                     )
@@ -127,16 +131,20 @@ export const LayoutWrapper = ({section, children}: LayoutWrapperProps) => {
         <section>
             <section className='bg-blue-light w-full flex flex-row justify-center'>
                 {sectionsIntro(section)}
+                {showSideBarIcon()}
             </section>
             <section className="flex flex-row justify-center">
                 <section
                     className="bg-white-bg h-full text-black text-justify grid grid-cols-12 px-2 w-full md:w-10/12 lg:w-9/12 xl:w8/12 2xl:w-7/12">
                     <section className={showSideNavBar ? "col-span-9" : "col-span-12"}>
-                        {showSideBarIcon()}
+
                         {children}
                     </section>
                     {sideBar()}
                 </section>
+            </section>
+            <section className="bg-blue-light flex flex-row justify-end pl-2 pr-2 md:pr-16 py-8">
+                <NavButton text={navigationTextButton} linkUrl={navigationButtonLinkUrl}/>
             </section>
         </section>
     )

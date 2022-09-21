@@ -34,7 +34,7 @@ export const Interactions = () => {
 
     return (
         <section className="bg-white-bg flex flex-row justify-center w-full">
-            <LayoutWrapper section="">
+            <LayoutWrapper section="" navigationTextButton="Objects" navigationButtonLinkUrl="/objects">
                 <section
                     className="bg-white-bg h-full text-black text-justify py-10 px-1">
                     <h1 className="text-4xl text-left font-medium pb-5 text-pink">Interaction with your application</h1>
@@ -131,10 +131,6 @@ export const Interactions = () => {
                         </section>
 
                     </section>
-                    <Link to="/objects" className="flex flex-row items-center pt-4">
-                        <span className="text-pink text-left text-lg font-semibold w-52">Dealing with Objects</span>
-                        <ArrowLongRightIcon className="text-pink h-16 w-16"/>
-                    </Link>
                 </section>
             </LayoutWrapper>
         </section>

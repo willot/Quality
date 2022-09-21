@@ -12,7 +12,7 @@ export const ExploratoryTesting = () => {
 
     return (
         <div className="bg-white-bg flex flex-row justify-center w-full">
-            <LayoutWrapper section="">
+            <LayoutWrapper section="" navigationTextButton="Interactions" navigationButtonLinkUrl="/interactions">
                 <section className="bg-white-bg h-full text-black text-justify py-10 px-1">
                     <h1 className="text-4xl text-left font-medium pb-5 text-pink">Exploratory testing </h1>
                     <section className="pb-10">
@@ -96,16 +96,12 @@ export const ExploratoryTesting = () => {
                                 states</Link>
                         </ul>
                         <ul>
-                            <Link to="/ecoSystem" className="text-lg underline underline-offset-2 px-2">Application in
+                            <Link to="/environment" className="text-lg underline underline-offset-2 px-2">Application in
                                 its
                                 environment</Link>
                         </ul>
 
                     </section>
-                    <Link to="/interactions" className="flex flex-row items-center pt-4">
-                        <span className="text-pink text-left text-lg font-semibold w-52">Learn more about interactions</span>
-                        <ArrowLongRightIcon className="text-pink h-16 w-16"/>
-                    </Link>
                 </section>
             </LayoutWrapper>
         </div>

@@ -14,7 +14,7 @@ export const States = () => {
 
     return (
         <section className="bg-white-bg flex flex-row justify-center w-full">
-            <LayoutWrapper section="">
+            <LayoutWrapper section="" navigationTextButton="Environment" navigationButtonLinkUrl="/environment">
                 <section className="bg-white-bg h-full text-black text-justify py-10 px-1">
                     <h1 className="text-4xl text-left font-medium pb-5 text-pink">States and changing states</h1>
                     <p>Weird bugs are often caused by action happening at time where they should not. They are usually
@@ -133,10 +133,6 @@ export const States = () => {
                             hard to
                             tests scenarios that can really negatively affect the users.</p>
                     </section>
-                    <Link to="/ecoSystem" className="flex flex-row items-center pt-4">
-                        <span className="text-pink text-left text-lg font-semibold w-52">Software in a system</span>
-                        <ArrowLongRightIcon className="text-pink h-16 w-16"/>
-                    </Link>
                 </section>
             </LayoutWrapper>
         </section>

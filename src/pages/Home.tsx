@@ -103,7 +103,7 @@ export const Home = () => {
         });`
 
     return (
-        <LayoutWrapper section="quality">
+        <LayoutWrapper section="quality" navigationTextButton="Exploratory Testing" navigationButtonLinkUrl="/exploratoryTesting">
             <section className="bg-white-bg h-full text-black text-justify py-10 px-1">
                 {/*<h1 className="text-4xl text-left font-medium pb-5 text-pink">What is quality?</h1>*/}
                 <section className="pb-10">
@@ -245,7 +245,6 @@ export const Home = () => {
                             and EXPLORATORY testing!</p>
                     </section>
                 </section>
-                <NavButton text="Exploratory Testing" linkUrl="/exploratoryTesting" />
             </section>
         </LayoutWrapper>
     )

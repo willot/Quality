@@ -12,7 +12,7 @@ export const Ecosystem = () => {
 
     return (
         <section className="bg-white-bg flex flex-row justify-center w-full">
-            <LayoutWrapper section="">
+            <LayoutWrapper section="" navigationTextButton="Summary" navigationButtonLinkUrl="/summary">
                 <section className="bg-white-bg h-full text-black text-justify py-10 px-1">
                     <h1 className="text-4xl text-left font-medium pb-5 text-pink">Application in its environment</h1>
                     <p>Your application is not only the software. It is running on servers. It is being access from a
@@ -81,10 +81,6 @@ export const Ecosystem = () => {
                         gain insight on your system and its limitations. It will also help you be proactive when
                         something go
                         wrong instead of being reactive.</p>
-                    <Link to="/summary" className="flex flex-row items-center pt-4">
-                        <span className="text-pink text-left text-lg font-semibold w-52">Summary</span>
-                        <ArrowLongRightIcon className="text-pink h-16 w-16"/>
-                    </Link>
                 </section>
             </LayoutWrapper>
         </section>

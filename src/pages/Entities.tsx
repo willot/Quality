@@ -23,7 +23,7 @@ export const Entities = () => {
 
     return (
         <section className="bg-white-bg flex flex-row justify-center w-full">
-            <LayoutWrapper section="Entities">
+            <LayoutWrapper section="Entities" navigationTextButton="States" navigationButtonLinkUrl="/states">
                 <section className="bg-white-bg h-full text-black text-justify py-10 px-1">
                     <h1 className="text-4xl text-left font-medium pb-5 text-pink">Dealing with Objects</h1>
                     <p>An object is maybe more an engineer term to describe something that can be created, updated, or
@@ -194,10 +194,6 @@ export const Entities = () => {
                             )}
                         </section>
                     </section>
-                    <Link to="/states" className="flex flex-row items-center pt-4">
-                        <span className="text-pink text-left text-lg font-semibold w-52">States</span>
-                        <ArrowLongRightIcon className="text-pink h-16 w-16"/>
-                    </Link>
                 </section>
             </LayoutWrapper>
         </section>

@@ -2,8 +2,8 @@ import {Link} from "react-router-dom";
 import {ArrowLongRightIcon} from "@heroicons/react/24/solid";
 
 type NavButtonProps = {
-    text: string,
-    linkUrl: string,
+    text: string;
+    linkUrl: string;
 }
 
 export const NavButton = ({text, linkUrl}:NavButtonProps) => {
