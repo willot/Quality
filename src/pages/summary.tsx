@@ -12,7 +12,7 @@ export const Summary = () => {
 
     return (
         <section className="bg-white-bg flex flex-row justify-center w-full">
-            <LayoutWrapper>
+            <LayoutWrapper section="">
                 <section className="bg-white-bg h-full text-black text-justify py-10 px-1">
                     <h1 className="text-4xl text-left font-medium pb-5 text-pink">Summary</h1>
                     <p className="pb-4">Quality is not only meeting your user expectation. It is also something that

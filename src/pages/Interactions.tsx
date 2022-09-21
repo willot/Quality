@@ -34,7 +34,7 @@ export const Interactions = () => {
 
     return (
         <section className="bg-white-bg flex flex-row justify-center w-full">
-            <LayoutWrapper>
+            <LayoutWrapper section="">
                 <section
                     className="bg-white-bg h-full text-black text-justify py-10 px-1">
                     <h1 className="text-4xl text-left font-medium pb-5 text-pink">Interaction with your application</h1>

@@ -102,9 +102,9 @@ export const Home = () => {
         });`
 
     return (
-        <LayoutWrapper>
+        <LayoutWrapper section="quality">
             <section className="bg-white-bg h-full text-black text-justify py-10 px-1">
-                <h1 className="text-4xl text-left font-medium pb-5 text-pink">What is quality?</h1>
+                {/*<h1 className="text-4xl text-left font-medium pb-5 text-pink">What is quality?</h1>*/}
                 <section className="pb-10">
                     <h2 className="font-bold">Dictionary definition:</h2>
                     <p className="indent-8">The standard of something as measured against other things of a similar
