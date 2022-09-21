@@ -8,6 +8,7 @@ import {xonokai} from "react-syntax-highlighter/dist/cjs/styles/prism";
 import {ArrowLongRightIcon} from "@heroicons/react/24/solid";
 import {Link} from "react-router-dom";
 import {LayoutWrapper} from "../components/LayoutWrapper";
+import {NavButton} from "../components/NavButton";
 
 export const Home = () => {
     const [textDetails, setTextDetails] = useState("");
@@ -174,7 +175,7 @@ export const Home = () => {
                     that is what I like to believe... But I can't test if it is what the users expect, and I can't test
                     what I didn't think about..
                 </section>
-                <section className="pt-4">
+                <section className="pt-4 pb-6">
                     <h2 className="font-bold">Let's look at the tests</h2>
                     <p className="py-2">The first test is very simple. Does the text in the button change when the user
                         clicks on
@@ -244,10 +245,7 @@ export const Home = () => {
                             and EXPLORATORY testing!</p>
                     </section>
                 </section>
-                <Link to="/exploratoryTesting" className="flex flex-row items-center pt-4">
-                    <span className="text-pink text-left text-lg font-semibold w-52">Exploratory Testing</span>
-                    <ArrowLongRightIcon className="text-pink h-16 w-16"/>
-                </Link>
+                <NavButton text="Exploratory Testing" linkUrl="/exploratoryTesting" />
             </section>
         </LayoutWrapper>
     )
