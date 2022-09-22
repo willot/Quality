@@ -36,21 +36,25 @@ export const Interactions = () => {
             <LayoutWrapper section="interactions" page="interactions">
                 <section
                     className="bg-white-bg h-full text-black text-justify py-10 px-1">
-                    <p>You know your application. You use it every day. But, do you really know it? Did you ever try to
+                    <p>You think you know your application. You use it every day, right? But, do you really know it? Did
+                        you ever try to
                         do things out of order? Did you try to use your keyboard instead of your mouse to navigate? Did
-                        you try to use a screen reader? When I explore an app I try to think like my kid and be curious.
-                        I try to act like I don't know better. These are things you can do to try to change the way you
-                        interact with the application you are exploring.
+                        you try to use a screen reader?</p>
+                    <p>When I explore an app, I try to think like my kid does and try to be curious.
+                        I try to act like I don't know better. Here are some things you can do to try to change the way
+                        you
+                        interact with the application you are exploring:
                     </p>
                     <section className="py-10">
                         <h2 className="font-bold">Play with the URL</h2>
-                        <p>Did you ever try to mess with the URL? Click on the link below or better try to play with the
-                            URL of this page. This is a simple app but sometimes the URL contains ids or parameters. It
-                            is often a good thing to try to mess with them and see what happens. See if the application
-                            breaks or if you get access to things you shouldn't be able to. It is an issue that you can
-                            sometimes find in applications. The application is properly secure against users that are
-                            not logged in but, when you are logged in you can sometimes take actions you shouldn't be
-                            able to. This happens when endpoints are not properly secure with the right permissions.
+                        <p>Did you ever try to mess with the URL? Click on the link below or, better yet, try to play
+                            with the
+                            URL of this page. This is a simple app, but sometimes the URL contains ids or parameters. It
+                            is often a good thing to try to mess with them, and see what happens. See if the application
+                            breaks, or if you get access to things you shouldn't be able to. It is an issue that
+                            commonly occurs in applications. The application is properly secured against users that are
+                            not logged in. However, when you are logged in, you can sometimes take actions you shouldn't be
+                            able to. This happens when endpoints are not properly secured with the right permissions.
                             Messing with a URL is a simple way to try things. You can also use tools like <a
                                 className="text-blue underline underline-offset-2"
                                 href={"https://www.postman.com/"}>postman</a>.</p>
@@ -60,7 +64,8 @@ export const Interactions = () => {
                     </section>
                     <section className="pb-10">
                         <h2 className="font-bold">Use your keyboard</h2>
-                        <p>A lot of people use their keyboards to navigate into applications. Using a keyboard can have a
+                        <p>A lot of people use their keyboards to navigate into applications. Using a keyboard can have
+                            a
                             huge impact on your interaction with an application. These are examples of what can go wrong
                             when using a keyboard.</p>
                         <section className="pt-4">

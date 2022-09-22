@@ -42,12 +42,14 @@ export const ExploratoryTesting = () => {
                             incomplete information about the bug. The person will have to try to gather more data to
                             understand what the bug is. At the same time, the manager will keep asking where we are with
                             the bug and when will it be fixed. Then the bug gets fixed and gets pushed. It distracted a
-                            lot of people from their work, added a lot of stress, and was terribly inefficient. Let's
-                            imagine the happy path. A QA or anybody in the team did some exploratory testing on the
+                            lot of people from their work, added a lot of stress, and was terribly inefficient.</p>
+                            <p>
+                                Let's
+                            imagine the happy path. A QA or someone in the team did some exploratory testing on the
                             stage environment and found an issue. A detailed ticket gets created and the product manager
-                            decides to prioritize it or not. Then the ticket gets added to the board. The next engineer
+                            decides whether to prioritize it. Then the ticket gets added to the board. The next engineer
                             available will pick the ticket on top of the board. The engineer will have all the
-                            information needed to fix the bug and life go on. No pages, no manager asking when it will
+                            information needed to fix the bug and life goes on. No late night pages, no manager asking when it will
                             be fixed, no engineer complaining that they don't have information to fix the bug. No
                             disturbance in the normal process.</p>
                     </section>
@@ -56,30 +58,30 @@ export const ExploratoryTesting = () => {
                         <p>For me, exploratory testing is putting yourself in the user's shoes. You become a user
                             advocate. How do I feel as a user? Does that really make sense? Is this confusing? Can I be
                             in a weird state if I do some action in a different order than expected? What can a user do
-                            that we didn't think was possible, we didn't expect?</p>
+                            that we didn't think was possible or didn't expect?</p>
                     </section>
                     <section>
                         <h2 className="font-bold">Basic rules:</h2>
                         <h3 className="text-pink font-semibold pt-4">The goal</h3>
                         <p>You need to have a goal when you do exploratory testing. Otherwise, you will just wander
                             aimlessly and not accomplish anything. It can be as simple as: "I want to test all the ways
-                            to create a user". You may find issues that are not relative to your goal, you should note
-                            them and come back later to it.</p>
+                            to create a user". You may find issues that are not relative to your goal. You should note
+                            them and come back to them later.</p>
                         <h3 className="text-pink font-semibold pt-4">The framework</h3>
                         <p>You need to set aside time for your exploration. I like to use an hour and a half to two
-                            hours. More time and it becomes hard to stay focused. Less time, then you feel like you just
-                            scratch the surface. I also like to set boundaries. I will only test on this browser or
-                            iOS...</p>
+                            hours. More time, and it becomes hard to stay focused. Less time, then you feel like you just
+                            scratch the surface. I also like to set boundaries. 'I will only test on this browser or
+                            iOS...'</p>
                         <h3 className="text-pink font-semibold pt-4">The group</h3>
-                        <p>I recommend to mob when doing exploratory testing. I find 4 people ideal but it is not a
-                            hard-set rule. What I like about doing with other people is that you generate more ideas
-                            about potential problems and you get more eyes looking at the screen. You also have more
+                        <p>I recommend to mob when doing exploratory testing. I find 4 people ideal, but it is not a
+                            hard-set rule. What I like about doing it with other people, is that you generate more ideas
+                            about potential problems and get more eyes looking at the screen. You also have more
                             people with knowledge of the system. This can help you create better hypotheses. You are
                             also more likely to catch things.</p>
                     </section>
                     <section>
-                        <h2 className="font-bold pt-10">What do you need to focus on?</h2>
-                        <p className="pb-2">These four sections are based on the "Explore it!" book</p>
+                        <h2 className="font-bold pt-10">Diving deeper</h2>
+                        <p className="pb-2">These four concepts are based on the "Explore it!" book</p>
                         <ul>
                             <Link to="/interactions" className="text-lg underline underline-offset-2 px-2">
                                 Interactions
@@ -98,7 +100,6 @@ export const ExploratoryTesting = () => {
                                 its
                                 environment</Link>
                         </ul>
-
                     </section>
                 </section>
             </LayoutWrapper>
