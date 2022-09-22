@@ -1,5 +1,4 @@
 import {Link, useLocation} from "react-router-dom";
-import {ArrowLongRightIcon} from "@heroicons/react/24/solid";
 import {ShoppingCartIcon} from "@heroicons/react/20/solid";
 import {useEffect, useState} from "react";
 import {LayoutWrapper} from "../components/LayoutWrapper";

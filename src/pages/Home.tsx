@@ -5,10 +5,7 @@ import {ExampleButtonNotAccessible} from "../components/ExampleButtonNotAccessib
 
 import {Prism as SyntaxHighlighter} from 'react-syntax-highlighter';
 import {xonokai} from "react-syntax-highlighter/dist/cjs/styles/prism";
-import {ArrowLongRightIcon} from "@heroicons/react/24/solid";
-import {Link} from "react-router-dom";
 import {LayoutWrapper} from "../components/LayoutWrapper";
-import {NavButton} from "../components/NavButton";
 
 export const Home = () => {
     const [textDetails, setTextDetails] = useState("");

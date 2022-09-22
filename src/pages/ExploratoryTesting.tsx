@@ -1,4 +1,3 @@
-import {ArrowLongRightIcon} from "@heroicons/react/24/solid";
 import {Link, useLocation} from "react-router-dom";
 import {LayoutWrapper} from "../components/LayoutWrapper";
 import {useEffect} from "react";

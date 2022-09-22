@@ -1,5 +1,4 @@
-import {Link, useLocation} from "react-router-dom";
-import {ArrowLongRightIcon} from "@heroicons/react/24/solid";
+import {useLocation} from "react-router-dom";
 import {EntitiesForm} from "../components/EntitiesForm";
 import {useEffect, useState} from "react";
 import {LayoutWrapper} from "../components/LayoutWrapper";
