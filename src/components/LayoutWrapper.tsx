@@ -11,7 +11,12 @@ type LayoutWrapperProps = {
     navigationButtonLinkUrl: string,
 }
 
-export const LayoutWrapper = ({section, children, navigationTextButton, navigationButtonLinkUrl}: LayoutWrapperProps) => {
+export const LayoutWrapper = ({
+                                  section,
+                                  children,
+                                  navigationTextButton,
+                                  navigationButtonLinkUrl
+                              }: LayoutWrapperProps) => {
     const [showSideNavBar, setShowSideNavBar] = useState(window.innerWidth > 650);
     const {ref, isVisible, setIsVisible} = OutsideClickDetector(false);
 
@@ -33,8 +38,58 @@ export const LayoutWrapper = ({section, children, navigationTextButton, navigati
                 return (<section className="px-4 text-left w-full py-28 md:w-10/12 lg:w-9/12 xl:w8/12 2xl:w-7/12">
                     <h1 className="text-4xl font-medium pb-5 text-pink">What is quality?</h1>
                     <p className="pb-8">Let's start by refreshing what quality means.</p>
-                    <NavButton text="Exploratory Testing" linkUrl="/exploratoryTesting" />
+                    <NavButton text="Exploratory Testing" linkUrl="/exploratoryTesting"/>
                 </section>)
+            }
+            case "exploratoryTesting" : {
+                return (<section className="px-4 text-left w-full py-28 md:w-10/12 lg:w-9/12 xl:w8/12 2xl:w-7/12">
+                    <h1 className="text-4xl text-left font-medium pb-5 text-pink">Exploratory testing </h1>
+                    <p className="pb-8">Introduction to exploratory testing.</p>
+                    <section className="flex flex-row items-center space-x-4">
+                        <NavButton text="Quality" linkUrl="/" left={true}/>
+                        <NavButton text="Interactions" linkUrl="/interactions"/>
+                    </section>
+                </section>)
+            }
+            case "interactions" : {
+                return (
+                    <section className="px-4 text-left w-full py-28 md:w-10/12 lg:w-9/12 xl:w8/12 2xl:w-7/12">
+                        <h1 className="text-4xl text-left font-medium pb-5 text-pink">Interaction with your
+                            application</h1>
+                        <p className="pb-8">Explaining how to change the way you interact with your application to find
+                            issues and bugs</p>
+                        <section className="flex flex-row items-center space-x-4">
+                            <NavButton text="Exploratory Testing" linkUrl="/exploratoryTesting" left={true}/>
+                            <NavButton text="Objects" linkUrl="/objects"/>
+                        </section>
+                    </section>
+                )
+            }
+            case "entities" : {
+                return (
+                    <section className="px-4 text-left w-full py-28 md:w-10/12 lg:w-9/12 xl:w8/12 2xl:w-7/12">
+                        <h1 className="text-4xl text-left font-medium pb-5 text-pink">Dealing with Objects</h1>
+                        <p className="pb-8">Explaining how important is it to be able to separate all the objects in
+                            your application</p>
+                        <section className="flex flex-row items-center space-x-4">
+                            <NavButton text="Interactions" linkUrl="/interactions" left={true}/>
+                            <NavButton text="States" linkUrl="/states"/>
+                        </section>
+                    </section>
+                )
+            }
+            case "states" : {
+                return (
+                    <section className="px-4 text-left w-full py-28 md:w-10/12 lg:w-9/12 xl:w8/12 2xl:w-7/12">
+                        <h1 className="text-4xl text-left font-medium pb-5 text-pink">States and changing states</h1>
+                        <p className="pb-8">Demonstrating the importance of understanding transitions between different
+                            states in your application </p>
+                        <section className="flex flex-row items-center space-x-4">
+                            <NavButton text="Objects" linkUrl="/objects" left={true}/>
+                            <NavButton text="Environment" linkUrl="/environment"/>
+                        </section>
+                    </section>
+                )
             }
             default: {
                 return (<section>

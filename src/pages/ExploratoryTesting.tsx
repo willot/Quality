@@ -12,9 +12,8 @@ export const ExploratoryTesting = () => {
 
     return (
         <div className="bg-white-bg flex flex-row justify-center w-full">
-            <LayoutWrapper section="" navigationTextButton="Interactions" navigationButtonLinkUrl="/interactions">
+            <LayoutWrapper section="exploratoryTesting" navigationTextButton="Interactions" navigationButtonLinkUrl="/interactions">
                 <section className="bg-white-bg h-full text-black text-justify py-10 px-1">
-                    <h1 className="text-4xl text-left font-medium pb-5 text-pink">Exploratory testing </h1>
                     <section className="pb-10">
                         <h2 className="font-bold">The Definition</h2>
                         <p className="indent-8"> "A style of software testing that emphasizes the personal freedom and

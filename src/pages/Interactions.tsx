@@ -34,10 +34,9 @@ export const Interactions = () => {
 
     return (
         <section className="bg-white-bg flex flex-row justify-center w-full">
-            <LayoutWrapper section="" navigationTextButton="Objects" navigationButtonLinkUrl="/objects">
+            <LayoutWrapper section="interactions" navigationTextButton="Objects" navigationButtonLinkUrl="/objects">
                 <section
                     className="bg-white-bg h-full text-black text-justify py-10 px-1">
-                    <h1 className="text-4xl text-left font-medium pb-5 text-pink">Interaction with your application</h1>
                     <p>You know your application. You use it every day. But, do you really know it? Did you ever try to
                         do things out of order? Did you try to use your keyboard instead of your mouse to navigate? Did
                         you try to use a screen reader? When I explore an app I try to think like my kid and be curious.

@@ -23,9 +23,8 @@ export const Entities = () => {
 
     return (
         <section className="bg-white-bg flex flex-row justify-center w-full">
-            <LayoutWrapper section="Entities" navigationTextButton="States" navigationButtonLinkUrl="/states">
+            <LayoutWrapper section="entities" navigationTextButton="States" navigationButtonLinkUrl="/states">
                 <section className="bg-white-bg h-full text-black text-justify py-10 px-1">
-                    <h1 className="text-4xl text-left font-medium pb-5 text-pink">Dealing with Objects</h1>
                     <p>An object is maybe more an engineer term to describe something that can be created, updated, or
                         deleted. An example is a ‘user’ in an application, a ‘transaction’ when buying something, or a
                         ‘post’ on social media. Applications are full of these objects. They represent the business

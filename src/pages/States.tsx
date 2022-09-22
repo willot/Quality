@@ -14,9 +14,9 @@ export const States = () => {
 
     return (
         <section className="bg-white-bg flex flex-row justify-center w-full">
-            <LayoutWrapper section="" navigationTextButton="Environment" navigationButtonLinkUrl="/environment">
+            <LayoutWrapper section="states" navigationTextButton="Environment" navigationButtonLinkUrl="/environment">
                 <section className="bg-white-bg h-full text-black text-justify py-10 px-1">
-                    <h1 className="text-4xl text-left font-medium pb-5 text-pink">States and changing states</h1>
+
                     <p>Weird bugs are often caused by action happening at time where they should not. They are usually
                         the
                         bugs that are hard to reproduce or even to understand.
@@ -37,6 +37,7 @@ export const States = () => {
                         running at once. Clearly it got in a weird state that it was not suppose to. This highlight that
                         some time you can get in weird cases when transition are not handle correctly.</p>
                     <section>
+                        <h2 className="font-semibold pt-4 pb">Example</h2>
                         <p className="pt-4">Let's take the example of a real library. A user enter the building.
                             Everybody
                             can
@@ -100,7 +101,7 @@ export const States = () => {
                                 available
                                 and checked out
                                 is an area that I would focus on.</p>
-                            <p className="font-semibold pt-4 pb-2">Lets imagine some scenarios:</p>
+                            <h2 className="font-semibold pt-4 pb-2">Lets imagine some scenarios:</h2>
                             <ul>
                                 <li>-If a user place a book in a cart but don't check it out yet. Can another user try
                                     to put the book in their cart?
