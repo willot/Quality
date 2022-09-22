@@ -24,6 +24,7 @@ export const Entities = () => {
         <section className="bg-white-bg flex flex-row justify-center w-full">
             <LayoutWrapper section="entities" page="entities">
                 <section className="bg-white-bg h-full text-black text-justify py-10 px-1">
+                    <h2 className="font-bold pb-2">What's an Object?</h2>
                     <p>An object is maybe more an engineer term to describe something that can be created, updated, or
                         deleted. An example is a ‘user’ in an application, a ‘transaction’ when buying something, or a
                         ‘post’ on social media. Applications are full of these objects. They represent the business
@@ -44,7 +45,7 @@ export const Entities = () => {
                         logic that can hide a bug.
                     </p>
                     <section className="pt-10">
-                        <h2 className="font-bold">Exploring the objects</h2>
+                        <h2 className="font-bold pb-2">Exploring the objects</h2>
                         <p className="pb-2">The first thing is that you want to identify these objects. As stated
                             earlier
                             they are entities on which you can take actions. A lot of things can happen when you create
@@ -54,11 +55,8 @@ export const Entities = () => {
                             Is there a limit in the number of characters? The problem of string being too long is a
                             pretty
                             common one. Database have limits for the number of characters in a field but the front end
-                            will
-                            not always enforce it. Therefore the data is send to the back end and it crashes and send
-                            back
-                            an
-                            error... </p>
+                            will not always enforce it. Therefore the data is send to the back end and it crashes and
+                            send back an error... </p>
                         <p className="pb-4 font-semibold text-blue">Fill the example form with fake info to
                             continue.</p>
                         <h3 className="text-pink font-semibold pb-4">Creating objects</h3>
@@ -123,7 +121,7 @@ export const Entities = () => {
                                             currently enter white space in every field and it will let you move
                                             forward.</p>
                                     </section>
-                                    <section className="pt-4">
+                                    <section className="py-4">
                                         <h3 className="text-pink font-semibold ">Updating objects</h3>
                                         <p className="pb-4 text-blue font-semibold">Now update the information you
                                             enter
@@ -169,25 +167,19 @@ export const Entities = () => {
                                             giving you a correct error. But this go against what the user want to do. It
                                             is a case where the acceptance criteria are wrong. </p>
                                     </section>
-                                    <p className="pt-4">If you are critic you could say that we don't need exploratory
+                                    <h2 className="font-semibold pb-2">Moving on from blame</h2>
+                                    <p>If you are critic you could say that we don't need exploratory
                                         testing. We need the engineers
                                         to write more tests or better tests. I think it is true. But it is hard for
-                                        engineer to think about all these cases. What also makes it complicated is that
-                                        the engineer that created the form originally may not be the same one that add
-                                        the
-                                        apartment field. Context get lost all the
+                                        engineers to think about all the possible cases. What also makes it complicated is that
+                                        the engineers that created the form originally may not be the same one that add
+                                        the apartment field. Context get lost all the
                                         time and tests are very useful to document functionality. Engineers will miss
-                                        things
-                                        because that is what human
-                                        do. When you build something you can't think about all the things that go wrong.
-                                        But
-                                        what you can do is writing new tests when a bugs are reported to ensure that in
-                                        the
-                                        future this bug doesn't happen again. For example someone found the bug that
-                                        white
-                                        space should be trim when submitting data. You can easily write a unit test for
-                                        it
-                                        an move on.</p>
+                                        things because that is what human do. When you build something you can't think
+                                        about all the things that go wrong. But what you can do is writing new tests
+                                        when a bugs are reported to ensure that in the future this bug doesn't happen
+                                        again. For example someone found the bug that white space should be trim when
+                                        submitting data. You can easily write a unit test for it and move on.</p>
                                 </>
                             )}
                         </section>
