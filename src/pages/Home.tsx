@@ -137,7 +137,7 @@ export const Home = () => {
                     </p>
                 </section>
                 <section className="pb-10">
-                    <h2 className="font-bold">Let's look at this example</h2>
+                    <h2 className="font-bold">Example</h2>
                     <h3>The story:</h3>
                     <section className="border-2 border-pink p-2 m-2 rounded-xl">
                         <p className="pl-2">As a user, I want to see more information about quality. Make a button that
@@ -172,7 +172,7 @@ export const Home = () => {
                     what I didn't think about..
                 </section>
                 <section className="pt-4 pb-6">
-                    <h2 className="font-bold">Let's look at the tests</h2>
+                    <h2 className="font-bold">Tests</h2>
                     <p className="py-2">The first test is very simple. Does the text in the button change when the user
                         clicks on
                         it? It tests for
@@ -233,7 +233,8 @@ export const Home = () => {
                             use
                             an analogy from Elizabeth Hendrickson's book, "Explore It!": Tests are a net, the
                             more tests, the tighter the weaves are, but you will always have gaps.</p>
-                        <p className="pt-4 text-pink font-semibold">For me, one of the most important values of
+                        <h2 className="font-bold pt-4">Value of tests</h2>
+                        <p className="pt-2 text-pink font-semibold">For me, one of the most important values of
                             automated
                             tests that often get missed, is that they remove the tedious, boring, unimportant parts of
                             quality control. These automated tests give time back to the professional testers to do the

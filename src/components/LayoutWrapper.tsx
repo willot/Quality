@@ -313,7 +313,7 @@ export const LayoutWrapper = ({
             </section>
             <footer className="bg-blue-light">
                 <nav
-                    className="flex flex-row justify-between pl-2 pr-2 md:pr-16 py-8 w-full md:w-10/12 lg:w-9/12 xl:w8/12 2xl:w-7/12 m-auto">
+                    className={`flex flex-row ${buttonFlow[pageName].button1.text !== "" ? "justify-between": "justify-end" } pl-2 pr-2 py-8 w-full md:w-10/12 lg:w-9/12 xl:w8/12 2xl:w-7/12 m-auto`}>
                     {buttonFlow[pageName].button1.text !== "" &&
                     <NavButton text={buttonFlow[pageName].button1.text} linkUrl={buttonFlow[pageName].button1.link}
                                left={true}/>}
