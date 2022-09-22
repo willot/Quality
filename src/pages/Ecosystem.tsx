@@ -13,7 +13,7 @@ export const Ecosystem = () => {
         <section className="bg-white-bg flex flex-row justify-center w-full">
             <LayoutWrapper section="environment" page="environment">
                 <section className="bg-white-bg h-full text-black text-justify py-10 px-1">
-
+                    <h2 className="pb-2 font-semibold">What's your environment?</h2>
                     <p>Your application is not only the software. It is running on servers. It is being access from a
                         lot of
                         different devices, PC, tablets, androids, iPhones... It is using databases. It is using external
@@ -23,7 +23,8 @@ export const Ecosystem = () => {
                         help
                         you find potential problems for your users.
                     </p>
-                    <p className="pt-4">We can take the example of on app that let you buy seeds. It is using an
+                    <h2 className="pb-2 pt-4 font-semibold">Example</h2>
+                    <p>We can take the example of on app that let you buy seeds. It is using an
                         external
                         API for
                         transactions, something like stripe. Now let's think of potential problems that can happens.
@@ -43,7 +44,9 @@ export const Ecosystem = () => {
                         be hack and be unable to provide the data your app rely on. So exploring what happens when
                         outside
                         service go down can be very valuable.</p>
-                    <p className="pt-4">The diversity of hardware that can run your application is always increasing,
+
+                    <h2 className="pb-2 pt-4 font-semibold">Hardware</h2>
+                    <p>The diversity of hardware that can run your application is always increasing,
                         how is
                         your app running
                         on a android versus a laptop. Screen size sometime can be a little tricky because there are so
@@ -52,7 +55,8 @@ export const Ecosystem = () => {
                         Internet connection can also be a limiting factor for your application. Your application is
                         working
                         well on a 1go internet connection but does the system time out when you use it on a slow 4g?</p>
-                    <p className="pt-4">There is a lot that you can explore about how an application interact with the
+                    <h2 className="pb-2 pt-4 font-semibold">Limitless environment</h2>
+                    <p>There is a lot that you can explore about how an application interact with the
                         rest
                         of the world. An example that come to mind is paying medical bills. I recently broke my ankle
                         pretty

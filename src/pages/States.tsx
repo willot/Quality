@@ -15,6 +15,7 @@ export const States = () => {
         <section className="bg-white-bg flex flex-row justify-center w-full">
             <LayoutWrapper section="states" page="states">
                 <section className="bg-white-bg h-full text-black text-justify py-10 px-1">
+                    <h2 className="pb-2 font-semibold">What's a state?</h2>
                     <p>Weird bugs are often caused by action happening at time where they should not. They are usually
                         the
                         bugs that are hard to reproduce or even to understand.
@@ -35,8 +36,8 @@ export const States = () => {
                         running at once. Clearly it got in a weird state that it was not suppose to. This highlight that
                         some time you can get in weird cases when transition are not handle correctly.</p>
                     <section>
-                        <h2 className="font-semibold pt-4 pb">Example</h2>
-                        <p className="pt-4">Let's take the example of a real library. A user enter the building.
+                        <h2 className="font-semibold pt-4 pb-2">Example</h2>
+                        <p>Let's take the example of a real library. A user enter the building.
                             Everybody
                             can
                             enter a library there are no requirement, no need to present a card or an ID. Then the user
@@ -115,6 +116,7 @@ export const States = () => {
                         </section>
                     </section>
                     <section className="pt-4">
+                        <h2 className="pb-2 font-semibold">Hot take</h2>
                         <p>These kind of tests are hard to automatize. You can write an end to end test for the process
                             of
                             checking out books. But you can't write a test for every possible scenario. End to end tests
@@ -128,9 +130,7 @@ export const States = () => {
                             I am also not aware of any end to end test framework that let you run as two concurrent
                             user.
                             This is where the exploratory testing again can be extremely valuable, and help find this
-                            very
-                            hard to
-                            tests scenarios that can really negatively affect the users.</p>
+                            very hard to tests scenarios that can really negatively affect the users.</p>
                     </section>
                 </section>
             </LayoutWrapper>
