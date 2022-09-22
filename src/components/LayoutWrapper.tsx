@@ -97,8 +97,20 @@ export const LayoutWrapper = ({
                         <h1 className="text-4xl text-left font-medium pb-5 text-pink">Application in its environment</h1>
                         <p className="pb-8">Learning how the environment around your application affect the user experience</p>
                         <section className="flex flex-row items-center space-x-4">
-                            <NavButton text="Objects" linkUrl="/objects" left={true}/>
-                            <NavButton text="Environment" linkUrl="/environment"/>
+                            <NavButton text="States" linkUrl="/states" left={true}/>
+                            <NavButton text="Summary" linkUrl="/summary"/>
+                        </section>
+                    </section>
+                )
+            }
+            case "summary" : {
+                return (
+                    <section className="px-4 text-left w-full py-28 md:w-10/12 lg:w-9/12 xl:w8/12 2xl:w-7/12">
+                        <h1 className="text-4xl text-left font-medium pb-5 text-pink">Summary</h1>
+                        <p className="pb-8">Summarize your learning on exploratory testing</p>
+                        <section className="flex flex-row items-center space-x-4">
+                            <NavButton text="Environment" linkUrl="/Environment" left={true}/>
+                            <NavButton text="Quality" linkUrl="/"/>
                         </section>
                     </section>
                 )
