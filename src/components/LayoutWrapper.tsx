@@ -91,6 +91,18 @@ export const LayoutWrapper = ({
                     </section>
                 )
             }
+            case "environment" : {
+                return (
+                    <section className="px-4 text-left w-full py-28 md:w-10/12 lg:w-9/12 xl:w8/12 2xl:w-7/12">
+                        <h1 className="text-4xl text-left font-medium pb-5 text-pink">Application in its environment</h1>
+                        <p className="pb-8">Learning how the environment around your application affect the user experience</p>
+                        <section className="flex flex-row items-center space-x-4">
+                            <NavButton text="Objects" linkUrl="/objects" left={true}/>
+                            <NavButton text="Environment" linkUrl="/environment"/>
+                        </section>
+                    </section>
+                )
+            }
             default: {
                 return (<section>
                     <p>Section in progress</p>
