@@ -113,19 +113,21 @@ export const LayoutWrapper = ({
                 return (<section className="px-4 text-left w-full py-28 md:w-10/12 lg:w-9/12 xl:w8/12 2xl:w-7/12">
                     <h1 className="text-4xl font-medium pb-5 text-pink">What is quality?</h1>
                     <p className="pb-8">Let's start by refreshing what quality means.</p>
-                    <NavButton text={buttonFlow.quality.button2.text} linkUrl={buttonFlow.quality.button2.link}/>
+                    <nav>
+                        <NavButton text={buttonFlow.quality.button2.text} linkUrl={buttonFlow.quality.button2.link}/>
+                    </nav>
                 </section>)
             }
             case "exploratoryTesting" : {
                 return (<section className="px-4 text-left w-full py-28 md:w-10/12 lg:w-9/12 xl:w8/12 2xl:w-7/12">
                     <h1 className="text-4xl text-left font-medium pb-5 text-pink">Exploratory testing </h1>
                     <p className="pb-8">Introduction to exploratory testing.</p>
-                    <section className="flex flex-row items-center space-x-4">
+                    <nav className="flex flex-row items-center space-x-4">
                         <NavButton text={buttonFlow.exploratoryTesting.button1.text}
                                    linkUrl={buttonFlow.exploratoryTesting.button1.link} left={true}/>
                         <NavButton text={buttonFlow.exploratoryTesting.button2.text}
                                    linkUrl={buttonFlow.exploratoryTesting.button2.link}/>
-                    </section>
+                    </nav>
                 </section>)
             }
             case "interactions" : {
@@ -135,12 +137,12 @@ export const LayoutWrapper = ({
                             application</h1>
                         <p className="pb-8">Explaining how to change the way you interact with your application to find
                             issues and bugs.</p>
-                        <section className="flex flex-row items-center space-x-4">
+                        <nav className="flex flex-row items-center space-x-4">
                             <NavButton text={buttonFlow.interactions.button1.text}
                                        linkUrl={buttonFlow.interactions.button1.link} left={true}/>
                             <NavButton text={buttonFlow.interactions.button2.text}
                                        linkUrl={buttonFlow.interactions.button2.link}/>
-                        </section>
+                        </nav>
                     </section>
                 )
             }
@@ -149,12 +151,12 @@ export const LayoutWrapper = ({
                     <section className="px-4 text-left w-full py-28 md:w-10/12 lg:w-9/12 xl:w8/12 2xl:w-7/12">
                         <h1 className="text-4xl text-left font-medium pb-5 text-pink">Dealing with Objects</h1>
                         <p className="pb-8">Understanding the objects in your application.</p>
-                        <section className="flex flex-row items-center space-x-4">
+                        <nav className="flex flex-row items-center space-x-4">
                             <NavButton text={buttonFlow.entities.button1.text}
                                        linkUrl={buttonFlow.entities.button1.link} left={true}/>
                             <NavButton text={buttonFlow.entities.button2.text}
                                        linkUrl={buttonFlow.entities.button2.link}/>
-                        </section>
+                        </nav>
                     </section>
                 )
             }
@@ -164,11 +166,11 @@ export const LayoutWrapper = ({
                         <h1 className="text-4xl text-left font-medium pb-5 text-pink">States and changing states</h1>
                         <p className="pb-8">Demonstrating the importance of understanding transitions between different
                             states in your application.</p>
-                        <section className="flex flex-row items-center space-x-4">
+                        <nav className="flex flex-row items-center space-x-4">
                             <NavButton text={buttonFlow.states.button1.text} linkUrl={buttonFlow.states.button1.link}
                                        left={true}/>
                             <NavButton text={buttonFlow.states.button2.text} linkUrl={buttonFlow.states.button2.link}/>
-                        </section>
+                        </nav>
                     </section>
                 )
             }
@@ -179,12 +181,12 @@ export const LayoutWrapper = ({
                             environment</h1>
                         <p className="pb-8">Learning how the environment around your application affect the user
                             experience.</p>
-                        <section className="flex flex-row items-center space-x-4">
+                        <nav className="flex flex-row items-center space-x-4">
                             <NavButton text={buttonFlow.environment.button1.text}
                                        linkUrl={buttonFlow.environment.button1.link} left={true}/>
                             <NavButton text={buttonFlow.environment.button2.text}
                                        linkUrl={buttonFlow.environment.button2.link}/>
-                        </section>
+                        </nav>
                     </section>
                 )
             }
@@ -193,12 +195,12 @@ export const LayoutWrapper = ({
                     <section className="px-4 text-left w-full py-28 md:w-10/12 lg:w-9/12 xl:w8/12 2xl:w-7/12">
                         <h1 className="text-4xl text-left font-medium pb-5 text-pink">Summary</h1>
                         <p className="pb-8">Summarize your learning on exploratory testing.</p>
-                        <section className="flex flex-row items-center space-x-4">
+                        <nav className="flex flex-row items-center space-x-4">
                             <NavButton text={buttonFlow.summary.button1.text} linkUrl={buttonFlow.summary.button1.link}
                                        left={true}/>
                             <NavButton text={buttonFlow.summary.button2.text}
                                        linkUrl={buttonFlow.summary.button2.link}/>
-                        </section>
+                        </nav>
                     </section>
                 )
             }
@@ -247,11 +249,11 @@ export const LayoutWrapper = ({
     const sideBar = () => {
         if (showSideNavBar) {
             return (
-                <section className="relative pt-16 col-span-3">
+                <aside className="relative pt-16 col-span-3">
                     <section className="fixed flex flex-col py-4 pl-6 pr-2 space-y-2  border-r border-pink">
                         {listOfLink()}
                     </section>
-                </section>)
+                </aside>)
         } else {
             return null;
         }
@@ -270,7 +272,7 @@ export const LayoutWrapper = ({
         if (!showSideNavBar) {
             return (
                 <>
-                    <section className="flex flex-row justify-end pt-2">
+                    <div className="flex flex-row justify-end pt-2">
                         <button
                             className="flex flex-row justify-center"
                             ref={ref}
@@ -280,12 +282,12 @@ export const LayoutWrapper = ({
                         >
                             <Bars3Icon className="h8 w-8"/>
                         </button>
-                    </section>
+                    </div>
                     {isVisible && (
-                        <section
+                        <nav
                             className="absolute w-9/12 flex right-7 flex-col pt-4 pl-4 space-y-1 bg-white rounded-xl">
                             {listOfLink()}
-                        </section>
+                        </nav>
                     )
                     }
                 </>
@@ -295,27 +297,29 @@ export const LayoutWrapper = ({
 
 
     return (
-        <section className="relative ">
-            <section className='bg-blue-light w-full flex flex-row justify-center'>
+        <main className="flex flex-col h-screen justify-between">
+            <header className='bg-blue-light w-full flex flex-row justify-center'>
                 {sectionsIntro(section)}
                 {showSideBarIcon()}
-            </section>
+            </header>
             <section className="flex flex-row justify-center">
                 <section
                     className="bg-white-bg h-full text-black text-justify grid grid-cols-12 px-2 w-full md:w-10/12 lg:w-9/12 xl:w8/12 2xl:w-7/12">
-                    <section className={showSideNavBar ? "col-span-9" : "col-span-12"}>
-
+                    <article className={showSideNavBar ? "col-span-9" : "col-span-12"}>
                         {children}
-                    </section>
+                    </article>
                     {sideBar()}
                 </section>
             </section>
-            <section className="bg-blue-light flex flex-row justify-end pl-2 pr-2 md:pr-16 py-8 w-full m-auto bottom-0">
-                {buttonFlow[pageName].button1.text !== "" &&
-                <NavButton text={buttonFlow[pageName].button1.text} linkUrl={buttonFlow[pageName].button1.link}
-                           left={true}/>}
-                <NavButton text={buttonFlow[pageName].button2.text} linkUrl={buttonFlow[pageName].button2.link}/>
-            </section>
-        </section>
+            <footer className="bg-blue-light">
+                <nav
+                    className="flex flex-row justify-between pl-2 pr-2 md:pr-16 py-8 w-full md:w-10/12 lg:w-9/12 xl:w8/12 2xl:w-7/12 m-auto">
+                    {buttonFlow[pageName].button1.text !== "" &&
+                    <NavButton text={buttonFlow[pageName].button1.text} linkUrl={buttonFlow[pageName].button1.link}
+                               left={true}/>}
+                    <NavButton text={buttonFlow[pageName].button2.text} linkUrl={buttonFlow[pageName].button2.link}/>
+                </nav>
+            </footer>
+        </main>
     )
 }

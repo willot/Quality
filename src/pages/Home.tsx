@@ -104,25 +104,25 @@ export const Home = () => {
             <section className="bg-white-bg h-full text-black text-justify py-10 px-1">
                 <section className="pb-10">
                     <h2 className="font-bold">Dictionary definition:</h2>
-                    <p className="indent-8">The standard of something as measured against other things of a similar
+                    <blockquote className="indent-8">The standard of something as measured against other things of a similar
                         kind;
-                        the degree of excellence of something</p>
-                    <p className="text-xs indent-8 pb-5">--Oxford Languages--</p>
+                        the degree of excellence of something</blockquote>
+                    <cite className="text-xs indent-8 pb-5">--Oxford Languages--</cite>
                     <p>This definition is not really useful. It doesn't tell us what quality is. What should I compare
                         my website to? Is my goal to match my competition if I want to be the best? Does being the best
                         mean being the standard for quality?</p>
                 </section>
                 <section className="pb-10">
                     <h2 className="font-bold">Useful definition:</h2>
-                    <p className="indent-8">
+                    <blockquote className="indent-8">
                         "An essential requirement of these products is that they meet the needs of those members of
                         society
                         who will actually use them. This concept of fitness for use is universal. It applies to all
                         goods
                         and services, without exception. The popular term for fitness for use is Quality, and our basic
                         definition becomes: quality means fitness for use."
-                    </p>
-                    <p className="text-xs indent-8 pb-5">--Joseph Juran--</p>
+                    </blockquote>
+                    <cite className="text-xs indent-8 pb-5">--Joseph Juran--</cite>
                     <p>
                         Basically, we produce something the user wants and meet their expectations. Quality is all about
                         the users, not about the requirements..
