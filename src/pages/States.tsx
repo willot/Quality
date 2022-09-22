@@ -13,9 +13,8 @@ export const States = () => {
 
     return (
         <section className="bg-white-bg flex flex-row justify-center w-full">
-            <LayoutWrapper section="states" navigationTextButton="Environment" navigationButtonLinkUrl="/environment">
+            <LayoutWrapper section="states" page="states">
                 <section className="bg-white-bg h-full text-black text-justify py-10 px-1">
-
                     <p>Weird bugs are often caused by action happening at time where they should not. They are usually
                         the
                         bugs that are hard to reproduce or even to understand.

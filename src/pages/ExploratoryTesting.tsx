@@ -11,7 +11,7 @@ export const ExploratoryTesting = () => {
 
     return (
         <div className="bg-white-bg flex flex-row justify-center w-full">
-            <LayoutWrapper section="exploratoryTesting" navigationTextButton="Interactions" navigationButtonLinkUrl="/interactions">
+            <LayoutWrapper section="exploratoryTesting" page="exploratoryTesting">
                 <section className="bg-white-bg h-full text-black text-justify py-10 px-1">
                     <section className="pb-10">
                         <h2 className="font-bold">The Definition</h2>

@@ -7,15 +7,13 @@ import {NavButton} from "./NavButton";
 type LayoutWrapperProps = {
     section: string;
     children: React.ReactElement;
-    navigationTextButton: string,
-    navigationButtonLinkUrl: string,
+    page:string,
 }
 
 export const LayoutWrapper = ({
                                   section,
                                   children,
-                                  navigationTextButton,
-                                  navigationButtonLinkUrl
+                                  page
                               }: LayoutWrapperProps) => {
     const [showSideNavBar, setShowSideNavBar] = useState(window.innerWidth > 650);
     const {ref, isVisible, setIsVisible} = OutsideClickDetector(false);
@@ -32,13 +30,86 @@ export const LayoutWrapper = ({
         return navData.isActive ? "text-blue font-semibold text-left" : "text-pink font-semibold text-left"
     }
 
+    const buttonFlow = {
+        quality: {
+            button2: {
+                text: "Exploratory Testing",
+                link: "/exploratoryTesting"
+            }
+        },
+        exploratoryTesting: {
+            button1: {
+                text: "Quality",
+                link: "/"
+            },
+            button2: {
+                text: "Interactions",
+                link: "/interactions"
+            }
+        },
+        interactions: {
+            button1: {
+                text: "Exploratory Testing",
+                link: "/exploratoryTesting"
+            },
+            button2: {
+                text: "Objects",
+                link: "/objects"
+            }
+        },
+        entities: {
+            button1: {
+                text: "Interactions",
+                link: "/interactions"
+            },
+            button2: {
+                text: "States",
+                link: "/states"
+            }
+        },
+        states: {
+            button1: {
+                text: "Objects",
+                link: "/objects"
+            },
+            button2: {
+                text: "Environment",
+                link: "/environment"
+            }
+        },
+        environment: {
+            button1: {
+                text: "States",
+                link: "/states"
+            },
+            button2: {
+                text: "Summary",
+                link: "/summary"
+            }
+        },
+        summary: {
+            button1: {
+                text: "Environment",
+                link: "/environment"
+            },
+            button2: {
+                text: "Quality",
+                link: "/"
+            }
+        }
+    }
+
+    type ObjectKey = keyof typeof buttonFlow;
+
+    const pageName = page as ObjectKey;
+
     const sectionsIntro = (sectionName: string) => {
         switch (sectionName) {
             case "quality": {
                 return (<section className="px-4 text-left w-full py-28 md:w-10/12 lg:w-9/12 xl:w8/12 2xl:w-7/12">
                     <h1 className="text-4xl font-medium pb-5 text-pink">What is quality?</h1>
                     <p className="pb-8">Let's start by refreshing what quality means.</p>
-                    <NavButton text="Exploratory Testing" linkUrl="/exploratoryTesting"/>
+                    <NavButton text={buttonFlow.quality.button2.text} linkUrl={buttonFlow.quality.button2.link}/>
                 </section>)
             }
             case "exploratoryTesting" : {
@@ -46,8 +117,8 @@ export const LayoutWrapper = ({
                     <h1 className="text-4xl text-left font-medium pb-5 text-pink">Exploratory testing </h1>
                     <p className="pb-8">Introduction to exploratory testing.</p>
                     <section className="flex flex-row items-center space-x-4">
-                        <NavButton text="Quality" linkUrl="/" left={true}/>
-                        <NavButton text="Interactions" linkUrl="/interactions"/>
+                        <NavButton text={buttonFlow.exploratoryTesting.button1.text} linkUrl={buttonFlow.exploratoryTesting.button1.link} left={true}/>
+                        <NavButton text={buttonFlow.exploratoryTesting.button2.text} linkUrl={buttonFlow.exploratoryTesting.button2.link}/>
                     </section>
                 </section>)
             }
@@ -59,8 +130,8 @@ export const LayoutWrapper = ({
                         <p className="pb-8">Explaining how to change the way you interact with your application to find
                             issues and bugs</p>
                         <section className="flex flex-row items-center space-x-4">
-                            <NavButton text="Exploratory Testing" linkUrl="/exploratoryTesting" left={true}/>
-                            <NavButton text="Objects" linkUrl="/objects"/>
+                            <NavButton text={buttonFlow.interactions.button1.text} linkUrl={buttonFlow.interactions.button1.link} left={true}/>
+                            <NavButton text={buttonFlow.interactions.button2.text} linkUrl={buttonFlow.interactions.button2.link}/>
                         </section>
                     </section>
                 )
@@ -72,8 +143,8 @@ export const LayoutWrapper = ({
                         <p className="pb-8">Explaining how important is it to be able to separate all the objects in
                             your application</p>
                         <section className="flex flex-row items-center space-x-4">
-                            <NavButton text="Interactions" linkUrl="/interactions" left={true}/>
-                            <NavButton text="States" linkUrl="/states"/>
+                            <NavButton text={buttonFlow.entities.button1.text} linkUrl={buttonFlow.entities.button1.link} left={true}/>
+                            <NavButton text={buttonFlow.entities.button2.text} linkUrl={buttonFlow.entities.button2.link}/>
                         </section>
                     </section>
                 )
@@ -85,8 +156,8 @@ export const LayoutWrapper = ({
                         <p className="pb-8">Demonstrating the importance of understanding transitions between different
                             states in your application </p>
                         <section className="flex flex-row items-center space-x-4">
-                            <NavButton text="Objects" linkUrl="/objects" left={true}/>
-                            <NavButton text="Environment" linkUrl="/environment"/>
+                            <NavButton text={buttonFlow.states.button1.text} linkUrl={buttonFlow.states.button1.link} left={true}/>
+                            <NavButton text={buttonFlow.states.button2.text} linkUrl={buttonFlow.states.button2.link}/>
                         </section>
                     </section>
                 )
@@ -97,8 +168,8 @@ export const LayoutWrapper = ({
                         <h1 className="text-4xl text-left font-medium pb-5 text-pink">Application in its environment</h1>
                         <p className="pb-8">Learning how the environment around your application affect the user experience</p>
                         <section className="flex flex-row items-center space-x-4">
-                            <NavButton text="States" linkUrl="/states" left={true}/>
-                            <NavButton text="Summary" linkUrl="/summary"/>
+                            <NavButton text={buttonFlow.environment.button1.text} linkUrl={buttonFlow.environment.button1.link} left={true}/>
+                            <NavButton text={buttonFlow.environment.button2.text} linkUrl={buttonFlow.environment.button2.link}/>
                         </section>
                     </section>
                 )
@@ -109,8 +180,8 @@ export const LayoutWrapper = ({
                         <h1 className="text-4xl text-left font-medium pb-5 text-pink">Summary</h1>
                         <p className="pb-8">Summarize your learning on exploratory testing</p>
                         <section className="flex flex-row items-center space-x-4">
-                            <NavButton text="Environment" linkUrl="/Environment" left={true}/>
-                            <NavButton text="Quality" linkUrl="/"/>
+                            <NavButton text={buttonFlow.summary.button1.text} linkUrl={buttonFlow.summary.button1.link} left={true}/>
+                            <NavButton text={buttonFlow.summary.button2.text} linkUrl={buttonFlow.summary.button2.link}/>
                         </section>
                     </section>
                 )
@@ -206,8 +277,10 @@ export const LayoutWrapper = ({
         }
     }
 
+
+
     return (
-        <section>
+        <section className="relative ">
             <section className='bg-blue-light w-full flex flex-row justify-center'>
                 {sectionsIntro(section)}
                 {showSideBarIcon()}
@@ -222,8 +295,8 @@ export const LayoutWrapper = ({
                     {sideBar()}
                 </section>
             </section>
-            <section className="bg-blue-light flex flex-row justify-end pl-2 pr-2 md:pr-16 py-8">
-                <NavButton text={navigationTextButton} linkUrl={navigationButtonLinkUrl}/>
+            <section className="bg-blue-light flex flex-row justify-end pl-2 pr-2 md:pr-16 py-8 w-full m-auto bottom-0">
+                <NavButton text={buttonFlow[pageName].button2.text} linkUrl={buttonFlow[pageName].button2.link}/>
             </section>
         </section>
     )

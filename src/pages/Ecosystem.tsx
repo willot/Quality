@@ -11,7 +11,7 @@ export const Ecosystem = () => {
 
     return (
         <section className="bg-white-bg flex flex-row justify-center w-full">
-            <LayoutWrapper section="environment" navigationTextButton="Summary" navigationButtonLinkUrl="/summary">
+            <LayoutWrapper section="environment" page="environment">
                 <section className="bg-white-bg h-full text-black text-justify py-10 px-1">
 
                     <p>Your application is not only the software. It is running on servers. It is being access from a

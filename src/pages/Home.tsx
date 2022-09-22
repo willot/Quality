@@ -100,7 +100,7 @@ export const Home = () => {
         });`
 
     return (
-        <LayoutWrapper section="quality" navigationTextButton="Exploratory Testing" navigationButtonLinkUrl="/exploratoryTesting">
+        <LayoutWrapper section="quality" page="quality">
             <section className="bg-white-bg h-full text-black text-justify py-10 px-1">
                 <section className="pb-10">
                     <h2 className="font-bold">Dictionary definition:</h2>

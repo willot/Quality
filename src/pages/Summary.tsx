@@ -10,8 +10,8 @@ export const Summary = () => {
     }, [pathname]);
 
     return (
-        <section className="bg-white-bg flex flex-row justify-center w-full">
-            <LayoutWrapper section="summary" navigationTextButton="Quality" navigationButtonLinkUrl="/">
+        <section className="bg-white-bg flex flex-row justify-center h-screen  w-full">
+            <LayoutWrapper section="summary" page="summary">
                 <section className="bg-white-bg h-full text-black text-justify py-10 px-1">
                     <p className="pb-4">Quality is not only meeting your user expectation. It is also something that
                         make

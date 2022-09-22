@@ -33,7 +33,7 @@ export const Interactions = () => {
 
     return (
         <section className="bg-white-bg flex flex-row justify-center w-full">
-            <LayoutWrapper section="interactions" navigationTextButton="Objects" navigationButtonLinkUrl="/objects">
+            <LayoutWrapper section="interactions" page="interactions">
                 <section
                     className="bg-white-bg h-full text-black text-justify py-10 px-1">
                     <p>You know your application. You use it every day. But, do you really know it? Did you ever try to
