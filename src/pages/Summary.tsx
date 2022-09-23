@@ -3,7 +3,7 @@ import {LayoutWrapper} from "../components/LayoutWrapper";
 import {useEffect} from "react";
 
 export const Summary = () => {
-    const { pathname } = useLocation();
+    const {pathname} = useLocation();
     useEffect(() => {
         document.title = 'Exploratory Testing-Summary';
         window.scrollTo(0, 0);
@@ -13,6 +13,7 @@ export const Summary = () => {
         <section className="bg-white-bg flex flex-row justify-center h-screen  w-full">
             <LayoutWrapper section="summary" page="summary">
                 <section className="bg-white-bg h-full text-black text-justify py-10 px-1">
+                    <h2 className="pb-2 font-semibold">A useful tool</h2>
                     <p className="pb-4">Quality is not only meeting your user expectation. It is also something that
                         make
                         you stand out in a good way
@@ -37,9 +38,8 @@ export const Summary = () => {
                         fixed. Unit, integration or end to end tests get written to ensure that this bug never appear
                         again.
                         Then you move on.</p>
-                    <p className="pb-4">When should you do exploratory testing? I think it is up to each team to decide.
-                        For
-                        me exploratory
+                    <h2 className="pb-2 font-semibold">When to use exploratory testing?</h2>
+                    <p className="pb-4">I think it is up to each team to decide. For me exploratory
                         testing is something that should happen everytime concerned are raised about a part of the
                         application. A lot of team do not have a QA person but that doesn't mean that you can't run
                         exploratory testing sessions. The person in charge of accepting stories can use exploratory
@@ -47,7 +47,8 @@ export const Summary = () => {
                         to go beyond the simple acceptance criteria. You can also organize weekly session and invite
                         different team members and guide them to show how exploratory testing let them
                         discover the limit of their application. </p>
-                    <p>Exploratory is a tool. It is not meant to replace other type of testing. It is a complement to
+                    <p>Exploratory testing is a tool. It is not meant to replace other type of testing. It is a
+                        complement to
                         your
                         current process. Since it is manual it is often discarded or confused with simple manual
                         testing. It
