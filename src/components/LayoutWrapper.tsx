@@ -122,7 +122,7 @@ export const LayoutWrapper = ({
                 return (<section className="px-4 text-left w-full py-28 md:w-10/12 lg:w-9/12 xl:w8/12 2xl:w-7/12">
                     <h1 className="text-4xl text-left font-medium pb-5 text-pink">Exploratory testing </h1>
                     <p className="pb-8">Introduction to exploratory testing.</p>
-                    <nav className="flex flex-row items-center space-x-4">
+                    <nav className="flex flex-col w-max justify-items-start sm:flex-row sm:items-center sm:space-x-4">
                         <NavButton text={buttonFlow.exploratoryTesting.button1.text}
                                    linkUrl={buttonFlow.exploratoryTesting.button1.link} left={true}/>
                         <NavButton text={buttonFlow.exploratoryTesting.button2.text}
@@ -137,7 +137,7 @@ export const LayoutWrapper = ({
                             application</h1>
                         <p className="pb-8">Explaining how to change the way you interact with your application to find
                             issues and bugs.</p>
-                        <nav className="flex flex-row items-center space-x-4">
+                        <nav className="flex flex-col w-max justify-items-start sm:flex-row sm:items-center sm:space-x-4">
                             <NavButton text={buttonFlow.interactions.button1.text}
                                        linkUrl={buttonFlow.interactions.button1.link} left={true}/>
                             <NavButton text={buttonFlow.interactions.button2.text}
@@ -151,7 +151,7 @@ export const LayoutWrapper = ({
                     <section className="px-4 text-left w-full py-28 md:w-10/12 lg:w-9/12 xl:w8/12 2xl:w-7/12">
                         <h1 className="text-4xl text-left font-medium pb-5 text-pink">Dealing with Objects</h1>
                         <p className="pb-8">Understanding the objects in your application.</p>
-                        <nav className="flex flex-row items-center space-x-4">
+                        <nav className="flex flex-col w-max justify-items-start sm:flex-row sm:items-center sm:space-x-4">
                             <NavButton text={buttonFlow.entities.button1.text}
                                        linkUrl={buttonFlow.entities.button1.link} left={true}/>
                             <NavButton text={buttonFlow.entities.button2.text}
@@ -166,7 +166,7 @@ export const LayoutWrapper = ({
                         <h1 className="text-4xl text-left font-medium pb-5 text-pink">States and changing states</h1>
                         <p className="pb-8">Demonstrating the importance of understanding transitions between different
                             states in your application.</p>
-                        <nav className="flex flex-row items-center space-x-4">
+                        <nav className="flex flex-col w-max justify-items-start sm:flex-row sm:items-center sm:space-x-4">
                             <NavButton text={buttonFlow.states.button1.text} linkUrl={buttonFlow.states.button1.link}
                                        left={true}/>
                             <NavButton text={buttonFlow.states.button2.text} linkUrl={buttonFlow.states.button2.link}/>
@@ -181,7 +181,7 @@ export const LayoutWrapper = ({
                             environment</h1>
                         <p className="pb-8">Learning how the environment around your application affect the user
                             experience.</p>
-                        <nav className="flex flex-row items-center space-x-4">
+                        <nav className="flex flex-col w-max justify-items-start sm:flex-row sm:items-center sm:space-x-4">
                             <NavButton text={buttonFlow.environment.button1.text}
                                        linkUrl={buttonFlow.environment.button1.link} left={true}/>
                             <NavButton text={buttonFlow.environment.button2.text}
@@ -195,7 +195,7 @@ export const LayoutWrapper = ({
                     <section className="px-4 text-left w-full py-28 md:w-10/12 lg:w-9/12 xl:w8/12 2xl:w-7/12">
                         <h1 className="text-4xl text-left font-medium pb-5 text-pink">Summary</h1>
                         <p className="pb-8">Summarize your learning on exploratory testing.</p>
-                        <nav className="flex flex-row items-center space-x-4">
+                        <nav className="flex flex-col w-max justify-items-start sm:flex-row sm:items-center sm:space-x-4">
                             <NavButton text={buttonFlow.summary.button1.text} linkUrl={buttonFlow.summary.button1.link}
                                        left={true}/>
                             <NavButton text={buttonFlow.summary.button2.text}
@@ -313,7 +313,7 @@ export const LayoutWrapper = ({
             </section>
             <footer className="bg-blue-light">
                 <nav
-                    className={`flex flex-row ${buttonFlow[pageName].button1.text !== "" ? "justify-between": "justify-end" } pl-2 pr-2 py-8 w-full md:w-10/12 lg:w-9/12 xl:w8/12 2xl:w-7/12 m-auto`}>
+                    className={`flex flex-col sm:flex-row ${buttonFlow[pageName].button1.text !== "" ? "justify-between": "justify-end" } w-max pl-2 pr-2 py-8 w-full md:w-10/12 lg:w-9/12 xl:w8/12 2xl:w-7/12 m-auto`}>
                     {buttonFlow[pageName].button1.text !== "" &&
                     <NavButton text={buttonFlow[pageName].button1.text} linkUrl={buttonFlow[pageName].button1.link}
                                left={true}/>}
@@ -322,4 +322,4 @@ export const LayoutWrapper = ({
             </footer>
         </main>
     )
-}
+};
