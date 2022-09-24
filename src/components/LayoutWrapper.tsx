@@ -5,15 +5,19 @@ import {OutsideClickDetector} from "../hooks/OutsideClickDetector";
 import {NavButton} from "./NavButton";
 
 type LayoutWrapperProps = {
-    section: string;
     children: React.ReactElement;
     page: string,
+    currentSection?: string;
+    setCurrentSection: (value: string) => void;
+    setIsClickedSection: (value: boolean) => void;
 }
 
 export const LayoutWrapper = ({
-                                  section,
                                   children,
-                                  page
+                                  page,
+                                  currentSection,
+                                  setCurrentSection,
+                                  setIsClickedSection
                               }: LayoutWrapperProps) => {
     const [showSideNavBar, setShowSideNavBar] = useState(window.innerWidth > 650);
     const {ref, isVisible, setIsVisible} = OutsideClickDetector(false);
@@ -137,7 +141,8 @@ export const LayoutWrapper = ({
                             application</h1>
                         <p className="pb-8">Explaining how to change the way you interact with your application to find
                             issues and bugs.</p>
-                        <nav className="flex flex-col w-max justify-items-start sm:flex-row sm:items-center sm:space-x-4">
+                        <nav
+                            className="flex flex-col w-max justify-items-start sm:flex-row sm:items-center sm:space-x-4">
                             <NavButton text={buttonFlow.interactions.button1.text}
                                        linkUrl={buttonFlow.interactions.button1.link} left={true}/>
                             <NavButton text={buttonFlow.interactions.button2.text}
@@ -151,7 +156,8 @@ export const LayoutWrapper = ({
                     <section className="px-4 text-left w-full py-28 md:w-10/12 lg:w-9/12 xl:w8/12 2xl:w-7/12">
                         <h1 className="text-4xl text-left font-medium pb-5 text-pink">Dealing with Objects</h1>
                         <p className="pb-8">Understanding the objects in your application.</p>
-                        <nav className="flex flex-col w-max justify-items-start sm:flex-row sm:items-center sm:space-x-4">
+                        <nav
+                            className="flex flex-col w-max justify-items-start sm:flex-row sm:items-center sm:space-x-4">
                             <NavButton text={buttonFlow.entities.button1.text}
                                        linkUrl={buttonFlow.entities.button1.link} left={true}/>
                             <NavButton text={buttonFlow.entities.button2.text}
@@ -166,7 +172,8 @@ export const LayoutWrapper = ({
                         <h1 className="text-4xl text-left font-medium pb-5 text-pink">States and changing states</h1>
                         <p className="pb-8">Demonstrating the importance of understanding transitions between different
                             states in your application.</p>
-                        <nav className="flex flex-col w-max justify-items-start sm:flex-row sm:items-center sm:space-x-4">
+                        <nav
+                            className="flex flex-col w-max justify-items-start sm:flex-row sm:items-center sm:space-x-4">
                             <NavButton text={buttonFlow.states.button1.text} linkUrl={buttonFlow.states.button1.link}
                                        left={true}/>
                             <NavButton text={buttonFlow.states.button2.text} linkUrl={buttonFlow.states.button2.link}/>
@@ -181,7 +188,8 @@ export const LayoutWrapper = ({
                             environment</h1>
                         <p className="pb-8">Learning how the environment around your application affect the user
                             experience.</p>
-                        <nav className="flex flex-col w-max justify-items-start sm:flex-row sm:items-center sm:space-x-4">
+                        <nav
+                            className="flex flex-col w-max justify-items-start sm:flex-row sm:items-center sm:space-x-4">
                             <NavButton text={buttonFlow.environment.button1.text}
                                        linkUrl={buttonFlow.environment.button1.link} left={true}/>
                             <NavButton text={buttonFlow.environment.button2.text}
@@ -195,7 +203,8 @@ export const LayoutWrapper = ({
                     <section className="px-4 text-left w-full py-28 md:w-10/12 lg:w-9/12 xl:w8/12 2xl:w-7/12">
                         <h1 className="text-4xl text-left font-medium pb-5 text-pink">Summary</h1>
                         <p className="pb-8">Summarize your learning on exploratory testing.</p>
-                        <nav className="flex flex-col w-max justify-items-start sm:flex-row sm:items-center sm:space-x-4">
+                        <nav
+                            className="flex flex-col w-max justify-items-start sm:flex-row sm:items-center sm:space-x-4">
                             <NavButton text={buttonFlow.summary.button1.text} linkUrl={buttonFlow.summary.button1.link}
                                        left={true}/>
                             <NavButton text={buttonFlow.summary.button2.text}
@@ -246,12 +255,67 @@ export const LayoutWrapper = ({
         )
     }
 
+    const linksForSpecificPage = (pageName: string) => {
+        switch (pageName) {
+            case "quality" : {
+                return (
+                    <>
+                        <a href="#Dictionary-definition"
+                           className={`${currentSection === "Dictionary-definition" ? "text-blue font-semibold text-left" : "text-pink font-semibold text-left"
+                           }`}
+                        onClick={() => {
+                            setCurrentSection("Dictionary-definition")
+                            setIsClickedSection(true);
+                        }}>
+                            Dictionary definition
+                        </a>
+                        <a href="#Useful-definition"
+                           className={`${currentSection === "Useful-definition" ? "text-blue font-semibold text-left" : "text-pink font-semibold text-left"
+                           }`}
+                           onClick={() => {setCurrentSection("Useful-definition")
+                               setIsClickedSection(true);
+                           }}>
+                            Useful definition</a>
+                        <a href="#Example"
+                           className={`${currentSection === "Example" ? "text-blue font-semibold text-left" : "text-pink font-semibold text-left"
+                           }`}
+                           onClick={() => {setCurrentSection("Example")
+                               setIsClickedSection(true);
+                           }}>
+                            Example
+                        </a>
+                        <a href="#Tests"
+                           className={`${currentSection === "Tests" ? "text-blue font-semibold text-left" : "text-pink font-semibold text-left"
+                           }`}
+                           onClick={() => {setCurrentSection("Tests")
+                               setIsClickedSection(true);
+                           }}>
+                            Tests
+                        </a>
+                        <a href="#Value-of-tests"
+                           className={`${currentSection === "Value-of-tests" ? "text-blue font-semibold text-left" : "text-pink font-semibold text-left"
+                           }`}
+                           onClick={() => {setCurrentSection("Value-of-tests")
+                               setIsClickedSection(true);
+                           }}>
+                            Value of tests
+                        </a>
+                    </>
+                )
+            }
+            default : {
+                return listOfLink();
+            }
+        }
+    }
+
     const sideBar = () => {
         if (showSideNavBar) {
             return (
                 <aside className="relative pt-16 col-span-3">
                     <section className="fixed flex flex-col py-4 pl-6 pr-2 space-y-2  border-r border-pink">
-                        {listOfLink()}
+                        {/*{listOfLink()}*/}
+                        {linksForSpecificPage(pageName)}
                     </section>
                 </aside>)
         } else {
@@ -299,7 +363,7 @@ export const LayoutWrapper = ({
     return (
         <main className="flex flex-col h-screen justify-between">
             <header className='bg-blue-light w-full flex flex-row justify-center'>
-                {sectionsIntro(section)}
+                {sectionsIntro(page)}
                 {showSideBarIcon()}
             </header>
             <section className="flex flex-row justify-center">
@@ -313,7 +377,7 @@ export const LayoutWrapper = ({
             </section>
             <footer className="bg-blue-light">
                 <nav
-                    className={`flex flex-col sm:flex-row ${buttonFlow[pageName].button1.text !== "" ? "justify-between": "justify-end" } w-max pl-2 pr-2 py-8 w-full md:w-10/12 lg:w-9/12 xl:w8/12 2xl:w-7/12 m-auto`}>
+                    className={`flex flex-col sm:flex-row ${buttonFlow[pageName].button1.text !== "" ? "justify-between" : "justify-end"} w-max pl-2 pr-2 py-8 w-full md:w-10/12 lg:w-9/12 xl:w8/12 2xl:w-7/12 m-auto`}>
                     {buttonFlow[pageName].button1.text !== "" &&
                     <NavButton text={buttonFlow[pageName].button1.text} linkUrl={buttonFlow[pageName].button1.link}
                                left={true}/>}

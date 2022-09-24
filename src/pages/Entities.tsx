@@ -13,6 +13,8 @@ export type User = {
 
 export const Entities = () => {
     const [entity, setEntity] = useState<User>();
+    const [idVisible, setIdVisible] = useState("");
+    const [clickedSection, setIsClickedSection] = useState(false)
 
     const {pathname} = useLocation();
     useEffect(() => {
@@ -22,7 +24,8 @@ export const Entities = () => {
 
     return (
         <section className="bg-white-bg flex flex-row justify-center w-full">
-            <LayoutWrapper section="entities" page="entities">
+            <LayoutWrapper page="entities"  currentSection={idVisible} setCurrentSection={setIdVisible}
+                           setIsClickedSection={setIsClickedSection}>
                 <section className="bg-white-bg h-full text-black text-justify py-10 px-1">
                     <h2 className="font-bold pb-2">What's an Object?</h2>
                     <p>An object is maybe more an engineer term to describe something that can be created, updated, or

@@ -1,9 +1,12 @@
 import {useLocation} from "react-router-dom";
 import {LayoutWrapper} from "../components/LayoutWrapper";
-import {useEffect} from "react";
+import {useEffect, useState} from "react";
 
 export const Ecosystem = () => {
     const { pathname } = useLocation();
+    const [idVisible, setIdVisible] = useState("");
+    const [clickedSection, setIsClickedSection] = useState(false);
+
     useEffect(() => {
         document.title = 'Exploratory Testing-Environment';
         window.scrollTo(0, 0);
@@ -11,7 +14,8 @@ export const Ecosystem = () => {
 
     return (
         <section className="bg-white-bg flex flex-row justify-center w-full">
-            <LayoutWrapper section="environment" page="environment">
+            <LayoutWrapper page="environment" currentSection={idVisible} setCurrentSection={setIdVisible}
+                           setIsClickedSection={setIsClickedSection}>
                 <section className="bg-white-bg h-full text-black text-justify py-10 px-1">
                     <h2 className="pb-2 font-semibold">What's your environment?</h2>
                     <p>Your application is not only the software. It is running on servers. It is being access from a

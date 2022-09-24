@@ -1,9 +1,12 @@
 import {Link, useLocation} from "react-router-dom";
 import {LayoutWrapper} from "../components/LayoutWrapper";
-import {useEffect} from "react";
+import {useEffect, useState} from "react";
 
 export const ExploratoryTesting = () => {
     const {pathname} = useLocation();
+    const [idVisible, setIdVisible] = useState("");
+    const [clickedSection, setIsClickedSection] = useState(false);
+
     useEffect(() => {
         document.title = 'Exploratory Testing';
         window.scrollTo(0, 0);
@@ -11,7 +14,8 @@ export const ExploratoryTesting = () => {
 
     return (
         <div className="bg-white-bg flex flex-row justify-center w-full">
-            <LayoutWrapper section="exploratoryTesting" page="exploratoryTesting">
+            <LayoutWrapper page="exploratoryTesting" currentSection={idVisible} setCurrentSection={setIdVisible}
+                           setIsClickedSection={setIsClickedSection}>
                 <section className="bg-white-bg h-full text-black text-justify py-10 px-1">
                     <section className="pb-10">
                         <h2 className="font-bold">The Definition</h2>

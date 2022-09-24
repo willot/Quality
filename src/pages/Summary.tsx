@@ -1,9 +1,12 @@
 import {useLocation} from "react-router-dom";
 import {LayoutWrapper} from "../components/LayoutWrapper";
-import {useEffect} from "react";
+import {useEffect, useState} from "react";
 
 export const Summary = () => {
     const {pathname} = useLocation();
+    const [idVisible, setIdVisible] = useState("");
+    const [clickedSection, setIsClickedSection] = useState(false);
+
     useEffect(() => {
         document.title = 'Exploratory Testing-Summary';
         window.scrollTo(0, 0);
@@ -11,7 +14,8 @@ export const Summary = () => {
 
     return (
         <section className="bg-white-bg flex flex-row justify-center h-screen  w-full">
-            <LayoutWrapper section="summary" page="summary">
+            <LayoutWrapper page="summary" currentSection={idVisible} setCurrentSection={setIdVisible}
+                           setIsClickedSection={setIsClickedSection}>
                 <section className="bg-white-bg h-full text-black text-justify py-10 px-1">
                     <h2 className="pb-2 font-semibold">A useful tool</h2>
                     <p className="pb-4">Quality is not only meeting your user expectation. It is also something that
@@ -46,7 +50,7 @@ export const Summary = () => {
                         testing
                         to go beyond the simple acceptance criteria. You can also organize weekly session and invite
                         different team members and guide them to show how exploratory testing let them
-                        discover the limit of their application. </p>
+                    discover the limit of their application. </p>
                     <p>Exploratory testing is a tool. It is not meant to replace other type of testing. It is a
                         complement to
                         your

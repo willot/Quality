@@ -5,6 +5,8 @@ import {LayoutWrapper} from "../components/LayoutWrapper";
 
 export const Interactions = () => {
     const [buttonIndex, setButtonIndex] = useState<string>("");
+    const [idVisible, setIdVisible] = useState("");
+    const [clickedSection, setIsClickedSection] = useState(false);
 
     const {pathname} = useLocation();
     useEffect(() => {
@@ -33,7 +35,8 @@ export const Interactions = () => {
 
     return (
         <section className="bg-white-bg flex flex-row justify-center w-full">
-            <LayoutWrapper section="interactions" page="interactions">
+            <LayoutWrapper page="interactions" currentSection={idVisible} setCurrentSection={setIdVisible}
+                           setIsClickedSection={setIsClickedSection}>
                 <section
                     className="bg-white-bg h-full text-black text-justify py-10 px-1">
                     <p>You think you know your application. You use it every day, right? But, do you really know it? Did

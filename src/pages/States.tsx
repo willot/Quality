@@ -1,11 +1,14 @@
 import {useLocation} from "react-router-dom";
 import Xarrow, {Xwrapper} from "react-xarrows";
 import {LayoutWrapper} from "../components/LayoutWrapper";
-import {useEffect} from "react";
+import {useEffect, useState} from "react";
 
 
 export const States = () => {
     const { pathname } = useLocation();
+    const [idVisible, setIdVisible] = useState("");
+    const [clickedSection, setIsClickedSection] = useState(false);
+
     useEffect(() => {
         document.title = 'Exploratory Testing-States';
         window.scrollTo(0, 0);
@@ -13,7 +16,8 @@ export const States = () => {
 
     return (
         <section className="bg-white-bg flex flex-row justify-center w-full">
-            <LayoutWrapper section="states" page="states">
+            <LayoutWrapper page="states" currentSection={idVisible} setCurrentSection={setIdVisible}
+                           setIsClickedSection={setIsClickedSection}>
                 <section className="bg-white-bg h-full text-black text-justify py-10 px-1">
                     <h2 className="pb-2 font-semibold">What's a state?</h2>
                     <p>Weird bugs are often caused by action happening at time where they should not. They are usually

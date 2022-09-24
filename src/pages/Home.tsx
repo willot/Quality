@@ -1,7 +1,7 @@
 import {useState} from "react";
 import {ExampleButton} from "../components/ExampleButton";
 import {ExampleButtonNotAccessible} from "../components/ExampleButtonNotAccessible";
-
+import {ShowSectionHook} from "../hooks/ShowSectionHook";
 
 import {Prism as SyntaxHighlighter} from 'react-syntax-highlighter';
 import {xonokai} from "react-syntax-highlighter/dist/cjs/styles/prism";
@@ -9,7 +9,11 @@ import {LayoutWrapper} from "../components/LayoutWrapper";
 
 export const Home = () => {
     const [textDetails, setTextDetails] = useState("");
+    const [idVisible, setIdVisible] = useState("");
+    const [clickedSection, setIsClickedSection] = useState(false)
 
+    //hook to find where the user is located in this page
+    const {ref1, ref2, ref3, ref4, ref5} = ShowSectionHook(clickedSection, setIsClickedSection, setIdVisible, window, "Value-of-tests");
 
     const details = () => {
         if (textDetails === "") {
@@ -100,20 +104,24 @@ export const Home = () => {
         });`
 
     return (
-        <LayoutWrapper section="quality" page="quality">
+        <LayoutWrapper page="quality" currentSection={idVisible} setCurrentSection={setIdVisible}
+                       setIsClickedSection={setIsClickedSection}>
             <section className="bg-white-bg h-full text-black text-justify py-10 px-1">
                 <section className="pb-10">
-                    <h2 className="font-bold">Dictionary definition:</h2>
-                    <blockquote className="indent-8">The standard of something as measured against other things of a similar
+                    <h2 className="font-bold" id="Dictionary-definition" ref={ref1} data-key={1}>Dictionary
+                        definition:</h2>
+                    <blockquote className="indent-8">The standard of something as measured against other things of a
+                        similar
                         kind;
-                        the degree of excellence of something</blockquote>
+                        the degree of excellence of something
+                    </blockquote>
                     <cite className="text-xs indent-8 pb-5">--Oxford Languages--</cite>
                     <p>This definition is not really useful. It doesn't tell us what quality is. What should I compare
                         my website to? Is my goal to match my competition if I want to be the best? Does being the best
                         mean being the standard for quality?</p>
                 </section>
                 <section className="pb-10">
-                    <h2 className="font-bold">Useful definition:</h2>
+                    <h2 className="font-bold" id="Useful-definition" ref={ref2} data-key={2}>Useful definition:</h2>
                     <blockquote className="indent-8">
                         "An essential requirement of these products is that they meet the needs of those members of
                         society
@@ -137,7 +145,7 @@ export const Home = () => {
                     </p>
                 </section>
                 <section className="pb-10">
-                    <h2 className="font-bold">Example</h2>
+                    <h2 className="font-bold" id="Example" ref={ref3} data-key={3}>Example</h2>
                     <h3>The story:</h3>
                     <section className="border-2 border-pink p-2 m-2 rounded-xl">
                         <p className="pl-2">As a user, I want to see more information about quality. Make a button that
@@ -172,7 +180,7 @@ export const Home = () => {
                     what I didn't think about..
                 </section>
                 <section className="pt-4 pb-6">
-                    <h2 className="font-bold">Tests</h2>
+                    <h2 className="font-bold" id="Tests" ref={ref4} data-key={4}>Tests</h2>
                     <p className="py-2">The first test is very simple. Does the text in the button change when the user
                         clicks on
                         it? It tests for
@@ -233,7 +241,7 @@ export const Home = () => {
                             use
                             an analogy from Elizabeth Hendrickson's book, "Explore It!": Tests are a net, the
                             more tests, the tighter the weaves are, but you will always have gaps.</p>
-                        <h2 className="font-bold pt-4">Value of tests</h2>
+                        <h2 className="font-bold pt-4" id="Value-of-tests" ref={ref5} data-key={5}>Value of tests</h2>
                         <p className="pt-2 text-pink font-semibold">For me, one of the most important values of
                             automated
                             tests that often get missed, is that they remove the tedious, boring, unimportant parts of
