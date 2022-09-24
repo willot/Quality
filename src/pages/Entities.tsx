@@ -14,7 +14,7 @@ export type User = {
 export const Entities = () => {
     const [entity, setEntity] = useState<User>();
     const [idVisible, setIdVisible] = useState("");
-    const [clickedSection, setIsClickedSection] = useState(false)
+    const [, setIsClickedSection] = useState(false)
 
     const {pathname} = useLocation();
     useEffect(() => {

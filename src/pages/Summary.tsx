@@ -5,7 +5,7 @@ import {useEffect, useState} from "react";
 export const Summary = () => {
     const {pathname} = useLocation();
     const [idVisible, setIdVisible] = useState("");
-    const [clickedSection, setIsClickedSection] = useState(false);
+    const [, setIsClickedSection] = useState(false);
 
     useEffect(() => {
         document.title = 'Exploratory Testing-Summary';

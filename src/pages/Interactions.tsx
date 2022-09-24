@@ -6,7 +6,7 @@ import {LayoutWrapper} from "../components/LayoutWrapper";
 export const Interactions = () => {
     const [buttonIndex, setButtonIndex] = useState<string>("");
     const [idVisible, setIdVisible] = useState("");
-    const [clickedSection, setIsClickedSection] = useState(false);
+    const [, setIsClickedSection] = useState(false);
 
     const {pathname} = useLocation();
     useEffect(() => {

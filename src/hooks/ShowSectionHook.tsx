@@ -1,26 +1,7 @@
 import {useEffect, useRef} from "react";
 
 export const ShowSectionHook = (clickedSection: boolean, setIsClickedSection: (value: boolean) => void, setIdVisible: (value: string) => void, window: Window, lastSectionId: string) => {
-    const threshold = 0;
-    let lastScrollY = window.scrollY;
-    let scrollDir = "";
 
-    const updateScrollDir = () => {
-        const scrollY = window.scrollY;
-
-        if (Math.abs(scrollY - lastScrollY) < threshold) {
-            return;
-        }
-        scrollDir = (scrollY > lastScrollY ? "scrolling down" : "scrolling up");
-        lastScrollY = scrollY > 0 ? scrollY : 0;
-
-        const bottom = Math.ceil(window.innerHeight + window.scrollY) >= document.documentElement.scrollHeight
-
-        if (bottom) {
-            setIdVisible(lastSectionId);
-
-        }
-    };
 
     const ref1 = useRef(null);
     const ref2 = useRef(null);
@@ -29,17 +10,40 @@ export const ShowSectionHook = (clickedSection: boolean, setIsClickedSection: (v
     const ref5 = useRef(null);
 
     useEffect(() => {
-        const element1 = ref1.current;
-        const element2 = ref2.current;
-        const element3 = ref3.current;
-        const element4 = ref4.current;
-        const element5 = ref5.current;
+        //Scroll listener to determine the scroll direction
+        const threshold = 0;
+        let lastScrollY = window.scrollY;
+        let scrollDir = "";
+
+        const updateScrollDir = () => {
+            const scrollY = window.scrollY;
+
+            if (Math.abs(scrollY - lastScrollY) < threshold) {
+                return;
+            }
+            scrollDir = (scrollY > lastScrollY ? "scrolling down" : "scrolling up");
+            lastScrollY = scrollY > 0 ? scrollY : 0;
+
+            const bottom = Math.ceil(window.innerHeight + window.scrollY) >= document.documentElement.scrollHeight
+
+            if (bottom) {
+                setIdVisible(lastSectionId);
+
+            }
+        };
 
         const onScroll = () => {
             window.requestAnimationFrame(updateScrollDir);
         };
 
         window.addEventListener("scroll", onScroll);
+
+        //interjection observer to detect if element is on the page
+        const element1 = ref1.current;
+        const element2 = ref2.current;
+        const element3 = ref3.current;
+        const element4 = ref4.current;
+        const element5 = ref5.current;
 
         const observer = new IntersectionObserver(
             ([entry]) => {
@@ -79,7 +83,7 @@ export const ShowSectionHook = (clickedSection: boolean, setIsClickedSection: (v
             window.removeEventListener("scroll", onScroll);
         }
 
-    }, [clickedSection, setIdVisible, setIsClickedSection, window])
+    }, [clickedSection, setIdVisible, setIsClickedSection, window, lastSectionId])
 
     return {ref1, ref2, ref3, ref4, ref5}
 }
