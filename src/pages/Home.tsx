@@ -12,7 +12,7 @@ export const Home = () => {
     const [idVisible, setIdVisible] = useState("");
     const [clickedSection, setIsClickedSection] = useState(false)
 
-    //hook to find where the user is located in this page
+    // hook to find where the user is located in this page
     const ref1= ShowSectionHook(clickedSection, setIsClickedSection, setIdVisible, window, "Value-of-tests");
     const ref2 = ShowSectionHook(clickedSection, setIsClickedSection, setIdVisible, window, "Value-of-tests");
     const ref3 = ShowSectionHook(clickedSection, setIsClickedSection, setIdVisible, window, "Value-of-tests");
@@ -65,43 +65,49 @@ export const Home = () => {
     }
 
     const test1 = `it('should change the text wording when the button is clicked', () => {
-            render(<Home/>);
-            const buttons = screen.getAllByRole('button');
-            expect(buttons[0]).toContainHTML("Show more details")
+            render(<Home/>, {wrapper: MemoryRouter});
+            const buttons = screen.getAllByRole('button', {name: "Show more details"});
+            
             click(buttons[0]);
             expect(buttons[0]).toContainHTML("show less details")
         });`;
 
     const test2 = `it('should show more info when the button is clicked', () => {
-            render(<Home/>);
-            const buttons = screen.getAllByRole('button');
+            render(<Home/>, {wrapper: MemoryRouter});
+            const buttons = screen.getAllByRole('button', {name: "Show more details"});
+            const extraInfo = screen.queryByText("Button 1 follows all the 
+            requirements, but will a user expect a button to get more information?
+             Should it be a link to a help page?")
+             
             click(buttons[0]);
-            const extraInfo = screen.queryByText("Button 1 follow all the"
-            + "requirements. But will a user expect a button to get more information?")
-            expect(extraInfo).toBeInTheDocument();
+            expect(extraInfo).not.toBeNull();
         });
         `;
 
-    const test3 = `it('should reset the wording of the button and change the text when clicking a second button', () => {
-            render(<Home/>);
-            const buttons = screen.getAllByRole('button');
+    const test3 = ` it('should reset the wording of the button and change the text when clicking a second button', () => {
+            render(<Home/>, {wrapper: MemoryRouter});
+            const buttons = screen.getAllByRole('button', {name: "Show more details"});
+            
             click(buttons[0]);
             expect(buttons[0]).toContainHTML("show less details");
-            expect(buttons[2]).toContainHTML("Show more details");
-            click(buttons[2]);
-            expect(buttons[2]).toContainHTML("show less details");
+            
+            click(buttons[1]);
+            expect(buttons[1]).toContainHTML("show less details");
             expect(buttons[0]).toContainHTML("Show more details");
-            const extraInfo = screen.queryByText("Button 3 follow all the requirements." +
-             "But the color contrast is hard to read.")
+            
+            const extraInfo = screen.queryByText("Button 3 follows all the requirements," +
+                " but the color contrast is hard to read.")
             expect(extraInfo).toBeInTheDocument();
         });`;
 
     const test4 = `it('should not show the information if the button is clicked again', () => {
-            render(<Home/>);
-            const buttons = screen.getAllByRole('button');
+            render(<Home/>, {wrapper: MemoryRouter});
+            const buttons = screen.getAllByRole('button', {name: "Show more details"});
             click(buttons[0]);
-            const extraInfo = screen.queryByText("Button 1 follow all the" + 
-            "requirements. But will a user expect a button to get more information?")
+            const extraInfo = screen.queryByText("Button 1 follows all the requirements, 
+            but will a user expect a button to get more information?
+             Should it be a link to a help page?")
+             
             expect(extraInfo).toBeInTheDocument();
             click(buttons[0]);
             expect(extraInfo).not.toBeInTheDocument();

@@ -116,7 +116,7 @@ export const LayoutWrapper = ({
             case "quality": {
                 return (<section className="px-4 text-left w-full py-28 md:w-10/12 lg:w-9/12 xl:w8/12 2xl:w-7/12">
                     <h1 className="text-4xl font-medium pb-5 text-pink">What is quality?</h1>
-                    <p className="pb-8">Let's start by refreshing what quality means.</p>
+                    <p className="pb-8">Let's start by a refresher on what quality is.</p>
                     <nav>
                         <NavButton text={buttonFlow.quality.button2.text} linkUrl={buttonFlow.quality.button2.link}/>
                     </nav>
