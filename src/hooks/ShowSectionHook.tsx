@@ -3,11 +3,7 @@ import {useEffect, useRef} from "react";
 export const ShowSectionHook = (clickedSection: boolean, setIsClickedSection: (value: boolean) => void, setIdVisible: (value: string) => void, window: Window, lastSectionId: string) => {
 
 
-    const ref1 = useRef(null);
-    const ref2 = useRef(null);
-    const ref3 = useRef(null);
-    const ref4 = useRef(null);
-    const ref5 = useRef(null);
+    const ref = useRef(null);
 
     useEffect(() => {
         //Scroll listener to determine the scroll direction
@@ -39,11 +35,7 @@ export const ShowSectionHook = (clickedSection: boolean, setIsClickedSection: (v
         window.addEventListener("scroll", onScroll);
 
         //interjection observer to detect if element is on the page
-        const element1 = ref1.current;
-        const element2 = ref2.current;
-        const element3 = ref3.current;
-        const element4 = ref4.current;
-        const element5 = ref5.current;
+        const element1 = ref.current;
 
         const observer = new IntersectionObserver(
             ([entry]) => {
@@ -65,18 +57,6 @@ export const ShowSectionHook = (clickedSection: boolean, setIsClickedSection: (v
         if (element1) {
             observer.observe(element1);
         }
-        if (element2) {
-            observer.observe(element2);
-        }
-        if (element3) {
-            observer.observe(element3);
-        }
-        if (element4) {
-            observer.observe(element4);
-        }
-        if (element5) {
-            observer.observe(element5);
-        }
 
         return () => {
             observer.disconnect()
@@ -85,5 +65,5 @@ export const ShowSectionHook = (clickedSection: boolean, setIsClickedSection: (v
 
     }, [clickedSection, setIdVisible, setIsClickedSection, window, lastSectionId])
 
-    return {ref1, ref2, ref3, ref4, ref5}
+    return {ref: ref}
 }
