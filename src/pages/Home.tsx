@@ -13,7 +13,7 @@ export const Home = () => {
     const [clickedSection, setIsClickedSection] = useState(false)
 
     // hook to find where the user is located in this page
-    const ref1= ShowSectionHook(clickedSection, setIsClickedSection, setIdVisible, window, "Value-of-tests");
+    const ref1 = ShowSectionHook(clickedSection, setIsClickedSection, setIdVisible, window, "Value-of-tests");
     const ref2 = ShowSectionHook(clickedSection, setIsClickedSection, setIdVisible, window, "Value-of-tests");
     const ref3 = ShowSectionHook(clickedSection, setIsClickedSection, setIdVisible, window, "Value-of-tests");
     const ref4 = ShowSectionHook(clickedSection, setIsClickedSection, setIdVisible, window, "Value-of-tests");

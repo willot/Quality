@@ -3,6 +3,7 @@ import React, {useEffect, useState} from "react";
 import {Bars3Icon} from "@heroicons/react/24/solid";
 import {OutsideClickDetector} from "../hooks/OutsideClickDetector";
 import {NavButton} from "./NavButton";
+import {SectionLink} from "./SectionLink";
 
 type LayoutWrapperProps = {
     children: React.ReactElement;
@@ -43,7 +44,8 @@ export const LayoutWrapper = ({
             button2: {
                 text: "Exploratory Testing",
                 link: "/exploratoryTesting"
-            }
+            },
+            listSection: ["Dictionary-definition", "Useful-definition", "Example", "Tests", "Value-of-tests"]
         },
         exploratoryTesting: {
             button1: {
@@ -253,54 +255,21 @@ export const LayoutWrapper = ({
                 </NavLink>
             </>
         )
+    };
+
+    const GenerateListOfLink = (listOfId: Array<string>) => {
+        return (
+            listOfId.map((idElement, index) => {
+                return <SectionLink idLink={idElement} currentSection={currentSection}
+                                    setCurrentSection={setCurrentSection} setIsClickedSection={setIsClickedSection} key={index}/>
+            }))
     }
 
     const linksForSpecificPage = (pageName: string) => {
         switch (pageName) {
             case "quality" : {
                 return (
-                    <>
-                        <a href="#Dictionary-definition"
-                           className={`${currentSection === "Dictionary-definition" ? "text-blue font-semibold text-left" : "text-pink font-semibold text-left"
-                           }`}
-                        onClick={() => {
-                            setCurrentSection("Dictionary-definition")
-                            setIsClickedSection(true);
-                        }}>
-                            Dictionary definition
-                        </a>
-                        <a href="#Useful-definition"
-                           className={`${currentSection === "Useful-definition" ? "text-blue font-semibold text-left" : "text-pink font-semibold text-left"
-                           }`}
-                           onClick={() => {setCurrentSection("Useful-definition")
-                               setIsClickedSection(true);
-                           }}>
-                            Useful definition</a>
-                        <a href="#Example"
-                           className={`${currentSection === "Example" ? "text-blue font-semibold text-left" : "text-pink font-semibold text-left"
-                           }`}
-                           onClick={() => {setCurrentSection("Example")
-                               setIsClickedSection(true);
-                           }}>
-                            Example
-                        </a>
-                        <a href="#Tests"
-                           className={`${currentSection === "Tests" ? "text-blue font-semibold text-left" : "text-pink font-semibold text-left"
-                           }`}
-                           onClick={() => {setCurrentSection("Tests")
-                               setIsClickedSection(true);
-                           }}>
-                            Tests
-                        </a>
-                        <a href="#Value-of-tests"
-                           className={`${currentSection === "Value-of-tests" ? "text-blue font-semibold text-left" : "text-pink font-semibold text-left"
-                           }`}
-                           onClick={() => {setCurrentSection("Value-of-tests")
-                               setIsClickedSection(true);
-                           }}>
-                            Value of tests
-                        </a>
-                    </>
+                    <>{GenerateListOfLink(buttonFlow.quality.listSection)}</>
                 )
             }
             default : {
@@ -314,7 +283,6 @@ export const LayoutWrapper = ({
             return (
                 <aside className="relative pt-16 col-span-3">
                     <section className="fixed flex flex-col py-4 pl-6 pr-2 space-y-2  border-r border-pink">
-                        {/*{listOfLink()}*/}
                         {linksForSpecificPage(pageName)}
                     </section>
                 </aside>)

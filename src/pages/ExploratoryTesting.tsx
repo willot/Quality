@@ -1,11 +1,17 @@
 import {Link, useLocation} from "react-router-dom";
 import {LayoutWrapper} from "../components/LayoutWrapper";
 import {useEffect, useState} from "react";
+import {ShowSectionHook} from "../hooks/ShowSectionHook";
 
 export const ExploratoryTesting = () => {
     const {pathname} = useLocation();
     const [idVisible, setIdVisible] = useState("");
-    const [, setIsClickedSection] = useState(false);
+    const [clickedSection, setIsClickedSection] = useState(false);
+    const ref1 = ShowSectionHook(clickedSection, setIsClickedSection, setIdVisible, window, "Value-of-tests");
+    const ref2 = ShowSectionHook(clickedSection, setIsClickedSection, setIdVisible, window, "Value-of-tests");
+    const ref3 = ShowSectionHook(clickedSection, setIsClickedSection, setIdVisible, window, "Value-of-tests");
+    const ref4 = ShowSectionHook(clickedSection, setIsClickedSection, setIdVisible, window, "Value-of-tests");
+    const ref5 = ShowSectionHook(clickedSection, setIsClickedSection, setIdVisible, window, "Value-of-tests");
 
     useEffect(() => {
         document.title = 'Exploratory Testing';
@@ -18,7 +24,7 @@ export const ExploratoryTesting = () => {
                            setIsClickedSection={setIsClickedSection}>
                 <section className="bg-white-bg h-full text-black text-justify py-10 px-1">
                     <section className="pb-10">
-                        <h2 className="font-bold">The Definition</h2>
+                        <h2 className="font-bold" ref={ref1.ref} id="definition">The Definition</h2>
                         <p className="indent-8"> "A style of software testing that emphasizes the personal freedom and
                             responsibility of the individual tester to continually optimize the quality of his/her work
                             by
@@ -34,7 +40,7 @@ export const ExploratoryTesting = () => {
                             system works if you haven't tested its edges?</p>
                     </section>
                     <section className="pb-10">
-                        <h2 className="font-bold">Why is it useful?</h2>
+                        <h2 className="font-bold" ref={ref2.ref} id="useful">Why is it useful?</h2>
                         <p>If you do not search for bugs, how do you find them? Checking that acceptance criteria are met
                             is not the same as checking for bugs. It only makes sure the work is done as expected. If you do not
                             try to move beyond just checking the acceptance criteria, then you are letting your users
@@ -58,14 +64,14 @@ export const ExploratoryTesting = () => {
                             disturbance in the normal process.</p>
                     </section>
                     <section className="pb-10">
-                        <h2 className="font-bold">What does exploratory testing add?</h2>
+                        <h2 className="font-bold" ref={ref3.ref} id={"exploratory-testing-provide"}>What does exploratory testing provide?</h2>
                         <p>For me, exploratory testing is putting yourself in the user's shoes. You become a user
                             advocate. How do I feel as a user? Does that really make sense? Is this confusing? Can I be
                             in a weird state if I do some action in a different order than expected? What can a user do
                             that we didn't think was possible or didn't expect?</p>
                     </section>
                     <section>
-                        <h2 className="font-bold">Basic rules:</h2>
+                        <h2 className="font-bold" ref={ref4.ref} id="basic-rules">Basic rules:</h2>
                         <h3 className="text-pink font-semibold pt-4">The goal</h3>
                         <p>You need to have a goal when you do exploratory testing. Otherwise, you will just wander
                             aimlessly and not accomplish anything. It can be as simple as: "I want to test all the ways
@@ -84,7 +90,7 @@ export const ExploratoryTesting = () => {
                             also more likely to catch things.</p>
                     </section>
                     <section>
-                        <h2 className="font-bold pt-10">Diving deeper</h2>
+                        <h2 className="font-bold pt-10" ref={ref5.ref} id="diving-deeper">Diving deeper</h2>
                         <p className="pb-2">These four concepts are based on the "Explore it!" book</p>
                         <ul>
                             <Link to="/interactions" className="text-lg underline underline-offset-2 px-2">
