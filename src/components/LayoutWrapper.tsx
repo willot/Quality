@@ -4,6 +4,7 @@ import {Bars3Icon} from "@heroicons/react/24/solid";
 import {OutsideClickDetector} from "../hooks/OutsideClickDetector";
 import {NavButton} from "./NavButton";
 import {SectionLink} from "./SectionLink";
+import {PageTitle} from "./PageTitle";
 
 type LayoutWrapperProps = {
     children: React.ReactElement;
@@ -46,8 +47,8 @@ export const LayoutWrapper = ({
                 link: "/exploratoryTesting"
             },
             listSection: ["Dictionary-definition", "Useful-definition", "Example", "Tests", "Value-of-tests"],
-            title: "",
-            subTitle: "",
+            title: "What is quality?",
+            subTitle: "Let's start by a refresher on what quality is.",
         },
         exploratoryTesting: {
             button1: {
@@ -59,8 +60,8 @@ export const LayoutWrapper = ({
                 link: "/interactions"
             },
             listSection: [],
-            title:"Exploratory testing ",
-            subTitle:"Introduction to exploratory testing."
+            title: "Exploratory testing ",
+            subTitle: "Introduction to exploratory testing."
         },
         interactions: {
             button1: {
@@ -72,8 +73,8 @@ export const LayoutWrapper = ({
                 link: "/objects"
             },
             listSection: [],
-            title: "",
-            subTitle: "",
+            title: "Interaction with your application",
+            subTitle: "Explaining how to change the way you interact with your application to find issues and bugs.",
         },
         entities: {
             button1: {
@@ -85,8 +86,8 @@ export const LayoutWrapper = ({
                 link: "/states"
             },
             listSection: [],
-            title: "",
-            subTitle: "",
+            title: "Dealing with Objects",
+            subTitle: "Understanding the objects in your application.",
         },
         states: {
             button1: {
@@ -98,8 +99,8 @@ export const LayoutWrapper = ({
                 link: "/environment"
             },
             listSection: [],
-            title: "",
-            subTitle: "",
+            title: "States and changing states",
+            subTitle: "Demonstrating the importance of understanding transitions between different in your application.",
         },
         environment: {
             button1: {
@@ -111,8 +112,8 @@ export const LayoutWrapper = ({
                 link: "/summary"
             },
             listSection: [],
-            title: "",
-            subTitle: "",
+            title: "Application in its environment",
+            subTitle: "Learning how the environment around your application affect the user experience.",
         },
         summary: {
             button1: {
@@ -124,8 +125,8 @@ export const LayoutWrapper = ({
                 link: "/"
             },
             listSection: [],
-            title: "",
-            subTitle: "",
+            title: "Summary",
+            subTitle: "Summarize your learning on exploratory testing.",
         }
     }
 
@@ -136,104 +137,25 @@ export const LayoutWrapper = ({
     const sectionsIntro = (sectionName: string) => {
         switch (sectionName) {
             case "quality": {
-                return (<section className="px-4 text-left w-full py-28 md:w-10/12 lg:w-9/12 xl:w8/12 2xl:w-7/12">
-                    <h1 className="text-4xl font-medium pb-5 text-pink">What is quality?</h1>
-                    <p className="pb-8">Let's start by a refresher on what quality is.</p>
-                    <nav>
-                        <NavButton text={buttonFlow.quality.button2.text} linkUrl={buttonFlow.quality.button2.link}/>
-                    </nav>
-                </section>)
+                return (<PageTitle pageButtonFlow={buttonFlow.quality} firstButton={false}/>);
             }
             case "exploratoryTesting" : {
-                return (<section className="px-4 text-left w-full py-28 md:w-10/12 lg:w-9/12 xl:w8/12 2xl:w-7/12">
-                    <h1 className="text-4xl text-left font-medium pb-5 text-pink">Exploratory testing </h1>
-                    <p className="pb-8">Introduction to exploratory testing.</p>
-                    <nav className="flex flex-col w-max justify-items-start sm:flex-row sm:items-center sm:space-x-4">
-                        <NavButton text={buttonFlow.exploratoryTesting.button1.text}
-                                   linkUrl={buttonFlow.exploratoryTesting.button1.link} left={true}/>
-                        <NavButton text={buttonFlow.exploratoryTesting.button2.text}
-                                   linkUrl={buttonFlow.exploratoryTesting.button2.link}/>
-                    </nav>
-                </section>)
+                return (<PageTitle pageButtonFlow={buttonFlow.exploratoryTesting}/>);
             }
             case "interactions" : {
-                return (
-                    <section className="px-4 text-left w-full py-28 md:w-10/12 lg:w-9/12 xl:w8/12 2xl:w-7/12">
-                        <h1 className="text-4xl text-left font-medium pb-5 text-pink">Interaction with your
-                            application</h1>
-                        <p className="pb-8">Explaining how to change the way you interact with your application to find
-                            issues and bugs.</p>
-                        <nav
-                            className="flex flex-col w-max justify-items-start sm:flex-row sm:items-center sm:space-x-4">
-                            <NavButton text={buttonFlow.interactions.button1.text}
-                                       linkUrl={buttonFlow.interactions.button1.link} left={true}/>
-                            <NavButton text={buttonFlow.interactions.button2.text}
-                                       linkUrl={buttonFlow.interactions.button2.link}/>
-                        </nav>
-                    </section>
-                )
+                return (<PageTitle pageButtonFlow={buttonFlow.interactions}/>);
             }
             case "entities" : {
-                return (
-                    <section className="px-4 text-left w-full py-28 md:w-10/12 lg:w-9/12 xl:w8/12 2xl:w-7/12">
-                        <h1 className="text-4xl text-left font-medium pb-5 text-pink">Dealing with Objects</h1>
-                        <p className="pb-8">Understanding the objects in your application.</p>
-                        <nav
-                            className="flex flex-col w-max justify-items-start sm:flex-row sm:items-center sm:space-x-4">
-                            <NavButton text={buttonFlow.entities.button1.text}
-                                       linkUrl={buttonFlow.entities.button1.link} left={true}/>
-                            <NavButton text={buttonFlow.entities.button2.text}
-                                       linkUrl={buttonFlow.entities.button2.link}/>
-                        </nav>
-                    </section>
-                )
+                return (<PageTitle pageButtonFlow={buttonFlow.entities}/>);
             }
             case "states" : {
-                return (
-                    <section className="px-4 text-left w-full py-28 md:w-10/12 lg:w-9/12 xl:w8/12 2xl:w-7/12">
-                        <h1 className="text-4xl text-left font-medium pb-5 text-pink">States and changing states</h1>
-                        <p className="pb-8">Demonstrating the importance of understanding transitions between different
-                            states in your application.</p>
-                        <nav
-                            className="flex flex-col w-max justify-items-start sm:flex-row sm:items-center sm:space-x-4">
-                            <NavButton text={buttonFlow.states.button1.text} linkUrl={buttonFlow.states.button1.link}
-                                       left={true}/>
-                            <NavButton text={buttonFlow.states.button2.text} linkUrl={buttonFlow.states.button2.link}/>
-                        </nav>
-                    </section>
-                )
+                return (<PageTitle pageButtonFlow={buttonFlow.states}/>);
             }
             case "environment" : {
-                return (
-                    <section className="px-4 text-left w-full py-28 md:w-10/12 lg:w-9/12 xl:w8/12 2xl:w-7/12">
-                        <h1 className="text-4xl text-left font-medium pb-5 text-pink">Application in its
-                            environment</h1>
-                        <p className="pb-8">Learning how the environment around your application affect the user
-                            experience.</p>
-                        <nav
-                            className="flex flex-col w-max justify-items-start sm:flex-row sm:items-center sm:space-x-4">
-                            <NavButton text={buttonFlow.environment.button1.text}
-                                       linkUrl={buttonFlow.environment.button1.link} left={true}/>
-                            <NavButton text={buttonFlow.environment.button2.text}
-                                       linkUrl={buttonFlow.environment.button2.link}/>
-                        </nav>
-                    </section>
-                )
+                return (<PageTitle pageButtonFlow={buttonFlow.environment}/>);
             }
             case "summary" : {
-                return (
-                    <section className="px-4 text-left w-full py-28 md:w-10/12 lg:w-9/12 xl:w8/12 2xl:w-7/12">
-                        <h1 className="text-4xl text-left font-medium pb-5 text-pink">Summary</h1>
-                        <p className="pb-8">Summarize your learning on exploratory testing.</p>
-                        <nav
-                            className="flex flex-col w-max justify-items-start sm:flex-row sm:items-center sm:space-x-4">
-                            <NavButton text={buttonFlow.summary.button1.text} linkUrl={buttonFlow.summary.button1.link}
-                                       left={true}/>
-                            <NavButton text={buttonFlow.summary.button2.text}
-                                       linkUrl={buttonFlow.summary.button2.link}/>
-                        </nav>
-                    </section>
-                )
+                return (<PageTitle pageButtonFlow={buttonFlow.summary}/>);
             }
             default: {
                 return (<section>
@@ -281,7 +203,8 @@ export const LayoutWrapper = ({
         return (
             listOfId.map((idElement, index) => {
                 return <SectionLink idLink={idElement} currentSection={currentSection}
-                                    setCurrentSection={setCurrentSection} setIsClickedSection={setIsClickedSection} key={index}/>
+                                    setCurrentSection={setCurrentSection} setIsClickedSection={setIsClickedSection}
+                                    key={index}/>
             }))
     }
 
