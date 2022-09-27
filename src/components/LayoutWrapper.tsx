@@ -45,7 +45,9 @@ export const LayoutWrapper = ({
                 text: "Exploratory Testing",
                 link: "/exploratoryTesting"
             },
-            listSection: ["Dictionary-definition", "Useful-definition", "Example", "Tests", "Value-of-tests"]
+            listSection: ["Dictionary-definition", "Useful-definition", "Example", "Tests", "Value-of-tests"],
+            title: "",
+            subTitle: "",
         },
         exploratoryTesting: {
             button1: {
@@ -55,7 +57,10 @@ export const LayoutWrapper = ({
             button2: {
                 text: "Interactions",
                 link: "/interactions"
-            }
+            },
+            listSection: [],
+            title:"Exploratory testing ",
+            subTitle:"Introduction to exploratory testing."
         },
         interactions: {
             button1: {
@@ -65,7 +70,10 @@ export const LayoutWrapper = ({
             button2: {
                 text: "Objects",
                 link: "/objects"
-            }
+            },
+            listSection: [],
+            title: "",
+            subTitle: "",
         },
         entities: {
             button1: {
@@ -75,7 +83,10 @@ export const LayoutWrapper = ({
             button2: {
                 text: "States",
                 link: "/states"
-            }
+            },
+            listSection: [],
+            title: "",
+            subTitle: "",
         },
         states: {
             button1: {
@@ -85,7 +96,10 @@ export const LayoutWrapper = ({
             button2: {
                 text: "Environment",
                 link: "/environment"
-            }
+            },
+            listSection: [],
+            title: "",
+            subTitle: "",
         },
         environment: {
             button1: {
@@ -95,7 +109,10 @@ export const LayoutWrapper = ({
             button2: {
                 text: "Summary",
                 link: "/summary"
-            }
+            },
+            listSection: [],
+            title: "",
+            subTitle: "",
         },
         summary: {
             button1: {
@@ -105,7 +122,10 @@ export const LayoutWrapper = ({
             button2: {
                 text: "Quality",
                 link: "/"
-            }
+            },
+            listSection: [],
+            title: "",
+            subTitle: "",
         }
     }
 
