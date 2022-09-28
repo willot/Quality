@@ -22,7 +22,7 @@ export const ShowSectionHook = (clickedSection: boolean, setIsClickedSection: (v
 
             const bottom = Math.ceil(window.innerHeight + window.scrollY) >= document.documentElement.scrollHeight
 
-            if (bottom) {
+            if (bottom && lastSectionId !=="") {
                 setIdVisible(lastSectionId);
 
             }

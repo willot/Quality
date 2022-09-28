@@ -59,7 +59,7 @@ export const LayoutWrapper = ({
                 text: "Interactions",
                 link: "/interactions"
             },
-            listSection: [],
+            listSection: ["The-Definition", "Why-is-it-useful?", "Basic-rules"],
             title: "Exploratory testing ",
             subTitle: "Introduction to exploratory testing."
         },
@@ -72,7 +72,7 @@ export const LayoutWrapper = ({
                 text: "Objects",
                 link: "/objects"
             },
-            listSection: [],
+            listSection: ["Play-with-the-URL", "Use-your-keyboard"],
             title: "Interaction with your application",
             subTitle: "Explaining how to change the way you interact with your application to find issues and bugs.",
         },
@@ -213,6 +213,16 @@ export const LayoutWrapper = ({
             case "quality" : {
                 return (
                     <>{GenerateListOfLink(buttonFlow.quality.listSection)}</>
+                )
+            }
+            case "exploratoryTesting" : {
+                return (
+                    <>{GenerateListOfLink(buttonFlow.exploratoryTesting.listSection)}</>
+                )
+            }
+            case "interactions" : {
+                return (
+                    <>{GenerateListOfLink(buttonFlow.interactions.listSection)}</>
                 )
             }
             default : {

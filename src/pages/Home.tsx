@@ -1,4 +1,4 @@
-import {useState} from "react";
+import {useEffect, useState} from "react";
 import {ExampleButton} from "../components/ExampleButton";
 import {ExampleButtonNotAccessible} from "../components/ExampleButtonNotAccessible";
 import {ShowSectionHook} from "../hooks/ShowSectionHook";
@@ -6,18 +6,25 @@ import {ShowSectionHook} from "../hooks/ShowSectionHook";
 import {Prism as SyntaxHighlighter} from 'react-syntax-highlighter';
 import {xonokai} from "react-syntax-highlighter/dist/cjs/styles/prism";
 import {LayoutWrapper} from "../components/LayoutWrapper";
+import {useLocation} from "react-router-dom";
 
 export const Home = () => {
     const [textDetails, setTextDetails] = useState("");
     const [idVisible, setIdVisible] = useState("");
-    const [clickedSection, setIsClickedSection] = useState(false)
+    const [clickedSection, setIsClickedSection] = useState(false);
 
     // hook to find where the user is located in this page
     const ref1 = ShowSectionHook(clickedSection, setIsClickedSection, setIdVisible, window, "Value-of-tests");
-    const ref2 = ShowSectionHook(clickedSection, setIsClickedSection, setIdVisible, window, "Value-of-tests");
-    const ref3 = ShowSectionHook(clickedSection, setIsClickedSection, setIdVisible, window, "Value-of-tests");
-    const ref4 = ShowSectionHook(clickedSection, setIsClickedSection, setIdVisible, window, "Value-of-tests");
-    const ref5 = ShowSectionHook(clickedSection, setIsClickedSection, setIdVisible, window, "Value-of-tests");
+    const ref2 = ShowSectionHook(clickedSection, setIsClickedSection, setIdVisible, window, "");
+    const ref3 = ShowSectionHook(clickedSection, setIsClickedSection, setIdVisible, window, "");
+    const ref4 = ShowSectionHook(clickedSection, setIsClickedSection, setIdVisible, window, "");
+    const ref5 = ShowSectionHook(clickedSection, setIsClickedSection, setIdVisible, window, "");
+
+    const {pathname} = useLocation();
+    useEffect(() => {
+        window.scrollTo(0, 0);
+        setIdVisible("Dictionary-definition")
+    }, [pathname]);
 
     const details = () => {
         if (textDetails === "") {
