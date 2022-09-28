@@ -8,6 +8,11 @@ type SectionLinkProps= {
 }
 
 export const SectionLink = ({idLink, currentSection, setCurrentSection, setIsClickedSection}:SectionLinkProps) => {
+
+    const replaceDashWithSpace = () => {
+        return idLink.replaceAll('-', ' ');
+    }
+
     return (
         <a href={`#${idLink}`}
            className={`${currentSection === idLink ? "text-blue font-semibold text-left" : "text-pink font-semibold text-left"
@@ -15,6 +20,6 @@ export const SectionLink = ({idLink, currentSection, setCurrentSection, setIsCli
            onClick={() => {
                setCurrentSection(idLink)
                setIsClickedSection(true);
-           }}>{idLink}</a>
+           }}>{replaceDashWithSpace()}</a>
     )
 }
