@@ -85,7 +85,7 @@ export const LayoutWrapper = ({
                 text: "States",
                 link: "/states"
             },
-            listSection: [],
+            listSection: ["What-is-an-Object?", "Exploring-the-objects", "Moving-on-from-blame"],
             title: "Dealing with Objects",
             subTitle: "Understanding the objects in your application.",
         },
@@ -98,7 +98,7 @@ export const LayoutWrapper = ({
                 text: "Environment",
                 link: "/environment"
             },
-            listSection: [],
+            listSection: ["What-is-a-state?", "Example", "Hot-take"],
             title: "States and changing states",
             subTitle: "Demonstrating the importance of understanding transitions between different in your application.",
         },
@@ -225,6 +225,16 @@ export const LayoutWrapper = ({
                     <>{GenerateListOfLink(buttonFlow.interactions.listSection)}</>
                 )
             }
+            case "entities": {
+                return (
+                    <>{GenerateListOfLink(buttonFlow.entities.listSection)}</>
+                )
+            }
+            case "states": {
+                return (
+                    <>{GenerateListOfLink(buttonFlow.states.listSection)}</>
+                )
+            }
             default : {
                 return listOfLink();
             }
@@ -289,7 +299,7 @@ export const LayoutWrapper = ({
             </header>
             <section className="flex flex-row justify-center">
                 <section
-                    className="bg-white-bg h-full text-black text-justify grid grid-cols-12 px-2 w-full md:w-10/12 lg:w-9/12 xl:w8/12 2xl:w-7/12">
+                    className="bg-white-bg h-full text-black text-justify grid grid-cols-12 px-2 w-full md:w-10/12 lg:w-9/12 xl:w7/12 2xl:w-5/12">
                     <article className={showSideNavBar ? "col-span-9" : "col-span-12"}>
                         {children}
                     </article>
@@ -298,7 +308,7 @@ export const LayoutWrapper = ({
             </section>
             <footer className="bg-blue-light">
                 <nav
-                    className={`flex flex-col sm:flex-row ${buttonFlow[pageName].button1.text !== "" ? "justify-between" : "justify-end"} w-max pl-2 pr-2 py-8 w-full md:w-10/12 lg:w-9/12 xl:w8/12 2xl:w-7/12 m-auto`}>
+                    className={`flex flex-col sm:flex-row ${buttonFlow[pageName].button1.text !== "" ? "justify-between" : "justify-end"} w-max pl-2 pr-2 py-8 w-full md:w-10/12 lg:w-9/12 xl:w7/12 2xl:w-5/12 m-auto`}>
                     {buttonFlow[pageName].button1.text !== "" &&
                     <NavButton text={buttonFlow[pageName].button1.text} linkUrl={buttonFlow[pageName].button1.link}
                                left={true}/>}

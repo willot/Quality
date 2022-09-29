@@ -1,6 +1,6 @@
 import {useEffect, useRef} from "react";
 
-export const ShowSectionHook = (clickedSection: boolean, setIsClickedSection: (value: boolean) => void, setIdVisible: (value: string) => void, window: Window, lastSectionId: string) => {
+export const ShowSectionHook = (clickedSection: boolean, setIsClickedSection: (value: boolean) => void, setIdVisible: (value: string) => void, window: Window, lastSectionId: string, firstId?: string) => {
 
 
     const ref = useRef(null);
@@ -21,10 +21,14 @@ export const ShowSectionHook = (clickedSection: boolean, setIsClickedSection: (v
             lastScrollY = scrollY > 0 ? scrollY : 0;
 
             const bottom = Math.ceil(window.innerHeight + window.scrollY) >= document.documentElement.scrollHeight
+            const top = window.scrollY;
 
             if (bottom && lastSectionId !=="") {
                 setIdVisible(lastSectionId);
+            }
 
+            if (top === 0 && firstId) {
+                setIdVisible(firstId);
             }
         };
 

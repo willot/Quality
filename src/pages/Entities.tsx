@@ -2,6 +2,7 @@ import {useLocation} from "react-router-dom";
 import {EntitiesForm} from "../components/EntitiesForm";
 import {useEffect, useState} from "react";
 import {LayoutWrapper} from "../components/LayoutWrapper";
+import {ShowSectionHook} from "../hooks/ShowSectionHook";
 
 export type User = {
     firstName?: string;
@@ -14,7 +15,12 @@ export type User = {
 export const Entities = () => {
     const [entity, setEntity] = useState<User>();
     const [idVisible, setIdVisible] = useState("");
-    const [, setIsClickedSection] = useState(false)
+    const [clickedSection, setIsClickedSection] = useState(false)
+
+    const ref1 = ShowSectionHook(clickedSection, setIsClickedSection, setIdVisible, window, "Moving-on-from-blame");
+    const ref2 = ShowSectionHook(clickedSection, setIsClickedSection, setIdVisible, window, "");
+    const ref3 = ShowSectionHook(clickedSection, setIsClickedSection, setIdVisible, window, "");
+
 
     const {pathname} = useLocation();
     useEffect(() => {
@@ -24,10 +30,10 @@ export const Entities = () => {
 
     return (
         <section className="bg-white-bg flex flex-row justify-center w-full">
-            <LayoutWrapper page="entities"  currentSection={idVisible} setCurrentSection={setIdVisible}
+            <LayoutWrapper page="entities" currentSection={idVisible} setCurrentSection={setIdVisible}
                            setIsClickedSection={setIsClickedSection}>
                 <section className="bg-white-bg h-full text-black text-justify py-10 px-1">
-                    <h2 className="font-bold pb-2">What's an Object?</h2>
+                    <h2 className="font-bold pb-2" ref={ref1.ref} id="What-is-an-Object?">What is an Object?</h2>
                     <p>An object is maybe more an engineer term to describe something that can be created, updated, or
                         deleted. An example is a ‘user’ in an application, a ‘transaction’ when buying something, or a
                         ‘post’ on social media. Applications are full of these objects. They represent the business
@@ -48,7 +54,8 @@ export const Entities = () => {
                         logic that can hide a bug.
                     </p>
                     <section className="pt-10">
-                        <h2 className="font-bold pb-2">Exploring the objects</h2>
+                        <h2 className="font-bold pb-2" id="Exploring-the-objects" ref={ref2.ref}>Exploring the
+                            objects</h2>
                         <p className="pb-2">The first thing is that you want to identify these objects. As stated
                             earlier
                             they are entities on which you can take actions. A lot of things can happen when you create
@@ -62,29 +69,31 @@ export const Entities = () => {
                             send back an error... </p>
                         <p className="pb-4 font-semibold text-blue">Fill the example form with fake info to
                             continue.</p>
-                        <h3 className="text-pink font-semibold pb-4">Creating objects</h3>
+                        <h3 className="text-pink font-semibold pb-4" id="Creating objects" ref={ref3.ref}>Creating
+                            objects</h3>
                         <EntitiesForm setEntity={setEntity}/>
                         <section className="pt-4">
-                            <p className="font-semibold pb-2">Saved objects</p>
+                            <p className="font-semibold pb-6">Saved objects</p>
+                            <section className="pb-6">
+                                <p className="font-bold text-pink">User</p>
+                                <p className="pl-6 text-blue"><span
+                                    className="font-semibold text-black">First name:</span> {entity ? entity.firstName : ""}
+                                </p>
+                                <p className="pl-6 text-blue"><span
+                                    className="font-semibold text-black">Last name:</span> {entity ? entity.lastName : ""}
+                                </p>
+                                <p className="font-bold text-pink">Address</p>
+                                <p className="pl-6 text-blue"><span
+                                    className="font-semibold text-black">Street:</span> {entity ? entity.street : ""}
+                                </p>
+                                <p className="pl-6 text-blue"><span
+                                    className="font-semibold text-black">Apartment #:</span> {entity ? entity.apt : ""}
+                                </p>
+                                <p className="pl-6 text-blue"><span
+                                    className="font-semibold text-black">City:</span> {entity ? entity.city : ""}</p>
+                            </section>
                             {entity && (
                                 <>
-                                    <section>
-                                        <p className="font-bold text-pink">User</p>
-                                        <p className="pl-6 text-blue"><span
-                                            className="font-semibold text-black">First name:</span> {entity.firstName}
-                                        </p>
-                                        <p className="pl-6 text-blue"><span
-                                            className="font-semibold text-black">Last name:</span> {entity.lastName}</p>
-                                        <p className="font-bold text-pink">Address</p>
-                                        <p className="pl-6 text-blue"><span
-                                            className="font-semibold text-black">Street:</span> {entity.street}
-                                        </p>
-                                        <p className="pl-6 text-blue"><span
-                                            className="font-semibold text-black">Apartment #:</span> {entity.apt}
-                                        </p>
-                                        <p className="pl-6 text-blue"><span
-                                            className="font-semibold text-black">City:</span> {entity.city}</p>
-                                    </section>
                                     <section className="pt-2">
                                         <p>We have one form but we can see that we created two separated objects. One
                                             user
@@ -170,21 +179,25 @@ export const Entities = () => {
                                             giving you a correct error. But this go against what the user want to do. It
                                             is a case where the acceptance criteria are wrong. </p>
                                     </section>
-                                    <h2 className="font-semibold pb-2">Moving on from blame</h2>
-                                    <p>If you are critic you could say that we don't need exploratory
-                                        testing. We need the engineers
-                                        to write more tests or better tests. I think it is true. But it is hard for
-                                        engineers to think about all the possible cases. What also makes it complicated is that
-                                        the engineers that created the form originally may not be the same one that add
-                                        the apartment field. Context get lost all the
-                                        time and tests are very useful to document functionality. Engineers will miss
-                                        things because that is what human do. When you build something you can't think
-                                        about all the things that go wrong. But what you can do is writing new tests
-                                        when a bugs are reported to ensure that in the future this bug doesn't happen
-                                        again. For example someone found the bug that white space should be trim when
-                                        submitting data. You can easily write a unit test for it and move on.</p>
                                 </>
                             )}
+                            <section className="pb-10">
+                                <h2 className="font-semibold pb-2 pt-10" id="Moving-on-from-blame" ref={ref3.ref}>Moving
+                                    on from blame</h2>
+                                <p>If you are critic you could say that we don't need exploratory
+                                    testing. We need the engineers
+                                    to write more tests or better tests. I think it is true. But it is hard for
+                                    engineers to think about all the possible cases. What also makes it complicated is
+                                    that
+                                    the engineers that created the form originally may not be the same one that add
+                                    the apartment field. Context get lost all the
+                                    time and tests are very useful to document functionality. Engineers will miss
+                                    things because that is what human do. When you build something you can't think
+                                    about all the things that go wrong. But what you can do is writing new tests
+                                    when a bugs are reported to ensure that in the future this bug doesn't happen
+                                    again. For example someone found the bug that white space should be trim when
+                                    submitting data. You can easily write a unit test for it and move on.</p>
+                            </section>
                         </section>
                     </section>
                 </section>

@@ -2,12 +2,17 @@ import {useLocation} from "react-router-dom";
 import Xarrow, {Xwrapper} from "react-xarrows";
 import {LayoutWrapper} from "../components/LayoutWrapper";
 import {useEffect, useState} from "react";
+import {ShowSectionHook} from "../hooks/ShowSectionHook";
 
 
 export const States = () => {
     const { pathname } = useLocation();
     const [idVisible, setIdVisible] = useState("");
-    const [, setIsClickedSection] = useState(false);
+    const [clickedSection, setIsClickedSection] = useState(false);
+
+    const ref1 = ShowSectionHook(clickedSection, setIsClickedSection, setIdVisible, window, "Hot-take");
+    const ref2 = ShowSectionHook(clickedSection, setIsClickedSection, setIdVisible, window, "");
+    const ref3 = ShowSectionHook(clickedSection, setIsClickedSection, setIdVisible, window, "");
 
     useEffect(() => {
         document.title = 'Exploratory Testing-States';
@@ -19,7 +24,7 @@ export const States = () => {
             <LayoutWrapper page="states" currentSection={idVisible} setCurrentSection={setIdVisible}
                            setIsClickedSection={setIsClickedSection}>
                 <section className="bg-white-bg h-full text-black text-justify py-10 px-1">
-                    <h2 className="pb-2 font-semibold">What's a state?</h2>
+                    <h2 className="pb-2 font-semibold" id="What-is-a-state?" ref={ref1.ref}>What is a state?</h2>
                     <p>Weird bugs are often caused by action happening at time where they should not. They are usually
                         the
                         bugs that are hard to reproduce or even to understand.
@@ -40,7 +45,7 @@ export const States = () => {
                         running at once. Clearly it got in a weird state that it was not suppose to. This highlight that
                         some time you can get in weird cases when transition are not handle correctly.</p>
                     <section>
-                        <h2 className="font-semibold pt-4 pb-2">Example</h2>
+                        <h2 className="font-semibold pt-4 pb-2" id="Example" ref={ref2.ref}>Example</h2>
                         <p>Let's take the example of a real library. A user enter the building.
                             Everybody
                             can
@@ -104,7 +109,7 @@ export const States = () => {
                                 available
                                 and checked out
                                 is an area that I would focus on.</p>
-                            <h2 className="font-semibold pt-4 pb-2">Lets imagine some scenarios:</h2>
+                            <h3 className="font-medium pt-4 pb-2">Lets imagine some scenarios:</h3>
                             <ul>
                                 <li>-If a user place a book in a cart but don't check it out yet. Can another user try
                                     to put the book in their cart?
@@ -120,7 +125,7 @@ export const States = () => {
                         </section>
                     </section>
                     <section className="pt-4">
-                        <h2 className="pb-2 font-semibold">Hot take</h2>
+                        <h2 className="pb-2 font-semibold" id="Hot-take" ref={ref3.ref}>Hot take</h2>
                         <p>These kind of tests are hard to automatize. You can write an end to end test for the process
                             of
                             checking out books. But you can't write a test for every possible scenario. End to end tests

@@ -9,7 +9,7 @@ export const Interactions = () => {
     const [idVisible, setIdVisible] = useState("");
     const [clickedSection, setIsClickedSection] = useState(false);
 
-    const ref1 = ShowSectionHook(clickedSection, setIsClickedSection, setIdVisible, window, "");
+    const ref1 = ShowSectionHook(clickedSection, setIsClickedSection, setIdVisible, window, "Use-your-keyboard", "Play-with-the-URL" );
     const ref2 = ShowSectionHook(clickedSection, setIsClickedSection, setIdVisible, window, "");
 
 
@@ -77,8 +77,8 @@ export const Interactions = () => {
                             a
                             huge impact on your interaction with an application. These are examples of what can go wrong
                             when using a keyboard.</p>
-                        <section className="pt-4">
-                            <h3 className="font-medium">Let's play with tabbing. Try to tab through these buttons.</h3>
+                        <section className="pt-16 pb-10">
+                            <h3 className="font-medium text-pink">Let's play with tabbing. Try to tab through these buttons.</h3>
                             <section
                                 className="grid grid-rows-2 grid-flow-col justify-items-center md:grid-rows-1 pt-4">
                                 <button tabIndex={0}
@@ -101,7 +101,7 @@ export const Interactions = () => {
                             <p>As you can see, the ordering of the buttons is not right. This is a common issue. The
                                 tabbing ordering doesn't follow the expected application flow.</p>
 
-                            <p className="pt-6">Let's look at another example. Click or tab on the button you think is
+                            <p className="pt-16 font-medium text-pink">Let's look at another example. Click or tab on the button you think is
                                 correct.</p>
                             <section
                                 className="grid grid-rows-2 grid-flow-col justify-items-center md:grid-rows-1 pt-4">
@@ -139,9 +139,7 @@ export const Interactions = () => {
                             <section className="text-blue font-semibold">
                                 {buttonMessage()}
                             </section>
-
                         </section>
-
                     </section>
                 </section>
             </LayoutWrapper>
