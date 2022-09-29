@@ -67,7 +67,7 @@ export const ShowSectionHook = (clickedSection: boolean, setIsClickedSection: (v
             window.removeEventListener("scroll", onScroll);
         }
 
-    }, [clickedSection, setIdVisible, setIsClickedSection, window, lastSectionId])
+    }, [clickedSection, setIdVisible, setIsClickedSection, window, lastSectionId, firstId])
 
     return {ref: ref}
 }
