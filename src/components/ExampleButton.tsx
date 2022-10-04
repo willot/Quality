@@ -7,7 +7,7 @@ type ExampleButtonProps = {
     css: string;
 }
 
-export const ExampleButton = ({setTextDetails, buttonId, buttonWording, css}:ExampleButtonProps) => {
+export const   ExampleButton = ({setTextDetails, buttonId, buttonWording, css}:ExampleButtonProps) => {
     const {ref, isVisible, setIsVisible} = OutsideClickDetector(false);
 
     return (

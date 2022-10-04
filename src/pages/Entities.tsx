@@ -26,6 +26,7 @@ export const Entities = () => {
     useEffect(() => {
         document.title = 'Exploratory Testing-Objects';
         window.scrollTo(0, 0);
+        setIdVisible("What-is-an-Object?");
     }, [pathname]);
 
     return (
@@ -34,7 +35,7 @@ export const Entities = () => {
                            setIsClickedSection={setIsClickedSection}>
                 <section className="bg-white-bg h-full text-black text-justify py-10 px-1">
                     <h2 className="font-bold pb-2" ref={ref1.ref} id="What-is-an-Object?">What is an Object?</h2>
-                    <p>An object is maybe more an engineer term to describe something that can be created, updated, or
+                    <p>An object is an engineer term to describe something that can be created, updated, or
                         deleted. An example is a ‘user’ in an application, a ‘transaction’ when buying something, or a
                         ‘post’ on social media. Applications are full of these objects. They represent the business
                         logic of the application. These objects usually are connected/interact with each other. A user
@@ -43,30 +44,29 @@ export const Entities = () => {
                         of the relationship affects the logic and possible bugs.
                     </p>
                     <p className="pt-2">For example, an insurance website lets you buy a personal
-                        customized policy. You will have an policy object and then a user "you" object. Then the
+                        customized policy. You will have an policy object and then a user, you, object. Then the
                         insurance
-                        company decide that users can add other people to their policy. Like multiple driver for a car.
+                        company decides that users can add other people to their policy. Like multiple drivers for a car.
                         Now
-                        there are multiple users connected to one policy. Can each one of them modify the policy? Or
+                        there are multiple users connected to one policy. Can each one of them modify the policy? Can
                         only
-                        the principal user? The amount of interactions can increase quickly and all this interactions
-                        held
-                        logic that can hide a bug.
+                        the principal user? The amount of interactions can increase quickly, and all these interactions
+                        have logic that can hide a bug.
                     </p>
                     <section className="pt-10">
                         <h2 className="font-bold pb-2" id="Exploring-the-objects" ref={ref2.ref}>Exploring the
                             objects</h2>
-                        <p className="pb-2">The first thing is that you want to identify these objects. As stated
-                            earlier
+                        <p className="pb-2">The first thing is too identify these objects. As stated
+                            earlier,
                             they are entities on which you can take actions. A lot of things can happen when you create
                             an
                             object. Are all the fields required? Can you put empty spaces? can you use weird characters
                             "Ω√"?
-                            Is there a limit in the number of characters? The problem of string being too long is a
+                            Is there a limit in the number of characters? The problem of strings being too long is a
                             pretty
-                            common one. Database have limits for the number of characters in a field but the front end
-                            will not always enforce it. Therefore the data is send to the back end and it crashes and
-                            send back an error... </p>
+                            common one. Database have limits for the number of characters in a field, but the front end
+                            will not always enforce it. Therefore, the data is sent to the back end, it crashes and
+                            sends back an error... </p>
                         <p className="pb-4 font-semibold text-blue">Fill the example form with fake info to
                             continue.</p>
                         <h3 className="text-pink font-semibold pb-4" id="Creating objects" ref={ref3.ref}>Creating
@@ -95,32 +95,31 @@ export const Entities = () => {
                             {entity && (
                                 <>
                                     <section className="pt-2">
-                                        <p>We have one form but we can see that we created two separated objects. One
+                                        <p>We have one form, but we can see that we created two separated objects. One
                                             user
                                             with a first and last name and an address with street, apartment number,
                                             and
                                             city.</p>
-                                        <p className="pt-2">If you play around you can notice a few things. There are no
+                                        <p className="pt-2">If you play around, you can notice a few things. There is no
                                             limit in the number
                                             of characters that you can enter inside each input. So if you want to type
-                                            3000 characters into the input box you can (It will work). The only reason
+                                            3000 characters into the input box, you can (It will work)! The only reason
                                             that
-                                            it doesn't produce an error is that in this application there is no database
+                                            it doesn't produce an error, is that in this application, there is no database
                                             saving this information. Otherwise, it is very
-                                            likely we will run into some field constraint in the database particularly
+                                            likely we will run into some field constraint in the database, particularly
                                             for
-                                            field like city. When you do exploratory testing it is important to know
+                                            fields like city. When you do exploratory testing, it is important to know
                                             what
-                                            kind of data a user will enter. For example the biggest name for a european
+                                            kind of data a user will enter. For example the biggest name for a European
                                             city
                                             is 58 characters in Welch. Knowing this can help you set some good test
                                             cases.
-                                            One that I often run into is middle name. If you complete immigration
+                                            One that I often run into is 'middle name'. If you complete immigration
                                             paperwork
-                                            this field often come up. I have 2 middle name... Most of the time it only
-                                            let
-                                            you enter one which can be a problem for immigration paperwork. Errors while
-                                            completing form are not always handle very well.
+                                            this field often comes up. I have 2 middle names... Most of the time
+                                            you can enter only one, which can be a problem for immigration paperwork...
+                                            Errors while completing forms are not always handled very well.
                                         </p>
                                         <p>Often no error is display to
                                             let the user know that the data was not save

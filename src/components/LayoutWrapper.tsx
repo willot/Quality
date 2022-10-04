@@ -111,7 +111,7 @@ export const LayoutWrapper = ({
                 text: "Summary",
                 link: "/summary"
             },
-            listSection: [],
+            listSection: ["Example","Hardware","Limitless-environment"],
             title: "Application in its environment",
             subTitle: "Learning how the environment around your application affect the user experience.",
         },
@@ -124,7 +124,7 @@ export const LayoutWrapper = ({
                 text: "Quality",
                 link: "/"
             },
-            listSection: [],
+            listSection: ["A-useful-tool","When-to-use-exploratory-testing?"],
             title: "Summary",
             subTitle: "Summarize your learning on exploratory testing.",
         }
@@ -233,6 +233,16 @@ export const LayoutWrapper = ({
             case "states": {
                 return (
                     <>{GenerateListOfLink(buttonFlow.states.listSection)}</>
+                )
+            }
+            case "environment": {
+                return (
+                    <>{GenerateListOfLink(buttonFlow.environment.listSection)}</>
+                )
+            }
+            case "summary": {
+                return (
+                    <>{GenerateListOfLink(buttonFlow.summary.listSection)}</>
                 )
             }
             default : {

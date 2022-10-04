@@ -1,15 +1,21 @@
 import {useLocation} from "react-router-dom";
 import {LayoutWrapper} from "../components/LayoutWrapper";
 import {useEffect, useState} from "react";
+import {ShowSectionHook} from "../hooks/ShowSectionHook";
 
 export const Ecosystem = () => {
     const { pathname } = useLocation();
     const [idVisible, setIdVisible] = useState("");
-    const [, setIsClickedSection] = useState(false);
+    const [clickedSection, setIsClickedSection] = useState(false);
+
+    const ref1 = ShowSectionHook(clickedSection, setIsClickedSection, setIdVisible, window, "Limitless-environment");
+    const ref2 = ShowSectionHook(clickedSection, setIsClickedSection, setIdVisible, window, "");
+    const ref3 = ShowSectionHook(clickedSection, setIsClickedSection, setIdVisible, window, "");
 
     useEffect(() => {
         document.title = 'Exploratory Testing-Environment';
         window.scrollTo(0, 0);
+        setIdVisible("Example")
     }, [pathname]);
 
     return (
@@ -17,7 +23,6 @@ export const Ecosystem = () => {
             <LayoutWrapper page="environment" currentSection={idVisible} setCurrentSection={setIdVisible}
                            setIsClickedSection={setIsClickedSection}>
                 <section className="bg-white-bg h-full text-black text-justify py-10 px-1">
-                    <h2 className="pb-2 font-semibold">What's your environment?</h2>
                     <p>Your application is not only the software. It is running on servers. It is being access from a
                         lot of
                         different devices, PC, tablets, androids, iPhones... It is using databases. It is using external
@@ -27,7 +32,7 @@ export const Ecosystem = () => {
                         help
                         you find potential problems for your users.
                     </p>
-                    <h2 className="pb-2 pt-4 font-semibold">Example</h2>
+                    <h2 className="pb-2 pt-10 font-semibold" id="Example" ref={ref1.ref}>Example</h2>
                     <p>We can take the example of on app that let you buy seeds. It is using an
                         external
                         API for
@@ -49,7 +54,7 @@ export const Ecosystem = () => {
                         outside
                         service go down can be very valuable.</p>
 
-                    <h2 className="pb-2 pt-4 font-semibold">Hardware</h2>
+                    <h2 className="pb-2 pt-10 font-semibold" id="Hardware" ref={ref2.ref}>Hardware</h2>
                     <p>The diversity of hardware that can run your application is always increasing,
                         how is
                         your app running
@@ -59,7 +64,7 @@ export const Ecosystem = () => {
                         Internet connection can also be a limiting factor for your application. Your application is
                         working
                         well on a 1go internet connection but does the system time out when you use it on a slow 4g?</p>
-                    <h2 className="pb-2 pt-4 font-semibold">Limitless environment</h2>
+                    <h2 className="pb-2 pt-10 font-semibold" id="Limitless-environment" ref={ref3.ref}>Limitless environment</h2>
                     <p>There is a lot that you can explore about how an application interact with the
                         rest
                         of the world. An example that come to mind is paying medical bills. I recently broke my ankle

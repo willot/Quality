@@ -28,10 +28,10 @@ export const Interactions = () => {
             return "You are incorrect, there is no aria-label. Someone using a screen reader would only hear `button` and have no idea what is this button for..."
         }
         if (buttonIndex === "button2") {
-            return "You are correct there is a aria-label, the outline is not deactivated and it is a button not a div."
+            return "You are correct there is a aria-label, the outline is not deactivated and it is a button, not a div."
         }
         if (buttonIndex === "button3") {
-            return "You are incorrect the outline of the button is deactivated when the button is focus. So you don't know that" +
+            return "You are incorrect the outline of the button is deactivated when the button is focused. So you don't know that" +
                 " you are currently on the button when you tab around"
         }
         if (buttonIndex === "button4") {
@@ -73,10 +73,10 @@ export const Interactions = () => {
                     </section>
                     <section className="pb-10">
                         <h2 className="font-bold" ref={ref2.ref} id="Use-your-keyboard">Use your keyboard</h2>
-                        <p>A lot of people use their keyboards to navigate into applications. Using a keyboard can have
+                        <p>A lot of people use their keyboards to navigate in applications. Using a keyboard can have
                             a
-                            huge impact on your interaction with an application. These are examples of what can go wrong
-                            when using a keyboard.</p>
+                            huge impact on your experience. Here are some examples of what can go wrong
+                            when using a keyboard:</p>
                         <section className="pt-16 pb-10">
                             <h3 className="font-medium text-pink">Let's play with tabbing. Try to tab through these buttons.</h3>
                             <section
@@ -102,7 +102,7 @@ export const Interactions = () => {
                                 tabbing ordering doesn't follow the expected application flow.</p>
 
                             <p className="pt-16 font-medium text-pink">Let's look at another example. Click or tab on the button you think is
-                                correct.</p>
+                                following best practices.</p>
                             <section
                                 className="grid grid-rows-2 grid-flow-col justify-items-center md:grid-rows-1 pt-4">
                                 <button tabIndex={5}

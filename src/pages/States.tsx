@@ -17,6 +17,7 @@ export const States = () => {
     useEffect(() => {
         document.title = 'Exploratory Testing-States';
         window.scrollTo(0, 0);
+        setIdVisible("What-is-a-state?");
     }, [pathname]);
 
     return (

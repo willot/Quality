@@ -1,15 +1,20 @@
 import {useLocation} from "react-router-dom";
 import {LayoutWrapper} from "../components/LayoutWrapper";
 import {useEffect, useState} from "react";
+import {ShowSectionHook} from "../hooks/ShowSectionHook";
 
 export const Summary = () => {
     const {pathname} = useLocation();
     const [idVisible, setIdVisible] = useState("");
-    const [, setIsClickedSection] = useState(false);
+    const [clickedSection, setIsClickedSection] = useState(false);
+
+    const ref1 = ShowSectionHook(clickedSection, setIsClickedSection, setIdVisible, window, "When-to-use-exploratory-testing?");
+    const ref2 = ShowSectionHook(clickedSection, setIsClickedSection, setIdVisible, window, "");
 
     useEffect(() => {
         document.title = 'Exploratory Testing-Summary';
         window.scrollTo(0, 0);
+        setIdVisible("A-useful-tool");
     }, [pathname]);
 
     return (
@@ -17,7 +22,7 @@ export const Summary = () => {
             <LayoutWrapper page="summary" currentSection={idVisible} setCurrentSection={setIdVisible}
                            setIsClickedSection={setIsClickedSection}>
                 <section className="bg-white-bg h-full text-black text-justify py-10 px-1">
-                    <h2 className="pb-2 font-semibold">A useful tool</h2>
+                    <h2 className="pb-2 font-semibold" ref={ref1.ref} id="A-useful-tool">A useful tool</h2>
                     <p className="pb-4">Quality is not only meeting your user expectation. It is also something that
                         make
                         you stand out in a good way
@@ -42,7 +47,7 @@ export const Summary = () => {
                         fixed. Unit, integration or end to end tests get written to ensure that this bug never appear
                         again.
                         Then you move on.</p>
-                    <h2 className="pb-2 font-semibold">When to use exploratory testing?</h2>
+                    <h2 className="pb-2 pt-10 font-semibold" ref={ref2.ref} id="When-to-use-exploratory-testing?">When to use exploratory testing?</h2>
                     <p className="pb-4">I think it is up to each team to decide. For me exploratory
                         testing is something that should happen everytime concerned are raised about a part of the
                         application. A lot of team do not have a QA person but that doesn't mean that you can't run
