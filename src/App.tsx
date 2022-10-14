@@ -4,10 +4,10 @@ import {Home} from "./pages/Home";
 
 
 function App() {
-        document.title = 'Quality';
+        document.title = 'Home';
 
   return (
-    <div className="App bg-white-bg flex flex-row justify-center">
+    <div className="App bg-white-bg">
       <Home/>
     </div>
   );

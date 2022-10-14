@@ -53,7 +53,7 @@ export const LayoutWrapper = ({
         exploratoryTesting: {
             button1: {
                 text: "Quality",
-                link: "/"
+                link: "/quality"
             },
             button2: {
                 text: "Interactions",
@@ -122,7 +122,7 @@ export const LayoutWrapper = ({
             },
             button2: {
                 text: "Quality",
-                link: "/"
+                link: "/quality"
             },
             listSection: ["A-useful-tool","When-to-use-exploratory-testing?"],
             title: "Summary",

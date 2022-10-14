@@ -11,6 +11,7 @@ import {Entities} from "./pages/Entities";
 import {States} from "./pages/States";
 import {Ecosystem} from "./pages/Ecosystem";
 import {Summary} from "./pages/Summary";
+import {Quality} from "./pages/Quality";
 
 const root = ReactDOM.createRoot(
     document.getElementById('root') as HTMLElement
@@ -21,6 +22,7 @@ root.render(
         <BrowserRouter>
             <Routes>
                 <Route path="/" element={<App/>}/>
+                <Route path="/quality" element={<Quality/>}/>
                 <Route path="/exploratoryTesting" element={<ExploratoryTesting/>}/>
                 <Route path="/interactions" element={<Interactions/>}/>
                 <Route path="/objects" element={<Entities/>}/>
