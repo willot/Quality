@@ -82,19 +82,19 @@ export const Interactions = () => {
                             <section
                                 className="grid grid-rows-2 grid-flow-col justify-items-center md:grid-rows-1 pt-4">
                                 <button tabIndex={0}
-                                        className="bg-pink text-white font-semibold w-28 border border-white rounded-md mb-2 p-2 active:translate-y-0.5 duration-200 active:bg-white">button
+                                        className="bg-pink text-white font-semibold w-28 border border-white rounded-md mb-2 p-2 active:translate-y-0.5 duration-200 active:bg-blue hover:bg-blue">button
                                     1
                                 </button>
                                 <button tabIndex={3}
-                                        className="bg-pink text-white font-semibold w-28 border border-white rounded-md mb-2 p-2 active:translate-y-0.5 duration-200 active:bg-white active:shadow-none">button
+                                        className="bg-pink text-white font-semibold w-28 border border-white rounded-md mb-2 p-2 active:translate-y-0.5 duration-200 active:bg-blue hover:bg-blue active:shadow-none">button
                                     2
                                 </button>
                                 <button tabIndex={1}
-                                        className="bg-pink text-white font-semibold w-28 border border-white rounded-md mb-2 p-2 active:translate-y-0.5 duration-200 active:bg-white">button
+                                        className="bg-pink text-white font-semibold w-28 border border-white rounded-md mb-2 p-2 active:translate-y-0.5 duration-200 active:bg-blue hover:bg-blue">button
                                     3
                                 </button>
                                 <button tabIndex={2}
-                                        className="bg-pink text-white font-semibold w-28 border border-white rounded-md mb-2 p-2 active:translate-y-0.5 duration-200 active:bg-white">button
+                                        className="bg-pink text-white font-semibold w-28 border border-white rounded-md mb-2 p-2 active:translate-y-0.5 duration-200 active:bg-blue hover:bg-blue">button
                                     4
                                 </button>
                             </section>
@@ -106,7 +106,7 @@ export const Interactions = () => {
                             <section
                                 className="grid grid-rows-2 grid-flow-col justify-items-center md:grid-rows-1 pt-4">
                                 <button tabIndex={5}
-                                        className="flex flex-row justify-center bg-pink text-white w-28 border border-white rounded-md mb-2 p-2 active:translate-y-0.5 duration-200 active:bg-white"
+                                        className="flex flex-row justify-center bg-pink text-white w-28 border border-white rounded-md mb-2 p-2 active:translate-y-0.5 duration-200 active:bg-blue hover:bg-blue"
                                         onClick={() => {
                                             setButtonIndex("button1")
                                         }}>
@@ -114,7 +114,7 @@ export const Interactions = () => {
                                 </button>
                                 <button aria-label="Shopping cart"
                                         tabIndex={5}
-                                        className="flex flex-row justify-center bg-pink text-white w-28 border border-white rounded-md mb-2 p-2 active:translate-y-0.5 duration-200 active:bg-white "
+                                        className="flex flex-row justify-center bg-pink text-white w-28 border border-white rounded-md mb-2 p-2 active:translate-y-0.5 duration-200 active:bg-blue hover:bg-blue "
                                         onClick={() => {
                                             setButtonIndex("button2")
                                         }}>
@@ -122,14 +122,14 @@ export const Interactions = () => {
                                 </button>
                                 <button aria-label="Shopping cart"
                                         tabIndex={5}
-                                        className="flex flex-row justify-center bg-pink text-white w-28 border border-white rounded-md mb-2 p-2 active:translate-y-0.5 duration-200 active:bg-white outline-0"
+                                        className="flex flex-row justify-center bg-pink text-white w-28 border border-white rounded-md mb-2 p-2 active:translate-y-0.5 duration-200 active:bg-blue hover:bg-blue outline-0"
                                         onClick={() => {
                                             setButtonIndex("button3")
                                         }}>
                                     <ShoppingCartIcon className="h-6 w-6"/>
                                 </button>
                                 <div tabIndex={5}
-                                     className="flex flex-row justify-center bg-pink text-white w-28 border border-white rounded-md mb-2 p-2 active:translate-y-0.5 duration-200 active:bg-white"
+                                     className="flex flex-row justify-center bg-pink text-white w-28 border border-white rounded-md mb-2 p-2 active:translate-y-0.5 duration-200 active:bg-blue hover:bg-blue"
                                      onClick={() => {
                                          setButtonIndex("button4")
                                      }}>
