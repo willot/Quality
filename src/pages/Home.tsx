@@ -1,8 +1,6 @@
 import React from "react";
 import {PageTitle} from "../components/PageTitle";
-import {ArrowLongRightIcon} from "@heroicons/react/24/solid";
-import {Link} from "react-router-dom";
-import {flushSync} from "react-dom";
+import {HomeCard} from "../components/HomeCard";
 
 export const Home = () => {
 
@@ -19,36 +17,19 @@ export const Home = () => {
         subTitle: "Explore the different techniques to truly explore your application and improve the quality in your project.",
     }
 
-
     return (
         <main className="h-screen">
             <header className='bg-blue-light w-full flex flex-row justify-center'>
                 <PageTitle pageButtonFlow={homePageHeader} firstButton={false}/>
             </header>
-            <section>
-                <button className="border border-blue rounded-md">
-                    <section className="p-2">
-                        <h2>Quality</h2>
-                        <p>This section is a refresh on what is quality</p>
-                    </section>
-                    <div className="border border-t border-t-blue">
-                        Read more
-                    </div>
-                </button>
-                <p>CARDS!</p>
-                <p>CARDS!</p>
-                <p>CARDS!</p>
-                <p>CARDS!</p>
-                <p>CARDS!</p>
-                <p>CARDS!</p>
-                <p>CARDS!</p>
-                <p>CARDS!</p>
-                <p>CARDS!</p>
-                <p>CARDS!</p>
-                <p>CARDS!</p>
-                <p>CARDS!</p>
-                <p>CARDS!</p>
-
+            <section className="m-auto md:w-10/12 lg:w-9/12 xl:w7/12 2xl:w-6/12 grid grid-cols-3 justify-items-center">
+                <HomeCard title={"Quality"} text={"This section is a refresher on what quality is"} link={"/quality"}/>
+                <HomeCard title={"Exploratory Testing"} text={"An introduction of what exploratory testing is and the benefits for your application quality."} link={"/exploratoryTesting"}/>
+                <HomeCard title={"Interaction"} text={"This is the first technique to learn to build your exploratory testing focus on changing the way you interact with your application."} link={"/interactions"}/>
+                <HomeCard title={"Objects"} text={"This is the second exploratory testing technique focus on understand how to identify the objects in your application and test them."} link={"/objects"}/>
+                <HomeCard title={"States"} text={"This is the third exploratory testing technique focus on identifying the states in your application."} link={"/states"}/>
+                <HomeCard title={"Environment"} text={"This is the last exploratory testing technique focus on understanding how the environment of your application affect the experience of the users."} link={"/environment"}/>
+                <HomeCard title={"Summary"} text={"Why exploratory testing is a very valuable technique to add to your tool box to improve the quality of your application."} link={"/summary"}/>
             </section>
             <footer className="bg-blue-light w-full flex flex-row justify-center">
                 <section className="px-4 text-left w-full py-28 md:w-10/12 lg:w-9/12 xl:w7/12 2xl:w-5/12">
