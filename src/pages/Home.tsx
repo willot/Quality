@@ -51,8 +51,8 @@ export const Home = () => {
                 <section className="px-4 text-left w-full py-28 md:w-10/12 lg:w-9/12 xl:w7/12 2xl:w-5/12">
                     <p className="font-bold">Learning more about exploratory testing</p>
                     <a className="text-blue underline underline-offset-2" href="https://www.linkedin.com/in/willot"
-                       target="_blank">by: Vianney Willot</a>
-                    <p>Senior Software Engineer at <a href="https://www.thisisartium.com/" target="_blank"
+                       rel="noopener noreferrer" target="_blank">by: Vianney Willot</a>
+                    <p>Senior Software Engineer at <a href="https://www.thisisartium.com/"
                                                       className="text-pink underline underline-offset-2">Artium</a></p>
                 </section>
             </footer>
