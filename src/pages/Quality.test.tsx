@@ -2,9 +2,11 @@ import {Quality} from "./Quality";
 import {render, screen} from '@testing-library/react';
 import {MemoryRouter} from "react-router-dom";
 import userEvent from "@testing-library/user-event";
+import {UserEvent} from "@testing-library/user-event/dist/types/setup/setup";
 
 describe('home page', () => {
     //Demo tests for the home page
+    let user: UserEvent;
     beforeEach(() => {
         const spyWindowOpen = jest.spyOn(window, 'scrollTo');
         spyWindowOpen.mockImplementation(jest.fn());
@@ -15,6 +17,7 @@ describe('home page', () => {
             disconnect: () => null
         });
         window.IntersectionObserver = mockIntersectionObserver;
+            user = userEvent.setup()
     });
     describe('example buttons', () => {
         it('should change the text wording when the button is clicked', async () => {
@@ -57,7 +60,7 @@ describe('home page', () => {
         });
     });
 
-    xdescribe('side bar', () => {
+    describe('side bar', () => {
         it('should change the color of the text when clicking on a section', async () => {
             render(<Quality/>, {wrapper: MemoryRouter});
             const button = screen.getByRole('link', {name: "Tests"});
