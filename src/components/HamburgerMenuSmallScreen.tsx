@@ -2,14 +2,14 @@ import {Bars3Icon} from "@heroicons/react/24/solid";
 import React from "react";
 import {listOfLink} from "./LayoutWrapper";
 
-type HamburgerMenuSmallScreen = {
+type HamburgerMenuSmallScreenProps = {
     ref: React.MutableRefObject<any>,
     setIsVisible: React.Dispatch<React.SetStateAction<boolean>>,
     isVisible: boolean,
     showSideNavBar: boolean,
 }
 
-export const HamburgerMenuSmallScreen = ({ref, setIsVisible, isVisible, showSideNavBar}: HamburgerMenuSmallScreen) => {
+export const HamburgerMenuSmallScreen = ({ref, setIsVisible, isVisible, showSideNavBar}: HamburgerMenuSmallScreenProps) => {
     return (
         <>
             {!showSideNavBar && (<>
