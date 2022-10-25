@@ -1,10 +1,52 @@
 import {NavLink} from "react-router-dom";
 import React, {useEffect, useState} from "react";
-import {Bars3Icon} from "@heroicons/react/24/solid";
 import {OutsideClickDetector} from "../hooks/OutsideClickDetector";
 import {NavButton} from "./NavButton";
 import {SectionLink} from "./SectionLink";
 import {PageTitle} from "./PageTitle";
+import {HamburgerMenuSmallScreen} from "./HamburgerMenuSmallScreen";
+
+export const listOfLink = () => {
+    return (<>
+            <NavLink to="/home"
+                     className={(navData) => navLinkStyle(navData)}>
+                Home
+            </NavLink>
+            <NavLink to="/quality"
+                     className={(navData) => navLinkStyle(navData)}>
+                Quality
+            </NavLink>
+            <NavLink to="/exploratoryTesting"
+                     className={(navData) => navLinkStyle(navData)}>
+                Exploratory Testing
+            </NavLink>
+            <NavLink to="/interactions"
+                     className={(navData) => navLinkStyle(navData)}>
+                Interactions
+            </NavLink>
+            <NavLink to="/objects"
+                     className={(navData) => navLinkStyle(navData)}>
+                Objects
+            </NavLink>
+            <NavLink to="/states"
+                     className={(navData) => navLinkStyle(navData)}>
+                States
+            </NavLink>
+            <NavLink to="/environment"
+                     className={(navData) => navLinkStyle(navData)}>
+                Environment
+            </NavLink>
+            <NavLink to="/summary"
+                     className={(navData) => navLinkStyle(navData)}>
+                Summary
+            </NavLink>
+        </>
+    )
+};
+
+export const navLinkStyle = (navData: any) => {
+    return navData.isActive ? "text-blue font-semibold text-left" : "text-pink font-semibold text-left"
+}
 
 type LayoutWrapperProps = {
     children: React.ReactElement;
@@ -31,10 +73,6 @@ export const LayoutWrapper = ({
             window.removeEventListener('resize', componentToDisplay)
         }
     })
-
-    const navLinkStyle = (navData: any) => {
-        return navData.isActive ? "text-blue font-semibold text-left" : "text-pink font-semibold text-left"
-    }
 
     const buttonFlow = {
         quality: {
@@ -111,7 +149,7 @@ export const LayoutWrapper = ({
                 text: "Summary",
                 link: "/summary"
             },
-            listSection: ["Example","Hardware","Limitless-environment"],
+            listSection: ["Example", "Hardware", "Limitless-environment"],
             title: "Application in its environment",
             subTitle: "Learning how the environment around your application affect the user experience.",
         },
@@ -124,7 +162,7 @@ export const LayoutWrapper = ({
                 text: "Quality",
                 link: "/quality"
             },
-            listSection: ["A-useful-tool","When-to-use-exploratory-testing?"],
+            listSection: ["A-useful-tool", "When-to-use-exploratory-testing?"],
             title: "Summary",
             subTitle: "Summarize your learning on exploratory testing.",
         }
@@ -165,39 +203,6 @@ export const LayoutWrapper = ({
         }
     }
 
-    const listOfLink = () => {
-        return (<>
-                <NavLink to="/"
-                         className={(navData) => navLinkStyle(navData)}>
-                    Quality
-                </NavLink>
-                <NavLink to="/exploratoryTesting"
-                         className={(navData) => navLinkStyle(navData)}>
-                    Exploratory Testing
-                </NavLink>
-                <NavLink to="/interactions"
-                         className={(navData) => navLinkStyle(navData)}>
-                    Interactions
-                </NavLink>
-                <NavLink to="/objects"
-                         className={(navData) => navLinkStyle(navData)}>
-                    Objects
-                </NavLink>
-                <NavLink to="/states"
-                         className={(navData) => navLinkStyle(navData)}>
-                    States
-                </NavLink>
-                <NavLink to="/environment"
-                         className={(navData) => navLinkStyle(navData)}>
-                    Environment
-                </NavLink>
-                <NavLink to="/summary"
-                         className={(navData) => navLinkStyle(navData)}>
-                    Summary
-                </NavLink>
-            </>
-        )
-    };
 
     const GenerateListOfLink = (listOfId: Array<string>) => {
         return (
@@ -274,32 +279,11 @@ export const LayoutWrapper = ({
     }
 
     const showSideBarIcon = () => {
-        if (!showSideNavBar) {
-            return (
-                <>
-                    <div className="flex flex-row justify-end pt-2">
-                        <button
-                            className="flex flex-row justify-center"
-                            ref={ref}
-                            onClick={() => {
-                                setIsVisible(!isVisible);
-                            }}
-                        >
-                            <Bars3Icon className="h8 w-8"/>
-                        </button>
-                    </div>
-                    {isVisible && (
-                        <nav
-                            className="absolute w-9/12 flex right-7 flex-col pt-4 pl-4 space-y-1 bg-white rounded-xl">
-                            {listOfLink()}
-                        </nav>
-                    )
-                    }
-                </>
-            )
-        }
+        return (
+            <HamburgerMenuSmallScreen ref={ref} isVisible={isVisible} setIsVisible={setIsVisible}
+                                      showSideNavBar={showSideNavBar}/>
+        )
     }
-
 
     return (
         <main className="flex flex-col h-screen justify-between">
