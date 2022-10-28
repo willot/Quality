@@ -9,7 +9,7 @@ type NavButtonProps = {
 
 export const NavButton = ({text, linkUrl, left = false}:NavButtonProps) => {
     return(
-        <section className="rounded-full bg-pink text-white text-left text-lg mt-4 py-2 px-6">
+        <section className="rounded-full bg-pink text-white text-left text-lg mt-4 py-2 px-6 hover:bg-blue">
             <Link to={linkUrl} className="flex flex-row">
                 {left && <ArrowLongLeftIcon className="h-8 w-8"/>}
                 <span className=" font-semibold px-4">{text}</span>
