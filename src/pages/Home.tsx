@@ -45,7 +45,7 @@ export const Home = () => {
                 <HamburgerMenuSmallScreen ref={ref} isVisible={isVisible} setIsVisible={setIsVisible}
                                           showSideNavBar={showSideNavBar}/>
             </header>
-            <section className="m-auto md:w-10/12 lg:w-9/12 xl:w-7/12 2xl:w-6/12 grid sm:grid-cols-2 lg:grid-cols-3 justify-items-center">
+            <section className="m-auto md:w-10/12 lg:w-9/12 xl:w-7/12 2xl:w-6/12 grid sm:grid-cols-2 lg:grid-cols-3 justify-items-center sm:justify-items-start">
                 <HomeCard title={"Quality"} text={"This section is a refresher on what quality is"} link={"/quality"}/>
                 <HomeCard title={"Exploratory Testing"} text={"An introduction of what exploratory testing is and the benefits for your application quality."} link={"/exploratoryTesting"}/>
                 <HomeCard title={"Interaction"} text={"This is the first technique to learn to build your exploratory testing focus on changing the way you interact with your application."} link={"/interactions"}/>
@@ -55,7 +55,7 @@ export const Home = () => {
                 <HomeCard title={"Summary"} text={"Why exploratory testing is a very valuable technique to add to your tool box to improve the quality of your application."} link={"/summary"}/>
             </section>
             <footer className="bg-blue-light w-full flex flex-row justify-center">
-                <section className="px-4 text-left w-full py-28 md:w-10/12 lg:w-9/12 xl:w7/12 2xl:w-6/12">
+                <section className="px-4 text-left w-full py-28 md:w-10/12 lg:w-9/12 xl:w-7/12 2xl:w-6/12">
                     <p className="font-bold">Learning more about exploratory testing</p>
                     <a className="text-blue underline underline-offset-2" href="https://www.linkedin.com/in/willot"
                        rel="noopener noreferrer" target="_blank">by: Vianney Willot</a>
