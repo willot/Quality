@@ -41,11 +41,11 @@ export const Home = () => {
     return (
         <main className="h-screen">
             <header className='bg-blue-light w-full flex flex-row justify-center'>
-                <PageTitle pageButtonFlow={homePageHeader} firstButton={false} widthForBigScreen={"2xl:w-6/12"}/>
+                <PageTitle pageButtonFlow={homePageHeader} widthForBigScreen={"2xl:w-6/12"}/>
                 <HamburgerMenuSmallScreen ref={ref} isVisible={isVisible} setIsVisible={setIsVisible}
                                           showSideNavBar={showSideNavBar}/>
             </header>
-            <section className="m-auto md:w-10/12 lg:w-9/12 xl:w-7/12 2xl:w-6/12 grid sm:grid-cols-2 lg:grid-cols-3 justify-items-center sm:justify-items-start">
+            <section className="m-auto pb-8 md:w-10/12 lg:w-9/12 xl:w-7/12 2xl:w-6/12 grid sm:grid-cols-2 lg:grid-cols-3 justify-items-center sm:justify-items-start">
                 <HomeCard title={"Quality"} text={"This section is a refresher on what quality is"} link={"/quality"}/>
                 <HomeCard title={"Exploratory Testing"} text={"An introduction of what exploratory testing is and the benefits for your application quality."} link={"/exploratoryTesting"}/>
                 <HomeCard title={"Interaction"} text={"This is the first technique to learn to build your exploratory testing focus on changing the way you interact with your application."} link={"/interactions"}/>
