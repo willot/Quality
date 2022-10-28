@@ -2,11 +2,10 @@ import React, {useEffect, useState} from "react";
 import {PageTitle} from "../components/PageTitle";
 import {HomeCard} from "../components/HomeCard";
 import {HamburgerMenuSmallScreen} from "../components/HamburgerMenuSmallScreen";
-import {OutsideClickDetector} from "../hooks/OutsideClickDetector";
 
 export const Home = () => {
     const [showSideNavBar, setShowSideNavBar] = useState(window.innerWidth > 650);
-    const {ref, isVisible, setIsVisible} = OutsideClickDetector(false);
+
 
     useEffect(() => {
         componentToDisplay();
@@ -42,8 +41,7 @@ export const Home = () => {
         <main className="h-screen">
             <header className='bg-blue-light w-full flex flex-row justify-center'>
                 <PageTitle pageButtonFlow={homePageHeader} widthForBigScreen={"2xl:w-6/12"}/>
-                <HamburgerMenuSmallScreen ref={ref} isVisible={isVisible} setIsVisible={setIsVisible}
-                                          showSideNavBar={showSideNavBar}/>
+                <HamburgerMenuSmallScreen showSideNavBar={showSideNavBar}/>
             </header>
             <section className="m-auto pb-8 md:w-10/12 lg:w-9/12 xl:w-7/12 2xl:w-6/12 grid sm:grid-cols-2 lg:grid-cols-3 justify-items-center sm:justify-items-start">
                 <HomeCard title={"Quality"} text={"This section is a refresher on what quality is"} link={"/quality"}/>

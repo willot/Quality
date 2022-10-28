@@ -1,6 +1,5 @@
 import {NavLink} from "react-router-dom";
 import React, {useEffect, useState} from "react";
-import {OutsideClickDetector} from "../hooks/OutsideClickDetector";
 import {SectionLink} from "./SectionLink";
 import {PageTitle} from "./PageTitle";
 import {HamburgerMenuSmallScreen} from "./HamburgerMenuSmallScreen";
@@ -65,7 +64,6 @@ export const LayoutWrapper = ({
                                   setIsClickedSection
                               }: LayoutWrapperProps) => {
     const [showSideNavBar, setShowSideNavBar] = useState(window.innerWidth > 650);
-    const {ref, isVisible, setIsVisible} = OutsideClickDetector(false);
 
     useEffect(() => {
         componentToDisplay();
@@ -202,18 +200,11 @@ export const LayoutWrapper = ({
         }
     }
 
-    const showSideBarIcon = () => {
-        return (
-            <HamburgerMenuSmallScreen ref={ref} isVisible={isVisible} setIsVisible={setIsVisible}
-                                      showSideNavBar={showSideNavBar}/>
-        )
-    }
-
     return (
         <main className="flex flex-col h-screen justify-between">
             <header className='bg-blue-light w-full flex flex-row justify-center'>
                 <PageTitle pageButtonFlow={buttonFlowPages[page]}/>
-                {showSideBarIcon()}
+                <HamburgerMenuSmallScreen showSideNavBar={showSideNavBar}/>
             </header>
             <section className="flex flex-row justify-center">
                 <section
