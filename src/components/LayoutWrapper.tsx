@@ -184,7 +184,7 @@ export const LayoutWrapper = ({
         if (showSideNavBar) {
             return (
                 <aside className="relative pt-16 col-span-3">
-                    <section className="fixed flex flex-col py-4 pl-6 pr-2 space-y-2  border-r border-pink">
+                    <section className="sticky top-6 flex flex-col py-4 pl-6 pr-2 space-y-2  border-r border-pink">
                         <>{GenerateListOfLink(buttonFlowPages[page])}</>
                     </section>
                 </aside>)
