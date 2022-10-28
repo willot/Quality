@@ -1,10 +1,11 @@
 import {NavLink} from "react-router-dom";
 import React, {useEffect, useState} from "react";
 import {OutsideClickDetector} from "../hooks/OutsideClickDetector";
-import {NavButton} from "./NavButton";
 import {SectionLink} from "./SectionLink";
 import {PageTitle} from "./PageTitle";
 import {HamburgerMenuSmallScreen} from "./HamburgerMenuSmallScreen";
+import {ArticlePageFooter} from "./ArticlePageFooter";
+import {ButtonFlow, ButtonFlowPages} from "../Utils/Interfaces";
 
 export const listOfLink = () => {
     return (<>
@@ -74,7 +75,7 @@ export const LayoutWrapper = ({
         }
     })
 
-    const buttonFlow = {
+    const buttonFlowPages: ButtonFlowPages = {
         quality: {
             button1: {
                 text: "",
@@ -168,91 +169,14 @@ export const LayoutWrapper = ({
         }
     }
 
-    type ObjectKey = keyof typeof buttonFlow;
-
-    const pageName = page as ObjectKey;
-
-    const sectionsIntro = (sectionName: string) => {
-        switch (sectionName) {
-            case "quality": {
-                return (<PageTitle pageButtonFlow={buttonFlow.quality} firstButton={false}/>);
-            }
-            case "exploratoryTesting" : {
-                return (<PageTitle pageButtonFlow={buttonFlow.exploratoryTesting}/>);
-            }
-            case "interactions" : {
-                return (<PageTitle pageButtonFlow={buttonFlow.interactions}/>);
-            }
-            case "entities" : {
-                return (<PageTitle pageButtonFlow={buttonFlow.entities}/>);
-            }
-            case "states" : {
-                return (<PageTitle pageButtonFlow={buttonFlow.states}/>);
-            }
-            case "environment" : {
-                return (<PageTitle pageButtonFlow={buttonFlow.environment}/>);
-            }
-            case "summary" : {
-                return (<PageTitle pageButtonFlow={buttonFlow.summary}/>);
-            }
-            default: {
-                return (<section>
-                    <p>Section in progress</p>
-                </section>)
-            }
-        }
-    }
-
-
-    const GenerateListOfLink = (listOfId: Array<string>) => {
-        return (
-            listOfId.map((idElement, index) => {
-                return <SectionLink idLink={idElement} currentSection={currentSection}
-                                    setCurrentSection={setCurrentSection} setIsClickedSection={setIsClickedSection}
-                                    key={index}/>
-            }))
-    }
-
-    const linksForSpecificPage = (pageName: string) => {
-        switch (pageName) {
-            case "quality" : {
-                return (
-                    <>{GenerateListOfLink(buttonFlow.quality.listSection)}</>
-                )
-            }
-            case "exploratoryTesting" : {
-                return (
-                    <>{GenerateListOfLink(buttonFlow.exploratoryTesting.listSection)}</>
-                )
-            }
-            case "interactions" : {
-                return (
-                    <>{GenerateListOfLink(buttonFlow.interactions.listSection)}</>
-                )
-            }
-            case "entities": {
-                return (
-                    <>{GenerateListOfLink(buttonFlow.entities.listSection)}</>
-                )
-            }
-            case "states": {
-                return (
-                    <>{GenerateListOfLink(buttonFlow.states.listSection)}</>
-                )
-            }
-            case "environment": {
-                return (
-                    <>{GenerateListOfLink(buttonFlow.environment.listSection)}</>
-                )
-            }
-            case "summary": {
-                return (
-                    <>{GenerateListOfLink(buttonFlow.summary.listSection)}</>
-                )
-            }
-            default : {
-                return listOfLink();
-            }
+    const GenerateListOfLink = (pageFlow: ButtonFlow | undefined) => {
+        if (pageFlow) {
+            return (
+                pageFlow.listSection.map((idElement, index) => {
+                    return <SectionLink idLink={idElement} currentSection={currentSection}
+                                        setCurrentSection={setCurrentSection} setIsClickedSection={setIsClickedSection}
+                                        key={index}/>
+                }))
         }
     }
 
@@ -261,7 +185,7 @@ export const LayoutWrapper = ({
             return (
                 <aside className="relative pt-16 col-span-3">
                     <section className="fixed flex flex-col py-4 pl-6 pr-2 space-y-2  border-r border-pink">
-                        {linksForSpecificPage(pageName)}
+                        <>{GenerateListOfLink(buttonFlowPages[page])}</>
                     </section>
                 </aside>)
         } else {
@@ -288,7 +212,7 @@ export const LayoutWrapper = ({
     return (
         <main className="flex flex-col h-screen justify-between">
             <header className='bg-blue-light w-full flex flex-row justify-center'>
-                {sectionsIntro(page)}
+                <PageTitle pageButtonFlow={buttonFlowPages[page]}/>
                 {showSideBarIcon()}
             </header>
             <section className="flex flex-row justify-center">
@@ -301,13 +225,7 @@ export const LayoutWrapper = ({
                 </section>
             </section>
             <footer className="bg-blue-light">
-                <nav
-                    className={`flex flex-col sm:flex-row ${buttonFlow[pageName].button1.text !== "" ? "justify-between" : "justify-end"} w-max pl-2 pr-2 py-8 w-full md:w-10/12 lg:w-9/12 xl:w7/12 2xl:w-5/12 m-auto`}>
-                    {buttonFlow[pageName].button1.text !== "" &&
-                    <NavButton text={buttonFlow[pageName].button1.text} linkUrl={buttonFlow[pageName].button1.link}
-                               left={true}/>}
-                    <NavButton text={buttonFlow[pageName].button2.text} linkUrl={buttonFlow[pageName].button2.link}/>
-                </nav>
+                <ArticlePageFooter buttonFlow={buttonFlowPages[page]}/>
             </footer>
         </main>
     )

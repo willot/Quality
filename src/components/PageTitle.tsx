@@ -13,7 +13,7 @@ export const PageTitle = ({pageButtonFlow, firstButton=true, widthForBigScreen =
             <h1 className="text-4xl text-left font-medium pb-5 text-pink">{pageButtonFlow.title}</h1>
             <p className="pb-8">{pageButtonFlow.subTitle}</p>
             <nav className="flex flex-col w-max justify-items-start sm:flex-row sm:items-center sm:space-x-4">
-                {firstButton && (<NavButton text={pageButtonFlow.button1.text}
+                {pageButtonFlow.button1.text !== "" && (<NavButton text={pageButtonFlow.button1.text}
                            linkUrl={pageButtonFlow.button1.link} left={true}/>)}
                 <NavButton text={pageButtonFlow.button2.text}
                            linkUrl={pageButtonFlow.button2.link}/>

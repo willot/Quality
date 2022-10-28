@@ -43,10 +43,10 @@ export const ShowSectionHook = (clickedSection: boolean, setIsClickedSection: (v
 
         const observer = new IntersectionObserver(
             ([entry]) => {
-                if (scrollDir === "scrolling down" && !entry.isIntersecting && !clickedSection) {
+                if (scrollDir === "scrolling down" && entry && !entry.isIntersecting && !clickedSection) {
                     setIdVisible(entry.target.id);
                 }
-                if (scrollDir === "scrolling up" && entry.isIntersecting && !clickedSection) {
+                if (scrollDir === "scrolling up" && entry && entry.isIntersecting && !clickedSection) {
                     setIdVisible(entry.target.id);
                 }
 

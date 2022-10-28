@@ -23,7 +23,7 @@ describe('home page', () => {
         it('should change the text wording when the button is clicked', async () => {
             render(<Quality/>, {wrapper: MemoryRouter});
             const buttons = screen.getAllByRole('button', {name: "Show more details"});
-            await userEvent.click(buttons[0]);
+            await userEvent.click(buttons[0]!);
             await screen.findByText("show less details");
             const buttonsClicked = screen.getAllByRole('button', {name: "show less details"});
             expect(buttonsClicked.length).toEqual(1)
@@ -31,7 +31,7 @@ describe('home page', () => {
         it('should show more info when the button is clicked', async () => {
             render(<Quality/>, {wrapper: MemoryRouter});
             const buttons = screen.getAllByRole('button', {name: "Show more details"});
-            await userEvent.click(buttons[0]);
+            await userEvent.click(buttons[0]!);
             const extraInfo = screen.queryByText("Button 1 follows all the requirements," +
                 " but will a user expect a button to get more information? Should it be a link to a help page?")
             expect(extraInfo).not.toBeNull();
@@ -39,9 +39,9 @@ describe('home page', () => {
         it('should reset the wording of the button and change the text when clicking a second button', async () => {
             render(<Quality/>, {wrapper: MemoryRouter});
             const buttons = screen.getAllByRole('button', {name: "Show more details"});
-            await userEvent.click(buttons[0]);
+            await userEvent.click(buttons[0]!);
             expect(buttons[0]).toContainHTML("show less details");
-            await userEvent.click(buttons[1]);
+            await userEvent.click(buttons[1]!);
             expect(buttons[1]).toContainHTML("show less details");
             expect(buttons[0]).toContainHTML("Show more details");
             const extraInfo = screen.queryByText("Button 3 follows all the requirements," +
@@ -51,11 +51,11 @@ describe('home page', () => {
         it('should not show the information if the button is clicked again', async () => {
             render(<Quality/>, {wrapper: MemoryRouter});
             const buttons = screen.getAllByRole('button', {name: "Show more details"});
-            await userEvent.click(buttons[0]);
+            await userEvent.click(buttons[0]!);
             const extraInfo = screen.queryByText("Button 1 follows all the requirements," +
                 " but will a user expect a button to get more information? Should it be a link to a help page?")
             expect(extraInfo).toBeInTheDocument();
-            await userEvent.click(buttons[0]);
+            await userEvent.click(buttons[0]!);
             expect(extraInfo).not.toBeInTheDocument();
         });
     });
