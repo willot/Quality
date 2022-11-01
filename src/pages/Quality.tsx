@@ -4,7 +4,7 @@ import {ExampleButtonNotAccessible} from "../components/ExampleButtonNotAccessib
 import {ShowSectionHook} from "../hooks/ShowSectionHook";
 
 import {Prism as SyntaxHighlighter} from 'react-syntax-highlighter';
-import {xonokai} from "react-syntax-highlighter/dist/cjs/styles/prism";
+import {nightOwl} from "react-syntax-highlighter/dist/cjs/styles/prism";
 import {LayoutWrapper} from "../components/LayoutWrapper";
 import {useLocation} from "react-router-dom";
 
@@ -201,7 +201,7 @@ export const Quality = () => {
                         the second requirement.</p>
                     <SyntaxHighlighter
                         language='javascript'
-                        style={xonokai}
+                        style={nightOwl}
                         highlighter={"prism" || "hljs"}
                     >
                         {test1}
@@ -212,7 +212,7 @@ export const Quality = () => {
                         button?</p>
                     <SyntaxHighlighter
                         language='javascript'
-                        style={xonokai}
+                        style={nightOwl}
                         highlighter={"prism" || "hljs"}
                     >
                         {test2}
@@ -224,7 +224,7 @@ export const Quality = () => {
                         combination of all the requirements together.</p>
                     <SyntaxHighlighter
                         language='javascript'
-                        style={xonokai}
+                        style={nightOwl}
                         highlighter={"prism" || "hljs"}
                     >
                         {test3}
@@ -235,7 +235,7 @@ export const Quality = () => {
                         disappear when the button is clicked again? This is the last requirement.</p>
                     <SyntaxHighlighter
                         language='javascript'
-                        style={xonokai}
+                        style={nightOwl}
                         highlighter={"prism" || "hljs"}
                     >
                         {test4}
