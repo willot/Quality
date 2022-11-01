@@ -1,9 +1,8 @@
 import {NavButton} from "./NavButton";
 import {Link} from "react-router-dom";
-import {ArrowLongLeftIcon, HeartIcon} from "@heroicons/react/24/solid";
+import {ArrowLongLeftIcon} from "@heroicons/react/24/solid";
 import React from "react";
 import {ButtonFlow} from "../Utils/Interfaces";
-import githubIcon1 from "../Images/GitHub-Mark-120px-plus.png"
 import {FooterLinkContent} from "./FooterLinkContent";
 
 interface ArticlePageFooterProps {

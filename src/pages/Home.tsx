@@ -2,8 +2,6 @@ import React, {useEffect, useState} from "react";
 import {PageTitle} from "../components/PageTitle";
 import {HomeCard} from "../components/HomeCard";
 import {HamburgerMenuSmallScreen} from "../components/HamburgerMenuSmallScreen";
-import {HeartIcon} from "@heroicons/react/24/solid";
-import githubIcon1 from "../Images/GitHub-Mark-120px-plus.png";
 import {FooterLinkContent} from "../components/FooterLinkContent";
 
 export const Home = () => {
