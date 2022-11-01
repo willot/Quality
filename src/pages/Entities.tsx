@@ -17,9 +17,8 @@ export const Entities = () => {
     const [idVisible, setIdVisible] = useState("");
     const [clickedSection, setIsClickedSection] = useState(false)
 
-    const ref1 = ShowSectionHook(clickedSection, setIsClickedSection, setIdVisible, window, "Moving-on-from-blame");
-    const ref2 = ShowSectionHook(clickedSection, setIsClickedSection, setIdVisible, window, "");
-    const ref3 = ShowSectionHook(clickedSection, setIsClickedSection, setIdVisible, window, "");
+    const {ref1, ref2, ref3} = ShowSectionHook(clickedSection, setIsClickedSection, setIdVisible, window, "Moving-on-from-blame");
+
 
 
     const {pathname} = useLocation();
@@ -34,7 +33,7 @@ export const Entities = () => {
             <LayoutWrapper page="entities" currentSection={idVisible} setCurrentSection={setIdVisible}
                            setIsClickedSection={setIsClickedSection}>
                 <section className="bg-white-bg h-full text-black text-justify py-10 px-1">
-                    <h2 className="font-bold pb-2" ref={ref1.ref} id="What-is-an-Object?">What is an Object?</h2>
+                    <h2 className="font-bold pb-2" ref={ref1} id="What-is-an-Object?">What is an Object?</h2>
                     <p>An object is an engineer term to describe something that can be created, updated, or
                         deleted. An example is a ‘user’ in an application, a ‘transaction’ when buying something, or a
                         ‘post’ on social media. Applications are full of these objects. They represent the business
@@ -54,7 +53,7 @@ export const Entities = () => {
                         have logic that can hide a bug.
                     </p>
                     <section className="pt-10">
-                        <h2 className="font-bold pb-2" id="Exploring-the-objects" ref={ref2.ref}>Exploring the
+                        <h2 className="font-bold pb-2" id="Exploring-the-objects" ref={ref2}>Exploring the
                             objects</h2>
                         <p className="pb-2">The first thing is too identify these objects. As stated
                             earlier,
@@ -69,7 +68,7 @@ export const Entities = () => {
                             sends back an error... </p>
                         <p className="pb-4 font-semibold text-blue">Fill the example form with fake info to
                             continue.</p>
-                        <h3 className="text-pink font-semibold pb-4" id="Creating objects" ref={ref3.ref}>Creating
+                        <h3 className="text-pink font-semibold pb-4" id="Creating objects" ref={ref3}>Creating
                             objects</h3>
                         <EntitiesForm setEntity={setEntity}/>
                         <section className="pt-4">
@@ -181,7 +180,7 @@ export const Entities = () => {
                                 </>
                             )}
                             <section className="pb-10">
-                                <h2 className="font-semibold pb-2 pt-10" id="Moving-on-from-blame" ref={ref3.ref}>Moving
+                                <h2 className="font-semibold pb-2 pt-10" id="Moving-on-from-blame" ref={ref3}>Moving
                                     on from blame</h2>
                                 <p>If you are critic you could say that we don't need exploratory
                                     testing. We need the engineers

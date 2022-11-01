@@ -9,8 +9,7 @@ export const Interactions = () => {
     const [idVisible, setIdVisible] = useState("");
     const [clickedSection, setIsClickedSection] = useState(false);
 
-    const ref1 = ShowSectionHook(clickedSection, setIsClickedSection, setIdVisible, window, "Use-your-keyboard", "Play-with-the-URL" );
-    const ref2 = ShowSectionHook(clickedSection, setIsClickedSection, setIdVisible, window, "");
+    const {ref1, ref2} = ShowSectionHook(clickedSection, setIsClickedSection, setIdVisible, window, "Use-your-keyboard", "Play-with-the-URL" );
 
 
     const {pathname} = useLocation();
@@ -55,7 +54,7 @@ export const Interactions = () => {
                         interact with the application you are exploring:
                     </p>
                     <section className="py-10">
-                        <h2 className="font-bold" ref={ref1.ref} id="Play-with-the-URL">Play with the URL</h2>
+                        <h2 className="font-bold" ref={ref1} id="Play-with-the-URL">Play with the URL</h2>
                         <p>Did you ever try to mess with the URL? Click on the link below or, better yet, try to play
                             with the
                             URL of this page. This is a simple app, but sometimes the URL contains ids or parameters. It
@@ -72,7 +71,7 @@ export const Interactions = () => {
                         </Link>
                     </section>
                     <section className="pb-10">
-                        <h2 className="font-bold" ref={ref2.ref} id="Use-your-keyboard">Use your keyboard</h2>
+                        <h2 className="font-bold" ref={ref2} id="Use-your-keyboard">Use your keyboard</h2>
                         <p>A lot of people use their keyboards to navigate in applications. Using a keyboard can have
                             a
                             huge impact on your experience. Here are some examples of what can go wrong

@@ -14,11 +14,7 @@ export const Quality = () => {
     const [clickedSection, setIsClickedSection] = useState(false);
 
     // hook to find where the user is located in this page
-    const ref1 = ShowSectionHook(clickedSection, setIsClickedSection, setIdVisible, window, "Value-of-tests");
-    const ref2 = ShowSectionHook(clickedSection, setIsClickedSection, setIdVisible, window, "");
-    const ref3 = ShowSectionHook(clickedSection, setIsClickedSection, setIdVisible, window, "");
-    const ref4 = ShowSectionHook(clickedSection, setIsClickedSection, setIdVisible, window, "");
-    const ref5 = ShowSectionHook(clickedSection, setIsClickedSection, setIdVisible, window, "");
+    const {ref1, ref2, ref3, ref4, ref5} = ShowSectionHook(clickedSection, setIsClickedSection, setIdVisible, window, "Value-of-tests");
 
     const {pathname} = useLocation();
     useEffect(() => {
@@ -126,7 +122,7 @@ export const Quality = () => {
                        setIsClickedSection={setIsClickedSection}>
             <section className="bg-white-bg h-full text-black text-justify py-10 px-1">
                 <section className="pb-10">
-                    <h2 className="font-bold" id="Dictionary-definition" ref={ref1.ref} data-key={1}>Dictionary
+                    <h2 className="font-bold" id="Dictionary-definition" ref={ref1} data-key={1}>Dictionary
                         definition:</h2>
                     <blockquote className="indent-8">The standard of something as measured against other things of a
                         similar
@@ -139,7 +135,7 @@ export const Quality = () => {
                         mean being the standard for quality?</p>
                 </section>
                 <section className="pb-10">
-                    <h2 className="font-bold" id="Useful-definition" ref={ref2.ref} data-key={2}>Useful definition:</h2>
+                    <h2 className="font-bold" id="Useful-definition" ref={ref2} data-key={2}>Useful definition:</h2>
                     <blockquote className="indent-8">
                         "An essential requirement of these products is that they meet the needs of those members of
                         society
@@ -163,7 +159,7 @@ export const Quality = () => {
                     </p>
                 </section>
                 <section className="pb-10">
-                    <h2 className="font-bold" id="Example" ref={ref3.ref} data-key={3}>Example</h2>
+                    <h2 className="font-bold" id="Example" ref={ref3} data-key={3}>Example</h2>
                     <h3>The story:</h3>
                     <section className="border-2 border-pink p-2 m-2 rounded-xl">
                         <p className="pl-2">As a user, I want to see more information about quality. Make a button that
@@ -198,7 +194,7 @@ export const Quality = () => {
                     what I didn't think about..
                 </section>
                 <section className="pt-4 pb-6">
-                    <h2 className="font-bold" id="Tests" ref={ref4.ref} data-key={4}>Tests</h2>
+                    <h2 className="font-bold" id="Tests" ref={ref4} data-key={4}>Tests</h2>
                     <p className="py-2">The first test is very simple. Does the text in the button change when the user
                         clicks on
                         it? It tests for
@@ -259,7 +255,7 @@ export const Quality = () => {
                             use
                             an analogy from Elizabeth Hendrickson's book, "Explore It!": Tests are a net, the
                             more tests, the tighter the weaves are, but you will always have gaps.</p>
-                        <h2 className="font-bold pt-10" id="Value-of-tests" ref={ref5.ref} data-key={5}>Value of tests</h2>
+                        <h2 className="font-bold pt-10" id="Value-of-tests" ref={ref5} data-key={5}>Value of tests</h2>
                         <p className="pt-2 text-pink font-semibold">For me, one of the most important values of
                             automated
                             tests that often get missed, is that they remove the tedious, boring, unimportant parts of
