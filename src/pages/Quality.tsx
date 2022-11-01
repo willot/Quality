@@ -129,8 +129,8 @@ export const Quality = () => {
                         kind;
                         the degree of excellence of something
                     </blockquote>
-                    <cite className="text-xs indent-8 pb-5">--Oxford Languages--</cite>
-                    <p>This definition is not really useful. It doesn't tell us what quality is. What should I compare
+                    <cite className="text-xs indent-8">--Oxford Languages--</cite>
+                    <p className="pt-4">This definition is not really useful. It doesn't tell us what quality is. What should I compare
                         my website to? Is my goal to match my competition if I want to be the best? Does being the best
                         mean being the standard for quality?</p>
                 </section>
@@ -144,8 +144,8 @@ export const Quality = () => {
                         and services, without exception. The popular term for fitness for use is Quality, and our basic
                         definition becomes: quality means fitness for use."
                     </blockquote>
-                    <cite className="text-xs indent-8 pb-5">--Joseph Juran--</cite>
-                    <p>
+                    <cite className="text-xs indent-8">--Joseph Juran--</cite>
+                    <p className="pt-4">
                         Basically, we produce something the user wants and meet their expectations. Quality is all about
                         the users, not about the requirements..
                     </p>
@@ -203,6 +203,7 @@ export const Quality = () => {
                         language='javascript'
                         style={nightOwl}
                         highlighter={"prism" || "hljs"}
+                        wrapLines={true}
                     >
                         {test1}
                     </SyntaxHighlighter>
@@ -214,6 +215,7 @@ export const Quality = () => {
                         language='javascript'
                         style={nightOwl}
                         highlighter={"prism" || "hljs"}
+                        wrapLines={true}
                     >
                         {test2}
                     </SyntaxHighlighter>
@@ -226,6 +228,7 @@ export const Quality = () => {
                         language='javascript'
                         style={nightOwl}
                         highlighter={"prism" || "hljs"}
+                        wrapLines={true}
                     >
                         {test3}
                     </SyntaxHighlighter>
@@ -237,6 +240,7 @@ export const Quality = () => {
                         language='javascript'
                         style={nightOwl}
                         highlighter={"prism" || "hljs"}
+                        wrapLines={true}
                     >
                         {test4}
                     </SyntaxHighlighter>
