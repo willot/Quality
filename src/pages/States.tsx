@@ -44,7 +44,7 @@ export const States = () => {
                         running at once. Clearly it got in a weird state that it was not suppose to. This highlight that
                         some time you can get in weird cases when transition are not handle correctly.</p>
                     <section>
-                        <h2 className="font-bold pt-4 text-2xl border-b border-grey-light pb-2 mb-4" id="Example" ref={ref2}>Example</h2>
+                        <h2 className="font-bold pt-10 text-2xl border-b border-grey-light pb-2 mb-4" id="Example" ref={ref2}>Example</h2>
                         <p>Let's take the example of a real library. A user enter the building.
                             Everybody
                             can
@@ -123,8 +123,8 @@ export const States = () => {
                             </ul>
                         </section>
                     </section>
-                    <section className="pt-4">
-                        <h2 className="font-bold text-2xl border-b border-grey-light pb-2 mb-4" id="Hot-take" ref={ref3}>Hot take</h2>
+                    <section>
+                        <h2 className="font-bold text-2xl border-b border-grey-light pb-2 mb-4 pt-10" id="Hot-take" ref={ref3}>Hot take</h2>
                         <p>These kind of tests are hard to automatize. You can write an end to end test for the process
                             of
                             checking out books. But you can't write a test for every possible scenario. End to end tests
