@@ -9,10 +9,10 @@ export const FooterLinkContent = () => {
             <section className="flex flex-col md:flex-row justify-between">
                 <p className="font-bold border-b border-grey-light pb-2 mb-4 text-xl">Learning more about exploratory testing</p>
                 <section className="flex flex-row space-x-2 pb-4 md:pb-0">
-                    <a href={'https://github.com/willot'} target="_blank">
+                    <a href={'https://github.com/willot'} target="_blank" rel="noopener noreferrer">
                         <img src={githubIcon1} className="h-8 w-8 rounded-full hover:bg-grey-light"/>
                     </a>
-                    <a href={"https://www.linkedin.com/in/willot"} target={"_blank"}>
+                    <a href={"https://www.linkedin.com/in/willot"} target={"_blank"} rel="noopener noreferrer">
                         <img src={linkedIn} className="h-8 w-8 hover:bg-grey-light"/>
                     </a>
                 </section>
