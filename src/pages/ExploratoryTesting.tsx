@@ -21,7 +21,7 @@ export const ExploratoryTesting = () => {
                            setIsClickedSection={setIsClickedSection}>
                 <section className="bg-white-bg h-full text-black text-justify py-10 px-1">
                     <section className="pb-10">
-                        <h2 className="font-bold" ref={ref1} id="The-Definition">The Definition</h2>
+                        <h2 className="font-bold text-2xl border-b border-grey-light pb-2 mb-4" ref={ref1} id="The-Definition">The Definition</h2>
                         <p className="indent-8"> "A style of software testing that emphasizes the personal freedom and
                             responsibility of the individual tester to continually optimize the quality of his/her work
                             by
@@ -37,7 +37,7 @@ export const ExploratoryTesting = () => {
                             system works if you haven't tested its edges?</p>
                     </section>
                     <section className="pb-10">
-                        <h2 className="font-bold" ref={ref2} id="Why-is-it-useful?">Why is it useful?</h2>
+                        <h2 className="font-bold text-2xl border-b border-grey-light pb-2 mb-4" ref={ref2} id="Why-is-it-useful?">Why is it useful?</h2>
                         <p>If you do not search for bugs, how do you find them? Checking that acceptance criteria are met
                             is not the same as checking for bugs. It only makes sure the work is done as expected. If you do not
                             try to move beyond just checking the acceptance criteria, then you are letting your users
@@ -67,7 +67,7 @@ export const ExploratoryTesting = () => {
                             that we didn't think was possible or didn't expect?</p>
                     </section>
                     <section>
-                        <h2 className="font-bold" ref={ref3} id="Basic-rules">Basic rules:</h2>
+                        <h2 className="font-bold text-2xl border-b border-grey-light pb-2 mb-4" ref={ref3} id="Basic-rules">Basic rules:</h2>
                         <h3 className="text-pink font-semibold pt-4">The goal</h3>
                         <p>You need to have a goal when you do exploratory testing. Otherwise, you will just wander
                             aimlessly and not accomplish anything. It can be as simple as: "I want to test all the ways

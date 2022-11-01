@@ -33,7 +33,7 @@ export const Entities = () => {
             <LayoutWrapper page="entities" currentSection={idVisible} setCurrentSection={setIdVisible}
                            setIsClickedSection={setIsClickedSection}>
                 <section className="bg-white-bg h-full text-black text-justify py-10 px-1">
-                    <h2 className="font-bold pb-2" ref={ref1} id="What-is-an-Object?">What is an Object?</h2>
+                    <h2 className="font-bold text-2xl border-b border-grey-light pb-2 mb-4" ref={ref1} id="What-is-an-Object?">What is an Object?</h2>
                     <p>An object is an engineer term to describe something that can be created, updated, or
                         deleted. An example is a ‘user’ in an application, a ‘transaction’ when buying something, or a
                         ‘post’ on social media. Applications are full of these objects. They represent the business
@@ -53,7 +53,7 @@ export const Entities = () => {
                         have logic that can hide a bug.
                     </p>
                     <section className="pt-10">
-                        <h2 className="font-bold pb-2" id="Exploring-the-objects" ref={ref2}>Exploring the
+                        <h2 className="font-bold text-2xl border-b border-grey-light pb-2 mb-4" id="Exploring-the-objects" ref={ref2}>Exploring the
                             objects</h2>
                         <p className="pb-2">The first thing is too identify these objects. As stated
                             earlier,
@@ -180,7 +180,7 @@ export const Entities = () => {
                                 </>
                             )}
                             <section className="pb-10">
-                                <h2 className="font-semibold pb-2 pt-10" id="Moving-on-from-blame" ref={ref3}>Moving
+                                <h2 className="font-semibold text-2xl border-b border-grey-light pb-2 mb-4 pt-10" id="Moving-on-from-blame" ref={ref3}>Moving
                                     on from blame</h2>
                                 <p>If you are critic you could say that we don't need exploratory
                                     testing. We need the engineers

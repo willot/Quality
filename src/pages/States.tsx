@@ -23,7 +23,7 @@ export const States = () => {
             <LayoutWrapper page="states" currentSection={idVisible} setCurrentSection={setIdVisible}
                            setIsClickedSection={setIsClickedSection}>
                 <section className="bg-white-bg h-full text-black text-justify py-10 px-1">
-                    <h2 className="pb-2 font-semibold" id="What-is-a-state?" ref={ref1}>What is a state?</h2>
+                    <h2 className="font-bold text-2xl border-b border-grey-light pb-2 mb-4" id="What-is-a-state?" ref={ref1}>What is a state?</h2>
                     <p>Weird bugs are often caused by action happening at time where they should not. They are usually
                         the
                         bugs that are hard to reproduce or even to understand.
@@ -44,7 +44,7 @@ export const States = () => {
                         running at once. Clearly it got in a weird state that it was not suppose to. This highlight that
                         some time you can get in weird cases when transition are not handle correctly.</p>
                     <section>
-                        <h2 className="font-semibold pt-4 pb-2" id="Example" ref={ref2}>Example</h2>
+                        <h2 className="font-bold pt-4 text-2xl border-b border-grey-light pb-2 mb-4" id="Example" ref={ref2}>Example</h2>
                         <p>Let's take the example of a real library. A user enter the building.
                             Everybody
                             can
@@ -124,7 +124,7 @@ export const States = () => {
                         </section>
                     </section>
                     <section className="pt-4">
-                        <h2 className="pb-2 font-semibold" id="Hot-take" ref={ref3}>Hot take</h2>
+                        <h2 className="font-bold text-2xl border-b border-grey-light pb-2 mb-4" id="Hot-take" ref={ref3}>Hot take</h2>
                         <p>These kind of tests are hard to automatize. You can write an end to end test for the process
                             of
                             checking out books. But you can't write a test for every possible scenario. End to end tests

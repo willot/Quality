@@ -21,7 +21,7 @@ export const Summary = () => {
             <LayoutWrapper page="summary" currentSection={idVisible} setCurrentSection={setIdVisible}
                            setIsClickedSection={setIsClickedSection}>
                 <section className="bg-white-bg h-full text-black text-justify py-10 px-1">
-                    <h2 className="pb-2 font-semibold" ref={ref1} id="A-useful-tool">A useful tool</h2>
+                    <h2 className="font-bold text-2xl border-b border-grey-light pb-2 mb-4" ref={ref1} id="A-useful-tool">A useful tool</h2>
                     <p className="pb-4">Quality is not only meeting your user expectation. It is also something that
                         make
                         you stand out in a good way
@@ -46,7 +46,7 @@ export const Summary = () => {
                         fixed. Unit, integration or end to end tests get written to ensure that this bug never appear
                         again.
                         Then you move on.</p>
-                    <h2 className="pb-2 pt-10 font-semibold" ref={ref2} id="When-to-use-exploratory-testing?">When to use exploratory testing?</h2>
+                    <h2 className="pt-10 font-bold text-2xl border-b border-grey-light pb-2 mb-4" ref={ref2} id="When-to-use-exploratory-testing?">When to use exploratory testing?</h2>
                     <p className="pb-4">I think it is up to each team to decide. For me exploratory
                         testing is something that should happen everytime concerned are raised about a part of the
                         application. A lot of team do not have a QA person but that doesn't mean that you can't run

@@ -26,7 +26,8 @@ module.exports = {
         DEFAULT: '#000000'
       },
       'grey': {
-        DEFAULT: '#333'
+        DEFAULT: '#333',
+        light: '#DADADA'
       }
     },
     extend: {},
