@@ -63,36 +63,36 @@ export const States = () => {
                             state and is officially borrowed.
                             Then the user leave the building and is logged out.</p>
 
-                        {window.innerWidth > 800 && <div className="w-full h-80 border-2 border-pink rounded-xl mt-6"
+                        {window.innerWidth > 500 && <div className="w-full h-fit border-2 border-pink rounded-xl mt-6"
                              aria-label="visual of the library example">
                             <span className="pl-4 pt-6 text-lg font-bold">Library</span>
                             <Xwrapper>
-                                <div className="flex flex-row m-10 justify-between">
-                                    <div className="pl-4 pr-4" id="user1">User enter</div>
-                                    <div className="pl-4 pr-4" id="user2">user pick a book</div>
-                                    <div className="pl-4 pr-4" id="user3">User show ID</div>
+                                <div className="flex flex-row m-8 justify-between">
+                                    <div className="pl-2 pr-2 w-28 text-left my-auto" id="user1">User enter</div>
+                                    <div className="pl-2 pr-2 w-28 text-left my-auto" id="user2">user pick a book</div>
+                                    <div className="pl-2 pr-2 w-28 text-left my-auto" id="user3">User show ID</div>
                                 </div>
-                                <div className="flex flex-row m-10 justify-between">
-                                    <div className="pl-4 pr-4" id="book1">book is available</div>
-                                    <div className="pl-4 pr-4" id="book2">book in transition state</div>
-                                    <div className="pl-4 pr-4" id="book3">book still in transition state</div>
+                                <div className="flex flex-row m-8 justify-between">
+                                    <div className="pl-2 pr-2 w-28 text-left my-auto" id="book1">book is available</div>
+                                    <div className="pl-2 pr-2 w-28 text-left my-auto" id="book2">book in transition state</div>
+                                    <div className="pl-2 pr-2 w-28 text-left my-auto" id="book3">book still in transition state</div>
                                 </div>
 
-                                <div className="flex flex-row m-10 justify-between">
-                                    <div className="pl-4 pr-4" id="user4">User leave</div>
-                                    <div className="pl-4 pr-4" id="user5">User check out the book</div>
+                                <div className="flex flex-row m-8 justify-between">
+                                    <div className="pl-2 pr-2 w-28 text-left my-auto" id="user4">User leave</div>
+                                    <div className="pl-2 pr-2 w-28 text-left my-auto" id="user5">User check out the book</div>
                                 </div>
-                                <div className="flex flex-row m-10 justify-between">
-                                    <div className="pl-4 pr-4" id="book4">book is checked out</div>
-                                    <div className="pl-4 pr-4" id="book5">book is being read</div>
+                                <div className="flex flex-row m-8 justify-between">
+                                    <div className="pl-2 pr-2 w-28 text-left my-auto" id="book4">book is checked out</div>
+                                    <div className="pl-2 pr-2 w-28 text-left my-auto" id="book5">book is being read</div>
                                 </div>
                                 <Xarrow start="user1" end="user2" color='lime'/>
                                 <Xarrow start="user2" end="user3" color='lime'/>
-                                <Xarrow start="user3" end="user5" color='lime'/>
+                                <Xarrow start="user3" end="user5" color='lime' _cpx1Offset={150} curveness={0.5}/>
                                 <Xarrow start="user5" end="user4" color='lime'/>
-                                <Xarrow start="book1" end="book2" color='orange'/>
+                                <Xarrow start="book1" end="book2" color='orange' />
                                 <Xarrow start="book2" end="book3" color='orange'/>
-                                <Xarrow start="book3" end="book5" color='orange'/>
+                                <Xarrow start="book3" end="book5" color='orange' _cpx1Offset={150} curveness={0.5}/>
                                 <Xarrow start="book5" end="book4" color='orange'/>
                             </Xwrapper>
                         </div>}
