@@ -7,14 +7,13 @@ type NavButtonProps = {
     left?: boolean;
 }
 
-export const NavButton = ({text, linkUrl, left = false}:NavButtonProps) => {
-    return(
-        <section className="rounded-full bg-pink text-white text-left text-lg mt-4 py-2 px-6 hover:bg-blue">
-            <Link to={linkUrl} className="flex flex-row">
-                {left && <ArrowLongLeftIcon className="h-8 w-8"/>}
-                <span className=" font-semibold px-4">{text}</span>
-                {!left && <ArrowLongRightIcon className="h-8 w-8"/>}
-            </Link>
-        </section>
+export const NavButton = ({text, linkUrl, left = false}: NavButtonProps) => {
+    return (
+        <Link to={linkUrl}
+              className="rounded-full bg-pink text-white text-left text-lg mt-4 py-2 px-6 hover:bg-blue flex flex-row">
+            {left && <ArrowLongLeftIcon className="h-8 w-8"/>}
+            <span className=" font-semibold px-4">{text}</span>
+            {!left && <ArrowLongRightIcon className="h-8 w-8"/>}
+        </Link>
     )
 }
