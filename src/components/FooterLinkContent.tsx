@@ -1,5 +1,5 @@
 import {HeartIcon} from "@heroicons/react/24/solid";
-import githubIcon1 from "../Images/GitHub-Mark-120px-plus.png";
+import githubIcon from "../Images/GitHub-Mark-120px-plus.png";
 import linkedIn from "../Images/LI-In-Bug.png"
 import React from "react";
 
@@ -10,10 +10,10 @@ export const FooterLinkContent = () => {
                 <p className="font-bold border-b border-grey-light pb-2 mb-4 text-xl">Learning more about exploratory testing</p>
                 <section className="flex flex-row space-x-2 pb-4 md:pb-0">
                     <a href={'https://github.com/willot'} target="_blank" rel="noopener noreferrer">
-                        <img src={githubIcon1} className="h-8 w-8 rounded-full hover:bg-grey-light"/>
+                        <img src={githubIcon} className="h-8 w-8 rounded-full hover:bg-grey-light" alt="Link to Github page"/>
                     </a>
                     <a href={"https://www.linkedin.com/in/willot"} target={"_blank"} rel="noopener noreferrer">
-                        <img src={linkedIn} className="h-8 w-8 hover:bg-grey-light"/>
+                        <img src={linkedIn} className="h-8 w-8 hover:bg-grey-light" alt="Link to LinkedIn page"/>
                     </a>
                 </section>
             </section>
