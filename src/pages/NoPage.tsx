@@ -5,7 +5,7 @@ export const NoPage = () => {
     return (
         <section className="bg-white-bg flex flex-column justify-center w-full">
             <section
-                className="bg-white-bg h-screen text-black text-justify py-10 px-5 w-11/12 md:w-9/12 lg:w-8/12 xl:w7/12 2xl:w-5/12">
+                className="bg-white-bg h-screen text-black text-justify py-10 px-5 w-11/12 md:w-9/12 lg:w-8/12 xl:w-7/12 2xl:w-5/12">
                 <h1 className="text-xl text-pink font-bold pb-10">Good try! but this page doesn't exist</h1>
                 <section>
                     <h2 className="text-black font-bold">Where do you want to go?</h2>

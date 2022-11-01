@@ -2,6 +2,9 @@ import React, {useEffect, useState} from "react";
 import {PageTitle} from "../components/PageTitle";
 import {HomeCard} from "../components/HomeCard";
 import {HamburgerMenuSmallScreen} from "../components/HamburgerMenuSmallScreen";
+import {HeartIcon} from "@heroicons/react/24/solid";
+import githubIcon1 from "../Images/GitHub-Mark-120px-plus.png";
+import {FooterLinkContent} from "../components/FooterLinkContent";
 
 export const Home = () => {
     const [showSideNavBar, setShowSideNavBar] = useState(window.innerWidth > 650);
@@ -54,11 +57,7 @@ export const Home = () => {
             </section>
             <footer className="bg-blue-light w-full flex flex-row justify-center">
                 <section className="px-4 text-left w-full py-28 md:w-10/12 lg:w-9/12 xl:w-7/12 2xl:w-6/12">
-                    <p className="font-bold">Learning more about exploratory testing</p>
-                    <a className="text-blue underline underline-offset-2" href="https://www.linkedin.com/in/willot"
-                       rel="noopener noreferrer" target="_blank">by: Vianney Willot</a>
-                    <p>Senior Software Engineer at <a href="https://www.thisisartium.com/"
-                                                      className="text-pink underline underline-offset-2">Artium</a></p>
+                    <FooterLinkContent/>
                 </section>
             </footer>
         </main>

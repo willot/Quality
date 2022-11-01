@@ -208,7 +208,7 @@ export const LayoutWrapper = ({
             </header>
             <section className="flex flex-row justify-center">
                 <section
-                    className="bg-white-bg h-full text-black text-justify grid grid-cols-12 px-2 w-full md:w-10/12 lg:w-9/12 xl:w7/12 2xl:w-5/12">
+                    className="bg-white-bg h-full text-black text-justify grid grid-cols-12 px-2 w-full md:w-10/12 lg:w-9/12 xl:w-7/12 2xl:w-5/12">
                     <article className={showSideNavBar ? "col-span-9" : "col-span-12"}>
                         {children}
                     </article>
