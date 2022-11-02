@@ -92,7 +92,7 @@ export const States = () => {
                                 <Xarrow start="user5" end="user4" color='lime'/>
                                 <Xarrow start="book1" end="book2" color='orange' />
                                 <Xarrow start="book2" end="book3" color='orange'/>
-                                <Xarrow start="book3" end="book5" color='orange' _cpx1Offset={150} curveness={0.5}/>
+                                <Xarrow start="book3" end="book5" color='orange' _cpx1Offset={150} curveness={0.3}/>
                                 <Xarrow start="book5" end="book4" color='orange'/>
                             </Xwrapper>
                         </div>}
