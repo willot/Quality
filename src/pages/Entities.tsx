@@ -17,8 +17,11 @@ export const Entities = () => {
     const [idVisible, setIdVisible] = useState("");
     const [clickedSection, setIsClickedSection] = useState(false)
 
-    const {ref1, ref2, ref3} = ShowSectionHook(clickedSection, setIsClickedSection, setIdVisible, window, "Moving-on-from-blame");
-
+    const {
+        ref1,
+        ref2,
+        ref3
+    } = ShowSectionHook(clickedSection, setIsClickedSection, setIdVisible, window, "Moving-on-from-blame");
 
 
     const {pathname} = useLocation();
@@ -33,9 +36,11 @@ export const Entities = () => {
             <LayoutWrapper page="entities" currentSection={idVisible} setCurrentSection={setIdVisible}
                            setIsClickedSection={setIsClickedSection}>
                 <section className="bg-white-bg h-full text-black text-justify py-10 px-1">
-                    <h2 className="font-bold text-2xl border-b border-grey-light pb-2 mb-4" ref={ref1} id="What-is-an-Object?">What is an Object?</h2>
+                    <h2 className="font-bold text-2xl border-b border-grey-light pb-2 mb-4" ref={ref1}
+                        id="What-is-an-Object?">What is an Object?</h2>
                     <p>An object is an engineer term to describe something that can be created, updated, or
-                        deleted. An example is a ‘user’ in an application, a ‘transaction’ when buying something, or a
+                        deleted. Examples are a ‘user’ in an application, a ‘transaction’ when making a purchase on a
+                        website, or a
                         ‘post’ on social media. Applications are full of these objects. They represent the business
                         logic of the application. These objects usually are connected/interact with each other. A user
                         will have an address, this address is likely to be its own object. A transaction is connected to
@@ -43,9 +48,10 @@ export const Entities = () => {
                         of the relationship affects the logic and possible bugs.
                     </p>
                     <p className="pt-2">For example, an insurance website lets you buy a personal
-                        customized policy. You will have an policy object and then a user, you, object. Then the
+                        customized policy. You will have an policy object and then a user, 'you', object. Then the
                         insurance
-                        company decides that users can add other people to their policy. Like multiple drivers for a car.
+                        company decides that users can add other people to their policy. Like multiple drivers for a
+                        car.
                         Now
                         there are multiple users connected to one policy. Can each one of them modify the policy? Can
                         only
@@ -53,7 +59,8 @@ export const Entities = () => {
                         have logic that can hide a bug.
                     </p>
                     <section className="pt-10">
-                        <h2 className="font-bold text-2xl border-b border-grey-light pb-2 mb-4" id="Exploring-the-objects" ref={ref2}>Exploring the
+                        <h2 className="font-bold text-2xl border-b border-grey-light pb-2 mb-4"
+                            id="Exploring-the-objects" ref={ref2}>Exploring the
                             objects</h2>
                         <p className="pb-2">The first thing is too identify these objects. As stated
                             earlier,
@@ -93,22 +100,24 @@ export const Entities = () => {
                             </section>
                             {entity && (
                                 <>
-                                    <section className="pt-2">
+                                    <section className="pt-2 flex flex-col space-y-2">
                                         <p>We have one form, but we can see that we created two separated objects. One
                                             user
                                             with a first and last name and an address with street, apartment number,
                                             and
                                             city.</p>
-                                        <p className="pt-2">If you play around, you can notice a few things. There is no
+                                        <p>If you play around, you can notice a few things. There is no
                                             limit in the number
                                             of characters that you can enter inside each input. So if you want to type
                                             3000 characters into the input box, you can (It will work)! The only reason
                                             that
-                                            it doesn't produce an error, is that in this application, there is no database
+                                            it doesn't produce an error, is that in this application, there is no
+                                            database
                                             saving this information. Otherwise, it is very
                                             likely we will run into some field constraint in the database, particularly
                                             for
-                                            fields like city. When you do exploratory testing, it is important to know
+                                            fields like city.</p>
+                                        <p>When you do exploratory testing, it is important to know
                                             what
                                             kind of data a user will enter. For example the biggest name for a European
                                             city
@@ -120,16 +129,16 @@ export const Entities = () => {
                                             you can enter only one, which can be a problem for immigration paperwork...
                                             Errors while completing forms are not always handled very well.
                                         </p>
-                                        <p>Often no error is display to
-                                            let the user know that the data was not save
-                                            or if there is an error no explanation is given to remedy it. So it is
-                                            important
-                                            for the front end to be aware to the limitation of the back end to protect
-                                            the
-                                            users against potential failure.</p>
-                                        <p>Another issue you can find is that the form doesn't trim white space. You can
-                                            currently enter white space in every field and it will let you move
-                                            forward.</p>
+                                        <p>Often when an error occurs nothing is displayed to
+                                            let the user know that the data was not saved. If there is an error display
+                                            often no explanation is given to remedy the problem. So it is
+                                            essential
+                                            for the front end to be aware of the limitation of the back end to protect
+                                            the users against potential failure.</p>
+                                        <p>Another bug you may have found is that the form doesn't trim white spaces.
+                                            You can
+                                            currently enter white space in every field and it will let you save the data
+                                            entered.</p>
                                     </section>
                                     <section className="py-4">
                                         <h3 className="text-pink font-semibold ">Updating objects</h3>
@@ -159,41 +168,50 @@ export const Entities = () => {
                                             </section>
                                         )}
 
-                                        <p>Now let's imagine that we want to update our objects. We can ensure that
-                                            city and last name are still required. We can enter white space in every
-                                            field and see that it sadly it still a bug because it is saving the empty
-                                            space
-                                            as values... Now let's try to update the apartment field. Let's image that
-                                            you
-                                            recently move and
-                                            are updating your address. You lived in an apartment complex and now you
-                                            have a nice house. Ouch what happens. It is telling me I can't do that. This
-                                            is sometimes an issue.
-                                            System are okay with blank field field when objects are created but it will
-                                            refuse to overwrite a field with an Null if there is already data there.
-                                            This is
-                                            why exploratory testing is so important. The website is working correctly
-                                            and
-                                            giving you a correct error. But this go against what the user want to do. It
-                                            is a case where the acceptance criteria are wrong. </p>
+                                        <section className="pt-2 flex flex-col space-y-2">
+                                            <p>Now let's imagine that we want to update our objects. We can ensure that
+                                                city and last name are still required. We can enter white space in every
+                                                field and see that sadly it is still a bug because it is saving the
+                                                empty
+                                                space
+                                                as values...</p>
+                                            <p>Try to update the apartment field. Let's imagine that
+                                                you recently move and are updating your address. You lived in an
+                                                apartment
+                                                complex and now you have a nice house. Ouch, what happened? It is
+                                                telling me
+                                                I can't do that. This is somewhat of a frequent issue.
+                                                Systems are okay with blank fields when objects are created but they
+                                                will
+                                                refuse to overwrite a field with a Null if there is already data
+                                                present.
+                                                This is
+                                                why exploratory testing is so important. The website is working
+                                                correctly
+                                                and
+                                                giving you a correct error. But this goes against what the user wants to
+                                                do. It
+                                                is a case of wrong acceptance criteria. </p>
+                                        </section>
                                     </section>
                                 </>
                             )}
                             <section className="pb-10">
-                                <h2 className="font-semibold text-2xl border-b border-grey-light pb-2 mb-4 pt-10" id="Moving-on-from-blame" ref={ref3}>Moving
+                                <h2 className="font-semibold text-2xl border-b border-grey-light pb-2 mb-4 pt-10"
+                                    id="Moving-on-from-blame" ref={ref3}>Moving
                                     on from blame</h2>
-                                <p>If you are critic you could say that we don't need exploratory
+                                <p>If you are a critic you could say that we don't need exploratory
                                     testing. We need the engineers
                                     to write more tests or better tests. I think it is true. But it is hard for
                                     engineers to think about all the possible cases. What also makes it complicated is
                                     that
-                                    the engineers that created the form originally may not be the same one that add
-                                    the apartment field. Context get lost all the
+                                    the engineers that created the form originally may not be the same ones that add
+                                    the apartment field. Context gets lost all the
                                     time and tests are very useful to document functionality. Engineers will miss
-                                    things because that is what human do. When you build something you can't think
-                                    about all the things that go wrong. But what you can do is writing new tests
-                                    when a bugs are reported to ensure that in the future this bug doesn't happen
-                                    again. For example someone found the bug that white space should be trim when
+                                    things because that is what humans do. When you build something you can't think
+                                    about all the things that can go wrong. But what you can do is write new tests
+                                    when bugs are reported to ensure that in the future this bug doesn't happen
+                                    again. For example, someone found the bug that white space should be trim when
                                     submitting data. You can easily write a unit test for it and move on.</p>
                             </section>
                         </section>
