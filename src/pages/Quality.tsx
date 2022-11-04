@@ -84,7 +84,7 @@ export const Quality = () => {
              Should it be a link to a help page?")
              
             click(buttons[0]);
-            expect(extraInfo).not.toBeNull();
+            expect(extraInfo).toBeInTheDocument();
         });
         `;
 
@@ -251,7 +251,7 @@ export const Quality = () => {
                             of
                             the tests is that they can be repeated without wasting developer or QA time, and streamlines
                             acceptance for deployment. You can run them when committing
-                            or pushing code. They ensure that nothing new breaks the current functionality, adn
+                            or pushing code. They ensure that nothing new breaks the current functionality, and
                             also act as documentation of expected behavior. They are regression tests.
                         </p>
                         <p className="pt-2">Nonetheless, tests are not bulletproof. If I wanted to cover all the

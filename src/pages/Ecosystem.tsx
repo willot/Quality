@@ -61,14 +61,14 @@ export const Ecosystem = () => {
                         working
                         well on a 1go internet connection but does the system time out when you use it on a slow 4g?</p>
                     <h2 className="pt-10 font-bold text-2xl border-b border-grey-light pb-2 mb-4" id="Limitless-environment" ref={ref3}>Limitless environment</h2>
-                    <p>There is a lot that you can explore about how an application interact with the
+                    <p>There is a lot that you can explore about how an application interacts with the
                         rest
-                        of the world. An example that come to mind is paying medical bills. I recently broke my ankle
+                        of the world. An example that comes to mind is paying medical bills. I recently broke my ankle
                         pretty
                         badly and
-                        received treatment in multiple places and different doctors. Then I started receiving medical
+                        received treatment in multiple places and from different doctors. Then I started receiving medical
                         bills.
-                        Each one separate for xrays, doctors even if perform in the same office. The fun part is that
+                        Individual bills for X-rays, doctors and equipment even if performed in the same office. The fun part is that
                         these
                         bills came in different formats even if they all came from the same big healthcare company. I
                         counted
@@ -76,19 +76,15 @@ export const Ecosystem = () => {
                         one case in particular the first question asked you which location the service was provided. But
                         the
                         bill does not mention this information. I had to figure out what was the bill for to guess the
-                        location... How many other bill have you receive where you are asked to enter the account number
-                        but
-                        you can't find the field in the form and only to figure out it is simply your name. Testing a
-                        system
-                        like a real user interact with it is extremely important. It can really make a difference for
-                        your
-                        users. </p>
+                        location... How many other bills have you received where you are asked to enter the account number?
+                        After searching for a few minutes you can't find the field in the form then are told that you simply need your name.
+                        Testing a system
+                        as a real user interacts with it is extremely important. It can really make a difference for
+                        your users. </p>
                     <p className="pt-4">Make a map of your app ecosystem and start exploring the interactions with
-                        external
-                        system. You will
-                        gain insight on your system and its limitations. It will also help you be proactive when
-                        something go
-                        wrong instead of being reactive.</p>
+                        the external systems. You will
+                        gain insight into your system and its limitations. It will also help you be proactive when
+                        something goes wrong instead of reactive.</p>
                 </section>
             </LayoutWrapper>
         </section>

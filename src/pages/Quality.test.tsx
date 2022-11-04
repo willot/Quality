@@ -34,7 +34,7 @@ describe('home page', () => {
             await userEvent.click(buttons[0]!);
             const extraInfo = screen.queryByText("Button 1 follows all the requirements," +
                 " but will a user expect a button to get more information? Should it be a link to a help page?")
-            expect(extraInfo).not.toBeNull();
+            expect(extraInfo).toBeInTheDocument();
         });
         it('should reset the wording of the button and change the text when clicking a second button', async () => {
             render(<Quality/>, {wrapper: MemoryRouter});
