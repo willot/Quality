@@ -26,7 +26,7 @@ export const FooterLinkContent = () => {
             </section>
             <p>Senior Software Engineer at <a href="https://www.thisisartium.com/"
                                               className="text-pink underline underline-offset-2">Artium</a></p>
-            <p className='pt-2'>Website create with <a href="https://reactjs.org/"
+            <p className='pt-2'>Website created with <a href="https://reactjs.org/"
                                                        className="text-blue underline underline-offset-2">React</a> and <a
                 href="https://tailwindcss.com/" className="text-blue underline underline-offset-2">Tailwind</a></p>
         </>
