@@ -161,7 +161,7 @@ export const LayoutWrapper = ({
                 text: "Quality",
                 link: "/quality"
             },
-            listSection: ["A-useful-tool", "When-to-use-exploratory-testing?"],
+            listSection: ["A-useful-tool", "When-to-use-exploratory-testing?", "Examples-of-small-bugs-with-big-impact"],
             title: "Summary",
             subTitle: "Summarize your learning on exploratory testing.",
         }
