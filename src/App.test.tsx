@@ -38,6 +38,13 @@ describe('links', () => {
       initialIndex: 0,
     });
 
+    // to set window.innerWidth
+      // Object.defineProperty(window, 'innerWidth', {
+      //   writable: true,
+      //   configurable: true,
+      //   value: 150,
+      // });
+
     render(<RouterProvider router={router}/>);
 
     const button = screen.getByRole('link', {name: "Let's get Started"});
