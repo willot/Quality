@@ -38,25 +38,23 @@ export const Entities = () => {
                 <section className="bg-white-bg h-full text-black text-justify py-10 px-1">
                     <h2 className="font-bold text-2xl border-b border-grey-light pb-2 mb-4" ref={ref1}
                         id="What-is-an-Object?">What is an Object?</h2>
-                    <p>An object is an engineer term to describe something that can be created, updated, or
-                        deleted. Examples are a ‘user’ in an application, a ‘transaction’ when making a purchase on a
-                        website, or a
-                        ‘post’ on social media. Applications are full of these objects. They represent the business
-                        logic of the application. These objects usually are connected/interact with each other. A user
-                        will have an address, this address is likely to be its own object. A transaction is connected to
-                        a user or, a user is connected to a transaction. This is a good example, because the direction
-                        of the relationship affects the logic and possible bugs.
+                    <p>In engineering, an 'object' is a term used to denote an entity that can be created, updated, or
+                        deleted. For instance, think of a 'user' within an application, a 'transaction' when conducting
+                        an online purchase, or a 'post' shared on a social media platform. These objects form the
+                        backbone of applications, embodying the underlying business logic.
                     </p>
-                    <p className="pt-2">For example, an insurance website lets you buy a personal
-                        customized policy. You will have an policy object and then a user, 'you', object. Then the
-                        insurance
-                        company decides that users can add other people to their policy. Like multiple drivers for a
-                        car.
-                        Now
-                        there are multiple users connected to one policy. Can each one of them modify the policy? Can
-                        only
-                        the principal user? The amount of interactions can increase quickly, and all these interactions
-                        have logic that can hide a bug.
+                    <p>These objects are extensively interconnected, establishing a web of relationships. For example, a
+                        'user' may possess an 'address,' which is likely to be considered an independent object.
+                        Similarly, a 'transaction' is linked to a 'user,' and conversely, a 'user' is connected to a
+                        'transaction.' The direction of these relationships significantly influences the system's logic
+                        and can potentially introduce bugs.</p>
+                    <p className="pt-2">Consider an insurance website that allows users to purchase personalized
+                        policies. In this scenario, you have a 'policy' object and a 'user' object representing you.
+                        Now, if the insurance company decides to permit users to add additional individuals to their
+                        policy, such as multiple drivers for a vehicle, the complexity of interactions escalates.
+                        Questions arise, such as: Can each user modify the policy, or only the principal user? This
+                        surge in interactions can rapidly escalate, and each interaction carries its own logic,
+                        potentially concealing a bug.
                     </p>
                     <section className="pt-10">
                         <h2 className="font-bold text-2xl border-b border-grey-light pb-2 mb-4"
