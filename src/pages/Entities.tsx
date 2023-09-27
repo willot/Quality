@@ -60,17 +60,15 @@ export const Entities = () => {
                         <h2 className="font-bold text-2xl border-b border-grey-light pb-2 mb-4"
                             id="Exploring-the-objects" ref={ref2}>Exploring the
                             objects</h2>
-                        <p className="pb-2">The first thing is too identify these objects. As stated
-                            earlier,
-                            they are entities on which you can take actions. A lot of things can happen when you create
-                            an
-                            object. Are all the fields required? Can you put empty spaces? can you use weird characters
-                            "Ω√"?
-                            Is there a limit in the number of characters? The problem of strings being too long is a
-                            pretty
-                            common one. Database have limits for the number of characters in a field, but the front end
-                            will not always enforce it. Therefore, the data is sent to the back end, it crashes and
-                            sends back an error... </p>
+                        <p className="pb-2">The initial step is to identify these objects. As mentioned earlier, these
+                            are entities upon which actions can be performed. When creating an object, various
+                            considerations come into play. Are all fields mandatory, or can some be left blank? Can
+                            special characters like "Ω√" be used? Additionally, is there a character limit for
+                            input?</p>
+                        <p>One common challenge arises from strings being excessively long. While databases have
+                            limitations on the number of characters allowed in a field, the front end may not always
+                            enforce these restrictions. Consequently, when data is sent to the back end, it may lead to
+                            a crash and trigger an error response...</p>
                         <p className="pb-4 font-semibold text-blue">Fill the example form with fake info to
                             continue.</p>
                         <h3 className="text-pink font-semibold pb-4" id="Creating objects" ref={ref3}>Creating
@@ -99,44 +97,42 @@ export const Entities = () => {
                             {entity && (
                                 <>
                                     <section className="pt-2 flex flex-col space-y-2">
-                                        <p>We have one form, but we can see that we created two separated objects. One
-                                            user
-                                            with a first and last name and an address with street, apartment number,
-                                            and
-                                            city.</p>
-                                        <p>If you play around, you can notice a few things. There is no
-                                            limit in the number
-                                            of characters that you can enter inside each input. So if you want to type
-                                            3000 characters into the input box, you can (It will work)! The only reason
-                                            that
-                                            it doesn't produce an error, is that in this application, there is no
-                                            database
-                                            saving this information. Otherwise, it is very
-                                            likely we will run into some field constraint in the database, particularly
-                                            for
-                                            fields like city.</p>
-                                        <p>When you do exploratory testing, it is important to know
-                                            what
-                                            kind of data a user will enter. For example the biggest name for a European
-                                            city
-                                            is 58 characters in Welch. Knowing this can help you set some good test
-                                            cases.
-                                            One that I often run into is 'middle name'. If you complete immigration
-                                            paperwork
-                                            this field often comes up. I have 2 middle names... Most of the time
-                                            you can enter only one, which can be a problem for immigration paperwork...
-                                            Errors while completing forms are not always handled very well.
+                                        <p>While we have just one form, it's clear that we've actually created two
+                                            distinct objects. The first object represents a 'user,' encompassing fields
+                                            for both the first and last names. The second object represents an 'address'
+                                            and includes fields for the street, apartment number, and city.</p>
+                                        <p>If you experiment with the input fields, you'll notice something interesting.
+                                            There's no enforced limit on the number of characters you can enter. So, if
+                                            you wanted to type in a whopping 3000 characters, you could do so (and it
+                                            would work)! The reason it doesn't generate an error is because, in this
+                                            particular application, there's no database storing this information.
+                                            However, in a real-world scenario, it's highly probable that we'd encounter
+                                            field constraints in the database, especially for fields like 'city'.</p>
+                                        <p>In exploratory testing, understanding the type of data users might input is
+                                            crucial. For instance, the longest European city name,
+                                            Llanfairpwllgwyngyllgogerychwyrndrobwllllantysiliogogogoch, spans 58
+                                            characters in Welsh. This knowledge aids in creating effective test cases.
+
+                                            One common scenario involves the 'middle name' field. In immigration
+                                            paperwork, this field often arises. Personally, I have two middle names, but
+                                            most systems only allow for one entry. This limitation can pose challenges
+                                            in such contexts.
                                         </p>
-                                        <p>Often when an error occurs nothing is displayed to
-                                            let the user know that the data was not saved. If there is an error display
-                                            often no explanation is given to remedy the problem. So it is
-                                            essential
-                                            for the front end to be aware of the limitation of the back end to protect
-                                            the users against potential failure.</p>
-                                        <p>Another bug you may have found is that the form doesn't trim white spaces.
-                                            You can
-                                            currently enter white space in every field and it will let you save the data
-                                            entered.</p>
+                                        <p>
+                                            Additionally, it's important to acknowledge that the error handling process
+                                            in form submissions may not always be user-friendly. In many cases, when an
+                                            error occurs, there is no visible indication to alert the user that their
+                                            data was not successfully saved. Even when an error message is displayed, it
+                                            often lacks an explanation or guidance on how to rectify the issue.
+
+                                            Therefore, it becomes imperative for the front-end system to be
+                                            well-informed about the limitations of the back end. This awareness serves
+                                            as a protective measure, ensuring a smoother user experience and
+                                            safeguarding users against potential failures.</p>
+                                        <p>Another issue that you might have encountered is that the form doesn't
+                                            automatically remove leading or trailing white spaces from input fields.
+                                            This means you can currently input white spaces in any field, and the system
+                                            will accept and save the data as entered.</p>
                                     </section>
                                     <section className="py-4">
                                         <h3 className="text-pink font-semibold ">Updating objects</h3>
@@ -167,29 +163,26 @@ export const Entities = () => {
                                         )}
 
                                         <section className="pt-2 flex flex-col space-y-2">
-                                            <p>Now let's imagine that we want to update our objects. We can ensure that
-                                                city and last name are still required. We can enter white space in every
-                                                field and see that sadly it is still a bug because it is saving the
-                                                empty
-                                                space
-                                                as values...</p>
-                                            <p>Try to update the apartment field. Let's imagine that
-                                                you recently move and are updating your address. You lived in an
-                                                apartment
-                                                complex and now you have a nice house. Ouch, what happened? It is
-                                                telling me
-                                                I can't do that. This is somewhat of a frequent issue.
-                                                Systems are okay with blank fields when objects are created but they
-                                                will
-                                                refuse to overwrite a field with a Null if there is already data
-                                                present.
-                                                This is
-                                                why exploratory testing is so important. The website is working
-                                                correctly
-                                                and
-                                                giving you a correct error. But this goes against what the user wants to
-                                                do. It
-                                                is a case of wrong acceptance criteria. </p>
+                                            <p>Let's consider a scenario where we need to update our objects. We'll make
+                                                sure that both the city and last name fields remain mandatory. However,
+                                                if we attempt to input white spaces in every field, we'll observe that
+                                                it still constitutes a bug. The system is erroneously saving the empty
+                                                space as a valid value.</p>
+                                            <p>Let's try updating the 'apartment' field. Imagine you've recently moved
+                                                and you're in the process of updating your address. Previously, you
+                                                lived in an apartment complex, but now you're living in a house.
+                                                However, when you attempt to update the apartment field with an empty
+                                                value, you encounter an unexpected error
+                                                message. It informs you that you can't proceed with this change. This
+                                                situation is not uncommon.
+
+                                                Systems typically accept blank fields during object creation, but they
+                                                often refuse to overwrite a field with a 'null' value if there's already
+                                                existing data. This behavior underscores the importance of exploratory
+                                                testing. While the website is functioning correctly and providing a
+                                                valid error message, it may conflict with the user's intention. It's a
+                                                case where the acceptance criteria may not align with user
+                                                expectations.</p>
                                         </section>
                                     </section>
                                 </>
@@ -198,19 +191,21 @@ export const Entities = () => {
                                 <h2 className="font-semibold text-2xl border-b border-grey-light pb-2 mb-4 pt-10"
                                     id="Moving-on-from-blame" ref={ref3}>Moving
                                     on from blame</h2>
-                                <p>If you are a critic you could say that we don't need exploratory
-                                    testing. We need the engineers
-                                    to write more tests or better tests. I think it is true. But it is hard for
-                                    engineers to think about all the possible cases. What also makes it complicated is
-                                    that
-                                    the engineers that created the form originally may not be the same ones that add
-                                    the apartment field. Context gets lost all the
-                                    time and tests are very useful to document functionality. Engineers will miss
-                                    things because that is what humans do. When you build something you can't think
-                                    about all the things that can go wrong. But what you can do is write new tests
-                                    when bugs are reported to ensure that in the future this bug doesn't happen
-                                    again. For example, someone found the bug that white space should be trim when
-                                    submitting data. You can easily write a unit test for it and move on.</p>
+                                <p>While it's valid to argue that we should rely less on exploratory testing and instead
+                                    emphasize the creation of more comprehensive and robust automated tests, the reality
+                                    is not always so straightforward. Engineers, no matter how skilled, may struggle to
+                                    anticipate every conceivable scenario. Moreover, the original form creators may not
+                                    be the same individuals tasked with later modifications, leading to a potential loss
+                                    of context.</p>
+                                <p>This is where tests truly shine, serving as invaluable documentation of
+                                    functionality. Engineers are fallible, and it's human nature to overlook certain
+                                    edge cases. When constructing something, it's nearly impossible to predict all
+                                    potential pitfalls. However, what can be done is the establishment of new tests in
+                                    response to reported bugs. This proactive approach helps prevent the recurrence of
+                                    similar issues in the future. For instance, if someone identifies the bug related to
+                                    whitespace not being trimmed during data submission, it can be promptly addressed
+                                    with the creation of a targeted unit test, ensuring the issue is resolved and
+                                    safeguarding against its reoccurrence.</p>
                             </section>
                         </section>
                     </section>
