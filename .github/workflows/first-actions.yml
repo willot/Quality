@@ -22,13 +22,29 @@ jobs:
           ls ${{ github.workspace }}
       - run: echo "🍏 This job's status is ${{ job.status }}."
 
-        steps:
-          - uses: actions/checkout@v3
-          - name: Use Node.js
-            uses: actions/setup-node@v3
-            with:
-              node-version: '16.x'
-              cache: 'yarn'
-          - name: Install dependencies
-            run: yarn --frozen-lockfile
-              - run: yarn test
+  setup-fe:
+    name: Front-end
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Use Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '16.x'
+          cache: 'yarn'
+      - name: Install dependencies
+        run: yarn --frozen-lockfile
+
+  test-frontend:
+    name: test
+    runs-on: ubuntu-latest
+    needs: setup-fe
+    environment: test
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: '16'
+          cache: 'yarn'
+      - run: yarn
+      - run: yarn test
