@@ -9,7 +9,10 @@ export const Interactions = () => {
     const [idVisible, setIdVisible] = useState("");
     const [clickedSection, setIsClickedSection] = useState(false);
 
-    const {ref1, ref2} = ShowSectionHook(clickedSection, setIsClickedSection, setIdVisible, window, "Use-your-keyboard", "Play-with-the-URL" );
+    const {
+        ref1,
+        ref2
+    } = ShowSectionHook(clickedSection, setIsClickedSection, setIdVisible, window, "Use-your-keyboard", "Play-with-the-URL");
 
 
     const {pathname} = useLocation();
@@ -54,16 +57,18 @@ export const Interactions = () => {
                         interact with the application you are exploring:
                     </p>
                     <section className="py-10">
-                        <h2 className="font-bold text-2xl border-b border-grey-light pb-2 mb-4" ref={ref1} id="Play-with-the-URL">Play with the URL</h2>
-                        <p>Did you ever try to mess with the URL? Click on the link below or, better yet, try to play
-                            with the
-                            URL of this page. This is a simple app, but sometimes the URL contains ids or parameters. It
-                            is often a good thing to try to mess with them, and see what happens. See if the application
-                            breaks, or if you get access to things you shouldn't be able to. It is an issue that
-                            commonly occurs in applications. The application is properly secured against users that are
-                            not logged in. However, when you are logged in, you can sometimes take actions you shouldn't be
-                            able to. This happens when endpoints are not properly secured with the right permissions.
-                            Messing with a URL is a simple way to try things. You can also use tools like <a
+                        <h2 className="font-bold text-2xl border-b border-grey-light pb-2 mb-4" ref={ref1}
+                            id="Play-with-the-URL">Play with the URL</h2>
+                        <p>Have you ever experimented with the URL? Click on the link below or, even better, try
+                            manipulating the URL of this page. While this is a simple application, URLs often contain
+                            IDs or parameters. It's a worthwhile exercise to tinker with them and observe the outcomes.
+                            Test if the application breaks or if you gain access to areas you shouldn't.
+
+                            This is a common issue in applications. They might be well-protected against unauthorized
+                            access, but once you're logged in, you might discover ways to perform actions you shouldn't.
+                            This typically happens when endpoints lack the proper security measures and permissions.
+                            Experimenting with a URL offers a straightforward method to explore potential
+                            vulnerabilities. You can also use tools like <a
                                 className="text-blue underline underline-offset-2"
                                 href={"https://www.postman.com/"}>postman</a>.</p>
                         <Link to="/blabla" className="flex flex-row items-center mt-2">
@@ -71,13 +76,15 @@ export const Interactions = () => {
                         </Link>
                     </section>
                     <section className="pb-10">
-                        <h2 className="font-bold text-2xl border-b border-grey-light pb-2 mb-4" ref={ref2} id="Use-your-keyboard">Use your keyboard</h2>
+                        <h2 className="font-bold text-2xl border-b border-grey-light pb-2 mb-4" ref={ref2}
+                            id="Use-your-keyboard">Use your keyboard</h2>
                         <p>A lot of people use their keyboards to navigate in applications. Using a keyboard can have
                             a
                             huge impact on your experience. Here are some examples of what can go wrong
                             when using a keyboard:</p>
                         <section className="pt-16 pb-10">
-                            <h3 className="font-medium text-pink">Let's play with tabbing. Try to tab through these buttons.</h3>
+                            <h3 className="font-medium text-pink">Let's play with tabbing. Try to tab through these
+                                buttons.</h3>
                             <section
                                 className="grid grid-rows-2 grid-flow-col justify-items-center md:grid-rows-1 pt-4">
                                 <button tabIndex={0}
@@ -100,7 +107,8 @@ export const Interactions = () => {
                             <p>As you can see, the ordering of the buttons is not right. This is a common issue. The
                                 tabbing ordering doesn't follow the expected application flow.</p>
 
-                            <p className="pt-16 font-medium text-pink">Let's look at another example. Click or tab on the button you think is
+                            <p className="pt-16 font-medium text-pink">Let's look at another example. Click or tab on
+                                the button you think is
                                 following best practices.</p>
                             <section
                                 className="grid grid-rows-2 grid-flow-col justify-items-center md:grid-rows-1 pt-4">
