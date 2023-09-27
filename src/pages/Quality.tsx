@@ -14,7 +14,13 @@ export const Quality = () => {
     const [clickedSection, setIsClickedSection] = useState(false);
 
     // hook to find where the user is located in this page
-    const {ref1, ref2, ref3, ref4, ref5} = ShowSectionHook(clickedSection, setIsClickedSection, setIdVisible, window, "Value-of-tests");
+    const {
+        ref1,
+        ref2,
+        ref3,
+        ref4,
+        ref5
+    } = ShowSectionHook(clickedSection, setIsClickedSection, setIdVisible, window, "Value-of-tests");
 
     const {pathname} = useLocation();
     useEffect(() => {
@@ -122,7 +128,8 @@ export const Quality = () => {
                        setIsClickedSection={setIsClickedSection}>
             <section className="bg-white-bg h-full text-black text-justify py-10 px-1">
                 <section className="pb-10">
-                    <h2 className="font-bold text-2xl border-b border-grey-light pb-2 mb-4" id="Dictionary-definition" ref={ref1} data-key={1}>Dictionary
+                    <h2 className="font-bold text-2xl border-b border-grey-light pb-2 mb-4" id="Dictionary-definition"
+                        ref={ref1} data-key={1}>Dictionary
                         definition:</h2>
                     <blockquote className="indent-8">The standard of something as measured against other things of a
                         similar
@@ -130,12 +137,14 @@ export const Quality = () => {
                         the degree of excellence of something
                     </blockquote>
                     <cite className="text-xs indent-8">--Oxford Languages--</cite>
-                    <p className="pt-4">This definition is not really useful. It doesn't tell us what quality is. What should I compare
+                    <p className="pt-4">This definition is not really useful. It doesn't tell us what quality is. What
+                        should I compare
                         my website to? Is my goal to match my competition if I want to be the best? Does being the best
                         mean being the standard for quality?</p>
                 </section>
                 <section className="pb-10">
-                    <h2 className="font-bold text-2xl border-b border-grey-light pb-2 mb-4" id="Useful-definition" ref={ref2} data-key={2}>Useful definition:</h2>
+                    <h2 className="font-bold text-2xl border-b border-grey-light pb-2 mb-4" id="Useful-definition"
+                        ref={ref2} data-key={2}>Useful definition:</h2>
                     <blockquote className="indent-8">
                         "An essential requirement of these products is that they meet the needs of those members of
                         society
@@ -146,20 +155,22 @@ export const Quality = () => {
                     </blockquote>
                     <cite className="text-xs indent-8">--Joseph Juran--</cite>
                     <p className="pt-4">
-                        Basically, we produce something the user wants and meet their expectations. Quality is all about
-                        the users, not about the requirements..
-                    </p>
-                    <p>
-                        As a software engineer, this definition is interesting. The quality of my work is, in general,
-                        based on me completing the requirements of my story, adding tests, passing all the previous
-                        tests, and someone validating the work. If I do that, my story gets accepted and pushed to prod.
-                        But this definition is interesting because I can do all my work (write tests, pass tests,
-                        complete requirements) and nonetheless produce bad quality if I don't meet the expectations of
-                        my users.
+                        Essentially, our aim is to create products that not only meet the defined requirements but also
+                        align with the user's needs and expectations. Quality, as defined by Joseph Juran, boils down to
+                        'fitness for use.' It emphasizes that the true measure of quality lies in how well it serves the
+                        end-users, rather than just adhering to technical specifications.</p>
+
+                    <p>In my role as a software engineer, I often gauge the quality of my work by ensuring I've met the
+                        story's requirements, written thorough tests, passed existing tests, and had my work validated.
+                        This process typically leads to the acceptance and deployment of my work. However, Juran's
+                        definition adds an important layer of consideration: even if I meticulously complete all
+                        technical aspects, the quality of my work ultimately hinges on whether it meets the user's
+                        expectations and needs.
                     </p>
                 </section>
                 <section className="pb-10">
-                    <h2 className="font-bold text-2xl border-b border-grey-light pb-2 mb-4" id="Example" ref={ref3} data-key={3}>Example</h2>
+                    <h2 className="font-bold text-2xl border-b border-grey-light pb-2 mb-4" id="Example" ref={ref3}
+                        data-key={3}>Example</h2>
                     <h3>The story:</h3>
                     <section className="border-2 border-pink p-2 m-2 rounded-xl">
                         <p className="pl-2">As a user, I want to see more information about quality. Make a button that
@@ -194,7 +205,8 @@ export const Quality = () => {
                     what I didn't think about..
                 </section>
                 <section className="pt-4 pb-6">
-                    <h2 className="font-bold text-2xl border-b border-grey-light pb-2 mb-4" id="Tests" ref={ref4} data-key={4}>Tests</h2>
+                    <h2 className="font-bold text-2xl border-b border-grey-light pb-2 mb-4" id="Tests" ref={ref4}
+                        data-key={4}>Tests</h2>
                     <p className="py-2">The first test is very simple. Does the text in the button change when the user
                         clicks on
                         it? It tests for
@@ -245,27 +257,30 @@ export const Quality = () => {
                         {test4}
                     </SyntaxHighlighter>
                     <section className="pt-10">
-                        <p>These simple tests can seem useless at first. They are extremely easy to reproduce manually
-                            and ensure
-                            that the functionality works correctly. However, that would be missing the point. The value
-                            of
-                            the tests is that they can be repeated without wasting developer or QA time, and streamlines
-                            acceptance for deployment. You can run them when committing
-                            or pushing code. They ensure that nothing new breaks the current functionality, and
-                            also act as documentation of expected behavior. They are regression tests.
+                        <p>
+                            At first glance, these simple tests might appear trivial. They're easily reproducible
+                            manually and serve to validate the functionality. However, dismissing them on these grounds
+                            would be missing their true significance. The real value lies in their repeatability, which
+                            eliminates the need for developers or QA teams to invest time in redundant manual checks.
+                            This efficiency streamlines the acceptance process for deployment. These tests can be
+                            executed upon code commits or pushes, ensuring that new changes don't disrupt existing
+                            functionality. Moreover, they serve as living documentation of expected behavior,
+                            functioning as regression tests.
                         </p>
-                        <p className="pt-2">Nonetheless, tests are not bulletproof. If I wanted to cover all the
-                            possibilities, I could have written at least 15 more tests... Which would be impractical. To
-                            use
-                            an analogy from Elizabeth Hendrickson's book, "Explore It!": Tests are a net, the
-                            more tests, the tighter the weaves are, but you will always have gaps.</p>
-                        <h2 className="font-bold pt-10 text-2xl border-b border-grey-light pb-2 mb-4" id="Value-of-tests" ref={ref5} data-key={5}>Value of tests</h2>
-                        <p className="pt-2 text-pink font-semibold">For me, one of the most important values of
-                            automated
-                            tests that often get missed, is that they remove the tedious, boring, unimportant parts of
-                            quality control. These automated tests give time back to the professional testers to do the
-                            essential testing: usability testing, stress testing, accessibility testing, load testing,
-                            and EXPLORATORY testing!</p>
+
+                        <p className="pt-2"> Yet, it's important to acknowledge that tests aren't foolproof. Attempting
+                            to cover every conceivable scenario would result in an impractical number of tests. To
+                            borrow an analogy from Elizabeth Hendrickson's book, 'Explore It!': Tests act as a net, with
+                            more tests creating tighter weaves. However, there will always be some gaps in coverage
+                        </p>
+                        <h2 className="font-bold pt-10 text-2xl border-b border-grey-light pb-2 mb-4"
+                            id="Value-of-tests" ref={ref5} data-key={5}>Value of tests</h2>
+                        <p className="pt-2 text-pink font-semibold">To me, one of the paramount advantages of automated
+                            tests, often overlooked, is their ability to eliminate the tedious and less critical aspects
+                            of quality control. By taking on these routine checks, automated tests free up valuable time
+                            for professional testers to focus on indispensable forms of testing: usability assessments,
+                            stress testing, accessibility evaluations, load testing, and, of course, the invaluable
+                            exploratory testing!</p>
                     </section>
                 </section>
             </section>
