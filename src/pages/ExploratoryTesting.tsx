@@ -33,7 +33,7 @@ export const ExploratoryTesting = () => {
                             treating test-related learning, test design, test execution, and test result interpretation
                             as
                             mutually supportive activities that run in parallel throughout the project."</p>
-                        <p className="text-xs indent-8 pb-5">--Cem Kaner--</p>
+                        <p className="text-xs indent-8 pb-5 font-semibold">--Cem Kaner--</p>
                         <p>For me, exploratory testing is using the scientific method to gain insights into your
                             application and find potential problems. You make an hypothesis. You gather data. You assess
                             if your hypothesis holds or not. Then you use your results to create a new hypothesis.
