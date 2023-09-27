@@ -7,7 +7,11 @@ export const ExploratoryTesting = () => {
     const {pathname} = useLocation();
     const [idVisible, setIdVisible] = useState("");
     const [clickedSection, setIsClickedSection] = useState(false);
-    const {ref1, ref2, ref3} = ShowSectionHook(clickedSection, setIsClickedSection, setIdVisible, window, "Basic-rules");
+    const {
+        ref1,
+        ref2,
+        ref3
+    } = ShowSectionHook(clickedSection, setIsClickedSection, setIdVisible, window, "Basic-rules");
 
     useEffect(() => {
         document.title = 'Exploratory Testing';
@@ -21,7 +25,8 @@ export const ExploratoryTesting = () => {
                            setIsClickedSection={setIsClickedSection}>
                 <section className="bg-white-bg h-full text-black text-justify py-10 px-1">
                     <section className="pb-10">
-                        <h2 className="font-bold text-2xl border-b border-grey-light pb-2 mb-4" ref={ref1} id="The-Definition">The Definition</h2>
+                        <h2 className="font-bold text-2xl border-b border-grey-light pb-2 mb-4" ref={ref1}
+                            id="The-Definition">The Definition</h2>
                         <p className="indent-8"> "A style of software testing that emphasizes the personal freedom and
                             responsibility of the individual tester to continually optimize the quality of his/her work
                             by
@@ -30,63 +35,86 @@ export const ExploratoryTesting = () => {
                             mutually supportive activities that run in parallel throughout the project."</p>
                         <p className="text-xs indent-8 pb-5">--Cem Kaner--</p>
                         <p>For me, exploratory testing is using the scientific method to gain insights into your
-                            application and find potential problems. You make a hypothesis. You gather data. You assess
+                            application and find potential problems. You make an hypothesis. You gather data. You assess
                             if your hypothesis holds or not. Then you use your results to create a new hypothesis.
                             This is how you "explore" your application/system. If you want to dig into this subject, I
                             recommend "Explore It!" by Elisabeth Hendrickson. Ultimately, how can you guarantee that the
                             system works if you haven't tested its edges?</p>
                     </section>
                     <section className="pb-10">
-                        <h2 className="font-bold text-2xl border-b border-grey-light pb-2 mb-4" ref={ref2} id="Why-is-it-useful?">Why is it useful?</h2>
-                        <p>If you do not search for bugs, how do you find them? Checking that acceptance criteria are met
-                            is not the same as checking for bugs. It only makes sure the work is done as expected. If you do not
-                            try to move beyond just checking the acceptance criteria, then you are letting your users
-                            find the bugs instead. If your users are the ones finding the bugs, you risk breaking their trust.
-                            They will be more likely to use your competitors. It will also
-                            increases the stress of your team. When a user reports a bug, the bug goes through
-                            triage and gets prioritized. Since it is in production, someone will likely be asked to rush a fix instead of their normal work,
-                            or, worse yet, get woken up in the middle of the night to solve it. The engineer is likely to receive
-                            incomplete information about the bug. The person will have to try to gather more data to
-                            understand what the bug is. At the same time, the manager will keep asking where we are with
-                            the bug and when will it be fixed. Then the bug gets fixed and gets pushed. It distracted a
-                            lot of people from their work, added a lot of stress, and was terribly inefficient.</p>
-                            <p>
-                                Let's
-                            imagine the happy path. A QA or someone in the team did some exploratory testing on the
-                            stage environment and found an issue. A detailed ticket gets created and the product manager
-                            decides whether to prioritize it. Then the ticket gets added to the board. The next engineer
-                            available will pick the ticket on top of the board. The engineer will have all the
-                            information needed to fix the bug and life goes on. No late night pages, no manager asking when it will
-                            be fixed, no engineer complaining that they don't have information to fix the bug. No
-                            disturbance in the normal process.</p>
+                        <h2 className="font-bold text-2xl border-b border-grey-light pb-2 mb-4" ref={ref2}
+                            id="Why-is-it-useful?">Why is it useful?</h2>
+                        <p>If you don't actively search for bugs, how will you uncover them? Simply ensuring that
+                            acceptance criteria are met doesn't equate to a thorough bug check. Relying solely on
+                            acceptance criteria means you're leaving bug discovery to your users. This not only
+                            jeopardizes their trust but also raises the likelihood of them turning to your
+                            competitors.</p>
+
+                        <p className="pb-4">Furthermore, this approach increases stress levels within your team. When a
+                            user reports a
+                            bug, it initiates a triage process and necessitates prioritization. This often leads to an
+                            engineer diverting from their regular tasks, or in worse cases, being called in the middle
+                            of the night to address it. The engineer may receive incomplete information about the bug
+                            and have to spend extra time gathering data to understand its nature. Simultaneously,
+                            managers may be pressing for updates on the bug's progress and expected resolution time.
+
+                            Once the bug is fixed and deployed, the whole process consumes a considerable amount of time
+                            and energy, causing distraction and stress, and ultimately proving highly inefficient.</p>
+                        <p>
+                            Let's envision the ideal scenario, commonly known as the 'happy path'. During exploratory
+                            testing on the stage environment, a QA team member or a colleague identifies an issue. A
+                            comprehensive ticket is then meticulously created, and the product manager assesses its
+                            priority. Subsequently, the ticket is seamlessly integrated into the task board.
+
+                            When the next available engineer selects the ticket from the top of the board, they find all
+                            the necessary information to resolve the bug. The process proceeds smoothly, without any
+                            late-night alerts, managers inquiring about the fix timeline, or engineers struggling due to
+                            inadequate bug details. This ensures a disruption-free continuation of the normal
+                            workflow.</p>
                     </section>
                     <section className="pb-10">
-                        <p>For me, exploratory testing is putting yourself in the user's shoes. You become a user
-                            advocate. How do I feel as a user? Does that really make sense? Is this confusing? Can I be
-                            in a weird state if I do some action in a different order than expected? What can a user do
-                            that we didn't think was possible or didn't expect?</p>
+                        <p>To me, exploratory testing is about stepping into the user's perspective. It's a way of
+                            advocating for the user. How would I, as a user, feel in this situation? Does the process
+                            truly make sense? Is anything potentially confusing? Could I end up in a peculiar state if I
+                            perform actions in an unexpected sequence? What unexpected actions or scenarios might a user
+                            encounter that we didn't anticipate or consider?</p>
                     </section>
                     <section>
-                        <h2 className="font-bold text-2xl border-b border-grey-light pb-2 mb-4" ref={ref3} id="Basic-rules">Basic rules:</h2>
+                        <h2 className="font-bold text-2xl border-b border-grey-light pb-2 mb-4" ref={ref3}
+                            id="Basic-rules">Basic rules:</h2>
                         <h3 className="text-pink font-semibold pt-4">The goal</h3>
-                        <p>You need to have a goal when you do exploratory testing. Otherwise, you will just wander
-                            aimlessly and not accomplish anything. It can be as simple as: "I want to test all the ways
-                            to create a user". You may find issues that are not relative to your goal. You should note
-                            them and come back to them later.</p>
+                        <p>When conducting exploratory testing, it's essential to have a clear objective in mind.
+                            Without a defined goal, your testing efforts may become unfocused and unproductive. Your
+                            goal can be as straightforward as 'I want to thoroughly test all the methods for creating a
+                            user.'
+
+                            During this process, you might encounter issues that aren't directly related to your
+                            immediate goal. In such cases, it's advisable to make note of these issues for future
+                            investigation. This allows you to stay on track with your current objective while ensuring
+                            that you address these additional concerns at a later point.</p>
                         <h3 className="text-pink font-semibold pt-4">The framework</h3>
-                        <p>You need to set aside time for your exploration. I like to use an hour and a half to two
-                            hours. More time, and it becomes hard to stay focused. Less time, then you feel like you just
-                            scratch the surface. I also like to set boundaries. 'I will only test on this browser or
-                            iOS...'</p>
+                        <p>It's crucial to allocate dedicated time for your exploration. I find that setting aside an
+                            hour and a half to two hours is usually optimal. Any more than that, and maintaining focus
+                            can become challenging. Conversely, if you allocate less time, you might feel like you've
+                            only skimmed the surface.</p>
+
+                        <p>Additionally, it's beneficial to establish boundaries. For instance, you might decide to
+                            focus exclusively on testing within a specific browser or operating system, providing a
+                            clear scope for your exploration.</p>
                         <h3 className="text-pink font-semibold pt-4">The group</h3>
-                        <p>I recommend to mob when doing exploratory testing. I find 4 people ideal, but it is not a
-                            hard-set rule. What I like about doing it with other people, is that you generate more ideas
-                            about potential problems and get more eyes looking at the screen. You also have more
-                            people with knowledge of the system. This can help you create better hypotheses. You are
-                            also more likely to catch things.</p>
+                        <p>I highly recommend mob testing during exploratory sessions. While a group of four individuals
+                            works well for me, it's not a strict requirement. One of the key advantages of collaborative
+                            testing is the wealth of diverse perspectives. With more participants, you generate a
+                            broader range of ideas about potential issues, and you benefit from multiple sets of eyes
+                            scrutinizing the screen.</p>
+
+                        <p>Additionally, having a team with varied levels of system knowledge enhances the quality of
+                            your hypotheses. Moreover, with multiple people involved, you're more likely to catch subtle
+                            nuances and potential problems that might otherwise go unnoticed.</p>
                     </section>
                     <section className="pt-10">
-                        <p className="pb-2">We will explore these four concepts. They are based on the "Explore it!" book</p>
+                        <p className="pb-2">We will explore these four concepts. They are based on the "Explore it!"
+                            book</p>
                         <ul>
                             <Link to="/interactions" className="text-lg underline underline-offset-2 px-2">
                                 Interactions
