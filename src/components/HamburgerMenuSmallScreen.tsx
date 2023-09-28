@@ -16,6 +16,7 @@ export const HamburgerMenuSmallScreen = ({ showSideNavBar}: HamburgerMenuSmallSc
                     <div className="flex flex-row justify-end pt-2">
                         <button
                             className="flex flex-row justify-center"
+                            aria-label={"Menu options"}
                             ref={ref}
                             onClick={() => {
                                 setIsVisible(!isVisible);
